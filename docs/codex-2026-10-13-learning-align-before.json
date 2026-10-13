@@ -1,0 +1,152 @@
+[
+  {
+    "width": 320,
+    "d": [
+      {
+        "id": "1731073040214",
+        "text": "Об﻿учения",
+        "rect": {
+          "x": 172,
+          "y": 417,
+          "width": 59.265625,
+          "height": 15,
+          "top": 417,
+          "right": 231.265625,
+          "bottom": 432,
+          "left": 172
+        },
+        "font": "600 12px Inter"
+      },
+      {
+        "id": "1731073040255",
+        "text": " ",
+        "rect": {
+          "x": 245,
+          "y": 411,
+          "width": 25,
+          "height": 26,
+          "top": 411,
+          "right": 270,
+          "bottom": 437,
+          "left": 245
+        },
+        "font": "16px Manrope, Arial, sans-serif"
+      },
+      {
+        "id": "1731073297186",
+        "text": "",
+        "rect": {
+          "x": 254,
+          "y": 420,
+          "width": 8,
+          "height": 8,
+          "top": 420,
+          "right": 262,
+          "bottom": 428,
+          "left": 254
+        },
+        "font": "16px Manrope, Arial, sans-serif"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "d": [
+      {
+        "id": "1731073040214",
+        "text": "Об﻿учения",
+        "rect": {
+          "x": 209.625,
+          "y": 415.96875,
+          "width": 72.22998046875,
+          "height": 18.28125,
+          "top": 415.96875,
+          "right": 281.85498046875,
+          "bottom": 434.25,
+          "left": 209.625
+        },
+        "font": "600 12px Inter"
+      },
+      {
+        "id": "1731073040255",
+        "text": " ",
+        "rect": {
+          "x": 298.59375,
+          "y": 408.65625,
+          "width": 30.46875,
+          "height": 31.6875,
+          "top": 408.65625,
+          "right": 329.0625,
+          "bottom": 440.34375,
+          "left": 298.59375
+        },
+        "font": "16px Manrope, Arial, sans-serif"
+      },
+      {
+        "id": "1731073297186",
+        "text": "",
+        "rect": {
+          "x": 309.5625,
+          "y": 419.625,
+          "width": 9.75,
+          "height": 9.75,
+          "top": 419.625,
+          "right": 319.3125,
+          "bottom": 429.375,
+          "left": 309.5625
+        },
+        "font": "16px Manrope, Arial, sans-serif"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "d": [
+      {
+        "id": "1731073040214",
+        "text": "Об﻿учения",
+        "rect": {
+          "x": 292,
+          "y": 416,
+          "width": 69.140625,
+          "height": 17,
+          "top": 416,
+          "right": 361.140625,
+          "bottom": 433,
+          "left": 292
+        },
+        "font": "600 14px Inter"
+      },
+      {
+        "id": "1731073040255",
+        "text": " ",
+        "rect": {
+          "x": 381,
+          "y": 410,
+          "width": 30,
+          "height": 30,
+          "top": 410,
+          "right": 411,
+          "bottom": 440,
+          "left": 381
+        },
+        "font": "16px Manrope, Arial, sans-serif"
+      },
+      {
+        "id": "1731073297186",
+        "text": "",
+        "rect": {
+          "x": 391,
+          "y": 420,
+          "width": 10,
+          "height": 9,
+          "top": 420,
+          "right": 401,
+          "bottom": 429,
+          "left": 391
+        },
+        "font": "16px Manrope, Arial, sans-serif"
+      }
+    ]
+  }
+]

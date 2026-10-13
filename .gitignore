@@ -19,3 +19,4 @@ playwright-report/
 **/.web-state-*.json
 **/storage-state*.json
 sources/overrides/**/home-source.html
+sources/current/

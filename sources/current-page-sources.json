@@ -1,0 +1,72 @@
+{
+  "/": {
+    "source": "https://medvediva.ru/",
+    "file": "sources/current/2026-10-13/home.html",
+    "capturedAt": "2026-10-13T09:22:22.185Z",
+    "sha256": "dfa45aaf0c114e883da9378ef50f380683444308ab643da9cfc48fead62393ce",
+    "bytes": 840247
+  },
+  "/pit": {
+    "source": "https://medvediva.ru/pit",
+    "file": "sources/current/2026-10-13/pit.html",
+    "capturedAt": "2026-10-13T09:22:24.730Z",
+    "sha256": "48a6611f50e0e30b54b65103df85c94aa89aa89da11b7562cc1ecd3e5d18982f",
+    "bytes": 2301643
+  },
+  "/intensiv": {
+    "source": "https://medvediva.ru/intensiv",
+    "file": "sources/current/2026-10-13/intensiv.html",
+    "capturedAt": "2026-10-13T09:22:25.391Z",
+    "sha256": "3a7e2c8339058431a1fdd59104b59168528f72b494eaed19825358a828f7525d",
+    "bytes": 981914
+  },
+  "/tvg": {
+    "source": "https://medvediva.ru/tvg",
+    "file": "sources/current/2026-10-13/tvg.html",
+    "capturedAt": "2026-10-13T09:22:27.420Z",
+    "sha256": "73fc4926a1c11df5a1d3fbdba2343cda8cf75ddc66ab5e9f8a7a756b78f95bf0",
+    "bytes": 796229
+  },
+  "/invent": {
+    "source": "https://medvediva.ru/invent",
+    "file": "sources/current/2026-10-13/invent.html",
+    "capturedAt": "2026-10-13T09:22:28.293Z",
+    "sha256": "2cc0eeaf0cf946250ddd1d7a5cc78cdb7ee16057358c52c64b2d8674d9018ff0",
+    "bytes": 1521377
+  },
+  "/personaldata": {
+    "source": "https://medvediva.ru/personaldata",
+    "file": "sources/current/2026-10-13/personaldata.html",
+    "capturedAt": "2026-10-13T09:22:28.794Z",
+    "sha256": "75b2bb691a2baead187d290ae33140aa67ee7b11759271ba61b5d6311f401c85",
+    "bytes": 263130
+  },
+  "/data-consent": {
+    "source": "https://medvediva.ru/data-consent",
+    "file": "sources/current/2026-10-13/data-consent.html",
+    "capturedAt": "2026-10-13T09:22:29.417Z",
+    "sha256": "2c43b1ec33389f2655784f5afe11809dcf570f90876a9b77ac00ec43607e6206",
+    "bytes": 245114
+  },
+  "/part_oferta": {
+    "source": "https://medvediva.ru/part_oferta",
+    "file": "sources/current/2026-10-13/part_oferta.html",
+    "capturedAt": "2026-10-13T09:22:30.060Z",
+    "sha256": "be9a45b29a47ceffc7aba6bace80681890d91f9eebb3eaebd0d09b92d27bfb5f",
+    "bytes": 272276
+  },
+  "/offer": {
+    "source": "https://medvediva.ru/offer",
+    "file": "sources/current/2026-10-13/offer.html",
+    "capturedAt": "2026-10-13T09:22:30.673Z",
+    "sha256": "0f5d67464dd1b521bf79eca432adf4dee5f44d2d3d66bb52ead5365c2c7f590e",
+    "bytes": 280122
+  },
+  "/consent": {
+    "source": "https://medvediva.ru/consent",
+    "file": "sources/current/2026-10-13/consent.html",
+    "capturedAt": "2026-10-13T09:22:31.410Z",
+    "sha256": "6a952847efc2f636fa26f9ca132e373bcb68cc866ea51d8b2c9b9558c6a2961c",
+    "bytes": 245875
+  }
+}

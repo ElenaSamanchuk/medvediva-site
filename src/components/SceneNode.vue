@@ -59,7 +59,7 @@ const href=computed(()=>{
    <SceneNode v-for="child in node.children" :key="child.id" :node="child" :screen="screen" :scene="scene" :parent="node" />
   </div>
  </div>
- <div v-else v-reveal="node.animation" class="scene-node" :class="[sourceClasses,`scene-${node.type}`,{'scene-group-child':isPhysicalFlex(parent?.fields),'pf-active':view.active}]" :hidden="view.hidden?true:undefined" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id">
+ <div v-else v-reveal="scene==='2322512891'?undefined:node.animation" class="scene-node" :class="[sourceClasses,`scene-${node.type}`,{'scene-group-child':isPhysicalFlex(parent?.fields),'pf-active':view.active}]" :hidden="view.hidden?true:undefined" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id">
   <DesignForm v-if="node.type==='form'" :node="node" :screen="screen" />
   <MediaPreview v-else-if="node.embed" :url="node.embed" />
   <DesignGallery v-else-if="node.type==='gallery'" :pictures="node.pictures" />

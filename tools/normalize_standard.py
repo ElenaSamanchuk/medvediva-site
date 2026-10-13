@@ -38,7 +38,10 @@ for route in routes:
  existing=json.loads((OUT/(route['page']+'.json')).read_text())
  has_native=any(b.get('type') in ('456','464','585','726') for b in existing['blocks']) or any(p.get('pictures') or p.get('hook')=='#menuopen' for p in existing['popups'])
  if not route['unsupported'] and not has_native:continue
- source=BeautifulSoup((ROOT/sources[route['path']]['file']).read_text(),'html.parser');model=json.loads((OUT/(route['page']+'.json')).read_text());remaining=[]
+ current_file=ROOT/'sources/current-page-sources.json'
+ current_sources=json.loads(current_file.read_text()) if current_file.exists() else {}
+ source_path=current_sources.get(route['path'],{}).get('file',sources[route['path']]['file'])
+ source=BeautifulSoup((ROOT/source_path).read_text(),'html.parser');model=json.loads((OUT/(route['page']+'.json')).read_text());remaining=[]
  candidates=[{'id':r['id'][3:],'type':r['data-record-type']} for r in source.select('[data-record-type]') if r['data-record-type'] in ('456','464','585','726','746','450','706')]
  for missing in candidates:
   model['blocks']=[b for b in model['blocks'] if b['id']!=missing['id']]

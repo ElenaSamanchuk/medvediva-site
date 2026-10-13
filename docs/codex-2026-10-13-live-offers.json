@@ -1,0 +1,632 @@
+{
+  "date": "2026-10-13T09:19:56.904Z",
+  "purpose": "live Tilda offers, pure client tariff options; no forms/purchases/backend requests",
+  "rows": [
+    {
+      "route": "/pit",
+      "width": 1440,
+      "phase": "phase1",
+      "timers": [
+        "00",
+        "00",
+        "00",
+        "00"
+      ],
+      "promo": [
+        {
+          "record": "rec4482959301",
+          "text": "Сегодня курс по самой низкой цене Скидка действует до 7 октября. С 8 октября цена станет выше До конца акции 00 : 00 : 00 : 00 секунд минут часов дней"
+        }
+      ],
+      "offerText": [
+        "Продажи открыты",
+        "Старт курса - 12 октября",
+        "42 поток",
+        "Старт 12 октября",
+        "41 поток",
+        "Расписание потоков",
+        "На сайте в этот момент продаж ещё нет",
+        "старт продаж —",
+        "Дата, с которой открывается продажа доступа к потоку в БОТе предзаписи. Сам курс начнётся позже — сейчас вы можете спокойно зафиксировать участие.",
+        "Что происходит в день старта продаж:в боте предзаписи открывается продажа доступа к потокуприходит напоминание о старте продаждействует самая выгодная ценаможно без спешки зафиксировать участие",
+        "дата, с которой начинается основное обучение в потоке. С этого дня открывается программа и вы начинаете проходитьеё по шагам.",
+        "Что происходит в день старта курса:открывается основной доступ к материалам и тренировкамначинается последовательное прохождение программы",
+        "старт курса —",
+        "Все тренировки доступны в любое время в приложении и на платформе Medve. Diva",
+        "4 + 1 неделя дополнительного доступа",
+        "Сегодня курс по самой низкой цене",
+        "Скидка действует до 7 октября. С 8 октября цена станет выше",
+        "4 023 ₽ за поток",
+        "8 потоков",
+        "Доступ 40 недель",
+        "4 потока",
+        "Доступ 20 недель",
+        "2 потока",
+        "Доступ 10 недель",
+        "1 поток",
+        "Доступ 5 недель",
+        "Выберите доступ:",
+        "+ «Тело в голове» на 5 недель",
+        "Доплата 2 500 ₽ вместо 6 790 ₽ отдельно",
+        "Скидки до 7 октября",
+        "5 790 ₽",
+        "5 290 ₽",
+        "Купить со скидкой до 13%",
+        "3 211 ₽ за поток",
+        "8 потоков",
+        "Доступ 40 недель",
+        "4 потока",
+        "Доступ 20 недель",
+        "2 потока",
+        "Доступ 10 недель",
+        "1 поток",
+        "Доступ 5 недель",
+        "Выберите доступ:",
+        "+ «Тело в голове» на 5 недель",
+        "Доплата 2 500 ₽ вместо 6 790 ₽ отдельно",
+        "Скидки до 7 октября",
+        "4 590 ₽",
+        "4 190 ₽",
+        "Купить со скидкой до 13%",
+        "6 790 ₽",
+        "Выберите поток и тариф.",
+        "Получите доступ к платформе."
+      ],
+      "tariffs": [
+        {
+          "key": "pit-bazovy",
+          "streams": 1,
+          "normal": {
+            "price": "4 190 ₽",
+            "old": "4 590 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_Y4ELaR/checkout"
+          },
+          "withTvg": {
+            "price": "6 690 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_xnzKqR/checkout"
+          }
+        },
+        {
+          "key": "pit-bazovy",
+          "streams": 2,
+          "normal": {
+            "price": "7 390 ₽",
+            "old": "8 390 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_39yjvn/checkout"
+          },
+          "withTvg": {
+            "price": "9 890 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_v4Wegn/checkout"
+          }
+        },
+        {
+          "key": "pit-bazovy",
+          "streams": 4,
+          "normal": {
+            "price": "13 790 ₽",
+            "old": "15 090 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_DnmBvR/checkout"
+          },
+          "withTvg": {
+            "price": "16 290 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_z4vwv9/checkout"
+          }
+        },
+        {
+          "key": "pit-bazovy",
+          "streams": 8,
+          "normal": {
+            "price": "25 690 ₽",
+            "old": "29 390 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_24B6o4/checkout"
+          },
+          "withTvg": {
+            "price": "28 190 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_q9bvl9/checkout"
+          }
+        },
+        {
+          "key": "pit-komfortny",
+          "streams": 1,
+          "normal": {
+            "price": "5 290 ₽",
+            "old": "5 790 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_O9r6V9/checkout"
+          },
+          "withTvg": {
+            "price": "7 790 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_VRo1m9/checkout"
+          }
+        },
+        {
+          "key": "pit-komfortny",
+          "streams": 2,
+          "normal": {
+            "price": "9 290 ₽",
+            "old": "10 490 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_e91lD4/checkout"
+          },
+          "withTvg": {
+            "price": "11 790 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_G4Ox39/checkout"
+          }
+        },
+        {
+          "key": "pit-komfortny",
+          "streams": 4,
+          "normal": {
+            "price": "17 190 ₽",
+            "old": "18 890 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_P4kLJ9/checkout"
+          },
+          "withTvg": {
+            "price": "19 690 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_24B6Y4/checkout"
+          }
+        },
+        {
+          "key": "pit-komfortny",
+          "streams": 8,
+          "normal": {
+            "price": "32 190 ₽",
+            "old": "36 690 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_yRAApR/checkout"
+          },
+          "withTvg": {
+            "price": "34 690 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_O9r6K9/checkout"
+          }
+        }
+      ],
+      "instrumentationNote": "All tariff options captured; optional final tariff screenshot skipped due helper scope typo (not a product failure)"
+    },
+    {
+      "route": "/pit",
+      "width": 390,
+      "phase": "phase1",
+      "timers": [
+        "00",
+        "00",
+        "00",
+        "00"
+      ],
+      "promo": [
+        {
+          "record": "rec4482959301",
+          "text": "Сегодня курс по самой низкой цене Скидка действует до 7 октября. С 8 октября цена станет выше До конца акции 00 : 00 : 00 : 00 секунд минут часов дней"
+        }
+      ],
+      "offerText": [
+        "Продажи открыты",
+        "Старт курса - 12 октября",
+        "42 поток",
+        "Старт 12 октября",
+        "41 поток",
+        "Расписание потоков",
+        "На сайте в этот момент продаж ещё нет",
+        "старт продаж —",
+        "Дата, с которой открывается продажа доступа к потоку в БОТе предзаписи. Сам курс начнётся позже — сейчас вы можете спокойно зафиксировать участие.",
+        "Что происходит в день старта продаж:в боте предзаписи открывается продажа доступа к потокуприходит напоминание о старте продаждействует самая выгодная ценаможно без спешки зафиксировать участие",
+        "дата, с которой начинается основное обучение в потоке. С этого дня открывается программа и вы начинаете проходитьеё по шагам.",
+        "Что происходит в день старта курса:открывается основной доступ к материалам и тренировкамначинается последовательное прохождение программы",
+        "старт курса —",
+        "Все тренировки доступны в любое время в приложении и на платформе Medve. Diva",
+        "4 + 1 неделя дополнительного доступа",
+        "Сегодня курс по самой низкой цене",
+        "Скидка действует до 7 октября. С 8 октября цена станет выше",
+        "4 023 ₽ за поток",
+        "8 потоков",
+        "Доступ 40 недель",
+        "4 потока",
+        "Доступ 20 недель",
+        "2 потока",
+        "Доступ 10 недель",
+        "1 поток",
+        "Доступ 5 недель",
+        "Выберите доступ:",
+        "+ «Тело в голове» на 5 недель",
+        "Доплата 2 500 ₽ вместо 6 790 ₽ отдельно",
+        "Скидки до 7 октября",
+        "5 790 ₽",
+        "5 290 ₽",
+        "Купить со скидкой до 13%",
+        "3 211 ₽ за поток",
+        "8 потоков",
+        "Доступ 40 недель",
+        "4 потока",
+        "Доступ 20 недель",
+        "2 потока",
+        "Доступ 10 недель",
+        "1 поток",
+        "Доступ 5 недель",
+        "Выберите доступ:",
+        "+ «Тело в голове» на 5 недель",
+        "Доплата 2 500 ₽ вместо 6 790 ₽ отдельно",
+        "Скидки до 7 октября",
+        "4 590 ₽",
+        "4 190 ₽",
+        "Купить со скидкой до 13%",
+        "6 790 ₽",
+        "Выберите поток и тариф.",
+        "Получите доступ к платформе."
+      ],
+      "tariffs": [
+        {
+          "key": "pit-bazovy",
+          "streams": 1,
+          "normal": {
+            "price": "4 190 ₽",
+            "old": "4 590 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_Y4ELaR/checkout"
+          },
+          "withTvg": {
+            "price": "6 690 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_xnzKqR/checkout"
+          }
+        },
+        {
+          "key": "pit-bazovy",
+          "streams": 2,
+          "normal": {
+            "price": "7 390 ₽",
+            "old": "8 390 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_39yjvn/checkout"
+          },
+          "withTvg": {
+            "price": "9 890 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_v4Wegn/checkout"
+          }
+        },
+        {
+          "key": "pit-bazovy",
+          "streams": 4,
+          "normal": {
+            "price": "13 790 ₽",
+            "old": "15 090 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_DnmBvR/checkout"
+          },
+          "withTvg": {
+            "price": "16 290 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_z4vwv9/checkout"
+          }
+        },
+        {
+          "key": "pit-bazovy",
+          "streams": 8,
+          "normal": {
+            "price": "25 690 ₽",
+            "old": "29 390 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_24B6o4/checkout"
+          },
+          "withTvg": {
+            "price": "28 190 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_q9bvl9/checkout"
+          }
+        },
+        {
+          "key": "pit-komfortny",
+          "streams": 1,
+          "normal": {
+            "price": "5 290 ₽",
+            "old": "5 790 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_O9r6V9/checkout"
+          },
+          "withTvg": {
+            "price": "7 790 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_VRo1m9/checkout"
+          }
+        },
+        {
+          "key": "pit-komfortny",
+          "streams": 2,
+          "normal": {
+            "price": "9 290 ₽",
+            "old": "10 490 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_e91lD4/checkout"
+          },
+          "withTvg": {
+            "price": "11 790 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_G4Ox39/checkout"
+          }
+        },
+        {
+          "key": "pit-komfortny",
+          "streams": 4,
+          "normal": {
+            "price": "17 190 ₽",
+            "old": "18 890 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_P4kLJ9/checkout"
+          },
+          "withTvg": {
+            "price": "19 690 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_24B6Y4/checkout"
+          }
+        },
+        {
+          "key": "pit-komfortny",
+          "streams": 8,
+          "normal": {
+            "price": "32 190 ₽",
+            "old": "36 690 ₽",
+            "label": "Купить со скидкой до 13%",
+            "url": "https://lk.medvediva.ru/payments/tariff_yRAApR/checkout"
+          },
+          "withTvg": {
+            "price": "34 690 ₽",
+            "old": "",
+            "label": "Купить",
+            "url": "https://lk.medvediva.ru/payments/tariff_O9r6K9/checkout"
+          }
+        }
+      ],
+      "instrumentationNote": "All tariff options captured; optional final tariff screenshot skipped due helper scope typo (not a product failure)"
+    },
+    {
+      "route": "/intensiv",
+      "width": 1440,
+      "timers": [],
+      "promo": [],
+      "offerText": [
+        "Чтобы получить уведомления о старте продаж по самым выгодным ценам подпишись на бот",
+        "Отличный старт для начала тренировок с Аленой Медведевой!",
+        "Продажи закрыты",
+        "Старт продаж - 13 октября",
+        "Доступ 10 дней",
+        "Доступ 10 дней",
+        "Доступ 10 дней",
+        "Система продаж",
+        "После прохождения любого интенсива ты сможешь перейти на флагманский курс «ПИТ» по самым выгодным ценам и продолжить заботу о теле в углубленном формате.",
+        "Продажи интенсивов открыты между запусками флагманского курса «Питание и тренировки».За 10 дней до старта продаж «ПИТ» возможность покупки закрывается.",
+        "Идеальный старт",
+        "Неделя эффективных тренировок до 30 минут без дополнительного оборудования. Идеален для тех, кто хочет «войти в движение» без стресса и бессрочных подписок.",
+        "Короткий формат по доступной цене создан, чтобы вы смогли попробовать подход и методику преподавания Алены Медведевой и решить — подходим мы друг другу или нет.",
+        "10 дней доступа",
+        "к занятиям после старта — занимайтесь в своём темпе, пересматривайте, возвращайтесь к любимым тренировкам.",
+        "Доступ к 6 тренировкам",
+        "Выгодные цены на ПиТ для участников интенсива"
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "error": "page.goto: net::ERR_TIMED_OUT at https://medvediva.ru/\nCall log:\n\u001b[2m  - navigating to \"https://medvediva.ru/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    }
+  ],
+  "homeFreshHtmlFallback": {
+    "source": "fresh GET only; DOM browser visit timed out; visibility not accepted",
+    "bytes": 840247,
+    "declaredOfferText": [
+      "Старт потока - 12 октября",
+      "Продажи открыты",
+      "Старт продаж - 13 октября",
+      "Продажи закрыты",
+      "Три направления для точечной работы с телом — выбирайте своё! Каждый интенсив длится 10 дней, подходит любому уровню подготовки и даёт видимый результат уже на первой неделе. Минимум теории, максимум практики.",
+      "Старт потока - 12 октября",
+      "Продажи открыты",
+      "Здесь вы первыми узнаете о старте продаж и получите доступ к лучшим предложениям на курсы."
+    ]
+  },
+  "homeTextPairs": [
+    {
+      "id": "1744966961047",
+      "text": "Старт потока - 12 октября",
+      "local": "  Старт потока - 12 октября   "
+    },
+    {
+      "id": "1744966961048",
+      "text": "Продажи открыты",
+      "local": "  Продажи открыты   "
+    },
+    {
+      "id": "1744966617559",
+      "text": "Старт продаж - 13 октября",
+      "local": "  Старт продаж - 13 октября   "
+    },
+    {
+      "id": "1744966617560",
+      "text": "Продажи закрыты",
+      "local": "  Продажи закрыты   "
+    },
+    {
+      "id": "1744966228464",
+      "text": "Старт потока - 12 октября",
+      "local": "  Старт потока - 12 октября   "
+    },
+    {
+      "id": "1744966120689",
+      "text": "Продажи открыты",
+      "local": "  Продажи открыты   "
+    }
+  ],
+  "tariffSourceConfigComparisons": [
+    {
+      "width": 1440,
+      "key": "pit-bazovy",
+      "streams": 1,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 1440,
+      "key": "pit-bazovy",
+      "streams": 2,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 1440,
+      "key": "pit-bazovy",
+      "streams": 4,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 1440,
+      "key": "pit-bazovy",
+      "streams": 8,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 1440,
+      "key": "pit-komfortny",
+      "streams": 1,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 1440,
+      "key": "pit-komfortny",
+      "streams": 2,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 1440,
+      "key": "pit-komfortny",
+      "streams": 4,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 1440,
+      "key": "pit-komfortny",
+      "streams": 8,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 390,
+      "key": "pit-bazovy",
+      "streams": 1,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 390,
+      "key": "pit-bazovy",
+      "streams": 2,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 390,
+      "key": "pit-bazovy",
+      "streams": 4,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 390,
+      "key": "pit-bazovy",
+      "streams": 8,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 390,
+      "key": "pit-komfortny",
+      "streams": 1,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 390,
+      "key": "pit-komfortny",
+      "streams": 2,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 390,
+      "key": "pit-komfortny",
+      "streams": 4,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    },
+    {
+      "width": 390,
+      "key": "pit-komfortny",
+      "streams": 8,
+      "priceMatches": true,
+      "addonMatches": true,
+      "normalLinkMatches": true,
+      "addonLinkMatches": true
+    }
+  ]
+}

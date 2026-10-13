@@ -1,5 +1,5 @@
 <script setup>
-import {localStore,sessionStore} from './lib/storage.mjs';
+import {localStore} from './lib/storage.mjs';
 import {localLink} from './lib/scene.mjs';
 import {captureAttribution,prepareLinks,checkoutLink} from './lib/attribution.mjs';
 import {ref,computed,onMounted,onUnmounted,nextTick,provide} from 'vue';
@@ -17,6 +17,7 @@ const props=defineProps({initialPage:Object,initialLayout:Object});
 const shared=ref(props.initialLayout||null);
 const client=typeof window!=='undefined';
 const width=ref(client?innerWidth:1200); const page=ref(props.initialPage||null); const error=ref(''); const popup=ref(null);const menu=ref(false);const banner=ref(false);
+const bannerWidth=computed(()=>width.value>768?Math.min(1200,width.value-32):width.value);
 const now=ref(Date.now());
 const authoredUi=createTariffUi(computed(()=>page.value?.promotion?.config),now);
 const countdown=computed(()=>countdownState(page.value?.promotion?.countdown,now.value));
@@ -90,7 +91,7 @@ function open(item){if(!popup.value&&!menu.value)previousFocus=document.activeEl
 function openMenu(){if(!menu.value&&!popup.value)previousFocus=document.activeElement;popup.value=null;menu.value=true;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-menu'),attribution);document.querySelector('.menu-close')?.focus();});}
 function click(e){
  const a=e.target.closest('a'); const node=e.target.closest('[data-node]');
- if(node?.dataset.node==='1779882150069'){banner.value=false;sessionStore.setItem('medvedivaBannerClosed','1');return;}
+ if(node?.dataset.node==='1779882150069'){banner.value=false;localStore.setItem('medvedivaBannerClosed','1');clearTimeout(timer);return;}
  if(node?.dataset.node==='1745573793244'){/* handled by link below */}
  if(node?.dataset.node==='1773213623325000005'){localStore.setItem('cookieConsent','accepted');localStore.setItem('cookieConsentDate',new Date().toISOString());cookie.value=false;return;}
  const tooltip=tooltipFor(a);
@@ -131,7 +132,7 @@ onMounted(async()=>{
   document.querySelector('meta[name="description"]')?.setAttribute('content',page.value.description);
   await document.fonts.ready;
   await nextTick();prepareLinks(document.getElementById('app'),attribution);
-  showTimer=setTimeout(()=>{banner.value=!sessionStore.getItem('medvedivaBannerClosed');},500);timer=setTimeout(()=>banner.value=false,10000);
+  showTimer=setTimeout(()=>{banner.value=!localStore.getItem('medvedivaBannerClosed');if(banner.value)timer=setTimeout(()=>banner.value=false,10000);},500);
   hashChange();
   if(!document.getElementById('sender-preview-script')){const widget=document.createElement('script');widget.id='sender-preview-script';widget.src='/support-preview/widget.js';document.body.append(widget);}
  }catch(e){error.value='Не удалось загрузить страницу.';console.error(e);}
@@ -145,7 +146,7 @@ onUnmounted(()=>{removeEventListener('resize',resize);removeEventListener('keydo
   <SiteHeader :scene="scene('1063609261')" :width="width" />
   <main><template v-for="block in blocks" :key="block.id"><SceneBlock v-if="block.kind==='scene'" :scene="scene(block.id)" :width="width" /><article v-else-if="block.kind==='article'" class="native-article" :id="`scene-${block.id}`" :style="block.style"><div v-html="block.html"></div></article><StandardBlock v-else-if="block.kind!=='anchor'" :block="block" :width="width" /><span v-else :id="`scene-${block.id}`"></span></template></main>
   <SiteFooter :scene="scene('770878605')" :width="width" />
-  <aside v-if="banner&&scene('2322512891')" class="native-banner"><SceneBlock :scene="scene('2322512891')" :width="width" /></aside>
+  <Transition name="vk-banner"><aside v-if="banner&&scene('2322512891')" class="native-banner"><SceneBlock :scene="scene('2322512891')" :width="bannerWidth" /></aside></Transition>
   <aside v-if="cookie&&scene('2019108731')" class="native-cookie"><SceneBlock :scene="scene('2019108731')" :width="width" /></aside>
   <Transition name="overlay"><div v-if="menu" class="native-menu" role="dialog" aria-modal="true" aria-label="Меню сайта"><button class="menu-close" aria-label="Закрыть меню" @click="close">×</button><SceneBlock :scene="scene('860237765')" :width="width" /></div></Transition>
   <Transition name="overlay"><div v-if="popup" class="native-modal" :class="{'native-modal--scene':dialogScenes.length}" @click.self="close"><section class="native-dialog" :data-popup-hook="popup.hook" :class="{'native-dialog--scene':dialogScenes.length}" role="dialog" aria-modal="true" :aria-label="popup.title||'Информация'"><button class="dialog-close" aria-label="Закрыть" @click="close">×</button><h2 v-if="popup.title">{{popup.title}}</h2><div v-if="popup.html" class="popup-description" v-html="popup.html"></div><SceneBlock v-for="item in dialogScenes" :key="item.id" :scene="item" :width="Math.min(width,1200)" /><MediaPreview v-if="popup.embed" :url="popup.embed" /><div v-if="popup.pictures" class="gallery-popup"><DesignGallery :pictures="popup.pictures" /></div><SupportForm v-if="popup.form" mode="dry-run" :show-intro="false" /><a v-if="popup.button" class="popup-button" :href="popup.button.href">{{popup.button.text}}</a></section></div></Transition>

@@ -141,10 +141,18 @@ def node(e):
 def compile_page(route):
  global current_path,tooltip_hooks
  current_path=route['path']
- s=BeautifulSoup((ROOT/route['file']).read_text(),'html.parser')
+ current_sources_file=ROOT/'sources/current-page-sources.json'
+ current_sources=json.loads(current_sources_file.read_text()) if current_sources_file.exists() else {}
+ current=current_sources.get(route['path'])
+ if current:
+  raw=(ROOT/current['file']).read_bytes()
+  if hashlib.sha256(raw).hexdigest()!=current['sha256']:raise ValueError('Current public source changed without refreshing its snapshot')
+  s=BeautifulSoup(raw,'html.parser')
+ else:
+  s=BeautifulSoup((ROOT/route['file']).read_text(),'html.parser')
  # Targeted current author design overrides; never replace unrelated page content or execute source JS.
  override_file=ROOT/'sources/shared-source-overrides.json'
- if route['path']=='/' and override_file.exists():
+ if route['path']=='/' and not current and override_file.exists():
   override=json.loads(override_file.read_text())
   for item in override.get('blocks',[]):
    if item['id'] not in ('rec860237765','rec1063609261','rec2322512891'):raise ValueError('Unexpected shared override block')

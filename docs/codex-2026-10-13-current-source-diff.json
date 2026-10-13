@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:22.185Z"
+  },
+  {
+    "path": "/pit",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:24.730Z"
+  },
+  {
+    "path": "/intensiv",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:25.391Z"
+  },
+  {
+    "path": "/tvg",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:27.420Z"
+  },
+  {
+    "path": "/invent",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:28.293Z"
+  },
+  {
+    "path": "/personaldata",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:28.794Z"
+  },
+  {
+    "path": "/data-consent",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:29.417Z"
+  },
+  {
+    "path": "/part_oferta",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:30.060Z"
+  },
+  {
+    "path": "/offer",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:30.673Z"
+  },
+  {
+    "path": "/consent",
+    "changedTexts": 0,
+    "examples": [],
+    "capturedAt": "2026-10-13T09:22:31.410Z"
+  }
+]

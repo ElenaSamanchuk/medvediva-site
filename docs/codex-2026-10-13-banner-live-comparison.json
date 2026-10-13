@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-13T09:16:54.535Z",
+  "rows": [
+    {
+      "width": 1440,
+      "kind": "live",
+      "rect": {
+        "x": 270,
+        "y": 60,
+        "width": 1200,
+        "height": 95,
+        "right": 1470
+      },
+      "css": {
+        "position": "fixed",
+        "left": "270px",
+        "top": "60px",
+        "width": "1200px",
+        "maxWidth": "1408px",
+        "display": "block",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "transition": "1.5s"
+      },
+      "artboard": {
+        "x": 270,
+        "y": 60,
+        "width": 1200,
+        "height": 95
+      },
+      "text": "#rec2322512891 .t396__artboard{height:95px;}#rec2322512891 .t396__filter{height:95px;}#rec2322512891 .t396__carrier{height:95px;background-position:center cente",
+      "time": 8968.5
+    },
+    {
+      "width": 1440,
+      "kind": "dev",
+      "rect": {
+        "x": 270,
+        "y": 60,
+        "width": 1200,
+        "height": 95,
+        "right": 1470
+      },
+      "css": {
+        "position": "fixed",
+        "left": "270px",
+        "top": "60px",
+        "width": "1200px",
+        "maxWidth": "1408px",
+        "display": "block",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "0s"
+      },
+      "artboard": {
+        "x": 270,
+        "y": 60,
+        "width": 1200,
+        "height": 95
+      },
+      "text": "Дублируем информацию в других соцсетях. Если не работает Телеграм — переходите сюда",
+      "time": 3793.2000000029802
+    },
+    {
+      "width": 390,
+      "kind": "live",
+      "rect": {
+        "x": 0,
+        "y": 55,
+        "width": 390,
+        "height": 82,
+        "right": 390
+      },
+      "css": {
+        "position": "fixed",
+        "left": "0px",
+        "top": "55px",
+        "width": "390px",
+        "maxWidth": "100%",
+        "display": "block",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "transition": "1.5s"
+      },
+      "artboard": {
+        "x": 0,
+        "y": 55,
+        "width": 390,
+        "height": 82
+      },
+      "text": "#rec2322512891 .t396__artboard{height:95px;}#rec2322512891 .t396__filter{height:95px;}#rec2322512891 .t396__carrier{height:95px;background-position:center cente",
+      "time": 8674.20000000298
+    },
+    {
+      "width": 390,
+      "kind": "dev",
+      "rect": {
+        "x": 0,
+        "y": 55,
+        "width": 390,
+        "height": 82,
+        "right": 390
+      },
+      "css": {
+        "position": "fixed",
+        "left": "0px",
+        "top": "55px",
+        "width": "390px",
+        "maxWidth": "100%",
+        "display": "block",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "0s"
+      },
+      "artboard": {
+        "x": 0,
+        "y": 55,
+        "width": 390,
+        "height": 82
+      },
+      "text": "Дублируем информацию в других соцсетях. Если не работает Телеграм — переходите сюда",
+      "time": 3764.8000000044703
+    }
+  ]
+}

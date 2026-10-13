@@ -1,0 +1,194 @@
+[
+  {
+    "width": 320,
+    "title": {
+      "x": 136,
+      "y": 213,
+      "width": 144.453125,
+      "height": 34,
+      "top": 213,
+      "right": 280.453125,
+      "bottom": 247,
+      "left": 136
+    },
+    "desc": {
+      "x": 136,
+      "y": 244.24560546875,
+      "width": 136.640625,
+      "height": 37,
+      "top": 244.24560546875,
+      "right": 272.640625,
+      "bottom": 281.24560546875,
+      "left": 136
+    },
+    "titleLineHeight": "normal",
+    "learn": [],
+    "scrollWidth": 320
+  },
+  {
+    "width": 390,
+    "title": {
+      "x": 165.75,
+      "y": 259.59375,
+      "width": 176.05224609375,
+      "height": 41.4375,
+      "top": 259.59375,
+      "right": 341.80224609375,
+      "bottom": 301.03125,
+      "left": 165.75
+    },
+    "desc": {
+      "x": 165.75,
+      "y": 297.5116271972656,
+      "width": 166.53076171875,
+      "height": 45.093780517578125,
+      "top": 297.5116271972656,
+      "right": 332.28076171875,
+      "bottom": 342.60540771484375,
+      "left": 165.75
+    },
+    "titleLineHeight": "normal",
+    "learn": [],
+    "scrollWidth": 390
+  },
+  {
+    "width": 1440,
+    "title": {
+      "x": 299,
+      "y": 429,
+      "width": 192.59375,
+      "height": 44,
+      "top": 429,
+      "right": 491.59375,
+      "bottom": 473,
+      "left": 299
+    },
+    "desc": {
+      "x": 299,
+      "y": 474.0508117675781,
+      "width": 228.484375,
+      "height": 52.593719482421875,
+      "top": 474.0508117675781,
+      "right": 527.484375,
+      "bottom": 526.64453125,
+      "left": 299
+    },
+    "titleLineHeight": "normal",
+    "learn": [],
+    "scrollWidth": 1440
+  },
+  {
+    "url": "http://127.0.0.1:5176/invent",
+    "facts": [
+      {
+        "id": "2365924581",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 505,
+          "top": 0,
+          "right": 390,
+          "bottom": 505,
+          "left": 0
+        }
+      },
+      {
+        "id": "2365900271",
+        "rect": {
+          "x": 0,
+          "y": 505,
+          "width": 390,
+          "height": 109,
+          "top": 505,
+          "right": 390,
+          "bottom": 614,
+          "left": 0
+        }
+      },
+      {
+        "id": "2368131481",
+        "rect": {
+          "x": 0,
+          "y": 614,
+          "width": 390,
+          "height": 585,
+          "top": 614,
+          "right": 390,
+          "bottom": 1199,
+          "left": 0
+        }
+      },
+      {
+        "id": "2368131981",
+        "rect": {
+          "x": 0,
+          "y": 1199,
+          "width": 390,
+          "height": 663,
+          "top": 1199,
+          "right": 390,
+          "bottom": 1862,
+          "left": 0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://medvediva.ru/invent",
+    "facts": [
+      {
+        "id": "2365924581",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 505,
+          "top": 0,
+          "right": 390,
+          "bottom": 505,
+          "left": 0
+        }
+      },
+      {
+        "id": "2365900271",
+        "rect": {
+          "x": 0,
+          "y": 505,
+          "width": 390,
+          "height": 109,
+          "top": 505,
+          "right": 390,
+          "bottom": 614,
+          "left": 0
+        }
+      },
+      {
+        "id": "2368131481",
+        "rect": {
+          "x": 0,
+          "y": 614,
+          "width": 390,
+          "height": 585,
+          "top": 614,
+          "right": 390,
+          "bottom": 1199,
+          "left": 0
+        }
+      },
+      {
+        "id": "2368131981",
+        "rect": {
+          "x": 0,
+          "y": 1199,
+          "width": 390,
+          "height": 663,
+          "top": 1199,
+          "right": 390,
+          "bottom": 1862,
+          "left": 0
+        }
+      }
+    ]
+  }
+]
