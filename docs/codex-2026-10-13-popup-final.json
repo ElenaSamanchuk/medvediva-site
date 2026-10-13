@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-13T08:33:19.747Z",
+  "rows": [
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "samples": [
+        {
+          "text": "Обучения Алены Медведевой",
+          "family": "Inter, Arial, sans-serif",
+          "weight": "500",
+          "size": "30px",
+          "lineHeight": "35.1px",
+          "actual": [
+            {
+              "familyName": "Inter Medium",
+              "postScriptName": "Inter-Medium",
+              "isCustomFont": true,
+              "glyphCount": 25
+            }
+          ]
+        },
+        {
+          "text": "Polestar Pilates «Принципы движения»",
+          "family": "Inter, Arial, sans-serif",
+          "weight": "400",
+          "size": "14px",
+          "lineHeight": "21.7px",
+          "actual": [
+            {
+              "familyName": "Inter",
+              "postScriptName": "Inter-Regular",
+              "isCustomFont": true,
+              "glyphCount": 38
+            }
+          ]
+        }
+      ],
+      "closeImmediateDOM": 1,
+      "afterCloseDOM": 0,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "samples": [
+        {
+          "text": "Обучения Алены Медведевой",
+          "family": "Inter, Arial, sans-serif",
+          "weight": "500",
+          "size": "30px",
+          "lineHeight": "35.1px",
+          "actual": [
+            {
+              "familyName": "Inter Medium",
+              "postScriptName": "Inter-Medium",
+              "isCustomFont": true,
+              "glyphCount": 25
+            }
+          ]
+        },
+        {
+          "text": "Polestar Pilates «Принципы движения»",
+          "family": "Inter, Arial, sans-serif",
+          "weight": "400",
+          "size": "14px",
+          "lineHeight": "21.7px",
+          "actual": [
+            {
+              "familyName": "Inter",
+              "postScriptName": "Inter-Regular",
+              "isCustomFont": true,
+              "glyphCount": 38
+            }
+          ]
+        }
+      ],
+      "closeImmediateDOM": 1,
+      "afterCloseDOM": 0,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "samples": [
+        {
+          "text": "Обучения Алены Медведевой",
+          "family": "Inter, Arial, sans-serif",
+          "weight": "500",
+          "size": "24px",
+          "lineHeight": "28.08px",
+          "actual": [
+            {
+              "familyName": "Inter Medium",
+              "postScriptName": "Inter-Medium",
+              "isCustomFont": true,
+              "glyphCount": 24
+            }
+          ]
+        },
+        {
+          "text": "Polestar Pilates «Принципы движения»",
+          "family": "Inter, Arial, sans-serif",
+          "weight": "400",
+          "size": "10px",
+          "lineHeight": "14.5px",
+          "actual": [
+            {
+              "familyName": "Inter",
+              "postScriptName": "Inter-Regular",
+              "isCustomFont": true,
+              "glyphCount": 38
+            }
+          ]
+        }
+      ],
+      "closeImmediateDOM": 1,
+      "afterCloseDOM": 0,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "motion": "reduce",
+      "samples": [
+        {
+          "text": "Обучения Алены Медведевой",
+          "family": "Inter, Arial, sans-serif",
+          "weight": "500",
+          "size": "24px",
+          "lineHeight": "28.08px",
+          "actual": [
+            {
+              "familyName": "Inter Medium",
+              "postScriptName": "Inter-Medium",
+              "isCustomFont": true,
+              "glyphCount": 24
+            }
+          ]
+        },
+        {
+          "text": "Polestar Pilates «Принципы движения»",
+          "family": "Inter, Arial, sans-serif",
+          "weight": "400",
+          "size": "10px",
+          "lineHeight": "14.5px",
+          "actual": [
+            {
+              "familyName": "Inter",
+              "postScriptName": "Inter-Regular",
+              "isCustomFont": true,
+              "glyphCount": 38
+            }
+          ]
+        }
+      ],
+      "closeImmediateDOM": 1,
+      "afterCloseDOM": 0,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+[
+  {
+    "name": "chromium",
+    "width": 320,
+    "opened": true,
+    "menu": "×  Подписывайтесь на социальные сети проекта Medve.Diva   Личный кабинетПитание и тренировкиинтенсивТело в головеОборудование",
+    "links": [
+      {
+        "text": "  Личный кабинет   ",
+        "scene": "1063609261",
+        "node": "1745573724678",
+        "rect": {
+          "x": 175,
+          "y": -175,
+          "width": 97,
+          "height": 24,
+          "top": -175,
+          "right": 272,
+          "bottom": -151,
+          "left": 175
+        },
+        "atomStyle": {
+          "font": "600 8px / 12.4px Manrope, Arial, sans-serif",
+          "height": "24px",
+          "display": "flex",
+          "alignItems": "center"
+        }
+      },
+      {
+        "text": "  Личный кабинет   ",
+        "scene": "770878605",
+        "node": "1691847195188",
+        "rect": {
+          "x": 199,
+          "y": 1599,
+          "width": 110,
+          "height": 28,
+          "top": 1599,
+          "right": 309,
+          "bottom": 1627,
+          "left": 199
+        },
+        "atomStyle": {
+          "font": "600 8px / 12.4px Inter",
+          "height": "28px",
+          "display": "flex",
+          "alignItems": "center"
+        }
+      },
+      {
+        "text": "Личный кабинет",
+        "scene": "860237765",
+        "node": "1748446143742",
+        "rect": {
+          "x": 152,
+          "y": 470.4765625,
+          "width": 89.703125,
+          "height": 14,
+          "top": 470.4765625,
+          "right": 241.703125,
+          "bottom": 484.4765625,
+          "left": 152
+        },
+        "atomStyle": {
+          "font": "500 11px / 17.05px Inter",
+          "height": "17.0469px",
+          "display": "table-cell",
+          "alignItems": "normal"
+        }
+      }
+    ],
+    "menuIcon": {
+      "x": 254,
+      "y": 469,
+      "width": 16,
+      "height": 16,
+      "top": 469,
+      "right": 270,
+      "bottom": 485,
+      "left": 254
+    },
+    "menuLabel": {
+      "x": 152,
+      "y": 469.4765625,
+      "width": 98,
+      "height": 17.046875,
+      "top": 469.4765625,
+      "right": 250,
+      "bottom": 486.5234375,
+      "left": 152
+    }
+  },
+  {
+    "name": "chromium",
+    "width": 390,
+    "opened": true,
+    "menu": "×  Подписывайтесь на социальные сети проекта Medve.Diva   Личный кабинетПитание и тренировкиинтенсивТело в головеОборудование",
+    "links": [
+      {
+        "text": "  Личный кабинет   ",
+        "scene": "1063609261",
+        "node": "1745573724678",
+        "rect": {
+          "x": 213.28125,
+          "y": -213.28125,
+          "width": 118.21875,
+          "height": 29.25,
+          "top": -213.28125,
+          "right": 331.5,
+          "bottom": -184.03125,
+          "left": 213.28125
+        },
+        "atomStyle": {
+          "font": "600 8px / 12.4px Manrope, Arial, sans-serif",
+          "height": "24px",
+          "display": "flex",
+          "alignItems": "center"
+        }
+      },
+      {
+        "text": "  Личный кабинет   ",
+        "scene": "770878605",
+        "node": "1691847195188",
+        "rect": {
+          "x": 242.53125,
+          "y": 1947.3125,
+          "width": 134.0625,
+          "height": 34.125,
+          "top": 1947.3125,
+          "right": 376.59375,
+          "bottom": 1981.4375,
+          "left": 242.53125
+        },
+        "atomStyle": {
+          "font": "600 8px / 12.4px Inter",
+          "height": "28px",
+          "display": "flex",
+          "alignItems": "center"
+        }
+      },
+      {
+        "text": "Личный кабинет",
+        "scene": "860237765",
+        "node": "1748446143742",
+        "rect": {
+          "x": 185.25,
+          "y": 573.393310546875,
+          "width": 109.32568359375,
+          "height": 17.0625,
+          "top": 573.393310546875,
+          "right": 294.57568359375,
+          "bottom": 590.455810546875,
+          "left": 185.25
+        },
+        "atomStyle": {
+          "font": "500 11px / 17.05px Inter",
+          "height": "17.0469px",
+          "display": "table-cell",
+          "alignItems": "normal"
+        }
+      }
+    ],
+    "menuIcon": {
+      "x": 309.5625,
+      "y": 571.59375,
+      "width": 19.5,
+      "height": 19.5,
+      "top": 571.59375,
+      "right": 329.0625,
+      "bottom": 591.09375,
+      "left": 309.5625
+    },
+    "menuLabel": {
+      "x": 185.25,
+      "y": 572.174560546875,
+      "width": 119.4375,
+      "height": 20.77587890625,
+      "top": 572.174560546875,
+      "right": 304.6875,
+      "bottom": 592.950439453125,
+      "left": 185.25
+    }
+  },
+  {
+    "name": "webkit",
+    "width": 320,
+    "opened": true,
+    "menu": "×  Подписывайтесь на социальные сети проекта Medve.Diva   Личный кабинетПитание и тренировкиинтенсивТело в головеОборудование",
+    "links": [
+      {
+        "text": "  Личный кабинет   ",
+        "scene": "1063609261",
+        "node": "1745573724678",
+        "rect": {
+          "x": 175,
+          "y": -175,
+          "width": 97,
+          "height": 24,
+          "top": -175,
+          "right": 272,
+          "bottom": -151,
+          "left": 175
+        },
+        "atomStyle": {
+          "font": "600 8px / 12.4px Manrope, Arial, sans-serif",
+          "height": "24px",
+          "display": "flex",
+          "alignItems": "center"
+        }
+      },
+      {
+        "text": "  Личный кабинет   ",
+        "scene": "770878605",
+        "node": "1691847195188",
+        "rect": {
+          "x": 199,
+          "y": 1599,
+          "width": 110,
+          "height": 28,
+          "top": 1599,
+          "right": 309,
+          "bottom": 1627,
+          "left": 199
+        },
+        "atomStyle": {
+          "font": "600 8px / 12.4px Inter",
+          "height": "28px",
+          "display": "flex",
+          "alignItems": "center"
+        }
+      },
+      {
+        "text": "Личный кабинет",
+        "scene": "860237765",
+        "node": "1748446143742",
+        "rect": {
+          "x": 152,
+          "y": 471.36865234375,
+          "width": 89.69189453125,
+          "height": 13.3095703125,
+          "top": 471.36865234375,
+          "right": 241.69189453125,
+          "bottom": 484.67822265625,
+          "left": 152
+        },
+        "atomStyle": {
+          "font": "500 11px / 17.049999px Inter",
+          "height": "17.046875px",
+          "display": "table-cell",
+          "alignItems": "normal"
+        }
+      }
+    ],
+    "menuIcon": {
+      "x": 254,
+      "y": 469,
+      "width": 16,
+      "height": 16,
+      "top": 469,
+      "right": 270,
+      "bottom": 485,
+      "left": 254
+    },
+    "menuLabel": {
+      "x": 152,
+      "y": 469.5,
+      "width": 98,
+      "height": 17.046875,
+      "top": 469.5,
+      "right": 250,
+      "bottom": 486.546875,
+      "left": 152
+    }
+  },
+  {
+    "name": "webkit",
+    "width": 390,
+    "opened": true,
+    "menu": "×  Подписывайтесь на социальные сети проекта Medve.Diva   Личный кабинетПитание и тренировкиинтенсивТело в головеОборудование",
+    "links": [
+      {
+        "text": "  Личный кабинет   ",
+        "scene": "1063609261",
+        "node": "1745573724678",
+        "rect": {
+          "x": 213.28125,
+          "y": -213.28125,
+          "width": 118.21875,
+          "height": 29.25,
+          "top": -213.28125,
+          "right": 331.5,
+          "bottom": -184.03125,
+          "left": 213.28125
+        },
+        "atomStyle": {
+          "font": "600 8px / 12.4px Manrope, Arial, sans-serif",
+          "height": "24px",
+          "display": "flex",
+          "alignItems": "center"
+        }
+      },
+      {
+        "text": "  Личный кабинет   ",
+        "scene": "770878605",
+        "node": "1691847195188",
+        "rect": {
+          "x": 242.53125,
+          "y": 1947.3125,
+          "width": 134.0625,
+          "height": 34.125,
+          "top": 1947.3125,
+          "right": 376.59375,
+          "bottom": 1981.4375,
+          "left": 242.53125
+        },
+        "atomStyle": {
+          "font": "600 8px / 12.4px Inter",
+          "height": "28px",
+          "display": "flex",
+          "alignItems": "center"
+        }
+      },
+      {
+        "text": "Личный кабинет",
+        "scene": "860237765",
+        "node": "1748446143742",
+        "rect": {
+          "x": 185.25,
+          "y": 574.4805297851562,
+          "width": 109.31201171875,
+          "height": 16.2210693359375,
+          "top": 574.4805297851562,
+          "right": 294.56201171875,
+          "bottom": 590.7015991210938,
+          "left": 185.25
+        },
+        "atomStyle": {
+          "font": "500 11px / 17.049999px Inter",
+          "height": "17.046875px",
+          "display": "table-cell",
+          "alignItems": "normal"
+        }
+      }
+    ],
+    "menuIcon": {
+      "x": 309.5625,
+      "y": 571.59375,
+      "width": 19.5,
+      "height": 19.5,
+      "top": 571.59375,
+      "right": 329.0625,
+      "bottom": 591.09375,
+      "left": 309.5625
+    },
+    "menuLabel": {
+      "x": 185.25,
+      "y": 572.203125,
+      "width": 119.4375,
+      "height": 20.77587890625,
+      "top": 572.203125,
+      "right": 304.6875,
+      "bottom": 592.97900390625,
+      "left": 185.25
+    }
+  }
+]

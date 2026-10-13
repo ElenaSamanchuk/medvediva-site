@@ -1,0 +1,160 @@
+# PROGRESS — Medvediva Tilda → Vue + Tailwind
+
+Обновлено: 09.10.2026, Europe/Minsk. Исполнитель: Codex. Источник состояния этой задачи — этот файл.
+
+## Цель и границы
+Весь публичный medvediva.ru: сохранить внешний вид, контент, URL/query/якоря, адаптив и рабочие бизнес-интеграции; убрать Tilda runtime/JS/CSS/CDN/forms. Не редизайн. Публичный сайт только читался; формы/платежи/Tilda/DNS не менялись. Git-коммиты, push, публикация и дополнительные платные API не выполнялись. Телефоны не использовались.
+
+## Завершено на текущем этапе
+- Прочитаны общие AGENTS/CLAUDE, elena-web-projects, общий shared workflow и полный QA-свод.
+- Старый чат «Перенести архив Tilda на Vue» проверен: обсуждение возможностей, подтверждённого архива/кода нет. Аудит источников координатора перенесён в docs/SOURCE-AUDIT.md. Архивы Kochfit/Popovich не использованы.
+- Создана отдельная папка medvediva-site. Собственного Git-корня/origin нет, наследуется /Users/elena/Projects; родительские проекты не менялись.
+- Сохранены публичные sitemap/robots/store sitemap и 111/120 HTML (около 56 MB). Последовательный acquisition завершён, 9 ошибок; это не подтверждённые баги сайта.
+- Offline manifest: 199 кандидатов маршрутов из sitemap/store/robots/ссылок; 1773 кандидата asset/URL, не полный список пригодных медиа. complete=false. URL/query/якоря/canonical/meta/формы/ссылки сохранены по доступным HTML. Чужой legacy host отмечен отдельно.
+- Эталоны главной 1440 desktop и 390 mobile touch/DPR3 после прокрутки/lazy-loading: screens-source. Остальные визуальные состояния ещё не сняты.
+- src/components/SupportForm.vue + src/lib/support.mjs: независимый Vue/Tailwind компонент, валидация, состояния отправки/ошибки/неподтверждённой доставки. default unconfigured; workbench только dry-run, без fetch/сохранения данных. Нативная страница всего сайта пока НЕ реализована.
+- npm install выполнен из npm, ignore-scripts; package-lock создан. Endor package-risk UNKNOWN: MCP/endorctl отсутствуют, не запускались платные сервисы. DEPENDENCIES.md содержит пробелы.
+- npm test: 5/5. npm run build: PASS (index-DuCucz1O.js, index-DGoUKEAY.css). Статический поиск текущего dist не нашёл подключения Tilda; это не подтверждает будущий полный сайт.
+- Локальный Chromium smoke 1440/390/320: validation/dry-run PASS, POST=0, pageerror=0, scrollWidth=viewport. Mobile hasTouch/isMobile/DPR3. CUA независимо подтвердил validation и сообщение dry-run.
+- HTML-отчёт: 1280/390, light/dark — scrollWidth=viewport, 0 битых изображений после lazy-loading; шапки визуально просмотрены во всех четырёх режимах. Lightbox open/next/close PASS, JSON-доказательства в docs/report-validation.json и report-lightbox.json. Скачивание оригиналов/свайп/полная визуальная проверка всех секций отдельно не выполнялись.
+- Полный комплект отчёта локального этапа создан: MD/HTML qa-kit/сообщение/комментарии; адресаты отдельного сайта не установлены, сообщения не отправлены.
+- Архитектура, план/предварительная оценка, запуск, развёртывание и приёмка описаны в docs; README ссылается на них.
+
+## Решения Елены
+Пока переносить локально на свой код; backend/получатели неизвестны. Елена попробует скачать свежий экспорт Tilda. Формы сохранить по назначению без обращений к Tilda. Зафиксировано в docs/DECISIONS.md.
+
+## Ограничения и что НЕ готово
+Свежий экспорт проекта 2075161 ещё не получен. Доставку формы нельзя считать рабочей: backend/получатели/consent/retention/idempotency не подтверждены. Полный frontend, самостоятельные медиа/шрифты, SEO/SSG, все URL/redirects/404, тарифы/сезонные состояния, аналитика/chat/bots/LK/payment и визуальное сравнение не завершены. 199 кандидатов требуют классификации, не все — страницы. Safari/Firefox/планшет/landscape/полный security/performance/a11y не проверены. Текущий dist — workbench, не публиковать как сайт.
+
+## Следующий шаг
+1. Получить от Елены ZIP свежего полного экспорта Tilda 2075161 или путь; проверить checksum/path traversal/project ID/canonical, сверить 120 sitemap URL + store/robots + дополнительные ссылки, даты/ассеты/редиректы/интеграции.
+2. Снять дополнительные эталоны основных лендингов и попапов. Перенести главную как нативный Vue/Tailwind пилот, локализовать ассеты/шрифты, сохранить композиции ZeroBlock и все состояния.
+3. Подтвердить пилот визуально и затем переносить общие блоки/маршруты; формы пока dry-run/unconfigured. Настройка реального backend позже, до приёмки.
+4. Пересчитать оценку после классификации. Предварительно пилот 4–8 активных часов после сверки; остальной сайт 30–60 часов плюс QA 8–16, без обещания срока доставки backend.
+
+## Запуск и доказательства
+npm run dev → http://127.0.0.1:5176/ (только loopback). npm test, npm run build, npm run inventory. README и docs/RUN.md. Источники: sources/live, route-manifest.json, migration-manifest.json, asset-candidates.json, integration-hosts.json. Доказательства: form-smoke.json, screens-local, screens-source. Никакой автоматической публикации/облачной синхронизации.
+
+## Ошибки acquisition (не баги)
+- https://medvediva.ru/fitness_for_health
+- https://medvediva.ru/page60815917.html
+- https://medvediva.ru/page105401526.html
+- https://medvediva.ru/data-consent
+- https://medvediva.ru/intensiv
+- https://medvediva.ru/b59
+- https://medvediva.ru/b80
+- https://medvediva.ru/page52708701.html
+- https://medvediva.ru/page144943146.html
+
+Локальный dev-server оставлен для просмотра результата: 127.0.0.1:5176 (exec session 92891). Автоматические acquisition/screenshot/smoke-процессы завершены.
+
+## Продолжение 09.10.2026 — свежий экспорт получен, frontend в работе
+
+Этот раздел заменяет прежнее ожидание ZIP и статус «только workbench». Предыдущий отчёт описывает именно предыдущую фазу.
+
+- Архив из Downloads проверен: SHA256 3d401fff25472e929981904463ec2ccee6cd682f1bb1a34fd8c484f3ce328e86, 1613 записей, 250 HTML, проект только 2075161, 124 уникальных canonical. Нет traversal/symlink. Извлечён в sources/export/2026-10-09/alenamedvedeva.
+- Представлены 119/120 sitemap URL. Недостающий /page60815917.html публично прочитан: HTTP 200, 1315 байт, пустая оболочка Tilda Members, robots=noindex; защищённый контент отсутствует. Не считать его публичным лендингом или 404.
+- tools/normalize_export.py извлекает дизайн, безопасное содержимое и конфигурацию в собственные модели; исходные JS/CSS bundles не подключаются. SceneBlock/SceneNode — независимый Vue renderer, собственные layout/масштабирование/группы/события/попапы. Generated per-element presentation содержит дизайн источника, без vendor runtime.
+- Изображения хешированы и сохранены в public/media (980 уникальных из архива); 12 кастомных начертаний и 5 Inter сохранены в public/fonts. В экспорте есть отсутствующие файлы/устаревшие Figma S3 URL; статус sources/missing-media-status.json и asset-issues.json. Дополнительные публичные изображения локализуются; на главной восстановлен Ellipse_455.svg по правильному регистру имени в live-источнике.
+- Корень localhost:5176 теперь главная; форма отдельно /__preview/support. Реализованы source-секции главной, header, меню, timed banner, cookie persistence, текстовые попапы, support dry-run, Telegram/LK/прочие ссылки. Исправлена перекрытая кликабельная надпись «Обучения».
+- Извлечены данные 124 маршрутов. Добавлены native article, form, gallery, embed preview и scene popups. 14 стандартных блоков ещё требуют переноса (список public/content/routes.json); custom JS-модификации и все состояния не приняты.
+- build:site создаёт 124 HTML через Vue SSR с текстом в HTML, title/description/canonical, source route aliases и локальными ресурсами. Режим preview: noindex + robots Disallow /; не публиковать. SSR build работает без dev websocket. npm test 5/5, build/build:site прошли; очередная сборка после последних исправлений ещё впереди.
+- Первые screenshots главной 1440/390 получены; геометрия и основные композиции близки к live. Визуальный PASS не выставлен. Smoke нашёл issues overlay click/hashchange/missing SVG; исправления внесены, повторная проверка впереди.
+
+Следующий шаг: завершить нормализацию ресурсов; повторить smoke и screenshot главной, проверить все маршруты локально, перенести оставшиеся стандартные блоки/custom interactions; затем сверка основных /pit, /intensiv, /tvg и остальных страниц. Backend, реальная доставка, checkout, NN99 chat/analytics и protected Members пока не настроены. Tilda/prod/DNS/Git не менялись, платные сервисы не запускались.
+
+## 09.10.2026 — скрипт предварительной выкатки по поручению Елены
+
+- Свежая статическая сборка: 124 canonical-маршрута с aliases; npm test 10/10; build:site PASS. 1597 файлов dist проверены на отсутствие ключей/ZIP/.env/исходных экспортов. Preview noindex/robots Disallow сохранены.
+- Повторный static-smoke PASS: главная, /pit, /intensiv, /tvg, alias, настоящая 404; текст главной без JS; mobile support/referral dry-run. POST=0, external=0, pageerror=0. Это не визуальная приёмка всех страниц.
+- SSH на согласованном сервере: timeout во время banner exchange, до проверки ключа. HTTPS также не устанавливает TLS-соединение. Сервер не изменялся, публичной выкатки ещё нет. Елена предполагает VPN и попросила код для самостоятельного запуска.
+- Созданы deploy/deploy-preview.sh, server-check.sh, server-activate.sh, check-build.mjs. Локальная синтаксическая проверка bash и аудит сборки прошли. Скрипт строит/загружает только dist, останавливается на неизвестных enabled sites/conf.d/отсутствующем nginx или sudo; штатную welcome-страницу допускает. Отдельный IP vhost HTTP, изолированные релизы, резервная конфигурация и восстановление при ошибке активации. Не устанавливает пакеты/сертификат, не меняет DNS, не удаляет старые релизы. На реальном сервере пока не выполнялся.
+- Последние требования записаны в DECISIONS.md. Ранее обнаруженные потери border/icon, общий layout, Sender, UTM/Back, iframe, типографика/tokens и полная визуальная приёмка остаются в работе. 2 legacy cart declaration не реализованы, отсутствующие Figma-медиа не приняты. Нельзя называть текущую версию завершённой.
+- Следующий шаг: Елена запускает скрипт после VPN; при STOP присылает только текст ошибки, без ключа/секретов. По фактическому inventory адаптировать конфигурацию; затем проверить публичные /, /invent, assets, 404, mobile, noindex и TLS. После демонстрации продолжить полный перенос и актуальный комплект QA.
+
+## 09.10.2026 — пауза перед выключением компьютера
+
+По прямой просьбе Елены работа остановлена. Файлы сохранены; новые этапы, сетевые операции и выкладка не запускались. Сервер не изменён ни здесь, ни координатором; private ElenaSamanchuk/medvediva-site создан координатором и пока пустой. Коммиты/push не выполнялись, проект пока наследует родительский Git — его не пушить.
+
+Передача: актуальная сборка в dist, данные 124 страниц в public/content, изменения текущего этапа в deploy/ и docs/DECISIONS.md; проверки и ограничения — в предыдущем разделе. Выкатку Елена запускает сама после VPN: `cd /Users/elena/Projects/medvediva-site` → `bash deploy/deploy-preview.sh`. Содержимое ключа/секреты не передавать. Скрипт рассчитан на HTTP; HTTPS пока не подтверждён. Локальное возобновление: `npm run dev` (5176) или `npm run preview` (4176). Сборка: `npm run build:site`; тесты: `npm test`. Полный QA и перенос ещё не завершены; следующим этапом обработать результат самостоятельной выкатки либо продолжить пункты приёмки из DECISIONS.md.
+
+Собственные локальные серверы Vite 5176 (session 92891) и static preview 4176 (session 15006) остановлены Ctrl+C; обе сессии завершились exit 130. Чужие процессы не трогались.
+
+## 09.10.2026 — Cursor: доработка deploy preview
+
+- Исполнитель: Cursor. Коммиты/push не выполнялись; сервер по SSH из среды агента без VPN по-прежнему недоступен (timeout banner exchange).
+- Добавлены `deploy/diagnose-preview.sh` (SSH + server-check + локальная сборка без upload) и `deploy/server-setup.sh` (однократно nginx на VM). Все `deploy/*.sh` с `chmod +x`, `bash -n` OK.
+- `server-activate.sh`: самоподписанный HTTPS для IP 146.185.240.110 (как у Popovich по IP), smoke curl по HTTP и HTTPS на localhost сервера.
+- `deploy-preview.sh`: подсказки при SSH/SCP сбое (VPN, другой IP vs Popovich 241.179, server-setup, diagnose).
+- `docs/DEPLOYMENT.md` переписан под фактический preview-процесс и таблицу STOP из server-check.
+- Локально: `npm test` 10/10, `node deploy/check-build.mjs` PASS (1597 файлов dist).
+- Следующий шаг для Елены: VPN → `bash deploy/diagnose-preview.sh` → при OK `bash deploy/deploy-preview.sh`; при STOP — только текст ошибки в чат.
+
+## 09.10.2026 23:53 — Cursor: минута на открытии http
+
+- Исполнитель: Cursor. Коммиты не делались. Повторная полная выкладка не нужна.
+- HTTP с десктопа и телефона открывается. Минута ожидания — не VPN и не отдельная мобильная сборка.
+- На главной четыре раза стоит один и тот же кружок 40×40 px: `media/bcc1a3b045eb419d9478dd0b.svg`. Внутри был JPEG 2725×4096, файл 8.2 МБ. Браузер качает и разбирает его до того, как страница выглядит готовой. Gzip почти не помогает: это уже сжатое фото в base64.
+- Файл заменён локально на тот же кадр, обрезанный в круг и уменьшенный до 160 px, 8.9 КБ. Копия в `public/media` и `dist/media`. На сервер Елена копирует один файл в релиз `20261009T173948Z`, без новой сборки.
+- На других страницах ещё пять SVG больше 1 МБ при размере иконки. Их не трогал, пока не откроют эти страницы.
+
+## 10.10.2026 00:02 — Cursor: nginx без сжатия
+
+- Исполнитель: Cursor. Коммиты не делались. Сайт не пересобирался, аватарка не причина: на сервере она уже 8.9 КБ, инкогнито всё равно открывает http://146.185.240.110/ около 20 секунд и на десктопе, и на телефоне.
+- Причина отдачи: nginx превью слушал только порт 80 и отдавал HTML (~240 КБ) и CSS (~451 КБ) без gzip и без кеша. Картинки главной ~2.7 МБ и используемые шрифты ~1.7 МБ при этом качаются заново при каждом заходе.
+- В `deploy/server-activate.sh` для этой VM: gzip уровня 5 для html/css/js/json/svg, sendfile, tcp_nopush, tcp_nodelay, open_file_cache. Картинки, шрифты и `/assets/` — кеш 7 дней. HTML — `Cache-Control: no-cache`. Порт 443 не включался. Елена применяет тот же релиз `20261009T173948Z` одной командой ssh.
+
+## 12.10.2026 — Codex: попапы /invent, общий layout, Sender; ПАУЗА
+
+Последняя прямая команда Елены — остановить Medvediva ради других приоритетов. Работа сохранена; до новой команды не запускать дальнейшие проверки, сборку, публикацию или сетевые действия. Коммиты/push/SSH/deploy не выполнялись. Изменения Cursor в deploy и оптимизированной аватарке сохранены.
+
+### Что исправлено и фактически проверено
+- Дважды воспроизведён сбой `/invent` → `#zeropopup1`: Vue `Cannot read properties of undefined (reading 'id')`, затем разрушение дерева. Причина: source `data-popup-rec-ids` содержит `rec…`, модели сцен — id без `rec`. Исправлены compiler и обратная совместимость renderer; popup scenes исключаются из тела страницы, отдельное оформление без padding обычного текстового окна, source blur. Кадры до: screens-local/web-invent-popup-before-0.png и -1.png.
+- Девять карточек `/invent` открываются/закрываются на 1440/768/390/320; 36 сценариев, 0 pageerror. Close возвращает прежний URL; DOM содержит один экземпляр сцены попапа. Факты: docs/popup-smoke-codex-1210.json, screens-local/web-invent-popup-after-1440.png, web-mob-invent-popup-after-{768,390,320}.png. Визуально просмотрены кадры 1440 и 320. Это не приёмка всех попапов сайта и не сравнение всех состояний с live.
+- Нормализация всех 124 моделей завершена, standard pass: 12 native models, 2 legacy declaration остаются. CSS var fallback перестал преждевременно заменять исходные border/color; исправлены локальные URL и native button icon mask. Повторное визуальное сравнение border/icon главной ещё не выполнено.
+- SiteHeader/SiteFooter + tools/compile-shared-layout.mjs: общий источник главной для header/menu/cookie/footer на всех маршрутах, отдельно SSR/layout seed. Компиляция и build:site прошли: 124 страницы; index-Cutc1bV8.js и index-SYsA6teg.css. Полная проверка common layout и всех legacy исключений ещё предстоит.
+- History попапов/меню: pushState, Back, возврат фокуса, focus trap; reduced-motion для появления, scroll-margin для якорей. Закрытие конкретного попапа проверено, полный Back/Forward/hash/cross-page набор не выполнен.
+- Link policy: medvediva/www нормализуются в относительные адреса; внешние HTTP(S) получают blank/noopener/noreferrer; special schemes сохраняются. Добавлен allowlist UTM/click IDs для внутренних страниц и medvediva.nn99.ru, без перезаписи destination query и без меток документов/якорей/прочих внешних сервисов. В preview хранение UTM только в sessionStorage текущей вкладки; исходная длительность UTM не установлена. Source устанавливает persistent last-touch r; это подтверждено по custom script архива. Полный пользовательский путь атрибуции ещё не проверен. tests/attribution.test.mjs + остальные: npm test 14/14.
+- Sender: найден собственный исходник NN99.RU/widget/src/index.js и интеграция в архиве. public/support-preview/widget.js использует этот runtime с изолированным in-memory API adapter: config/init без сети, Socket.IO не подключается, доставка/эскалация/вложения отключены; сообщение остаётся в поле, явный результат «Демонстрационный режим. Сообщение не отправлено». Ключи оригинальной интеграции в preview не копировались; production widget config ещё не принят. Исходник/хеш: sources/sender-source-audit.json. Проверены реальное открытие/закрытие и dry-run на 1440/390/320, 0 external/POST/pageerror, габариты 380×520 desktop и viewport mobile. docs/sender-smoke-codex-1210.json и screens-local/*sender-preview*.png. Скриншоты Sender пока не просмотрены визуально. Это проверка UI preview, не реальной доставки или live config fidelity.
+- iframe inventory по всем canonical источникам: 56 iframe, все kinescope.io; sources/iframe-inventory-codex-1210.json. Текущий MediaPreview ещё использует iframe по клику. Собственный video player/официальные streaming API и доступы пока не определены; требование без iframe не завершено. Никакие iframe видео при этих проверках не запускались.
+
+### Важное о текущей сборке и продолжении
+Последний dist собран ДО подключения Sender и последних CSS/tests: исходный dev-код новее dist. При возобновлении сначала проверить изменения других агентов, затем закончить независимые link/Back/layout/Sender проверки и пересобрать. Нормализатор уже изменён для rich-text link policy, но модели после этой последней правки не регенерировались: в браузере links готовит runtime, без JS часть rich-text policy ещё старая. Не выкатывать dist под видом последнего результата.
+
+Формы по последнему решению — только визуальная демонстрация, backend не добавлять и получателей не ждать. Новый комплект QA этой фазы ещё не создан: есть JSON и PNG, старые отчёты 09.10 не перезаписаны. Следующий шаг — актуальный узкий комплект через qa-kit с честным coverage, затем продолжить typography/tokens, native video alternatives, Meta/cookie, all-route visual acceptance и media/performance. Новые дизайн tokens/массовая редактура текста ещё НЕ выполнены. Полный перенос не завершён.
+
+Для продолжения: `npm run dev` → 127.0.0.1:5176; `npm test`; `npm run build:site`; `npm run preview` → 127.0.0.1:4176. Серверные действия делает Елена отдельно по своей инструкции. Свои телефоны/блокировки не использовались; чужие Chrome/процессы не трогались.
+
+Собственный Vite dev-server (session 63160, порт 5176) остановлен Ctrl+C при паузе. Остальные собственные проверки завершились ранее; общие устройства и блокировки не занимались.
+
+## 13.10.2026 · Codex · PAUSED_BY_USER перед сном
+
+По прямой просьбе Елены работа остановлена до завтра. Dev5176 (session47457) и preview4176 (session6586) остановлены Ctrl+C, оба exit130. Агенты получили команду прекратить проверки и закрыть свои браузеры. Новые правки/тесты/сборки/публикации до продолжения не запускать. Сервер146.185.240.110, Git и телефоны не менялись
+
+Сохранены исправления прямых якорей, Back/Forward, возврата фокуса, попапов/меню, настоящих tooltipHook для /pit,/tvg,/pred, hit-testing пустой шапки, Firefox высоты кнопки и WebKit SVG. Добавлена типографика обычного текста с исключением юридических страниц. Cookies принимаются явно кнопкой (осознанное UX-изменение, не регресс источника)
+
+Native Kinescope плеер без iframe реализован: Safari/iOS native HLS, Chromium lazy hls.js1.7.3. Static /invent подтверждён: готовность3338мс, 5секplay→pause→close, iframe0, pageerrors0; только один публичный ролик. Vue обновлён до3.5.43, npm audit0; Endor package-risk UNKNOWN из-за недоступного MCP, не Endor PASS. Последний dist: index-Cci-sjFg.js / index-sFBiNCys.css,124 SSRстраницы/noindex. Последняя сборка ДО подключения тарифов
+
+ВАЖНО: предварительная версия ещё НЕ ГОТОВА к показу из-за потерянного авторского кода ПИТ. /pit показывает3плашки и статические countdown/тарифные значения. Найден PFinline T123(rec4482970101), сцены карточек4482964301/4482965901, promo4482959301/4482960101/4482961001. Свежий live13Oct PF совпадает с9Oct: датыМСК/phase1/2/3 и outsideCampaign=phase1 — не угадывать закрытие после12Oct. Live countdown deadline13Oct12:00МСК, в архиве12Oct12:00
+
+Сохранено: src/lib/promotion.mjs и tests/promotion.test.mjs (7PASS); sources/promotion-config-2026-10-13.json и promotion-node-map-2026-10-13.json. src/lib/tariffs.mjs и tests/tariffs.test.mjs (4PASS); sources/pf-pit-config.json и public/content/pit-tariffs.json. Helpers/configs ЕЩЁ НЕ ПОДКЛЮЧЕНЫ К UI. Нужно сохранить pf-/cd-classes в compiler, связать show/hide, живой таймер, streams1/2/4/8, TVG+2500, цены/зачёркивания/бейджи и отдельные checkoutlinks без выполнения покупки. Карточки: komfort1782313150684000001 / bazovy1782310489103000046; IDs повторяются в desktop/mobile сценах, ключ должен включать scene
+
+Подтверждено сравнение основных Bounded/Manrope по реально отрисованным CDPглифам и12WOFF побайтно. Но обычный popup#popup_ed пока имеет НЕВЕРНЫЕ generic стили: source Inter50030px/local Manrope60028px, описание Inter40014px/local Manrope40016px; mobiletitle24/22,description10/14. Исправление НЕ внесено. Доказательства docs/codex-2026-10-13-fonts-live-comparison.*, PNG fonts-popup-ed-* в screens-local/codex-2026-10-13-interactions. Вопрос размеров VKбаннера остаётся кандидатом из-за масштабирования, не подтверждённым багом
+
+Приоритет завтра: 1) подключить PF/cd/tariffs и проверить границы дат и все комбинации streams+TVG+checkoutURL; 2) исправить popup Interстили и плавный выход menu/modal (пока v-if без exitTransition); 3) закончить полный инвентарь авторских T123/customscripts всего экспорта, включая текущий live, не путать vendorJS с авторской бизнеслогикой; 4) проверить особенно10адресов меню/футера из docs/codex-2026-10-13-primary-routes.json: /,/pit,/intensiv,/tvg,/invent,/personaldata,/data-consent,/part_oferta,/offer,/consent. Текст документов не редактировать. /offer320 overflow341 — кандидат layoutагента, дождаться результата повтора/фикса; 5) одна актуальная сборка→stable4176→повтор основных размеров, шрифтов, картинок, анимаций, попапов, кода и UX. Автообход124маршрутов не равен полной визуальной приёмке
+
+Артефакты этапа: docs/codex-2026-10-13-{interactions,layout,final-layout,fonts,fonts-live-comparison,resource-audit,transfer-practice,static-smoke,package-risk}.*, screens-local/codex-2026-10-13-*. Практика Claude Кочфит/Попович изучена точечно; чужие проекты/отчёты не правили. Формы и Sender толькоdemo. 19исходных недоступных imageссылок на12страницах и5тяжёлых SVG остаются для отдельной проверки; обычных локальных404медиа не найдено. Публикации не было
+
+## 13.10.2026 · Работа возобновлена по команде Елены
+
+Предыдущая пауза завершена. Приоритет — предварительный показ основных страниц из меню и футера, сохранение действующего дизайна Тильды и её авторской логики. Цены и противоречивые даты акции по прямому ответу Елены сохраняем как на Тильде
+
+Подключены PF/cd на /pit: показывается одна плашка этапа, таймер обновляется, потоки 1/2/4/8 и ТВГ меняют цены и конкретные checkout-ссылки. Исправлены повторные desktop/mobile тарифы и flex:none таймера. На стабильной сборке index-BMJeuq25.js / index-ChOLOQPx.css проверены взаимодействия на 390 и 1440, сохранение r/UTM, независимость двух карточек и управление клавиатурой. Все комбинации ссылок проверены модульно; ручная покупка не выполнялась
+
+Попап #popup_ed приведён к исходным Inter/размерам, меню и попапы получили enter/leave переходы. Native Kinescope без iframe: один ролик /invent на стабильной сборке прошёл play → pause → close; после закрытия видео и диалога нет, ошибок нет. Исправлены мигание первого кадра анимации и переполнение юридического текста /offer на 320 без редактирования содержания
+
+35 модульных проверок, build:site и static-smoke прошли. Основные пять страниц в Chromium/WebKit на 320/390/1440: 30 проверок без общего переполнения и ошибок страницы; пять юридических страниц и повтор /offer: 12 проверок. Это геометрия и просмотр выбранных кадров, не подтверждение всех авторских функций и не приёмка всех 124 страниц
+
+Пользователь после проверки указала дополнительные визуальные проблемы: фон плашки при hover тултипа, выравнивание плашек потоков и кнопки личного кабинета. Эти замечания открыты и исправляются отдельно; прежний геометрический PASS не закрывает их. Также нужно перенести свежие изменения меню и VK с действующего сайта, не меняя исходный архив 09.10. После этих правок нужна новая сборка и точечный визуальный повтор
+
+Dev5176 и preview4176 оставлены для просмотра. Сервер 146.185.240.110, Git и телефоны не менялись. Формы и Sender остаются демонстрационными

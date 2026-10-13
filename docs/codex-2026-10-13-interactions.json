@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-12T21:12:49.432Z",
+  "results": [
+    {
+      "width": 1440,
+      "anchor": {
+        "scrollY": 1240,
+        "top": 80
+      },
+      "popup": "Back/Forward/Escape, focus return and body unlock passed",
+      "menu": "desktop",
+      "cookie": "stays until explicit acceptance",
+      "internalLinks": 9,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "anchor": {
+        "scrollY": 1134,
+        "top": 65
+      },
+      "popup": "Back/Forward/Escape, focus return and body unlock passed",
+      "menu": "Back/Forward/close passed",
+      "cookie": "stays until explicit acceptance",
+      "internalLinks": 9,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "anchor": {
+        "scrollY": 920,
+        "top": 65
+      },
+      "popup": "Back/Forward/Escape, focus return and body unlock passed",
+      "menu": "Back/Forward/close passed",
+      "cookie": "stays until explicit acceptance",
+      "internalLinks": 9,
+      "errors": []
+    }
+  ],
+  "scope": "local only, no submissions or external requests",
+  "tooltips": [
+    {
+      "route": "pit",
+      "width": 1440,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "hover enter/leave",
+      "escape": true,
+      "errors": []
+    },
+    {
+      "route": "pit",
+      "width": 390,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "tap toggle and burger",
+      "escape": true,
+      "errors": []
+    },
+    {
+      "route": "pit",
+      "width": 320,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "tap toggle and burger",
+      "escape": true,
+      "errors": []
+    },
+    {
+      "route": "tvg",
+      "width": 1440,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "hover enter/leave",
+      "escape": true,
+      "errors": []
+    },
+    {
+      "route": "tvg",
+      "width": 390,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "tap toggle and burger",
+      "escape": true,
+      "errors": []
+    },
+    {
+      "route": "tvg",
+      "width": 320,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "tap toggle and burger",
+      "escape": true,
+      "errors": []
+    },
+    {
+      "route": "pred",
+      "width": 1440,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "hover enter/leave",
+      "escape": true,
+      "errors": []
+    },
+    {
+      "route": "pred",
+      "width": 390,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "tap toggle and burger",
+      "escape": true,
+      "errors": []
+    },
+    {
+      "route": "pred",
+      "width": 320,
+      "repeats": 2,
+      "initialHidden": true,
+      "stableAfter350ms": true,
+      "interaction": "tap toggle and burger",
+      "escape": true,
+      "errors": []
+    }
+  ],
+  "tooltipSource": {
+    "source": "https://cdn.postnikovmd.com/tilda@1.5/tooltip.min.js",
+    "runtimeCopied": false
+  },
+  "beforeDirectAnchor": [
+    {
+      "repeat": 1,
+      "scrollY": 0,
+      "top": 1320
+    },
+    {
+      "repeat": 2,
+      "scrollY": 0,
+      "top": 1320
+    }
+  ]
+}

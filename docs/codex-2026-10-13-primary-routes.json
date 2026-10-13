@@ -1,0 +1,15 @@
+{
+  "paths": [
+    "/",
+    "/pit",
+    "/intensiv",
+    "/tvg",
+    "/invent",
+    "/personaldata",
+    "/data-consent",
+    "/part_oferta",
+    "/offer",
+    "/consent"
+  ],
+  "source": "shared header/menu/footer models"
+}

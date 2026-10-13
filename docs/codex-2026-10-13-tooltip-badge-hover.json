@@ -1,0 +1,56 @@
+{
+  "before": {
+    "background": "rgba(0, 0, 0, 0) linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%) no-repeat scroll 0% 0% / cover padding-box border-box",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)",
+    "pseudoBackground": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "pseudoOpacity": "1",
+    "vars": [
+      "",
+      ""
+    ],
+    "css": ""
+  },
+  "hover": {
+    "background": "rgba(0, 0, 0, 0) none no-repeat scroll 0% 0% / cover padding-box border-box",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "pseudoBackground": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "pseudoOpacity": "0",
+    "vars": [
+      "",
+      ""
+    ],
+    "css": ""
+  },
+  "sourceLive": {
+    "before": {
+      "bg": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)",
+      "color": "rgba(0, 0, 0, 0)",
+      "pseudoBG": "none",
+      "pseudoOpacity": "0",
+      "hoverImage": "",
+      "hoverColor": ""
+    },
+    "hover": {
+      "bg": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)",
+      "color": "rgba(0, 0, 0, 0)",
+      "pseudoBG": "none",
+      "pseudoOpacity": "0",
+      "hoverImage": "",
+      "hoverColor": ""
+    }
+  },
+  "afterFixDev": [
+    {
+      "repeat": 1,
+      "before": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)",
+      "hover": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)"
+    },
+    {
+      "repeat": 2,
+      "before": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)",
+      "hover": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)"
+    }
+  ]
+}

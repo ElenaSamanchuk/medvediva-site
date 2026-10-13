@@ -1,0 +1,3166 @@
+{
+  "date": "2026-10-12T21:32:11.265Z",
+  "scope": "public live read-only; no form clicks, no non-GET or analytics/widget requests",
+  "results": [
+    {
+      "route": "/",
+      "width": 1440,
+      "sourceVars": {
+        "text": "'Inter',Arial,sans-serif",
+        "heading": "",
+        "body": "Times"
+      },
+      "pairs": [
+        {
+          "source": {
+            "id": "1745573724678",
+            "text": "Личный кабинет",
+            "top": 27,
+            "width": 120,
+            "height": 32,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Личный кабинет",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 120,
+            "height": 32
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1745573724647",
+            "text": "Питание и тренировки",
+            "top": 35,
+            "width": 129.90625,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Питание и тренировки",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 129.90625,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724652",
+            "text": "Интенсив",
+            "top": 35,
+            "width": 56.296875,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Интенсив",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 59.1875,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724655",
+            "text": "Тело в голове",
+            "top": 35,
+            "width": 79.578125,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Тело в голове",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 79.578125,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724658",
+            "text": "Оборудование",
+            "top": 35,
+            "width": 85.328125,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Оборудование",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 85.328125,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1773213623323000003",
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "top": 840,
+            "width": 252,
+            "height": 80,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "15.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 252,
+            "height": 77.96875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "15.6px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1773213623325000005",
+            "text": "Согласен",
+            "top": 932,
+            "width": 100,
+            "height": 36,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Согласен",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 100,
+            "height": 36
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1779798129532000004",
+            "text": "Дублируем информацию в других соцсетях. Если не работает Телеграм — переходите сюда.",
+            "top": 92,
+            "width": 322,
+            "height": 32,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Если не работает Телеграм — переходите ВК",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "14px",
+            "lineHeight": "18.9px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 746,
+            "height": 18.890625
+          },
+          "diff": {
+            "size": [
+              "12px",
+              "14px"
+            ],
+            "lineHeight": [
+              "16px",
+              "18.9px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1731066364150",
+            "text": "Medve.Diva",
+            "top": 179,
+            "width": 537,
+            "height": 84,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "60px",
+            "lineHeight": "84px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Medve.Diva",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "60px",
+            "lineHeight": "84px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 537,
+            "height": 84
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1744966961057",
+            "text": "Подробнее",
+            "top": 1137,
+            "width": 221,
+            "height": 50,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "21.7px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Подробнее",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "21.7px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 221,
+            "height": 50
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1744966617573",
+            "text": "Подробнее",
+            "top": 1137,
+            "width": 221,
+            "height": 50,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "21.7px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Подробнее",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "21.7px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 221,
+            "height": 50
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1744966399411",
+            "text": "Подробнее",
+            "top": 1137,
+            "width": 221,
+            "height": 50,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "21.7px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Подробнее",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "21.7px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 221,
+            "height": 50
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1744968060805",
+            "text": "Преимущества фитнес-клуба Medve.Diva",
+            "top": 1591,
+            "width": 582,
+            "height": 58,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "24px",
+            "lineHeight": "29px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Преимущества фитнес-клуба Medve.Diva",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "24px",
+            "lineHeight": "28.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 582,
+            "height": 57.59375
+          },
+          "diff": {
+            "lineHeight": [
+              "29px",
+              "28.8px"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "sourceVars": {
+        "text": "'Inter',Arial,sans-serif",
+        "heading": "",
+        "body": "Times"
+      },
+      "pairs": [
+        {
+          "source": {
+            "id": "1773213623323000003",
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "top": 850.90625,
+            "width": 259.640625,
+            "height": 82.265625,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "13.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "13.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 259.59375,
+            "height": 82.265625
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1773213623325000005",
+            "text": "Согласен",
+            "top": 945.359375,
+            "width": 96.296875,
+            "height": 34.125,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "10px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Согласен",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "10px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 96.28125,
+            "height": 34.125
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1779798129532000004",
+            "text": "Дублируем информацию в других соцсетях. Если не работает Телеграм — переходите сюда.",
+            "top": 80.59375,
+            "width": 314.5,
+            "height": 31.6875,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "13px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Если не работает Телеграм — переходите ВК",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "8px",
+            "lineHeight": "10.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 242.53125,
+            "height": 13.15869140625
+          },
+          "diff": {
+            "size": [
+              "10px",
+              "8px"
+            ],
+            "lineHeight": [
+              "13px",
+              "10.8px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1731066364150",
+            "text": "Medve.Diva",
+            "top": 110.921875,
+            "width": 310.84375,
+            "height": 51.203125,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "30px",
+            "lineHeight": "42px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Medve.Diva",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "30px",
+            "lineHeight": "42px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 310.78125,
+            "height": 51.1875
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1731066364240",
+            "text": "Тренировки, которые ты любишь. Результаты, которые ты видишь.",
+            "top": 169.4375,
+            "width": 316.9375,
+            "height": 39,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Тренировки, которые ты любишь. Результаты, которые ты видишь",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 316.875,
+            "height": 39.45703125
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1744956671591",
+            "text": "Онлайн фитнес-клуб",
+            "top": 88.984375,
+            "width": 187.46875,
+            "height": 19.5,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Онлайн фитнес-клуб",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 187.4208984375,
+            "height": 19.5
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "176034604788681140",
+            "text": "Начните тренироваться с Medve.Diva",
+            "top": 259.640625,
+            "width": 198.6875,
+            "height": 60,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "12px",
+            "lineHeight": "normal",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Начните тренироваться с Medve.Diva",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 198.65625,
+            "height": 67.9833984375
+          },
+          "diff": {
+            "lineHeight": [
+              "normal",
+              "18.6px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "176034604789485860",
+            "text": "Выбирайте подходящий тариф и приступайте к тренировкам уже сегодня!",
+            "top": 299.859375,
+            "width": 177.96875,
+            "height": 43.875,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Выбирайте подходящий тариф и приступайте к тренировкам уже сегодня!",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "11.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 177.9375,
+            "height": 42.046875
+          },
+          "diff": {
+            "lineHeight": [
+              "12px",
+              "11.5px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "176034604790278430",
+            "text": "Выбрать курс",
+            "top": 362.03125,
+            "width": 181.625,
+            "height": 48.75,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "normal",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Выбрать курс",
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "15.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 181.59375,
+            "height": 48.75
+          },
+          "diff": {
+            "lineHeight": [
+              "normal",
+              "15.5px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1744966961047",
+            "text": "Старт потока - 12 октября",
+            "top": 1697.109375,
+            "width": 175.53125,
+            "height": 23.15625,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "8px",
+            "lineHeight": "12.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Старт потока - 12 октября",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "8px",
+            "lineHeight": "12.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 175.5,
+            "height": 23.15625
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1744966961048",
+            "text": "Продажи открыты",
+            "top": 1667.859375,
+            "width": 175.53125,
+            "height": 23.15625,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "8px",
+            "lineHeight": "12.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Продажи открыты",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "8px",
+            "lineHeight": "12.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 175.5,
+            "height": 23.15625
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1744966961049",
+            "text": "тело в голове",
+            "top": 1745.875,
+            "width": 148.078125,
+            "height": 18.28125,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "15px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "тело в голове",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "15px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 148.13525390625,
+            "height": 18.28125
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1744966961057",
+            "text": "Подробнее",
+            "top": 1845.828125,
+            "width": 336.4375,
+            "height": 48.75,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "15.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Подробнее",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "15.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 336.375,
+            "height": 48.75
+          },
+          "diff": {}
+        }
+      ]
+    },
+    {
+      "route": "/pit",
+      "width": 1440,
+      "sourceVars": {
+        "text": "'Inter',Arial,sans-serif",
+        "heading": "",
+        "body": "Times"
+      },
+      "pairs": [
+        {
+          "source": {
+            "id": "1745573724678",
+            "text": "Личный кабинет",
+            "top": 27,
+            "width": 120,
+            "height": 32,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Личный кабинет",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 120,
+            "height": 32
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1745573724647",
+            "text": "Питание и тренировки",
+            "top": 35,
+            "width": 129.90625,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Питание и тренировки",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 129.90625,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724652",
+            "text": "Интенсив",
+            "top": 35,
+            "width": 56.296875,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Интенсив",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 59.1875,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724655",
+            "text": "Тело в голове",
+            "top": 35,
+            "width": 79.578125,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Тело в голове",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 79.578125,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724658",
+            "text": "Оборудование",
+            "top": 35,
+            "width": 85.328125,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Оборудование",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 85.328125,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1773213623323000003",
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "top": 840,
+            "width": 252,
+            "height": 80,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "15.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 252,
+            "height": 77.96875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "15.6px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1773213623325000005",
+            "text": "Согласен",
+            "top": 932,
+            "width": 100,
+            "height": 36,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Согласен",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 100,
+            "height": 36
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1731066364150",
+            "text": "Питание и тренировки",
+            "top": 182,
+            "width": 537,
+            "height": 120,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "50px",
+            "lineHeight": "60px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "matrix(1, 0, 0, 1, 0, 3.48166e-13)",
+            "visible": true
+          },
+          "local": {
+            "text": "Питание и тренировки",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "50px",
+            "lineHeight": "60px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 537,
+            "height": 120
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1731066364240",
+            "text": "Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость ",
+            "top": 312.0022277832031,
+            "width": 461,
+            "height": 57,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "14px",
+            "lineHeight": "19px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.00222361)",
+            "visible": true
+          },
+          "local": {
+            "text": "Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость ",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "14px",
+            "lineHeight": "18.9px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 461,
+            "height": 56.671875
+          },
+          "diff": {
+            "lineHeight": [
+              "19px",
+              "18.9px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175984289411259450",
+            "text": "Все тренировки доступны в любое время в приложении и на платформе Medve. Diva",
+            "top": 1107,
+            "width": 335,
+            "height": 32,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "14px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.27253e-05)",
+            "visible": true
+          },
+          "local": {
+            "text": "Все тренировки доступны в любое время в приложении и на платформе Medve. Diva",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "14px",
+            "lineHeight": "16.1px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 335,
+            "height": 32.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.1px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175983601512824920",
+            "text": "Google Play",
+            "top": 1115,
+            "width": 72,
+            "height": 12,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "400",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.27253e-05)",
+            "visible": true
+          },
+          "local": {
+            "text": "Google Play",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "400",
+            "size": "10px",
+            "lineHeight": "11.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 72,
+            "height": 11.5
+          },
+          "diff": {
+            "lineHeight": [
+              "12px",
+              "11.5px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175984295669393940",
+            "text": "App Store",
+            "top": 1115,
+            "width": 72,
+            "height": 12,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "400",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.27253e-05)",
+            "visible": true
+          },
+          "local": {
+            "text": "App Store",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "400",
+            "size": "10px",
+            "lineHeight": "11.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 72,
+            "height": 11.5
+          },
+          "diff": {
+            "lineHeight": [
+              "12px",
+              "11.5px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175984291512919870",
+            "text": "Скачивайте мобильное приложение Medve.Diva",
+            "top": 1018,
+            "width": 171,
+            "height": 30,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "13px",
+            "lineHeight": "15px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.27253e-05)",
+            "visible": true
+          },
+          "local": {
+            "text": "Скачивайте мобильное приложение Medve.Diva",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "13px",
+            "lineHeight": "14.95px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 171,
+            "height": 29.875
+          },
+          "diff": {
+            "lineHeight": [
+              "15px",
+              "14.95px"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "route": "/pit",
+      "width": 390,
+      "sourceVars": {
+        "text": "'Inter',Arial,sans-serif",
+        "heading": "",
+        "body": "Times"
+      },
+      "pairs": [
+        {
+          "source": {
+            "id": "1773213623323000003",
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "top": 850.90625,
+            "width": 259.640625,
+            "height": 82.265625,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "13.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "13.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 259.59375,
+            "height": 82.265625
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1773213623325000005",
+            "text": "Согласен",
+            "top": 945.359375,
+            "width": 96.296875,
+            "height": 34.125,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "10px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Согласен",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "10px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 96.28125,
+            "height": 34.125
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1731066364150",
+            "text": "Питание и тренировки",
+            "top": 170.171875,
+            "width": 321.8125,
+            "height": 70.6875,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "26px",
+            "lineHeight": "29px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Питание и тренировки",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "26px",
+            "lineHeight": "28.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 321.75,
+            "height": 70.6875
+          },
+          "diff": {
+            "lineHeight": [
+              "29px",
+              "28.6px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1731066364240",
+            "text": "Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость ",
+            "top": 255.5,
+            "width": 316.9375,
+            "height": 68.25,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость ",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "13.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 316.875,
+            "height": 65.8125
+          },
+          "diff": {
+            "lineHeight": [
+              "14px",
+              "13.5px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745313603011",
+            "text": "Продажи открыты",
+            "top": 101.90625,
+            "width": 158.46875,
+            "height": 25.59375,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "8px",
+            "lineHeight": "12.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Продажи открыты",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "8px",
+            "lineHeight": "12.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 158.4375,
+            "height": 25.59375
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1745313603006",
+            "text": "Старт курса - 12 октября",
+            "top": 101.90625,
+            "width": 165.78125,
+            "height": 25.59375,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "8px",
+            "lineHeight": "12.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Старт курса - 12 октября",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "8px",
+            "lineHeight": "12.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 165.75,
+            "height": 25.59375
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "175983006072662690",
+            "text": "Подпишись на БОТ предзаписи",
+            "top": 376.1875,
+            "width": 204.78125,
+            "height": 17.0625,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Подпишись на БОТ предзаписи",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "13.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 204.75,
+            "height": 16.453125
+          },
+          "diff": {
+            "lineHeight": [
+              "14px",
+              "13.5px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175983006073376030",
+            "text": "Выбирайте подходящий тариф и приступайте к тренировкам уже сегодня!",
+            "top": 398.125,
+            "width": 227.9375,
+            "height": 26.8125,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "8px",
+            "lineHeight": "11px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Выбирайте подходящий тариф и приступайте к тренировкам уже сегодня!",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "8px",
+            "lineHeight": "10.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 227.90625,
+            "height": 26.3173828125
+          },
+          "diff": {
+            "lineHeight": [
+              "11px",
+              "10.8px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175983006073940820",
+            "text": "Выбрать тариф",
+            "top": 435.921875,
+            "width": 249.890625,
+            "height": 39,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "10px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Выбрать тариф",
+            "family": "Inter",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "10px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 249.84375,
+            "height": 39
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175983601511322270",
+            "text": "Основная программа",
+            "top": 1006.890625,
+            "width": 268.171875,
+            "height": 18.28125,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "14px",
+            "lineHeight": "15px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Основная программа",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "14px",
+            "lineHeight": "14.7px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 268.125,
+            "height": 17.900390625
+          },
+          "diff": {
+            "lineHeight": [
+              "15px",
+              "14.7px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175984289411259450",
+            "text": "Все тренировки доступны в любое время в приложении и на платформе Medve. Diva",
+            "top": 1528.625,
+            "width": 338.875,
+            "height": 34.125,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "12px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Все тренировки доступны в любое время в приложении и на платформе Medve. Diva",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "12px",
+            "lineHeight": "13.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 338.8125,
+            "height": 33.6298828125
+          },
+          "diff": {
+            "lineHeight": [
+              "14px",
+              "13.8px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175983601513363730",
+            "text": "4 + 1 неделя дополнительного доступа",
+            "top": 1037.375,
+            "width": 163.34375,
+            "height": 29.25,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "4 + 1 неделя дополнительного доступа",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "11.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 163.3125,
+            "height": 28.03125
+          },
+          "diff": {
+            "lineHeight": [
+              "12px",
+              "11.5px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "175984306551564340",
+            "text": "Бонусные материалы",
+            "top": 1127.578125,
+            "width": 210.875,
+            "height": 18.28125,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "14px",
+            "lineHeight": "15px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Бонусные материалы",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "800",
+            "size": "14px",
+            "lineHeight": "14.7px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 210.84375,
+            "height": 17.900390625
+          },
+          "diff": {
+            "lineHeight": [
+              "15px",
+              "14.7px"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "route": "/invent",
+      "width": 1440,
+      "sourceVars": {
+        "text": "'Inter',Arial,sans-serif",
+        "heading": "",
+        "body": "Times"
+      },
+      "pairs": [
+        {
+          "source": {
+            "id": "1745573724678",
+            "text": "Личный кабинет",
+            "top": 27,
+            "width": 120,
+            "height": 32,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Личный кабинет",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 120,
+            "height": 32
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1745573724647",
+            "text": "Питание и тренировки",
+            "top": 35,
+            "width": 129.90625,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Питание и тренировки",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 129.90625,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724652",
+            "text": "Интенсив",
+            "top": 35,
+            "width": 56.296875,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Интенсив",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 59.1875,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724655",
+            "text": "Тело в голове",
+            "top": 35,
+            "width": 79.578125,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Тело в голове",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 79.578125,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1745573724658",
+            "text": "Оборудование",
+            "top": 35,
+            "width": 85.328125,
+            "height": 16,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Оборудование",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 85.328125,
+            "height": 16.1875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "16.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1773213623323000003",
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "top": 840,
+            "width": 252,
+            "height": 80,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "12px",
+            "lineHeight": "15.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 252,
+            "height": 77.96875
+          },
+          "diff": {
+            "lineHeight": [
+              "16px",
+              "15.6px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1773213623325000005",
+            "text": "Согласен",
+            "top": 932,
+            "width": 100,
+            "height": 36,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Согласен",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "14px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 100,
+            "height": 36
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1723635093698",
+            "text": "Для коррекционных тренировок",
+            "top": 365,
+            "width": 240,
+            "height": 45,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Для коррекционных тренировок",
+            "family": "Inter",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 240,
+            "height": 45
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1723635093695",
+            "text": "Для силовых тренировок",
+            "top": 365,
+            "width": 195,
+            "height": 45,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Для силовых тренировок",
+            "family": "Inter",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 195,
+            "height": 45
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781092158693",
+            "text": "Ссылки",
+            "top": 1206,
+            "width": 328,
+            "height": 40,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "14px",
+            "lineHeight": "16.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Ссылки",
+            "family": "Inter",
+            "weight": "600",
+            "size": "14px",
+            "lineHeight": "16.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 328,
+            "height": 40
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781092311118000001",
+            "text": "Ссылки",
+            "top": 1206,
+            "width": 328,
+            "height": 40,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "14px",
+            "lineHeight": "16.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Ссылки",
+            "family": "Inter",
+            "weight": "600",
+            "size": "14px",
+            "lineHeight": "16.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 328,
+            "height": 40
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781026719520000292",
+            "text": "Рекомендации:",
+            "top": 1022,
+            "width": 310,
+            "height": 17,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "17px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Рекомендации:",
+            "family": "Inter",
+            "weight": "700",
+            "size": "14px",
+            "lineHeight": "16.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 310,
+            "height": 16.796875
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ],
+            "lineHeight": [
+              "17px",
+              "16.8px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781092480371000002",
+            "text": "Ссылки",
+            "top": 1207,
+            "width": 328,
+            "height": 40,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "14px",
+            "lineHeight": "16.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Ссылки",
+            "family": "Inter",
+            "weight": "600",
+            "size": "14px",
+            "lineHeight": "16.8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 328,
+            "height": 40
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "route": "/invent",
+      "width": 390,
+      "sourceVars": {
+        "text": "'Inter',Arial,sans-serif",
+        "heading": "",
+        "body": "Times"
+      },
+      "pairs": [
+        {
+          "source": {
+            "id": "1773213623323000003",
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "top": 850.90625,
+            "width": 259.640625,
+            "height": 82.265625,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "13.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данны",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "10px",
+            "lineHeight": "13.5px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 259.59375,
+            "height": 82.265625
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1773213623325000005",
+            "text": "Согласен",
+            "top": 945.359375,
+            "width": 96.296875,
+            "height": 34.125,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "10px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Согласен",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "700",
+            "size": "10px",
+            "lineHeight": "10px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 96.28125,
+            "height": 34.125
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1723635093698",
+            "text": "Для коррекционных тренировок",
+            "top": 225.5,
+            "width": 195.03125,
+            "height": 36.5625,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "8px",
+            "lineHeight": "8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Для коррекционных тренировок",
+            "family": "Inter",
+            "weight": "600",
+            "size": "8px",
+            "lineHeight": "8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 195,
+            "height": 36.5625
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1723635093695",
+            "text": "Для силовых тренировок",
+            "top": 225.5,
+            "width": 158.46875,
+            "height": 36.5625,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "8px",
+            "lineHeight": "8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Для силовых тренировок",
+            "family": "Inter",
+            "weight": "600",
+            "size": "8px",
+            "lineHeight": "8px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 158.4375,
+            "height": 36.5625
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1723635093668",
+            "text": "Оборудование для курса",
+            "top": 109.703125,
+            "width": 365.6875,
+            "height": 19.5,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "16px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Оборудование для курса",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "16px",
+            "lineHeight": "16px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 365.625,
+            "height": 19.5
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1723635093678",
+            "text": "Конечно, на курсе можно пользоваться заменами — полотенце вместо роллера или пояс от халата вместо л",
+            "top": 141.390625,
+            "width": 335.21875,
+            "height": 54.8125,
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "9px",
+            "lineHeight": "11.25px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Конечно, на курсе можно пользоваться заменами — полотенце вместо роллера или пояс от халата вместо л",
+            "family": "Manrope, Arial, sans-serif",
+            "weight": "500",
+            "size": "9px",
+            "lineHeight": "11.25px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 335.15625,
+            "height": 54.84375
+          },
+          "diff": {}
+        },
+        {
+          "source": {
+            "id": "1781026719515000200",
+            "text": "Оборудование для коррекционных тренировок",
+            "top": 541.5625,
+            "width": 365.6875,
+            "height": 69.46875,
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "16px",
+            "lineHeight": "19px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Оборудование для коррекционных тренировок",
+            "family": "Bounded, Arial, sans-serif",
+            "weight": "600",
+            "size": "16px",
+            "lineHeight": "19.2px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 365.625,
+            "height": 70.154296875
+          },
+          "diff": {
+            "lineHeight": [
+              "19px",
+              "19.2px"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781026719515000205",
+            "text": "2 массажных мяча диаметр 10−12 см",
+            "top": 802.265625,
+            "width": 304.75,
+            "height": 17.546875,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "14.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "2 массажных мяча диаметр 10−12 см",
+            "family": "Inter",
+            "weight": "600",
+            "size": "12px",
+            "lineHeight": "14.4px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 304.6875,
+            "height": 17.53857421875
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781026719516000208",
+            "text": "Важность:",
+            "top": 841.09375,
+            "width": 50.703125,
+            "height": 11.6875,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "500",
+            "size": "8px",
+            "lineHeight": "9.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Важность:",
+            "family": "Inter",
+            "weight": "500",
+            "size": "8px",
+            "lineHeight": "9.6px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 50.6923828125,
+            "height": 11.6923828125
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781092158693",
+            "text": "Ссылки",
+            "top": 1091.5,
+            "width": 304.75,
+            "height": 42.65625,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Ссылки",
+            "family": "Inter",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 304.6875,
+            "height": 42.65625
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781092311118000001",
+            "text": "Ссылки",
+            "top": 1093.234375,
+            "width": 304.75,
+            "height": 42.65625,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Ссылки",
+            "family": "Inter",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 304.6875,
+            "height": 42.65625
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781092480371000002",
+            "text": "Ссылки",
+            "top": 1091,
+            "width": 304.75,
+            "height": 42.65625,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Ссылки",
+            "family": "Inter",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 304.6875,
+            "height": 42.65625
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        },
+        {
+          "source": {
+            "id": "1781092658710000003",
+            "text": "Ссылки",
+            "top": 1096.046875,
+            "width": 304.75,
+            "height": 42.65625,
+            "family": "Inter, Arial, sans-serif",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "visible": true
+          },
+          "local": {
+            "text": "Ссылки",
+            "family": "Inter",
+            "weight": "600",
+            "size": "10px",
+            "lineHeight": "12px",
+            "spacing": "normal",
+            "style": "normal",
+            "decoration": "none",
+            "synthesis": "weight style small-caps",
+            "transform": "none",
+            "width": 304.6875,
+            "height": 42.65625
+          },
+          "diff": {
+            "family": [
+              "Inter, Arial, sans-serif",
+              "Inter"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "educationPopup": [
+    {
+      "width": 1440,
+      "live": [
+        {
+          "family": "Inter",
+          "weight": "500",
+          "size": "30px",
+          "lineHeight": "35.1px",
+          "text": "Обучения Алены Медведевой",
+          "rect": {
+            "w": 470,
+            "h": 35.09375
+          },
+          "actual": [
+            {
+              "familyName": "Inter",
+              "postScriptName": "Inter-Regular_Medium",
+              "isCustomFont": true,
+              "glyphCount": 25
+            }
+          ]
+        },
+        {
+          "family": "Inter",
+          "weight": "400",
+          "size": "14px",
+          "lineHeight": "21.7px",
+          "text": "Polestar Pilates «Принципы движения»Profitness «Коррекция осанки»Profitness «Работа со стопой, голен",
+          "rect": {
+            "w": 470,
+            "h": 433.75
+          },
+          "actual": []
+        }
+      ],
+      "local": [
+        {
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "28px",
+          "lineHeight": "34.44px",
+          "text": "Обучения Алены Медведевой",
+          "rect": {
+            "w": 480,
+            "h": 34.4375
+          },
+          "actual": [
+            {
+              "familyName": "Manrope SemiBold",
+              "postScriptName": "Manrope-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 25
+            }
+          ]
+        },
+        {
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "400",
+          "size": "16px",
+          "lineHeight": "24.8px",
+          "text": "Polestar Pilates «Принципы движения»Profitness «Коррекция осанки»Profitness «Работа со стопой, голен",
+          "rect": {
+            "w": 480,
+            "h": 561.9375
+          },
+          "actual": []
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "live": [
+        {
+          "family": "Inter",
+          "weight": "500",
+          "size": "24px",
+          "lineHeight": "28.08px",
+          "text": "Обучения Алены Медведевой",
+          "rect": {
+            "w": 310,
+            "h": 56.15625
+          },
+          "actual": [
+            {
+              "familyName": "Inter",
+              "postScriptName": "Inter-Regular_Medium",
+              "isCustomFont": true,
+              "glyphCount": 24
+            }
+          ]
+        },
+        {
+          "family": "Inter",
+          "weight": "400",
+          "size": "10px",
+          "lineHeight": "14.5px",
+          "text": "Polestar Pilates «Принципы движения»Profitness «Коррекция осанки»Profitness «Работа со стопой, голен",
+          "rect": {
+            "w": 310,
+            "h": 290
+          },
+          "actual": []
+        }
+      ],
+      "local": [
+        {
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "22px",
+          "lineHeight": "27.06px",
+          "text": "Обучения Алены Медведевой",
+          "rect": {
+            "w": 330,
+            "h": 27.046875
+          },
+          "actual": [
+            {
+              "familyName": "Manrope SemiBold",
+              "postScriptName": "Manrope-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 25
+            }
+          ]
+        },
+        {
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "400",
+          "size": "14px",
+          "lineHeight": "21.7px",
+          "text": "Polestar Pilates «Принципы движения»Profitness «Коррекция осанки»Profitness «Работа со стопой, голен",
+          "rect": {
+            "w": 330,
+            "h": 521.4375
+          },
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "actualRenderedComparedSummary": [
+    {
+      "route": "/",
+      "width": 1440,
+      "headlineLiveAndLocal": "Bounded-SemiBold",
+      "bodyLiveAndLocal": "Manrope-Medium",
+      "cookieLiveAndLocal": "Manrope-Medium"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "headlineLiveAndLocal": "Bounded-SemiBold",
+      "bodyLiveAndLocal": "Manrope-Medium",
+      "cookieLiveAndLocal": "Manrope-Medium"
+    },
+    {
+      "route": "/pit",
+      "width": 1440,
+      "headlineLiveAndLocal": "Bounded-SemiBold",
+      "bodyLiveAndLocal": "Manrope-SemiBold",
+      "cookieLiveAndLocal": "Manrope-Medium"
+    },
+    {
+      "route": "/pit",
+      "width": 390,
+      "headlineLiveAndLocal": "Bounded-SemiBold",
+      "bodyLiveAndLocal": "Manrope-SemiBold",
+      "cookieLiveAndLocal": "Manrope-Medium"
+    }
+  ],
+  "actualRenderedLimitations": [
+    "Second live /invent visit timed out; source-vs-local CDP matrix incomplete; computed style matrix /invent completed earlier",
+    "CTA wrappers with no direct rendered glyphs returned empty CDP font list; not counted as font match",
+    "Banner CSS size comparison requires final transform/zoom calculation before treating 12→14 or10→8 as visual mismatch"
+  ]
+}

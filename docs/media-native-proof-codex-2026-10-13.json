@@ -1,0 +1,31 @@
+{
+  "asset": "/assets/index-BMJeuq25.js",
+  "baseUrl": "http://127.0.0.1:4176",
+  "closed": {
+    "videoCount": 0,
+    "dialogCount": 0
+  },
+  "readinessMs": 2508,
+  "at": "2026-10-13T08:50:58.508Z",
+  "path": "/invent",
+  "sample": "iybjGEYtGedq8nm6hd8KQd",
+  "initial": {
+    "video": 0,
+    "iframe": 0
+  },
+  "during": {
+    "time": 5.099471,
+    "duration": 835.36,
+    "paused": false,
+    "readyState": 4
+  },
+  "after": {
+    "time": 5.110073,
+    "paused": true
+  },
+  "iframeCount": 0,
+  "iframeRequests": 0,
+  "errors": [],
+  "observedContentLengthBytes": 4020837,
+  "coverage": "one public sample Chromium mobile emulation; not full56video acceptance"
+}

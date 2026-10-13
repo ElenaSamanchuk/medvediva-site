@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Druktextwidecyr",
+    "weight": "600",
+    "url": "https://static.tildacdn.com/tild6565-6439-4362-b832-633336616535/druktextwidecyr-medi.woff"
+  },
+  {
+    "name": "Druktextwidecyr",
+    "weight": "700",
+    "url": "https://static.tildacdn.com/tild3538-6465-4333-b837-663263633365/druktextwidecyr-bold.woff"
+  },
+  {
+    "name": "Manrope",
+    "weight": "200",
+    "url": "https://static.tildacdn.com/tild3631-3839-4336-a666-376366333339/Manrope-ExtraLight.woff"
+  },
+  {
+    "name": "Manrope",
+    "weight": "300",
+    "url": "https://static.tildacdn.com/tild3832-3135-4666-b663-626330333735/Manrope-Light.woff"
+  },
+  {
+    "name": "Manrope",
+    "weight": "400",
+    "url": "https://static.tildacdn.com/tild6537-6637-4661-a630-663864643764/Manrope-Regular.woff"
+  },
+  {
+    "name": "Manrope",
+    "weight": "500",
+    "url": "https://static.tildacdn.com/tild3834-3865-4437-a164-343337666235/Manrope-Medium.woff"
+  },
+  {
+    "name": "Manrope",
+    "weight": "600",
+    "url": "https://static.tildacdn.com/tild3361-6565-4361-b732-386262663538/Manrope-SemiBold.woff"
+  },
+  {
+    "name": "Manrope",
+    "weight": "700",
+    "url": "https://static.tildacdn.com/tild3163-3333-4461-a366-663835373630/Manrope-Bold.woff"
+  },
+  {
+    "name": "Manrope",
+    "weight": "800",
+    "url": "https://static.tildacdn.com/tild3861-3637-4337-a434-373333643266/Manrope-ExtraBold.woff"
+  },
+  {
+    "name": "Bounded",
+    "weight": "500",
+    "url": "https://static.tildacdn.com/tild3337-6131-4437-b564-393965343162/Bounded-Medium.woff"
+  },
+  {
+    "name": "Bounded",
+    "weight": "600",
+    "url": "https://static.tildacdn.com/tild3731-6363-4933-b538-616163613432/Bounded-SemiBold.woff"
+  },
+  {
+    "name": "Bounded",
+    "weight": "900",
+    "url": "https://static.tildacdn.com/tild3062-3361-4532-b764-326266366462/Bounded-Black.woff"
+  }
+]

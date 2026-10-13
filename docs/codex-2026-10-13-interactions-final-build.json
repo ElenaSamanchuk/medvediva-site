@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-13T09:10:56.295Z",
+  "build": "DiHKPjJw/aOOO0vK0",
+  "rows": [
+    {
+      "width": 1440,
+      "hover": [
+        {
+          "repeat": 1,
+          "before": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)",
+          "after": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)"
+        },
+        {
+          "repeat": 2,
+          "before": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)",
+          "after": "linear-gradient(127.08deg, rgb(135, 169, 218) 0%, rgb(67, 105, 163) 100%)"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "start": {
+        "classes": "native-menu overlay-enter-active overlay-enter-to",
+        "opacity": "0",
+        "duration": "0.18s"
+      },
+      "leave": {
+        "classes": "native-menu overlay-leave-active overlay-leave-to",
+        "opacity": "1",
+        "duration": "0.18s"
+      },
+      "closed": true,
+      "focusReturned": true,
+      "bodyUnlocked": true,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "start": {
+        "classes": "native-menu overlay-enter-active overlay-enter-to",
+        "opacity": "0",
+        "duration": "0.18s"
+      },
+      "leave": {
+        "classes": "native-menu overlay-leave-from overlay-leave-active",
+        "opacity": "1",
+        "duration": "0.18s"
+      },
+      "closed": true,
+      "focusReturned": true,
+      "bodyUnlocked": true,
+      "errors": []
+    }
+  ]
+}

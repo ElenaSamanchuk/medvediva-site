@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Nunito Sans",
+    "weight": "400",
+    "url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G1ilntA.ttf",
+    "file": "nunitosans400.ttf"
+  },
+  {
+    "name": "Nunito Sans",
+    "weight": "600",
+    "url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GCC5ntA.ttf",
+    "file": "nunitosans600.ttf"
+  },
+  {
+    "name": "Nunito Sans",
+    "weight": "700",
+    "url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GMS5ntA.ttf",
+    "file": "nunitosans700.ttf"
+  },
+  {
+    "name": "Open Sans",
+    "weight": "300",
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4n.ttf",
+    "file": "opensans300.ttf"
+  },
+  {
+    "name": "Open Sans",
+    "weight": "400",
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf",
+    "file": "opensans400.ttf"
+  },
+  {
+    "name": "Open Sans",
+    "weight": "500",
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4n.ttf",
+    "file": "opensans500.ttf"
+  },
+  {
+    "name": "Open Sans",
+    "weight": "600",
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4n.ttf",
+    "file": "opensans600.ttf"
+  },
+  {
+    "name": "Open Sans",
+    "weight": "700",
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf",
+    "file": "opensans700.ttf"
+  },
+  {
+    "name": "Open Sans",
+    "weight": "800",
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4n.ttf",
+    "file": "opensans800.ttf"
+  },
+  {
+    "name": "Unbounded",
+    "weight": "200",
+    "url": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG65jx040.ttf",
+    "file": "unbounded200.ttf"
+  },
+  {
+    "name": "Unbounded",
+    "weight": "300",
+    "url": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG60bx040.ttf",
+    "file": "unbounded300.ttf"
+  },
+  {
+    "name": "Unbounded",
+    "weight": "400",
+    "url": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG6xjx040.ttf",
+    "file": "unbounded400.ttf"
+  },
+  {
+    "name": "Unbounded",
+    "weight": "500",
+    "url": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG6yrx040.ttf",
+    "file": "unbounded500.ttf"
+  },
+  {
+    "name": "Unbounded",
+    "weight": "600",
+    "url": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG68b2040.ttf",
+    "file": "unbounded600.ttf"
+  },
+  {
+    "name": "Unbounded",
+    "weight": "700",
+    "url": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG6__2040.ttf",
+    "file": "unbounded700.ttf"
+  },
+  {
+    "name": "Unbounded",
+    "weight": "800",
+    "url": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG65j2040.ttf",
+    "file": "unbounded800.ttf"
+  },
+  {
+    "name": "Unbounded",
+    "weight": "900",
+    "url": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG67H2040.ttf",
+    "file": "unbounded900.ttf"
+  }
+]

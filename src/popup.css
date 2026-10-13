@@ -1,0 +1,8 @@
+/* Verified against the current source popup; keep other scene popups intact. */
+.native-dialog[data-popup-hook="#popup_ed"] h2{font-family:Inter,Arial,sans-serif;font-weight:500;font-size:30px;line-height:1.17}
+.native-dialog[data-popup-hook="#popup_ed"] .popup-description{font-family:Inter,Arial,sans-serif;font-weight:400;font-size:14px;line-height:1.55}
+@media(max-width:640px){.native-dialog[data-popup-hook="#popup_ed"] h2{font-size:24px}.native-dialog[data-popup-hook="#popup_ed"] .popup-description{font-size:10px;line-height:1.45}}
+.overlay-enter-active,.overlay-leave-active{transition:opacity .18s ease}
+.overlay-enter-from,.overlay-leave-to{opacity:0}
+.overlay-leave-active{pointer-events:none}
+@media(prefers-reduced-motion:reduce){.overlay-enter-active,.overlay-leave-active{transition:none}.overlay-enter-from,.overlay-leave-to{opacity:1}}

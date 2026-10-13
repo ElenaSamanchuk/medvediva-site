@@ -1,0 +1,85 @@
+{
+  "at": "2026-10-13T08:48:14.412Z",
+  "baseUrl": "http://127.0.0.1:4176",
+  "facts": [
+    {
+      "width": 390,
+      "first": {
+        "price": "4 190 ₽",
+        "old": "4 590 ₽",
+        "buy": "https://lk.medvediva.ru/payments/tariff_Y4ELaR/checkout?utm_source=qa-ui-proof&utm_campaign=source-transfer&r=QA-Medvediva-13",
+        "label": "Купить со скидкой до 13%",
+        "selected": "scene-group pf-option pf-option--1 pf-active",
+        "addon": "false"
+      },
+      "eight": {
+        "price": "25 690 ₽",
+        "old": "29 390 ₽",
+        "buy": "https://lk.medvediva.ru/payments/tariff_24B6o4/checkout?utm_source=qa-ui-proof&utm_campaign=source-transfer&r=QA-Medvediva-13",
+        "label": "Купить со скидкой до 13%",
+        "selected": "scene-group pf-option pf-option--8 pf-active",
+        "addon": "false"
+      },
+      "addon": {
+        "price": "28 190 ₽",
+        "old": "",
+        "buy": "https://lk.medvediva.ru/payments/tariff_q9bvl9/checkout?utm_source=qa-ui-proof&utm_campaign=source-transfer&r=QA-Medvediva-13",
+        "label": "Купить",
+        "selected": "scene-group pf-option pf-option--8 pf-active",
+        "addon": "true"
+      },
+      "keyboard": {
+        "price": "9 890 ₽",
+        "old": "",
+        "buy": "https://lk.medvediva.ru/payments/tariff_v4Wegn/checkout?utm_source=qa-ui-proof&utm_campaign=source-transfer&r=QA-Medvediva-13",
+        "label": "Купить",
+        "selected": "scene-group pf-option pf-option--2 pf-active",
+        "addon": "true"
+      },
+      "comfort": "5 290 ₽",
+      "errors": [],
+      "iframe": 0
+    },
+    {
+      "width": 1440,
+      "first": {
+        "price": "4 190 ₽",
+        "old": "4 590 ₽",
+        "buy": "https://lk.medvediva.ru/payments/tariff_Y4ELaR/checkout?utm_source=qa-ui-proof&utm_campaign=source-transfer&r=QA-Medvediva-13",
+        "label": "Купить со скидкой до 13%",
+        "selected": "scene-group pf-option pf-option--1 pf-active",
+        "addon": "false"
+      },
+      "eight": {
+        "price": "25 690 ₽",
+        "old": "29 390 ₽",
+        "buy": "https://lk.medvediva.ru/payments/tariff_24B6o4/checkout?utm_source=qa-ui-proof&utm_campaign=source-transfer&r=QA-Medvediva-13",
+        "label": "Купить со скидкой до 13%",
+        "selected": "scene-group pf-option pf-option--8 pf-active",
+        "addon": "false"
+      },
+      "addon": {
+        "price": "28 190 ₽",
+        "old": "",
+        "buy": "https://lk.medvediva.ru/payments/tariff_q9bvl9/checkout?utm_source=qa-ui-proof&utm_campaign=source-transfer&r=QA-Medvediva-13",
+        "label": "Купить",
+        "selected": "scene-group pf-option pf-option--8 pf-active",
+        "addon": "true"
+      },
+      "keyboard": {
+        "price": "9 890 ₽",
+        "old": "",
+        "buy": "https://lk.medvediva.ru/payments/tariff_v4Wegn/checkout?utm_source=qa-ui-proof&utm_campaign=source-transfer&r=QA-Medvediva-13",
+        "label": "Купить",
+        "selected": "scene-group pf-option pf-option--2 pf-active",
+        "addon": "true"
+      },
+      "comfort": "5 290 ₽",
+      "errors": [],
+      "iframe": 0
+    }
+  ],
+  "purchasesPerformed": 0,
+  "asset": "index-BMJeuq25.js",
+  "checks": "Strict numeric/UTM/referral/card-visibility assertions; checkout navigation not performed"
+}

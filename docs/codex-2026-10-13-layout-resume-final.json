@@ -1,0 +1,4705 @@
+{
+  "base": "http://127.0.0.1:4176",
+  "checkedAt": "2026-10-13T08:55:13.314Z",
+  "notPhysicalDevices": true,
+  "matrix": [
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 5623,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 5083,
+        "width": 320,
+        "height": 540,
+        "top": 5083,
+        "right": 320,
+        "bottom": 5623,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/pit",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 6303,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 5763,
+        "width": 320,
+        "height": 540,
+        "top": 5763,
+        "right": 320,
+        "bottom": 6303,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/intensiv",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 5489,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 4949,
+        "width": 320,
+        "height": 540,
+        "top": 4949,
+        "right": 320,
+        "bottom": 5489,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/tvg",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 4320,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "900"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 3780,
+        "width": 320,
+        "height": 540,
+        "top": 3780,
+        "right": 320,
+        "bottom": 4320,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/invent",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 2069,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "500"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 1529,
+        "width": 320,
+        "height": 540,
+        "top": 1529,
+        "right": 320,
+        "bottom": 2069,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 390,
+      "route": "/",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 6854,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 6196,
+        "width": 390,
+        "height": 658,
+        "top": 6196,
+        "right": 390,
+        "bottom": 6854,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 390,
+      "route": "/pit",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 7681,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 7023,
+        "width": 390,
+        "height": 658,
+        "top": 7023,
+        "right": 390,
+        "bottom": 7681,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 390,
+      "route": "/intensiv",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 6690,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 6032,
+        "width": 390,
+        "height": 658,
+        "top": 6032,
+        "right": 390,
+        "bottom": 6690,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 390,
+      "route": "/tvg",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 5267,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "900"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 4609,
+        "width": 390,
+        "height": 658,
+        "top": 4609,
+        "right": 390,
+        "bottom": 5267,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 390,
+      "route": "/invent",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 2520,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "500"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 1862,
+        "width": 390,
+        "height": 658,
+        "top": 1862,
+        "right": 390,
+        "bottom": 2520,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 4626,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 4148,
+        "width": 1440,
+        "height": 478,
+        "top": 4148,
+        "right": 1440,
+        "bottom": 4626,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/pit",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 4878,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 4400,
+        "width": 1440,
+        "height": 478,
+        "top": 4400,
+        "right": 1440,
+        "bottom": 4878,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/intensiv",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 4411,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 3933,
+        "width": 1440,
+        "height": 478,
+        "top": 3933,
+        "right": 1440,
+        "bottom": 4411,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/tvg",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 3484,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "900"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 3006,
+        "width": 1440,
+        "height": 478,
+        "top": 3006,
+        "right": 1440,
+        "bottom": 3484,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/invent",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 2282,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "500"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 1804,
+        "width": 1440,
+        "height": 478,
+        "top": 1804,
+        "right": 1440,
+        "bottom": 2282,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 320,
+      "route": "/",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 5623,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 5083,
+        "width": 320,
+        "height": 540,
+        "top": 5083,
+        "right": 320,
+        "bottom": 5623,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 320,
+      "route": "/pit",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 6303,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 5763,
+        "width": 320,
+        "height": 540,
+        "top": 5763,
+        "right": 320,
+        "bottom": 6303,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 320,
+      "route": "/intensiv",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 5489,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 4949,
+        "width": 320,
+        "height": 540,
+        "top": 4949,
+        "right": 320,
+        "bottom": 5489,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 320,
+      "route": "/tvg",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 4320,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "900"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 3780,
+        "width": 320,
+        "height": 540,
+        "top": 3780,
+        "right": 320,
+        "bottom": 4320,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 320,
+      "route": "/invent",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 320,
+      "height": 2069,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "500"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 70,
+        "top": 0,
+        "right": 320,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 1529,
+        "width": 320,
+        "height": 540,
+        "top": 1529,
+        "right": 320,
+        "bottom": 2069,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 6854,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 6196,
+        "width": 390,
+        "height": 658,
+        "top": 6196,
+        "right": 390,
+        "bottom": 6854,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/pit",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 7681,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 7023,
+        "width": 390,
+        "height": 658,
+        "top": 7023,
+        "right": 390,
+        "bottom": 7681,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/intensiv",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 6690,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 6032,
+        "width": 390,
+        "height": 658,
+        "top": 6032,
+        "right": 390,
+        "bottom": 6690,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/tvg",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 5267,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "900"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 4609,
+        "width": 390,
+        "height": 658,
+        "top": 4609,
+        "right": 390,
+        "bottom": 5267,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/invent",
+      "isMobile": true,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 390,
+      "height": 2520,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "500"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 85,
+        "top": 0,
+        "right": 390,
+        "bottom": 85,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 1862,
+        "width": 390,
+        "height": 658,
+        "top": 1862,
+        "right": 390,
+        "bottom": 2520,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 1440,
+      "route": "/",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 4626,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 4148,
+        "width": 1440,
+        "height": 478,
+        "top": 4148,
+        "right": 1440,
+        "bottom": 4626,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 1440,
+      "route": "/pit",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 4878,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 4400,
+        "width": 1440,
+        "height": 478,
+        "top": 4400,
+        "right": 1440,
+        "bottom": 4878,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 1440,
+      "route": "/intensiv",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 4411,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "500"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 3933,
+        "width": 1440,
+        "height": 478,
+        "top": 3933,
+        "right": 1440,
+        "bottom": 4411,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 1440,
+      "route": "/tvg",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 3484,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Manrope",
+          "weight": "700"
+        },
+        {
+          "family": "Manrope",
+          "weight": "800"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "900"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 3006,
+        "width": 1440,
+        "height": 478,
+        "top": 3006,
+        "right": 1440,
+        "bottom": 3484,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "width": 1440,
+      "route": "/invent",
+      "isMobile": false,
+      "errors": [],
+      "failed": [],
+      "scrollWidth": 1440,
+      "height": 2282,
+      "fonts": [
+        {
+          "family": "Manrope",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "weight": "500"
+        },
+        {
+          "family": "Manrope",
+          "weight": "600"
+        },
+        {
+          "family": "Bounded",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "400"
+        },
+        {
+          "family": "Inter",
+          "weight": "500"
+        },
+        {
+          "family": "Inter",
+          "weight": "600"
+        },
+        {
+          "family": "Inter",
+          "weight": "700"
+        }
+      ],
+      "fontStatus": "loaded",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      },
+      "footer": {
+        "x": 0,
+        "y": 1804,
+        "width": 1440,
+        "height": 478,
+        "top": 1804,
+        "right": 1440,
+        "bottom": 2282,
+        "left": 0
+      },
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "tables": [],
+      "paragraphs": 0,
+      "clippedTextCandidates": [],
+      "headerCount": 1,
+      "footerCount": 1,
+      "footerLinks": [
+        {
+          "text": "Питание и тренировки",
+          "href": "/pit",
+          "target": null
+        },
+        {
+          "text": "Политика в отношении обработки персональных данных",
+          "href": "/personaldata",
+          "target": null
+        },
+        {
+          "text": "Согласие на обработку персональных данных",
+          "href": "/data-consent",
+          "target": null
+        },
+        {
+          "text": "Партнерское соглашение (Договор-оферта) о реферальной программе",
+          "href": "/part_oferta",
+          "target": null
+        },
+        {
+          "text": "Договор оферта",
+          "href": "/offer",
+          "target": null
+        },
+        {
+          "text": "Поддержка",
+          "href": "tg://resolve?domain=MedveDivaCare_bot",
+          "target": null
+        },
+        {
+          "text": "Instagram*",
+          "href": "https://instagram.com/medve_diva_?igshid=YmMyMTA2M2Y=",
+          "target": "_blank"
+        },
+        {
+          "text": "Telegram-канал",
+          "href": "tg://resolve?domain=medve_diva1",
+          "target": null
+        },
+        {
+          "text": "Личный кабинет",
+          "href": "https://lk.medvediva.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Интенсив",
+          "href": "/intensiv",
+          "target": null
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@medvediva",
+          "target": "_blank"
+        },
+        {
+          "text": "",
+          "href": "https://shumann.ru/",
+          "target": "_blank"
+        },
+        {
+          "text": "Согласие на рассылку информационных сообщений",
+          "href": "/consent",
+          "target": null
+        }
+      ],
+      "menuSVG": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ]
+    }
+  ],
+  "build": "BMJeuq25/ChOLOQPx",
+  "visualReviewed": [
+    "chromium-pit-320-0.25.png",
+    "chromium-pit-320-0.5.png",
+    "chromium-home-390-0.5.png",
+    "chromium-intensiv-390-0.5.png",
+    "webkit-pit-320-0.5.png",
+    "webkit-invent-320-0.5.png",
+    "webkit-home-320-0.75.png"
+  ],
+  "sharedProof": "docs/codex-2026-10-13-final-shared-legal.json",
+  "limitations": [
+    "Chromium/WebKit emulation,notphysicaliOS/Safari",
+    "NumericgeometrycheckplusrepresentativePNGreviewisnotvisualreviewofeverypixelof124pages",
+    "Tariffcalculation/promotions/backendbehaviorhandledbyresourceagent; geometryPASSdoesnotprovefinancialcorrectness",
+    "Nativearticlelongtokenwrapfixedwithouteditinglegaltext"
+  ],
+  "summary": {
+    "completedCases": 30,
+    "errors": 0,
+    "overflowCases": 0,
+    "clippedTextCandidates": 0,
+    "failedResourceResponses": 0
+  }
+}

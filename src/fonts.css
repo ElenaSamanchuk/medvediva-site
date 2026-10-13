@@ -1,0 +1,35 @@
+@font-face{font-family:Druktextwidecyr;font-weight:600;font-style:normal;font-display:swap;src:url(/fonts/druktextwidecyr600.woff) format("woff");}
+@font-face{font-family:Druktextwidecyr;font-weight:700;font-style:normal;font-display:swap;src:url(/fonts/druktextwidecyr700.woff) format("woff");}
+@font-face{font-family:Manrope;font-weight:200;font-style:normal;font-display:swap;src:url(/fonts/manrope200.woff) format("woff");}
+@font-face{font-family:Manrope;font-weight:300;font-style:normal;font-display:swap;src:url(/fonts/manrope300.woff) format("woff");}
+@font-face{font-family:Manrope;font-weight:400;font-style:normal;font-display:swap;src:url(/fonts/manrope400.woff) format("woff");}
+@font-face{font-family:Manrope;font-weight:500;font-style:normal;font-display:swap;src:url(/fonts/manrope500.woff) format("woff");}
+@font-face{font-family:Manrope;font-weight:600;font-style:normal;font-display:swap;src:url(/fonts/manrope600.woff) format("woff");}
+@font-face{font-family:Manrope;font-weight:700;font-style:normal;font-display:swap;src:url(/fonts/manrope700.woff) format("woff");}
+@font-face{font-family:Manrope;font-weight:800;font-style:normal;font-display:swap;src:url(/fonts/manrope800.woff) format("woff");}
+@font-face{font-family:Bounded;font-weight:500;font-style:normal;font-display:swap;src:url(/fonts/bounded500.woff) format("woff");}
+@font-face{font-family:Bounded;font-weight:600;font-style:normal;font-display:swap;src:url(/fonts/bounded600.woff) format("woff");}
+@font-face{font-family:Bounded;font-weight:900;font-style:normal;font-display:swap;src:url(/fonts/bounded900.woff) format("woff");}
+@font-face{font-family:Inter;font-style:normal;font-weight:300;font-display:swap;src:url(/fonts/inter300.ttf) format("truetype");}
+@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/inter400.ttf) format("truetype");}
+@font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/inter500.ttf) format("truetype");}
+@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/inter600.ttf) format("truetype");}
+@font-face{font-family:Inter;font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/inter700.ttf) format("truetype");}
+/* Additional source fonts */
+@font-face{font-family:"Nunito Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/nunitosans400.ttf) format("truetype");}
+@font-face{font-family:"Nunito Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/nunitosans600.ttf) format("truetype");}
+@font-face{font-family:"Nunito Sans";font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/nunitosans700.ttf) format("truetype");}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:300;font-display:swap;src:url(/fonts/opensans300.ttf) format("truetype");}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/opensans400.ttf) format("truetype");}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/opensans500.ttf) format("truetype");}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/opensans600.ttf) format("truetype");}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/opensans700.ttf) format("truetype");}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/opensans800.ttf) format("truetype");}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:200;font-display:swap;src:url(/fonts/unbounded200.ttf) format("truetype");}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:300;font-display:swap;src:url(/fonts/unbounded300.ttf) format("truetype");}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/unbounded400.ttf) format("truetype");}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/unbounded500.ttf) format("truetype");}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/unbounded600.ttf) format("truetype");}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/unbounded700.ttf) format("truetype");}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/unbounded800.ttf) format("truetype");}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:900;font-display:swap;src:url(/fonts/unbounded900.ttf) format("truetype");}

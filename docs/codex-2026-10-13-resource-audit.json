@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-13",
+  "scope": "readonly current source and generated models; no browser acceptance, deployment or external delivery",
+  "exportCanonicalRoutes": 124,
+  "generatedRoutes": 124,
+  "generatedModels": 124,
+  "missingLocalAssetReferences": 0,
+  "sourceMissingMediaPositions": 19,
+  "sourceMissingMediaRoutes": [
+    {
+      "path": "/page156348076.html",
+      "missingMediaCount": 1
+    },
+    {
+      "path": "/page52708701.html",
+      "missingMediaCount": 2
+    },
+    {
+      "path": "/time",
+      "missingMediaCount": 1
+    },
+    {
+      "path": "/page51876667.html",
+      "missingMediaCount": 2
+    },
+    {
+      "path": "/fitness_for_health",
+      "missingMediaCount": 2
+    },
+    {
+      "path": "/2",
+      "missingMediaCount": 1
+    },
+    {
+      "path": "/page41858117.html",
+      "missingMediaCount": 2
+    },
+    {
+      "path": "/page68220891.html",
+      "missingMediaCount": 1
+    },
+    {
+      "path": "/page67656165.html",
+      "missingMediaCount": 1
+    },
+    {
+      "path": "/page77594406.html",
+      "missingMediaCount": 3
+    },
+    {
+      "path": "/page67486639.html",
+      "missingMediaCount": 2
+    },
+    {
+      "path": "/page67639341.html",
+      "missingMediaCount": 1
+    }
+  ],
+  "unsupportedBlocks": [
+    {
+      "path": "/support",
+      "unsupported": [
+        {
+          "id": "617699925",
+          "type": "706"
+        }
+      ]
+    },
+    {
+      "path": "/delete",
+      "unsupported": [
+        {
+          "id": "783403572",
+          "type": "706"
+        }
+      ]
+    }
+  ],
+  "iframeCount": 56,
+  "iframeProvider": "kinescope.io",
+  "heavySvg": [
+    {
+      "file": "public/media/62450b0e2c65f683458dda01.svg",
+      "bytes": 2256636,
+      "routes": [
+        "/page67656165.html"
+      ]
+    },
+    {
+      "file": "public/media/51697d75bfb37b0bca4ca3c7.svg",
+      "bytes": 1069608,
+      "routes": [
+        "/page60259039.html"
+      ]
+    },
+    {
+      "file": "public/media/2ed0281887fefdb473b06c21.svg",
+      "bytes": 1069608,
+      "routes": [
+        "/page60244757.html"
+      ]
+    },
+    {
+      "file": "public/media/5e490f42e0fdbf0fa35ceaf4.svg",
+      "bytes": 1142024,
+      "routes": [
+        "/page59461283.html"
+      ]
+    },
+    {
+      "file": "public/media/35eae03a24c26d41c5f570bf.svg",
+      "bytes": 3390948,
+      "routes": [
+        "/priut"
+      ]
+    }
+  ],
+  "fontTotalBytes": 6376960,
+  "fontFaceDeclarations": 34,
+  "emptyDescriptions": 110,
+  "exportDescriptionCount": 14,
+  "structuredDataPages": 0,
+  "previewNoindex": true,
+  "metricsActive": false,
+  "senderMode": "isolated UI demo adapter, no real delivery",
+  "cookieFinding": "Any click outside cookie scene sets cookieConsent=accepted; reference Popovich repeats source T123 behavior. Verify Medvediva source before changing; not established regression",
+  "formsMode": "dry-run per user instruction",
+  "laterImplementation": {
+    "media": "native video + lazy hls.js; no iframe",
+    "publicSampleRealPlayback": "PASS Chromium mobile390 static preview4176",
+    "sample": "iybjGEYtGedq8nm6hd8KQd",
+    "remaining": "55 other source embeds and real Safari not accepted",
+    "unitTests": "18/18 PASS",
+    "proof": "docs/media-native-proof-codex-2026-10-13.json"
+  }
+}

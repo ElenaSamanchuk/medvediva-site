@@ -1,0 +1,54 @@
+[
+  {
+    "motion": "no-preference",
+    "first": {
+      "active": "Закрыть",
+      "animation": "dialog-enter",
+      "bodyOverflow": "hidden",
+      "dialogRole": "dialog"
+    },
+    "shift": {
+      "inside": true,
+      "tag": "A",
+      "text": "Открыть видео отдельно ↗"
+    },
+    "tab": {
+      "inside": true,
+      "label": "Закрыть"
+    },
+    "closed": {
+      "overflow": "",
+      "activeNode": "1723635093690",
+      "hash": "",
+      "video": 0,
+      "finalHash": ""
+    },
+    "errors": []
+  },
+  {
+    "motion": "reduce",
+    "first": {
+      "active": "Закрыть",
+      "animation": "none",
+      "bodyOverflow": "hidden",
+      "dialogRole": "dialog"
+    },
+    "shift": {
+      "inside": true,
+      "tag": "A",
+      "text": "Открыть видео отдельно ↗"
+    },
+    "tab": {
+      "inside": true,
+      "label": "Закрыть"
+    },
+    "closed": {
+      "overflow": "",
+      "activeNode": "1723635093690",
+      "hash": "",
+      "video": 0,
+      "finalHash": ""
+    },
+    "errors": []
+  }
+]

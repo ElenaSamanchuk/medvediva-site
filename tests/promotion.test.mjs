@@ -1,0 +1,21 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {getActivePhase,promotionVisible,countdownState,countdownTarget,russianPlural} from '../src/lib/promotion.mjs';
+const config={page:{audience:'new',phase:'auto'},dates:{timezone:'Europe/Moscow',phase1Start:'2026-10-02',phase2Start:'2026-10-08',phase3Start:'2026-10-09',campaignEnd:'2026-10-12',outsideCampaign:'phase1'}};
+test('phases use Moscow day boundaries, not UTC/browser day',()=>{assert.equal(getActivePhase(config,'2026-10-07T20:59:59Z'),'phase1');assert.equal(getActivePhase(config,'2026-10-07T21:00:00Z'),'phase2');assert.equal(getActivePhase(config,'2026-10-08T21:00:00Z'),'phase3');});
+test('outside campaign retains explicit source phase1 policy and includes last campaign day',()=>{assert.equal(getActivePhase(config,'2026-10-12T20:59:59Z'),'phase3');assert.equal(getActivePhase(config,'2026-10-12T21:00:00Z'),'phase1');assert.equal(getActivePhase(config,'2026-09-30T00:00:00Z'),'phase1');});
+test('renewal and manual phase override auto dates',()=>{assert.equal(getActivePhase({...config,page:{audience:'renewal',phase:'phase2'}},'2026-10-13'),'renewal');assert.equal(getActivePhase({...config,page:{audience:'new',phase:'phase2'}},'2026-10-13'),'phase2');});
+test('exactly one phase promo is shown; sale, nosale and phase4 markers follow source',()=>{const now='2026-10-08T08:00:00Z';assert.deepEqual(['phase1','phase2','phase3'].map(p=>promotionVisible(['pf-show-'+p],config,now)),[false,true,false]);assert.equal(promotionVisible(['pf-show-with-sale'],config,now),true);assert.equal(promotionVisible(['pf-show-nosale'],config,now),false);assert.equal(promotionVisible(['pf-show-phase4'],{...config,page:{audience:'renewal'}},now),true);});
+test('current fixed countdown is Moscow 13 October noon and clamps expired state to zero',()=>{const timer={timezone:'Europe/Moscow',mode:'fixed',endDate:'2026-10-13 12:00:00'};assert.equal(countdownTarget(timer),Date.parse('2026-10-13T09:00:00Z'));const before=countdownState(timer,'2026-10-13T08:59:59Z');assert.equal(before.remaining,1);assert.equal(before.text['cd-secs-num'],'01');assert.equal(before.text['cd-secs-text'],'секунда');const after=countdownState(timer,'2026-10-13T09:00:10Z');assert.equal(after.remaining,0);assert.equal(after.text['cd-days-num'],'00');});
+test('endOfDay resets at the next Moscow day and plural forms handle 11-14',()=>{const timer={timezone:'Europe/Moscow',mode:'endOfDay'};assert.equal(countdownState(timer,'2026-10-13T20:59:58Z').remaining,1);assert.equal(countdownState(timer,'2026-10-13T21:00:00Z').remaining,86399);assert.equal(russianPlural(12,['час','часа','часов']),'часов');assert.equal(russianPlural(21,['час','часа','часов']),'час');});
+test('invalid timer or timezone does not invent a running timer',()=>{assert.equal(countdownState({mode:'fixed',endDate:'unknown'}),null);assert.equal(getActivePhase({...config,dates:{...config.dates,timezone:'bad/zone'}}),null);});
+import {projectPromotionScene} from '../src/lib/promotion-model.mjs';
+test('projection hides whole inactive scene and updates countdown without changing original styles or IDs',()=>{
+ const scene={id:'4482960101',board:{height:'200'},nodes:[{id:'group',sourceClasses:['pf-show-phase2'],children:[{id:'same-id',sourceClasses:['cd-secs-num'],html:'<span style="color:blue">01</span>',fields:{fontsize:'10'}},{id:'heading',html:'Оставленный текст'}]}]};
+ const promotion={config,countdown:{timezone:'Europe/Moscow',mode:'fixed',endDate:'2026-10-08 12:00:00'}};
+ assert.equal(projectPromotionScene(scene,promotion,'2026-10-09T06:00:00Z'),null);
+ const visible=projectPromotionScene(scene,promotion,'2026-10-08T08:59:58Z');
+ assert.equal(visible.nodes[0].children[0].html,'<span style="color:blue">02</span>');
+ assert.equal(scene.nodes[0].children[0].html,'<span style="color:blue">01</span>');
+ assert.strictEqual(visible.nodes[0].children[0].fields,scene.nodes[0].children[0].fields);
+ assert.strictEqual(visible.nodes[0].children[1],scene.nodes[0].children[1]);
+ assert.strictEqual(visible.board,scene.board);
+});

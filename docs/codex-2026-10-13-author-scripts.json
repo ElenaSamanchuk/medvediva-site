@@ -1,0 +1,830 @@
+{
+  "source": "archived primary 10; PF fresh live config separately audited",
+  "items": [
+    {
+      "hash": "86c4acafb888a5c09ecbd8494d32adbc8b9d582a2c3655c81e76ddc5c51175d3",
+      "kind": "cookie consent",
+      "bytes": 1869,
+      "source": null,
+      "preview": "(function() {   'use strict';   var STORAGE_KEY = 'cookieConsent';   var STORAGE_DATE_KEY = 'cookieConsentDate';   var isInitialized = false;   function checkCo",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/pit",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/invent",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/offer",
+          "record": "rec2019110181"
+        },
+        {
+          "route": "/consent",
+          "record": "rec2019110181"
+        }
+      ]
+    },
+    {
+      "hash": "3f7d2ecca13d29ad4819ecb6192b197b4f8e45f6d0bd74a65578075b99b64f82",
+      "kind": "referral/UTM handoff",
+      "bytes": 1077,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/pit",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/invent",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/offer",
+          "record": "rec857516649"
+        },
+        {
+          "route": "/consent",
+          "record": "rec857516649"
+        }
+      ]
+    },
+    {
+      "hash": "722966ba3c2de2889a7edfb49338dd30837cd3126a8116d1905c58047622b5be",
+      "kind": "referral/UTM handoff",
+      "bytes": 1078,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/pit",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/invent",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/offer",
+          "record": "rec860263697"
+        },
+        {
+          "route": "/consent",
+          "record": "rec860263697"
+        }
+      ]
+    },
+    {
+      "hash": "19202f804f33132fee2ccbbc14671c25742916548eb9fab9740ad305338f921a",
+      "kind": "overlay menu",
+      "bytes": 8432,
+      "source": null,
+      "preview": "(function() { if (typeof window.nlm082blocks == 'undefined') { window.nlm082blocks = []; window.nlm082blocks.push('#rec860237765'); } else { window.nlm082blocks",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/pit",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/invent",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/offer",
+          "record": "rec860263261"
+        },
+        {
+          "route": "/consent",
+          "record": "rec860263261"
+        }
+      ]
+    },
+    {
+      "hash": "60178b7c790853049202007cdf80f2378b2001a54ed687dee2dd85bcd2c79f55",
+      "kind": "top banner 500 ms / 10 s / persistent dismiss",
+      "bytes": 2256,
+      "source": null,
+      "preview": "(function () {   'use strict';    var REC_ID = '2322512891';   var BANNER_SELECTOR = '#rec2322512891';   var SHOW_DURATION = 10000;   var STORAGE_KEY = 'kochfit",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec2322514551"
+        }
+      ],
+      "migration": "native banner exists; source localStorage key differs from native sessionStorage; root notified"
+    },
+    {
+      "hash": "ea0becaaf35210c3a2c925d21912febaa7d80685d231280021671889b844bb95",
+      "kind": "referral/UTM handoff",
+      "bytes": 2255,
+      "source": null,
+      "preview": "(function () {     // Функция для обработки ссылок     function processLinks() {         const urlParams = new URLSearchParams(window.location.search);         ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec1016422526"
+        }
+      ]
+    },
+    {
+      "hash": "aa4cccf7e5530a24fb9f0ec2ddaef984ba5cdd66f380c5c79c982f39d04b80dc",
+      "kind": "referral/UTM handoff",
+      "bytes": 1082,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec1016473496"
+        }
+      ]
+    },
+    {
+      "hash": "a1a5f49eb6a7f5cc03964620e6095a11d3c4ba5895a3a0d24c649e86de4c3e27",
+      "kind": "referral/UTM handoff",
+      "bytes": 1087,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec1513420451"
+        }
+      ]
+    },
+    {
+      "hash": "bb879953b06ee0a28e4939e4c155c8d5c90be4f194f74838806048f04e177abb",
+      "kind": "referral/UTM handoff",
+      "bytes": 1082,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec1513420791"
+        }
+      ]
+    },
+    {
+      "hash": "3614c3bd97f3e885222e5021c82a74b86f8b19409a0fb1b23184ddf487d23550",
+      "kind": "referral/UTM handoff",
+      "bytes": 2255,
+      "source": null,
+      "preview": "(function () {     // Функция для обработки ссылок     function processLinks() {         const urlParams = new URLSearchParams(window.location.search);         ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec1016478371"
+        }
+      ]
+    },
+    {
+      "hash": "16f8d500210882974781193dfe2a1c0516425b8ec4a8979e6cee2cc56f1adaad",
+      "kind": "referral/UTM handoff",
+      "bytes": 1078,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec857513133"
+        }
+      ]
+    },
+    {
+      "hash": "b5f83e66eae7653c850539bc9d276cd6b8134d2adfd44819ed959003218983d1",
+      "kind": "referral/UTM handoff",
+      "bytes": 1078,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec846884915"
+        }
+      ]
+    },
+    {
+      "hash": "09e1d1852aab7aa6d33c173b018867518b1b943e88b24a1196093629693d9d71",
+      "kind": "referral/UTM handoff",
+      "bytes": 1078,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec857514967"
+        }
+      ]
+    },
+    {
+      "hash": "b76d6f3476ad18c582cbe6efee8146841635a85bb804fa5a3d70d540561f6a9b",
+      "kind": "Yandex metrics",
+      "bytes": 509,
+      "source": null,
+      "preview": "(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();    for (var j = 0; j < document.scripts.length; j++",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/pit",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/invent",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/offer",
+          "record": "rec701571114"
+        },
+        {
+          "route": "/consent",
+          "record": "rec701571114"
+        }
+      ]
+    },
+    {
+      "hash": "05ba2c53c71ead56059d0fdcb5a173f6e643bd67380610a7c89cee94d95470b2",
+      "kind": "Sender support",
+      "bytes": 0,
+      "source": "https://www.nn99.ru/widget.js",
+      "preview": "",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/pit",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/invent",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/offer",
+          "record": "rec861379437"
+        },
+        {
+          "route": "/consent",
+          "record": "rec861379437"
+        }
+      ]
+    },
+    {
+      "hash": "560ed5f9e7cefe10bf125618f18051c653de1507c4561fc13611b358aa943027",
+      "kind": "persistent r capture into ref_id",
+      "bytes": 611,
+      "source": null,
+      "preview": "t_onReady(function(){  const utmName = 'r';// Тут название переменной в GET параметрах  const refIdName = 'ref_id';//Сюда вместо ref_id пишешь название твоего с",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/pit",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/invent",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/offer",
+          "record": "rec846782091"
+        },
+        {
+          "route": "/consent",
+          "record": "rec846782091"
+        }
+      ],
+      "migration": "native r storage exists; checkout propagation requires actual lk.medvediva.ru allowlist"
+    },
+    {
+      "hash": "487adc5d77df2d21af4211be4a966f5df88c20e23868697a4002fd0c22c1cb5a",
+      "kind": "legacy Tilda member profile external renderer",
+      "bytes": 0,
+      "source": "https://storage.yandexcloud.net/tilda-tools/0b2ab01e-913e-4ead-8612-534415bf57f4.js?v=1",
+      "preview": "",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/pit",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/invent",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/offer",
+          "record": "rec846782093"
+        },
+        {
+          "route": "/consent",
+          "record": "rec846782093"
+        }
+      ],
+      "migration": "public script read only; POST runner not executed; backend replacement not configured"
+    },
+    {
+      "hash": "2cc642a7c1a4617fd76a949d5a6dd3689bbd3380b07311178b777c925f7672e4",
+      "kind": "legacy Tilda member visibility",
+      "bytes": 703,
+      "source": null,
+      "preview": "function n_ready(t) { \"loading\" != document.readyState ? t() : document.addEventListener ? document.addEventListener(\"DOMContentLoaded\", t) : document.attachEve",
+      "locations": [
+        {
+          "route": "/",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/pit",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/intensiv",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/invent",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/personaldata",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/data-consent",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/part_oferta",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/offer",
+          "record": "rec846782094"
+        },
+        {
+          "route": "/consent",
+          "record": "rec846782094"
+        }
+      ],
+      "migration": "source conditions on tilda_members_profile; not native new-LK authentication"
+    },
+    {
+      "hash": "2d31af86f57da8dcb1b5e39d65273493aa5261327d85ddbddda6a55a16924025",
+      "kind": "Postnikov tooltip loader",
+      "bytes": 0,
+      "source": "https://cdn.postnikovmd.com/tilda@1.5/mods.min.js",
+      "preview": "",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec1934653601"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec1937527051"
+        }
+      ],
+      "migration": "native tooltip logic implemented; source library excluded"
+    },
+    {
+      "hash": "da170421ebc12294e47eaeb319274bdd6c9711cca35ba7622b52755d2cccd862",
+      "kind": "referral/UTM handoff",
+      "bytes": 1078,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec1016491196"
+        }
+      ]
+    },
+    {
+      "hash": "30206fc1cd50187f2610cb869c1a3be6759175382c5f2c100e6c814700d3b908",
+      "kind": "referral/UTM handoff",
+      "bytes": 1587,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL и его параметры     const urlParams = new URLSearchParams(window.locat",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec2294705181"
+        }
+      ]
+    },
+    {
+      "hash": "2eaf5d084cd37badb8a2aeef601b59a7059f0a1ba3d014e4c91259058e152541",
+      "kind": "tooltip",
+      "bytes": 52,
+      "source": null,
+      "preview": "tooltip.init(\".uc-tooltip-1\", { link: \"#tooltip1\" })",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec1934639571"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec1937525051"
+        }
+      ]
+    },
+    {
+      "hash": "798c0cac04be96f3380e9c49f0fc651ae44828ede7fedce48ed3ffd37df8ff59",
+      "kind": "tooltip",
+      "bytes": 52,
+      "source": null,
+      "preview": "tooltip.init(\".uc-tooltip-2\", { link: \"#tooltip2\" })",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec1934642141"
+        },
+        {
+          "route": "/tvg",
+          "record": "rec1937526301"
+        }
+      ]
+    },
+    {
+      "hash": "bcee8923f5ce2f841cd6d3a3a2e5f86ffdf62aa6304880516e7b736e2ee3f268",
+      "kind": "referral/UTM handoff",
+      "bytes": 2255,
+      "source": null,
+      "preview": "(function () {     // Функция для обработки ссылок     function processLinks() {         const urlParams = new URLSearchParams(window.location.search);         ",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec1016510936"
+        }
+      ]
+    },
+    {
+      "hash": "ef0a085cbc2293907a52f36fd5d5e145f87333c340adbe6fae5721b0040781ca",
+      "kind": "referral/UTM handoff",
+      "bytes": 1595,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL и его параметры     const urlParams = new URLSearchParams(window.locat",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec1177150466"
+        }
+      ]
+    },
+    {
+      "hash": "28ffee0bec32b7df60cbe4e5fdd31870f43c674fa44d3bf6c3be6802c64483f6",
+      "kind": "PIT countdown timezone",
+      "bytes": 12288,
+      "source": null,
+      "preview": "(function () {   'use strict';    /* ══ НАСТРОЙКИ — меняйте только здесь ══ */   var CONFIG = {     // Часовой пояс для таймера и дат ('Europe/Moscow' = МСК, не",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec4482963101"
+        }
+      ]
+    },
+    {
+      "hash": "8cc339bc1c38cd896e4a39a933999b85db90f68dfe10c5589b43445ff4c65d38",
+      "kind": "PIT tariff phases/prices/links",
+      "bytes": 28336,
+      "source": null,
+      "preview": "(function () {   'use strict';    /* ════════════════════════════════════════════════════════════════      ★ НАСТРОЙКИ АДМИНА — менять только этот блок ★      ═",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec4482970101"
+        }
+      ]
+    },
+    {
+      "hash": "435107bc5b145aa129d1f3988b1020d6bb99985adce59a916aabd036cb2647b0",
+      "kind": "referral/UTM handoff",
+      "bytes": 1587,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL и его параметры     const urlParams = new URLSearchParams(window.locat",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec2414435611"
+        }
+      ]
+    },
+    {
+      "hash": "e709011e8bed13001e4693cf2b406b61f299ced55885eafa0b2b3586cc4f3747",
+      "kind": "referral/UTM handoff",
+      "bytes": 1595,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL и его параметры     const urlParams = new URLSearchParams(window.locat",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec2294714821"
+        }
+      ]
+    },
+    {
+      "hash": "ab6b566ee32d206d61729e492a9dfe775493d9272a1c0221d08b8f53ed74841c",
+      "kind": "obsolete horizontal-arrow record references",
+      "bytes": 5509,
+      "source": null,
+      "preview": "document.addEventListener('DOMContentLoaded', function () {     let arrowBlocks = ['#rec981018806'];     let scrollableBlocks = ['#rec981016656'];             l",
+      "locations": [
+        {
+          "route": "/pit",
+          "record": "rec989751426"
+        }
+      ],
+      "migration": "all referenced arrow/scroll records absent from canonical source, no invented replacement"
+    },
+    {
+      "hash": "df08026d8937d66b7022ed888dbbcc1d99d317941db9fb1f4dfefe8eaad5484c",
+      "kind": "referral/UTM handoff",
+      "bytes": 1078,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL     const urlParams = new URLSearchParams(window.location.search);    ",
+      "locations": [
+        {
+          "route": "/intensiv",
+          "record": "rec1016721166"
+        }
+      ]
+    },
+    {
+      "hash": "572ecb3575b9c45af00d0ccc0d47ddcdc096ae3f2eec6cc7bf96a41c4ce5bcfd",
+      "kind": "referral/UTM handoff",
+      "bytes": 1587,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL и его параметры     const urlParams = new URLSearchParams(window.locat",
+      "locations": [
+        {
+          "route": "/intensiv",
+          "record": "rec2311417151"
+        }
+      ]
+    },
+    {
+      "hash": "5eabce915698e1952fc902785a0262fcc01a3e9a64f9fff50a801362f86788bf",
+      "kind": "referral/UTM handoff",
+      "bytes": 1592,
+      "source": null,
+      "preview": "document.addEventListener(\"DOMContentLoaded\", function () {     // Определяем текущий URL и его параметры     const urlParams = new URLSearchParams(window.locat",
+      "locations": [
+        {
+          "route": "/intensiv",
+          "record": "rec2311416901"
+        }
+      ]
+    },
+    {
+      "hash": "2676fdbd2ddf5bf30b931b58dbd3b3986c751c6c0cae7c3731f98a73e0530a0c",
+      "kind": "obsolete horizontal-arrow record references",
+      "bytes": 5509,
+      "source": null,
+      "preview": "document.addEventListener('DOMContentLoaded', function () {     let arrowBlocks = ['#rec978980451'];     let scrollableBlocks = ['#rec978980316'];             l",
+      "locations": [
+        {
+          "route": "/intensiv",
+          "record": "rec989761956"
+        }
+      ],
+      "migration": "all referenced arrow/scroll records absent from canonical source, no invented replacement"
+    },
+    {
+      "hash": "fee220d3b9c17707cb7d8f71bb822269bdcd663fd434aa222c0f92a3a1a6ba16",
+      "kind": "referral/UTM handoff",
+      "bytes": 2255,
+      "source": null,
+      "preview": "(function () {     // Функция для обработки ссылок     function processLinks() {         const urlParams = new URLSearchParams(window.location.search);         ",
+      "locations": [
+        {
+          "route": "/tvg",
+          "record": "rec1016735266"
+        }
+      ]
+    },
+    {
+      "hash": "cd1336922ab81ed7161cb93120a95080db4eb18f0e27f77308967ecc90c6d50a",
+      "kind": "referral/UTM handoff",
+      "bytes": 2255,
+      "source": null,
+      "preview": "(function () {     // Функция для обработки ссылок     function processLinks() {         const urlParams = new URLSearchParams(window.location.search);         ",
+      "locations": [
+        {
+          "route": "/tvg",
+          "record": "rec1016736171"
+        }
+      ]
+    },
+    {
+      "hash": "6552742467f69a434b969f786f5f5a425ade45ed7444e4a694941736dd8c0cb2",
+      "kind": "invent touch/native overflow and mouse drag",
+      "bytes": 2291,
+      "source": null,
+      "preview": "$(function() {      var blockScrollId = '.uc-scroll';   // или '#rec2368131481'     var blockArrowsId = '.uc-arrows';   // или '#rec682559813'      var $viewpor",
+      "locations": [
+        {
+          "route": "/invent",
+          "record": "rec2384968691"
+        }
+      ],
+      "migration": "native overflow confirmed; authored mouse drag and post-drag click suppression not verified"
+    }
+  ]
+}

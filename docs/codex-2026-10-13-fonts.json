@@ -1,0 +1,1662 @@
+{
+  "date": "2026-10-12T21:26:38.550Z",
+  "scope": "Chromium actual rendered fonts via CDP; no live production interactions",
+  "fontMetadata": [
+    {
+      "file": "manrope600.woff",
+      "family": "Manrope SemiBold",
+      "subfamily": "Regular",
+      "postscript": "Manrope-SemiBold",
+      "weight": 600,
+      "cyrillic_r": true,
+      "sha256": "61d4df9e5614b1621062fe586ba03e11bec53518802b648e662c51b24d5987c8"
+    },
+    {
+      "file": "unbounded200.ttf",
+      "family": "Unbounded ExtraLight",
+      "subfamily": "Regular",
+      "postscript": "Unbounded-ExtraLight",
+      "weight": 250,
+      "cyrillic_r": true,
+      "sha256": "fc6850d0e570df367906d24f89c80c10cef317c31044fac0bc2f9d302d846e23"
+    },
+    {
+      "file": "inter500.ttf",
+      "family": "Inter Medium",
+      "subfamily": "Regular",
+      "postscript": "Inter-Medium",
+      "weight": 500,
+      "cyrillic_r": true,
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+    },
+    {
+      "file": "inter700.ttf",
+      "family": "Inter",
+      "subfamily": "Bold",
+      "postscript": "Inter-Bold",
+      "weight": 700,
+      "cyrillic_r": true,
+      "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c"
+    },
+    {
+      "file": "unbounded400.ttf",
+      "family": "Unbounded",
+      "subfamily": "Regular",
+      "postscript": "Unbounded-Regular",
+      "weight": 400,
+      "cyrillic_r": true,
+      "sha256": "b5decd19a5fc6c5942c6c52a258384dbf99af09d1f082430f285b4402a5fc267"
+    },
+    {
+      "file": "druktextwidecyr600.woff",
+      "family": "Druk Text Wide Cyr",
+      "subfamily": "Medium",
+      "postscript": "DrukTextWideCyr-Medium",
+      "weight": 500,
+      "cyrillic_r": true,
+      "sha256": "910e628c785e861bee1bd2bb842d651140513c5c54bbda37bfde9cac401f66b6"
+    },
+    {
+      "file": "inter300.ttf",
+      "family": "Inter Light",
+      "subfamily": "Regular",
+      "postscript": "Inter-Light",
+      "weight": 300,
+      "cyrillic_r": true,
+      "sha256": "d0f4bc7faca468376e3db9b5e57afcdc2192134c9ac82a9511f32767b56853a4"
+    },
+    {
+      "file": "manrope800.woff",
+      "family": "Manrope ExtraBold",
+      "subfamily": "Regular",
+      "postscript": "Manrope-ExtraBold",
+      "weight": 800,
+      "cyrillic_r": true,
+      "sha256": "5ab252faa68392d78067dbbe24b3a86f847a7381539f2fbc48642ebe4f2c3fc8"
+    },
+    {
+      "file": "manrope400.woff",
+      "family": "Manrope",
+      "subfamily": "Regular",
+      "postscript": "Manrope-Regular",
+      "weight": 400,
+      "cyrillic_r": true,
+      "sha256": "ffbfbc1a9b4c2a855b38f55ee6fb767997e3ddcf1f056a82e1565d7ca1b49001"
+    },
+    {
+      "file": "unbounded600.ttf",
+      "family": "Unbounded SemiBold",
+      "subfamily": "Regular",
+      "postscript": "Unbounded-SemiBold",
+      "weight": 600,
+      "cyrillic_r": true,
+      "sha256": "5d85f700bcc2a4be1b69c30c6d00c57f0d3848a505aceaaa1a22ba61ebc5b394"
+    },
+    {
+      "file": "inter600.ttf",
+      "family": "Inter SemiBold",
+      "subfamily": "Regular",
+      "postscript": "Inter-SemiBold",
+      "weight": 600,
+      "cyrillic_r": true,
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+    },
+    {
+      "file": "unbounded300.ttf",
+      "family": "Unbounded Light",
+      "subfamily": "Regular",
+      "postscript": "Unbounded-Light",
+      "weight": 300,
+      "cyrillic_r": true,
+      "sha256": "789c1e3061d62c2176a94ba56699b1b27cb6a52c6e986850d86a3aaadb44bad2"
+    },
+    {
+      "file": "inter400.ttf",
+      "family": "Inter",
+      "subfamily": "Regular",
+      "postscript": "Inter-Regular",
+      "weight": 400,
+      "cyrillic_r": true,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "file": "opensans800.ttf",
+      "family": "Open Sans ExtraBold",
+      "subfamily": "Regular",
+      "postscript": "OpenSans-ExtraBold",
+      "weight": 800,
+      "cyrillic_r": true,
+      "sha256": "8e325b2fc46c5f9ca4f8d9bde772b0f46fc7cbfbff6bc19c9570d2cd965b0954"
+    },
+    {
+      "file": "bounded500.woff",
+      "family": "Bounded Med",
+      "subfamily": "Regular",
+      "postscript": "Bounded-Medium",
+      "weight": 500,
+      "cyrillic_r": true,
+      "sha256": "4219baf99a43be75a24b4a14adff7bfd1b5b50e7282284d90c6ff9004cb90404"
+    },
+    {
+      "file": "bounded900.woff",
+      "family": "Bounded",
+      "subfamily": "Regular",
+      "postscript": "Bounded-Black",
+      "weight": 900,
+      "cyrillic_r": true,
+      "sha256": "cde4b2e72fe0f4aa7d5fde6e1b525bc58e409eae7cecde964c876be611fc00f2"
+    },
+    {
+      "file": "unbounded700.ttf",
+      "family": "Unbounded",
+      "subfamily": "Bold",
+      "postscript": "Unbounded-Bold",
+      "weight": 700,
+      "cyrillic_r": true,
+      "sha256": "0587b7ea8407976e5feda03dcba410dde297fa203ae115eb1098d64186efef5c"
+    },
+    {
+      "file": "manrope200.woff",
+      "family": "Manrope ExtraLight",
+      "subfamily": "Regular",
+      "postscript": "Manrope-ExtraLight",
+      "weight": 250,
+      "cyrillic_r": true,
+      "sha256": "16c75c4b39d83c9ecb07ebce2474cbe41733be9af7952f114795f8f5398d3ccb"
+    },
+    {
+      "file": "unbounded500.ttf",
+      "family": "Unbounded Medium",
+      "subfamily": "Regular",
+      "postscript": "Unbounded-Medium",
+      "weight": 500,
+      "cyrillic_r": true,
+      "sha256": "7ac0baee243b4d54ea0282ceb7e017a455f064462989620720215727e1b9129c"
+    },
+    {
+      "file": "opensans600.ttf",
+      "family": "Open Sans SemiBold",
+      "subfamily": "Regular",
+      "postscript": "OpenSans-SemiBold",
+      "weight": 600,
+      "cyrillic_r": true,
+      "sha256": "733eb93b167e6d45de09aa768f6c0355647c2c26f5416dbc7407a08ed41e81c6"
+    },
+    {
+      "file": "nunitosans400.ttf",
+      "family": "Nunito Sans",
+      "subfamily": "Regular",
+      "postscript": "NunitoSans-Regular",
+      "weight": 400,
+      "cyrillic_r": true,
+      "sha256": "a699fa825cd47524461c459a54fe3cd51eb13e1e76ba238fe6ea86932979a808"
+    },
+    {
+      "file": "unbounded900.ttf",
+      "family": "Unbounded Black",
+      "subfamily": "Regular",
+      "postscript": "Unbounded-Black",
+      "weight": 900,
+      "cyrillic_r": true,
+      "sha256": "4e308d4d3fb0bef4a5507f4ba2443a65b1e865b2ffb04468997f7a154103a0b7"
+    },
+    {
+      "file": "nunitosans600.ttf",
+      "family": "Nunito Sans SemiBold",
+      "subfamily": "Regular",
+      "postscript": "NunitoSans-SemiBold",
+      "weight": 600,
+      "cyrillic_r": true,
+      "sha256": "ad2699609215220841b2bbb16dd1899f32559d24f55b4cdaaa913ca3e15e3fbd"
+    },
+    {
+      "file": "manrope700.woff",
+      "family": "Manrope",
+      "subfamily": "Bold",
+      "postscript": "Manrope-Bold",
+      "weight": 700,
+      "cyrillic_r": true,
+      "sha256": "515d19383357bac86a42746d4b975e171e9c0a81e919df70b334f4e5a677d237"
+    },
+    {
+      "file": "opensans400.ttf",
+      "family": "Open Sans",
+      "subfamily": "Regular",
+      "postscript": "OpenSans-Regular",
+      "weight": 400,
+      "cyrillic_r": true,
+      "sha256": "47ed1cfaa7ffca04a04ab850b2938fd52c09d1b44cfa3e2980878e166b0cbd87"
+    },
+    {
+      "file": "manrope500.woff",
+      "family": "Manrope Medium",
+      "subfamily": "Regular",
+      "postscript": "Manrope-Medium",
+      "weight": 500,
+      "cyrillic_r": true,
+      "sha256": "00f94f92823cfe5f3060d4c449108abbe13e7bdbec8b1f4b6078386cdcd358a4"
+    },
+    {
+      "file": "druktextwidecyr700.woff",
+      "family": "Druk Text Wide Cyr",
+      "subfamily": "Bold",
+      "postscript": "DrukTextWideCyr-Bold",
+      "weight": 700,
+      "cyrillic_r": true,
+      "sha256": "f90616fef63343f1d790b071412c55f300f8965322e391b4e3b5a91f262e86d5"
+    },
+    {
+      "file": "nunitosans700.ttf",
+      "family": "Nunito Sans",
+      "subfamily": "Bold",
+      "postscript": "NunitoSans-Bold",
+      "weight": 700,
+      "cyrillic_r": true,
+      "sha256": "ec2336c2beb651fb7f9fb968ef4e5b69e91af624c240331a239d3aefd6e41ef0"
+    },
+    {
+      "file": "opensans500.ttf",
+      "family": "Open Sans Medium",
+      "subfamily": "Regular",
+      "postscript": "OpenSans-Medium",
+      "weight": 500,
+      "cyrillic_r": true,
+      "sha256": "05f24e5e4d738b9f8e8643809ebed4800287d61a75d19ac2716f12b5d26279dd"
+    },
+    {
+      "file": "bounded600.woff",
+      "family": "Bounded SemBd",
+      "subfamily": "Regular",
+      "postscript": "Bounded-SemiBold",
+      "weight": 600,
+      "cyrillic_r": true,
+      "sha256": "3a1424b40d0a87a727f25a32c9b1e6ca1e8bd171360edc853dc0df55c1dfdf07"
+    },
+    {
+      "file": "opensans700.ttf",
+      "family": "Open Sans",
+      "subfamily": "Bold",
+      "postscript": "OpenSans-Bold",
+      "weight": 700,
+      "cyrillic_r": true,
+      "sha256": "75367e6da7d914eaed87883ba51b2a2b5816b5cdbb39f96ec5c81a5b032bfd5a"
+    },
+    {
+      "file": "unbounded800.ttf",
+      "family": "Unbounded ExtraBold",
+      "subfamily": "Regular",
+      "postscript": "Unbounded-ExtraBold",
+      "weight": 800,
+      "cyrillic_r": true,
+      "sha256": "2f1f467b85c320c52e054b6d937fc98b0b2e8319bd181f3857e3ab844255bf42"
+    },
+    {
+      "file": "opensans300.ttf",
+      "family": "Open Sans Light",
+      "subfamily": "Regular",
+      "postscript": "OpenSans-Light",
+      "weight": 300,
+      "cyrillic_r": true,
+      "sha256": "afdae82811cf046213e1f65db56ffd21e01a7fb0e5d6194c34717df15535338b"
+    },
+    {
+      "file": "manrope300.woff",
+      "family": "Manrope Light",
+      "subfamily": "Regular",
+      "postscript": "Manrope-Light",
+      "weight": 300,
+      "cyrillic_r": true,
+      "sha256": "88aca15188c973d1389777adc312e7122a8e99e85d35d87ce7dacfb35929a360"
+    }
+  ],
+  "rows": [
+    {
+      "route": "/",
+      "width": 1440,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Medve.Diva",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "60px",
+          "node": "1731066364150",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:60px;font-family:'Bounded',Arial,sans-serif;line-height:1.4;font-weight:600;text-transform:uppercase;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Создан для тех, кто хочет справиться с перееданием, эмоциональными срывами и хаосом в пищевом поведении",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "14px",
+          "node": "1744966961054",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 101
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:14px;font-family:'Manrope',Arial,sans-serif;line-height:1.35;font-weight:500;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "12px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "12px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Medve.Diva",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "30px",
+          "node": "1731066364150",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:60px;font-family:'Bounded',Arial,sans-serif;line-height:1.4;font-weight:600;text-transform:uppercase;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Создан для тех, кто хочет справиться с перееданием, эмоциональными срывами и хаосом в пищевом поведении",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "node": "1744966961054",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 101
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:14px;font-family:'Manrope',Arial,sans-serif;line-height:1.35;font-weight:500;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "8px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Medve.Diva",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "30px",
+          "node": "1731066364150",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:60px;font-family:'Bounded',Arial,sans-serif;line-height:1.4;font-weight:600;text-transform:uppercase;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Создан для тех, кто хочет справиться с перееданием, эмоциональными срывами и хаосом в пищевом поведении",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "node": "1744966961054",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 101
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:14px;font-family:'Manrope',Arial,sans-serif;line-height:1.35;font-weight:500;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "8px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/pit",
+      "width": 1440,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Питание и тренировки",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "50px",
+          "node": "1731066364150",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 19
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4369a3;font-size:50px;font-family:'Bounded',Arial,sans-serif;line-height:1.2;font-weight:600;text-transform:uppercase;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость и энергию ",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "14px",
+          "node": "1731066364240",
+          "actual": [
+            {
+              "familyName": "Manrope SemiBold",
+              "postScriptName": "Manrope-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 152
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:14px;font-family:'Manrope',Arial,sans-serif;line-height:1.35;font-weight:600;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "12px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "12px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/pit",
+      "width": 390,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Питание и тренировки",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "26px",
+          "node": "1731066364150",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 19
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4369a3;font-size:50px;font-family:'Bounded',Arial,sans-serif;line-height:1.2;font-weight:600;text-transform:uppercase;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость и энергию ",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "10px",
+          "node": "1731066364240",
+          "actual": [
+            {
+              "familyName": "Manrope SemiBold",
+              "postScriptName": "Manrope-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 151
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:14px;font-family:'Manrope',Arial,sans-serif;line-height:1.35;font-weight:600;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "8px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/pit",
+      "width": 320,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Питание и тренировки",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "26px",
+          "node": "1731066364150",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 19
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4369a3;font-size:50px;font-family:'Bounded',Arial,sans-serif;line-height:1.2;font-weight:600;text-transform:uppercase;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость и энергию ",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "10px",
+          "node": "1731066364240",
+          "actual": [
+            {
+              "familyName": "Manrope SemiBold",
+              "postScriptName": "Manrope-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 151
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:14px;font-family:'Manrope',Arial,sans-serif;line-height:1.35;font-weight:600;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "8px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/invent",
+      "width": 1440,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Оборудование для курса",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "25px",
+          "node": "1723635093668",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 22
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:25px;font-family:'Bounded',Arial,sans-serif;line-height:1;font-weight:600;text-transform:uppercase;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Конечно, на курсе можно пользоваться заменами — полотенце вместо роллера или пояс от халата вместо ленты-эспан",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "12px",
+          "node": "1723635093678",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 203
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.25;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "12px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "12px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/invent",
+      "width": 390,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Оборудование для курса",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "node": "1723635093668",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 22
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:25px;font-family:'Bounded',Arial,sans-serif;line-height:1;font-weight:600;text-transform:uppercase;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Конечно, на курсе можно пользоваться заменами — полотенце вместо роллера или пояс от халата вместо ленты-эспан",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "9px",
+          "node": "1723635093678",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 202
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.25;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "8px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/invent",
+      "width": 320,
+      "samples": [
+        {
+          "kind": "headline",
+          "index": 0,
+          "text": "Оборудование для курса",
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "node": "1723635093668",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 22
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:25px;font-family:'Bounded',Arial,sans-serif;line-height:1;font-weight:600;text-transform:uppercase;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "body",
+          "index": 1,
+          "text": "Конечно, на курсе можно пользоваться заменами — полотенце вместо роллера или пояс от халата вместо ленты-эспан",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "9px",
+          "node": "1723635093678",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 202
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#262626;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.25;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        },
+        {
+          "kind": "header",
+          "index": 2,
+          "text": "ЛК",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "600",
+          "size": "8px",
+          "node": "1751534146907",
+          "actual": [],
+          "sourceCSSFontRules": [
+            "color:#ffffff;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:10px 10px 10px 10px;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:transparent;--t396-bgcolor-image:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);background-image:var(--t396-bgcolor-image,none);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;"
+          ]
+        },
+        {
+          "kind": "cookie",
+          "index": 3,
+          "text": "Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соотве",
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "node": "1773213623323000003",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 116
+            }
+          ],
+          "sourceCSSFontRules": [
+            "vertical-align:middle;color:#4c4c4c;font-size:12px;font-family:'Manrope',Arial,sans-serif;line-height:1.3;font-weight:500;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));"
+          ]
+        }
+      ],
+      "failedFonts": [],
+      "headerRendered": [
+        {
+          "index": 8,
+          "text": "Питание и тренировки",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "text": "Интенсив",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "text": "Тело в голове",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "text": "Оборудование",
+          "font": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceFontByteChecks": [
+    {
+      "family": "Druktextwidecyr",
+      "weight": "600",
+      "file": "druktextwidecyr600.woff",
+      "sourceURL": "https://static.tildacdn.com/tild6565-6439-4362-b832-633336616535/druktextwidecyr-medi.woff",
+      "sha256": "910e628c785e861bee1bd2bb842d651140513c5c54bbda37bfde9cac401f66b6",
+      "sameAsSource": true
+    },
+    {
+      "family": "Druktextwidecyr",
+      "weight": "700",
+      "file": "druktextwidecyr700.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3538-6465-4333-b837-663263633365/druktextwidecyr-bold.woff",
+      "sha256": "f90616fef63343f1d790b071412c55f300f8965322e391b4e3b5a91f262e86d5",
+      "sameAsSource": true
+    },
+    {
+      "family": "Manrope",
+      "weight": "200",
+      "file": "manrope200.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3631-3839-4336-a666-376366333339/Manrope-ExtraLight.woff",
+      "sha256": "16c75c4b39d83c9ecb07ebce2474cbe41733be9af7952f114795f8f5398d3ccb",
+      "sameAsSource": true
+    },
+    {
+      "family": "Manrope",
+      "weight": "300",
+      "file": "manrope300.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3832-3135-4666-b663-626330333735/Manrope-Light.woff",
+      "sha256": "88aca15188c973d1389777adc312e7122a8e99e85d35d87ce7dacfb35929a360",
+      "sameAsSource": true
+    },
+    {
+      "family": "Manrope",
+      "weight": "400",
+      "file": "manrope400.woff",
+      "sourceURL": "https://static.tildacdn.com/tild6537-6637-4661-a630-663864643764/Manrope-Regular.woff",
+      "sha256": "ffbfbc1a9b4c2a855b38f55ee6fb767997e3ddcf1f056a82e1565d7ca1b49001",
+      "sameAsSource": true
+    },
+    {
+      "family": "Manrope",
+      "weight": "500",
+      "file": "manrope500.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3834-3865-4437-a164-343337666235/Manrope-Medium.woff",
+      "sha256": "00f94f92823cfe5f3060d4c449108abbe13e7bdbec8b1f4b6078386cdcd358a4",
+      "sameAsSource": true
+    },
+    {
+      "family": "Manrope",
+      "weight": "600",
+      "file": "manrope600.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3361-6565-4361-b732-386262663538/Manrope-SemiBold.woff",
+      "sha256": "61d4df9e5614b1621062fe586ba03e11bec53518802b648e662c51b24d5987c8",
+      "sameAsSource": true
+    },
+    {
+      "family": "Manrope",
+      "weight": "700",
+      "file": "manrope700.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3163-3333-4461-a366-663835373630/Manrope-Bold.woff",
+      "sha256": "515d19383357bac86a42746d4b975e171e9c0a81e919df70b334f4e5a677d237",
+      "sameAsSource": true
+    },
+    {
+      "family": "Manrope",
+      "weight": "800",
+      "file": "manrope800.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3861-3637-4337-a434-373333643266/Manrope-ExtraBold.woff",
+      "sha256": "5ab252faa68392d78067dbbe24b3a86f847a7381539f2fbc48642ebe4f2c3fc8",
+      "sameAsSource": true
+    },
+    {
+      "family": "Bounded",
+      "weight": "500",
+      "file": "bounded500.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3337-6131-4437-b564-393965343162/Bounded-Medium.woff",
+      "sha256": "4219baf99a43be75a24b4a14adff7bfd1b5b50e7282284d90c6ff9004cb90404",
+      "sameAsSource": true
+    },
+    {
+      "family": "Bounded",
+      "weight": "600",
+      "file": "bounded600.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3731-6363-4933-b538-616163613432/Bounded-SemiBold.woff",
+      "sha256": "3a1424b40d0a87a727f25a32c9b1e6ca1e8bd171360edc853dc0df55c1dfdf07",
+      "sameAsSource": true
+    },
+    {
+      "family": "Bounded",
+      "weight": "900",
+      "file": "bounded900.woff",
+      "sourceURL": "https://static.tildacdn.com/tild3062-3361-4532-b764-326266366462/Bounded-Black.woff",
+      "sha256": "cde4b2e72fe0f4aa7d5fde6e1b525bc58e409eae7cecde964c876be611fc00f2",
+      "sameAsSource": true
+    }
+  ],
+  "observedFallbacks": [],
+  "limitations": [
+    "Chromium desktop and touch emulation; Safari/Firefox not checked in this audit",
+    "9 page/viewport combinations: /, /pit, /invent x 1440,390,320; other routes not accepted by this audit",
+    "Primary 12 source WOFF files checked byte-for-byte; auxiliary Google font files metadata only",
+    "Mobile header logo and LK are SVG artwork; empty glyph lists are not fallback proof",
+    "Header candidate list may contain mobile-hidden desktop nav; headline/body/cookie samples were visible"
+  ]
+}

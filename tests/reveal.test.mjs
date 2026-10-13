@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {revealFrames} from '../src/lib/reveal.mjs';
+test('source zoomin scale is retained and rotation is not overwritten',()=>{const frames=revealFrames({style:'zoomin',scale:'0.5'},'matrix(0, 1, -1, 0, 0, 0)');assert.equal(frames[0].transform,'matrix(0, 1, -1, 0, 0, 0) scale(0.5)');assert.equal(frames[1].transform,'matrix(0, 1, -1, 0, 0, 0)');});
+test('source reveal distance is retained for normal fade',()=>{assert.equal(revealFrames({style:'fadeinup',distance:'150'})[0].transform,'translateY(150px)');assert.deepEqual(revealFrames({style:'fadein'})[1],{opacity:1,transform:'none'});});

@@ -1,0 +1,880 @@
+{
+  "archive": "/Users/elena/Downloads/alenamedvedeva_2403a2d0eda756cce2e286a217042cd45f3bded3.zip",
+  "zipSHA256": "3d401fff25472e929981904463ec2ccee6cd682f1bb1a34fd8c484f3ce328e86",
+  "projectId": "2075161",
+  "htmlFiles": 250,
+  "canonicalRecords": 124,
+  "routes": [
+    {
+      "path": "/page36077418.html",
+      "canonical": "https://medvediva.ru/page36077418.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page36077418.html",
+      "pageId": "36077418",
+      "bytes": 896495
+    },
+    {
+      "path": "/page144427436.html",
+      "canonical": "https://medvediva.ru/page144427436.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page144427436.html",
+      "pageId": "144427436",
+      "bytes": 47173
+    },
+    {
+      "path": "/b71",
+      "canonical": "https://medvediva.ru/b71",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54687769.html",
+      "pageId": "54687769",
+      "bytes": 274654
+    },
+    {
+      "path": "/b83",
+      "canonical": "https://medvediva.ru/b83",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689673.html",
+      "pageId": "54689673",
+      "bytes": 274666
+    },
+    {
+      "path": "/b73",
+      "canonical": "https://medvediva.ru/b73",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54688111.html",
+      "pageId": "54688111",
+      "bytes": 274750
+    },
+    {
+      "path": "/page60259039.html",
+      "canonical": "https://medvediva.ru/page60259039.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page60259039.html",
+      "pageId": "60259039",
+      "bytes": 566545
+    },
+    {
+      "path": "/page156348076.html",
+      "canonical": "https://medvediva.ru/page156348076.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page156348076.html",
+      "pageId": "156348076",
+      "bytes": 50696
+    },
+    {
+      "path": "/thank-you-page",
+      "canonical": "https://medvediva.ru/thank-you-page",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page17782439.html",
+      "pageId": "17782439",
+      "bytes": 262168
+    },
+    {
+      "path": "/page_05",
+      "canonical": "https://medvediva.ru/page_05",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page41559890.html",
+      "pageId": "41559890",
+      "bytes": 333467
+    },
+    {
+      "path": "/b61",
+      "canonical": "https://medvediva.ru/b61",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page45123473.html",
+      "pageId": "45123473",
+      "bytes": 274704
+    },
+    {
+      "path": "/page_04",
+      "canonical": "https://medvediva.ru/page_04",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page41559582.html",
+      "pageId": "41559582",
+      "bytes": 342442
+    },
+    {
+      "path": "/page59927673.html",
+      "canonical": "https://medvediva.ru/page59927673.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page59927673.html",
+      "pageId": "59927673",
+      "bytes": 248714
+    },
+    {
+      "path": "/z20",
+      "canonical": "https://medvediva.ru/z20",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page45112683.html",
+      "pageId": "45112683",
+      "bytes": 266444
+    },
+    {
+      "path": "/page67533869.html",
+      "canonical": "https://medvediva.ru/page67533869.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page67533869.html",
+      "pageId": "67533869",
+      "bytes": 636666
+    },
+    {
+      "path": "/page52708701.html",
+      "canonical": "https://medvediva.ru/page52708701.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page52708701.html",
+      "pageId": "52708701",
+      "bytes": 477864
+    },
+    {
+      "path": "/b81",
+      "canonical": "https://medvediva.ru/b81",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689097.html",
+      "pageId": "54689097",
+      "bytes": 274847
+    },
+    {
+      "path": "/b77",
+      "canonical": "https://medvediva.ru/b77",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689081.html",
+      "pageId": "54689081",
+      "bytes": 274600
+    },
+    {
+      "path": "/footer",
+      "canonical": "https://medvediva.ru/footer",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page32633308.html",
+      "pageId": "32633308",
+      "bytes": 104045
+    },
+    {
+      "path": "/page43122762.html",
+      "canonical": "https://medvediva.ru/page43122762.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page43122762.html",
+      "pageId": "43122762",
+      "bytes": 727769
+    },
+    {
+      "path": "/time",
+      "canonical": "https://medvediva.ru/time",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page42022917.html",
+      "pageId": "42022917",
+      "bytes": 463531
+    },
+    {
+      "path": "/b64",
+      "canonical": "https://medvediva.ru/b64",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page49978867.html",
+      "pageId": "49978867",
+      "bytes": 258282
+    },
+    {
+      "path": "/page61670363.html",
+      "canonical": "https://medvediva.ru/page61670363.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page61670363.html",
+      "pageId": "61670363",
+      "bytes": 267022
+    },
+    {
+      "path": "/page144943146.html",
+      "canonical": "https://medvediva.ru/page144943146.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page144943146.html",
+      "pageId": "144943146",
+      "bytes": 416174
+    },
+    {
+      "path": "/page84569796.html",
+      "canonical": "https://medvediva.ru/page84569796.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page84569796.html",
+      "pageId": "84569796",
+      "bytes": 947071
+    },
+    {
+      "path": "/b86",
+      "canonical": "https://medvediva.ru/b86",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689679.html",
+      "pageId": "54689679",
+      "bytes": 274769
+    },
+    {
+      "path": "/page51876667.html",
+      "canonical": "https://medvediva.ru/page51876667.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page51876667.html",
+      "pageId": "51876667",
+      "bytes": 469043
+    },
+    {
+      "path": "/b70",
+      "canonical": "https://medvediva.ru/b70",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54687755.html",
+      "pageId": "54687755",
+      "bytes": 274692
+    },
+    {
+      "path": "/fitness_for_health",
+      "canonical": "https://medvediva.ru/fitness_for_health",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page27264871.html",
+      "pageId": "27264871",
+      "bytes": 530967
+    },
+    {
+      "path": "/b60",
+      "canonical": "https://medvediva.ru/b60",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page45122803.html",
+      "pageId": "45122803",
+      "bytes": 274723
+    },
+    {
+      "path": "/invent",
+      "canonical": "https://medvediva.ru/invent",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page147712636.html",
+      "pageId": "147712636",
+      "bytes": 1522211
+    },
+    {
+      "path": "/page51597097.html",
+      "canonical": "https://medvediva.ru/page51597097.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page51597097.html",
+      "pageId": "51597097",
+      "bytes": 371999
+    },
+    {
+      "path": "/z21",
+      "canonical": "https://medvediva.ru/z21",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page45125057.html",
+      "pageId": "45125057",
+      "bytes": 266490
+    },
+    {
+      "path": "/2",
+      "canonical": "https://medvediva.ru/2",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page42226737.html",
+      "pageId": "42226737",
+      "bytes": 480678
+    },
+    {
+      "path": "/b84",
+      "canonical": "https://medvediva.ru/b84",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689675.html",
+      "pageId": "54689675",
+      "bytes": 274634
+    },
+    {
+      "path": "/page43094989.html",
+      "canonical": "https://medvediva.ru/page43094989.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page43094989.html",
+      "pageId": "43094989",
+      "bytes": 467692
+    },
+    {
+      "path": "/page41858117.html",
+      "canonical": "https://medvediva.ru/page41858117.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page41858117.html",
+      "pageId": "41858117",
+      "bytes": 599050
+    },
+    {
+      "path": "/b65",
+      "canonical": "https://medvediva.ru/b65",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page49978877.html",
+      "pageId": "49978877",
+      "bytes": 258410
+    },
+    {
+      "path": "/termsofuse",
+      "canonical": "https://medvediva.ru/termsofuse",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page17770118.html",
+      "pageId": "17770118",
+      "bytes": 247687
+    },
+    {
+      "path": "/intensiv",
+      "canonical": "https://medvediva.ru/intensiv",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page34861983.html",
+      "pageId": "34861983",
+      "bytes": 981065
+    },
+    {
+      "path": "/page128221656.html",
+      "canonical": "https://medvediva.ru/page128221656.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page128221656.html",
+      "pageId": "128221656",
+      "bytes": 64641
+    },
+    {
+      "path": "/stopi",
+      "canonical": "https://medvediva.ru/stopi",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page53331299.html",
+      "pageId": "53331299",
+      "bytes": 577141
+    },
+    {
+      "path": "/priut",
+      "canonical": "https://medvediva.ru/priut",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page78642956.html",
+      "pageId": "78642956",
+      "bytes": 504648
+    },
+    {
+      "path": "/page67242767.html",
+      "canonical": "https://medvediva.ru/page67242767.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page67242767.html",
+      "pageId": "67242767",
+      "bytes": 618371
+    },
+    {
+      "path": "/taplink",
+      "canonical": "https://medvediva.ru/taplink",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page35864706.html",
+      "pageId": "35864706",
+      "bytes": 485245
+    },
+    {
+      "path": "/prolong_tariff",
+      "canonical": "https://medvediva.ru/prolong_tariff",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page60159913.html",
+      "pageId": "60159913",
+      "bytes": 1534985
+    },
+    {
+      "path": "/page150752676.html",
+      "canonical": "https://medvediva.ru/page150752676.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page150752676.html",
+      "pageId": "150752676",
+      "bytes": 1314100
+    },
+    {
+      "path": "/inventsjd",
+      "canonical": "https://medvediva.ru/inventsjd",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page32298642.html",
+      "pageId": "32298642",
+      "bytes": 338336
+    },
+    {
+      "path": "/page120016146.html",
+      "canonical": "https://medvediva.ru/page120016146.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page120016146.html",
+      "pageId": "120016146",
+      "bytes": 326051
+    },
+    {
+      "path": "/page67567619.html",
+      "canonical": "https://medvediva.ru/page67567619.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page67567619.html",
+      "pageId": "67567619",
+      "bytes": 799923
+    },
+    {
+      "path": "/b68",
+      "canonical": "https://medvediva.ru/b68",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54687037.html",
+      "pageId": "54687037",
+      "bytes": 274733
+    },
+    {
+      "path": "/page150587836.html",
+      "canonical": "https://medvediva.ru/page150587836.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page150587836.html",
+      "pageId": "150587836",
+      "bytes": 1314101
+    },
+    {
+      "path": "/b79",
+      "canonical": "https://medvediva.ru/b79",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689087.html",
+      "pageId": "54689087",
+      "bytes": 274683
+    },
+    {
+      "path": "/long",
+      "canonical": "https://medvediva.ru/long",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page64985843.html",
+      "pageId": "64985843",
+      "bytes": 404528
+    },
+    {
+      "path": "/page68220891.html",
+      "canonical": "https://medvediva.ru/page68220891.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page68220891.html",
+      "pageId": "68220891",
+      "bytes": 498457
+    },
+    {
+      "path": "/z23",
+      "canonical": "https://medvediva.ru/z23",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page47713269.html",
+      "pageId": "47713269",
+      "bytes": 266502
+    },
+    {
+      "path": "/b66",
+      "canonical": "https://medvediva.ru/b66",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page49978881.html",
+      "pageId": "49978881",
+      "bytes": 258372
+    },
+    {
+      "path": "/page61490435.html",
+      "canonical": "https://medvediva.ru/page61490435.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page61490435.html",
+      "pageId": "61490435",
+      "bytes": 512801
+    },
+    {
+      "path": "/work",
+      "canonical": "https://medvediva.ru/work",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page56118473.html",
+      "pageId": "56118473",
+      "bytes": 320420
+    },
+    {
+      "path": "/page59569323.html",
+      "canonical": "https://medvediva.ru/page59569323.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page59569323.html",
+      "pageId": "59569323",
+      "bytes": 824436
+    },
+    {
+      "path": "/page59693539.html",
+      "canonical": "https://medvediva.ru/page59693539.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page59693539.html",
+      "pageId": "59693539",
+      "bytes": 480697
+    },
+    {
+      "path": "/pitanie_guide",
+      "canonical": "https://medvediva.ru/pitanie_guide",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page70893213.html",
+      "pageId": "70893213",
+      "bytes": 328182
+    },
+    {
+      "path": "/page84158536.html",
+      "canonical": "https://medvediva.ru/page84158536.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page84158536.html",
+      "pageId": "84158536",
+      "bytes": 878332
+    },
+    {
+      "path": "/page67601801.html",
+      "canonical": "https://medvediva.ru/page67601801.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page67601801.html",
+      "pageId": "67601801",
+      "bytes": 615432
+    },
+    {
+      "path": "/b85",
+      "canonical": "https://medvediva.ru/b85",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689677.html",
+      "pageId": "54689677",
+      "bytes": 274712
+    },
+    {
+      "path": "/page67656165.html",
+      "canonical": "https://medvediva.ru/page67656165.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page67656165.html",
+      "pageId": "67656165",
+      "bytes": 630092
+    },
+    {
+      "path": "/support",
+      "canonical": "https://medvediva.ru/support",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page38226361.html",
+      "pageId": "38226361",
+      "bytes": 320145
+    },
+    {
+      "path": "/page53417205.html",
+      "canonical": "https://medvediva.ru/page53417205.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page53417205.html",
+      "pageId": "53417205",
+      "bytes": 269977
+    },
+    {
+      "path": "/b75",
+      "canonical": "https://medvediva.ru/b75",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54688119.html",
+      "pageId": "54688119",
+      "bytes": 274760
+    },
+    {
+      "path": "/pit",
+      "canonical": "https://medvediva.ru/pit",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page34214761.html",
+      "pageId": "34214761",
+      "bytes": 2299679
+    },
+    {
+      "path": "/page150748976.html",
+      "canonical": "https://medvediva.ru/page150748976.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page150748976.html",
+      "pageId": "150748976",
+      "bytes": 1229501
+    },
+    {
+      "path": "/delete",
+      "canonical": "https://medvediva.ru/delete",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page53151191.html",
+      "pageId": "53151191",
+      "bytes": 267911
+    },
+    {
+      "path": "/pitanie",
+      "canonical": "https://medvediva.ru/pitanie",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page70879781.html",
+      "pageId": "70879781",
+      "bytes": 385853
+    },
+    {
+      "path": "/page58551483.html",
+      "canonical": "https://medvediva.ru/page58551483.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page58551483.html",
+      "pageId": "58551483",
+      "bytes": 422691
+    },
+    {
+      "path": "/page_01",
+      "canonical": "https://medvediva.ru/page_01",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page41026322.html",
+      "pageId": "41026322",
+      "bytes": 445887
+    },
+    {
+      "path": "/b80",
+      "canonical": "https://medvediva.ru/b80",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689089.html",
+      "pageId": "54689089",
+      "bytes": 274674
+    },
+    {
+      "path": "/page61678147.html",
+      "canonical": "https://medvediva.ru/page61678147.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page61678147.html",
+      "pageId": "61678147",
+      "bytes": 251108
+    },
+    {
+      "path": "/page59853835.html",
+      "canonical": "https://medvediva.ru/page59853835.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page59853835.html",
+      "pageId": "59853835",
+      "bytes": 235425
+    },
+    {
+      "path": "/page59461283.html",
+      "canonical": "https://medvediva.ru/page59461283.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page59461283.html",
+      "pageId": "59461283",
+      "bytes": 725471
+    },
+    {
+      "path": "/amotest",
+      "canonical": "https://medvediva.ru/amotest",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page85861676.html",
+      "pageId": "85861676",
+      "bytes": 19942
+    },
+    {
+      "path": "/1",
+      "canonical": "https://medvediva.ru/1",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page42044550.html",
+      "pageId": "42044550",
+      "bytes": 933469
+    },
+    {
+      "path": "/b67",
+      "canonical": "https://medvediva.ru/b67",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54686887.html",
+      "pageId": "54686887",
+      "bytes": 274809
+    },
+    {
+      "path": "/page53417005.html",
+      "canonical": "https://medvediva.ru/page53417005.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page53417005.html",
+      "pageId": "53417005",
+      "bytes": 287312
+    },
+    {
+      "path": "/page74246813.html",
+      "canonical": "https://medvediva.ru/page74246813.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page74246813.html",
+      "pageId": "74246813",
+      "bytes": 248581
+    },
+    {
+      "path": "/b78",
+      "canonical": "https://medvediva.ru/b78",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689085.html",
+      "pageId": "54689085",
+      "bytes": 274687
+    },
+    {
+      "path": "/tv",
+      "canonical": "https://medvediva.ru/tv",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page84349816.html",
+      "pageId": "84349816",
+      "bytes": 241319
+    },
+    {
+      "path": "/page59882331.html",
+      "canonical": "https://medvediva.ru/page59882331.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page59882331.html",
+      "pageId": "59882331",
+      "bytes": 421237
+    },
+    {
+      "path": "/personaldata",
+      "canonical": "https://medvediva.ru/personaldata",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page17707894.html",
+      "pageId": "17707894",
+      "bytes": 262129
+    },
+    {
+      "path": "/page218430309.html",
+      "canonical": "https://medvediva.ru/page218430309.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page218430309.html",
+      "pageId": "218430309",
+      "bytes": 321659
+    },
+    {
+      "path": "/b76",
+      "canonical": "https://medvediva.ru/b76",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54688125.html",
+      "pageId": "54688125",
+      "bytes": 274842
+    },
+    {
+      "path": "/b82",
+      "canonical": "https://medvediva.ru/b82",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54689671.html",
+      "pageId": "54689671",
+      "bytes": 274734
+    },
+    {
+      "path": "/b63",
+      "canonical": "https://medvediva.ru/b63",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page45123607.html",
+      "pageId": "45123607",
+      "bytes": 274752
+    },
+    {
+      "path": "/b69",
+      "canonical": "https://medvediva.ru/b69",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54687045.html",
+      "pageId": "54687045",
+      "bytes": 274882
+    },
+    {
+      "path": "/page64977463.html",
+      "canonical": "https://medvediva.ru/page64977463.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page64977463.html",
+      "pageId": "64977463",
+      "bytes": 1397971
+    },
+    {
+      "path": "/z22",
+      "canonical": "https://medvediva.ru/z22",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page47713259.html",
+      "pageId": "47713259",
+      "bytes": 266442
+    },
+    {
+      "path": "/pred",
+      "canonical": "https://medvediva.ru/pred",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page42012570.html",
+      "pageId": "42012570",
+      "bytes": 2243593
+    },
+    {
+      "path": "/page74425479.html",
+      "canonical": "https://medvediva.ru/page74425479.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page74425479.html",
+      "pageId": "74425479",
+      "bytes": 558133
+    },
+    {
+      "path": "/page_03",
+      "canonical": "https://medvediva.ru/page_03",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page41340325.html",
+      "pageId": "41340325",
+      "bytes": 350050
+    },
+    {
+      "path": "/consent",
+      "canonical": "https://medvediva.ru/consent",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page55199219.html",
+      "pageId": "55199219",
+      "bytes": 244874
+    },
+    {
+      "path": "/page58191799.html",
+      "canonical": "https://medvediva.ru/page58191799.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page58191799.html",
+      "pageId": "58191799",
+      "bytes": 669246
+    },
+    {
+      "path": "/",
+      "canonical": "https://medvediva.ru",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page51404777.html",
+      "pageId": "51404777",
+      "bytes": 839382
+    },
+    {
+      "path": "/page77594406.html",
+      "canonical": "https://medvediva.ru/page77594406.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page77594406.html",
+      "pageId": "77594406",
+      "bytes": 977522
+    },
+    {
+      "path": "/offer",
+      "canonical": "https://medvediva.ru/offer",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page22530234.html",
+      "pageId": "22530234",
+      "bytes": 279121
+    },
+    {
+      "path": "/tvg",
+      "canonical": "https://medvediva.ru/tvg",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page62157703.html",
+      "pageId": "62157703",
+      "bytes": 795754
+    },
+    {
+      "path": "/mist",
+      "canonical": "https://medvediva.ru/mist",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page32950380.html",
+      "pageId": "32950380",
+      "bytes": 261417
+    },
+    {
+      "path": "/page67486639.html",
+      "canonical": "https://medvediva.ru/page67486639.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page67486639.html",
+      "pageId": "67486639",
+      "bytes": 692735
+    },
+    {
+      "path": "/data-consent",
+      "canonical": "https://medvediva.ru/data-consent",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page69942691.html",
+      "pageId": "69942691",
+      "bytes": 244113
+    },
+    {
+      "path": "/test-split",
+      "canonical": "https://medvediva.ru/test-split",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page68982467.html",
+      "pageId": "68982467",
+      "bytes": 231719
+    },
+    {
+      "path": "/page_02",
+      "canonical": "https://medvediva.ru/page_02",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page41333646.html",
+      "pageId": "41333646",
+      "bytes": 544193
+    },
+    {
+      "path": "/page57938753.html",
+      "canonical": "https://medvediva.ru/page57938753.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page57938753.html",
+      "pageId": "57938753",
+      "bytes": 880266
+    },
+    {
+      "path": "/header",
+      "canonical": "https://medvediva.ru/header",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page38277523.html",
+      "pageId": "38277523",
+      "bytes": 141182
+    },
+    {
+      "path": "/b74",
+      "canonical": "https://medvediva.ru/b74",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54688113.html",
+      "pageId": "54688113",
+      "bytes": 274757
+    },
+    {
+      "path": "/page83889216.html",
+      "canonical": "https://medvediva.ru/page83889216.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page83889216.html",
+      "pageId": "83889216",
+      "bytes": 763188
+    },
+    {
+      "path": "/b72",
+      "canonical": "https://medvediva.ru/b72",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page54688105.html",
+      "pageId": "54688105",
+      "bytes": 274694
+    },
+    {
+      "path": "/page84128326.html",
+      "canonical": "https://medvediva.ru/page84128326.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page84128326.html",
+      "pageId": "84128326",
+      "bytes": 623294
+    },
+    {
+      "path": "/page62637493.html",
+      "canonical": "https://medvediva.ru/page62637493.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page62637493.html",
+      "pageId": "62637493",
+      "bytes": 19940
+    },
+    {
+      "path": "/b59",
+      "canonical": "https://medvediva.ru/b59",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page45112439.html",
+      "pageId": "45112439",
+      "bytes": 274645
+    },
+    {
+      "path": "/testform",
+      "canonical": "https://medvediva.ru/testform",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page61522219.html",
+      "pageId": "61522219",
+      "bytes": 253197
+    },
+    {
+      "path": "/part_oferta",
+      "canonical": "https://medvediva.ru/part_oferta",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page61862831.html",
+      "pageId": "61862831",
+      "bytes": 271247
+    },
+    {
+      "path": "/z24",
+      "canonical": "https://medvediva.ru/z24",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page47713281.html",
+      "pageId": "47713281",
+      "bytes": 266421
+    },
+    {
+      "path": "/b62",
+      "canonical": "https://medvediva.ru/b62",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page45123535.html",
+      "pageId": "45123535",
+      "bytes": 274732
+    },
+    {
+      "path": "/page60244757.html",
+      "canonical": "https://medvediva.ru/page60244757.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page60244757.html",
+      "pageId": "60244757",
+      "bytes": 570745
+    },
+    {
+      "path": "/page67639341.html",
+      "canonical": "https://medvediva.ru/page67639341.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page67639341.html",
+      "pageId": "67639341",
+      "bytes": 496412
+    },
+    {
+      "path": "/page150757606.html",
+      "canonical": "https://medvediva.ru/page150757606.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page150757606.html",
+      "pageId": "150757606",
+      "bytes": 1314138
+    },
+    {
+      "path": "/page105401526.html",
+      "canonical": "https://medvediva.ru/page105401526.html",
+      "file": "sources/export/2026-10-09/alenamedvedeva/page105401526.html",
+      "pageId": "105401526",
+      "bytes": 197604
+    }
+  ],
+  "missingSitemapURLs": [
+    "https://medvediva.ru/page60815917.html"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "medvediva-migration-workbench",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "node tools/preview-static.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "inventory": "node tools/build-inventory.mjs",
+    "build:site": "node tools/build-site.mjs",
+    "normalize": "python3 tools/normalize_export.py --all && python3 tools/normalize_standard.py"
+  },
+  "dependencies": {
+    "hls.js": "^1.7.3",
+    "vue": "3.5.43"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@vitejs/plugin-vue": "6.0.8",
+    "tailwindcss": "4.3.3",
+    "vite": "8.2.0"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-13T08:43:11.813Z",
+  "scope": "real primary hero node1731066364150; touch390/391; normal and reduced motion",
+  "rows": [
+    {
+      "motion": "no-preference",
+      "early": {
+        "inlineOpacity": "0",
+        "opacity": "0.0614418",
+        "animations": [
+          {
+            "time": 66.74299999959443,
+            "state": "running",
+            "keyframes": [
+              {
+                "offset": null,
+                "easing": "linear",
+                "composite": "auto",
+                "opacity": "0",
+                "transform": "translateY(25px)",
+                "computedOffset": 0
+              },
+              {
+                "offset": null,
+                "easing": "linear",
+                "composite": "auto",
+                "opacity": "1",
+                "transform": "none",
+                "computedOffset": 1
+              }
+            ]
+          }
+        ]
+      },
+      "done": {
+        "inlineOpacity": "",
+        "opacity": "1",
+        "animations": 0
+      },
+      "resized": {
+        "inlineOpacity": "",
+        "opacity": "1",
+        "animations": 0
+      }
+    },
+    {
+      "motion": "reduce",
+      "early": {
+        "inlineOpacity": "",
+        "opacity": "1",
+        "animations": []
+      },
+      "done": {
+        "inlineOpacity": "",
+        "opacity": "1",
+        "animations": 0
+      },
+      "resized": {
+        "inlineOpacity": "",
+        "opacity": "1",
+        "animations": 0
+      }
+    }
+  ]
+}

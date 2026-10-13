@@ -1,0 +1,34 @@
+[
+  {
+    "name": "chromium",
+    "width": 320,
+    "open": true,
+    "closed": true,
+    "hash": "",
+    "overflow": ""
+  },
+  {
+    "name": "chromium",
+    "width": 390,
+    "open": true,
+    "closed": true,
+    "hash": "",
+    "overflow": ""
+  },
+  {
+    "name": "webkit",
+    "width": 320,
+    "open": true,
+    "closed": true,
+    "hash": "",
+    "overflow": ""
+  },
+  {
+    "name": "webkit",
+    "width": 390,
+    "open": true,
+    "closed": true,
+    "hash": "",
+    "overflow": ""
+  }
+]

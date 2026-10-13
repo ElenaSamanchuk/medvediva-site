@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "rect": {
+      "x": 1040,
+      "y": 380,
+      "width": 380,
+      "height": 520
+    },
+    "errors": [],
+    "posts": [],
+    "external": []
+  },
+  {
+    "width": 390,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "errors": [],
+    "posts": [],
+    "external": []
+  },
+  {
+    "width": 320,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 844
+    },
+    "errors": [],
+    "posts": [],
+    "external": []
+  }
+]

@@ -1,0 +1,207 @@
+{
+  "date": "2026-10-13T08:58:05.479Z",
+  "build": "BMJeuq25/ChOLOQPx",
+  "rows": [
+    {
+      "width": 1440,
+      "fonts": [
+        {
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "60px",
+          "opacity": "1",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "14px",
+          "opacity": "1",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 101
+            }
+          ]
+        }
+      ],
+      "popupFont": {
+        "family": "Inter, Arial, sans-serif",
+        "weight": "500",
+        "size": "30px"
+      },
+      "educationPopup": "Tab/Escape/focus return",
+      "inventPopup": "Back/Forward/Escape/body unlock",
+      "tooltip": "hover/tap persistent350ms",
+      "promos": [
+        {
+          "id": "4482959301",
+          "width": 1440,
+          "height": 140
+        }
+      ],
+      "counterBefore": [
+        "00",
+        "00",
+        "02",
+        "38"
+      ],
+      "counterAfter": [
+        "00",
+        "00",
+        "02",
+        "37"
+      ],
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      "errors": [],
+      "posts": [],
+      "external": []
+    },
+    {
+      "width": 390,
+      "fonts": [
+        {
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "30px",
+          "opacity": "1",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "opacity": "1",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 101
+            }
+          ]
+        }
+      ],
+      "popupFont": {
+        "family": "Inter, Arial, sans-serif",
+        "weight": "500",
+        "size": "24px"
+      },
+      "educationPopup": "Tab/Escape/focus return",
+      "inventPopup": "Back/Forward/Escape/body unlock",
+      "tooltip": "hover/tap persistent350ms",
+      "promos": [
+        {
+          "id": "4482959301",
+          "width": 390,
+          "height": 109
+        }
+      ],
+      "counterBefore": [
+        "00",
+        "00",
+        "02",
+        "19"
+      ],
+      "counterAfter": [
+        "00",
+        "00",
+        "02",
+        "18"
+      ],
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390
+      },
+      "errors": [],
+      "posts": [],
+      "external": []
+    },
+    {
+      "width": 320,
+      "fonts": [
+        {
+          "family": "Bounded, Arial, sans-serif",
+          "weight": "600",
+          "size": "30px",
+          "opacity": "1",
+          "actual": [
+            {
+              "familyName": "Bounded SemBd",
+              "postScriptName": "Bounded-SemiBold",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "family": "Manrope, Arial, sans-serif",
+          "weight": "500",
+          "size": "10px",
+          "opacity": "1",
+          "actual": [
+            {
+              "familyName": "Manrope Medium",
+              "postScriptName": "Manrope-Medium",
+              "isCustomFont": true,
+              "glyphCount": 101
+            }
+          ]
+        }
+      ],
+      "popupFont": {
+        "family": "Inter, Arial, sans-serif",
+        "weight": "500",
+        "size": "24px"
+      },
+      "educationPopup": "Tab/Escape/focus return",
+      "inventPopup": "Back/Forward/Escape/body unlock",
+      "tooltip": "hover/tap persistent350ms",
+      "promos": [
+        {
+          "id": "4482959301",
+          "width": 320,
+          "height": 90
+        }
+      ],
+      "counterBefore": [
+        "00",
+        "00",
+        "01",
+        "59"
+      ],
+      "counterAfter": [
+        "00",
+        "00",
+        "01",
+        "58"
+      ],
+      "geometry": {
+        "width": 320,
+        "scrollWidth": 320
+      },
+      "errors": [],
+      "posts": [],
+      "external": []
+    }
+  ]
+}

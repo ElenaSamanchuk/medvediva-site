@@ -1,0 +1,116 @@
+[
+  {
+    "name": "chromium",
+    "width": 390,
+    "scroll": 390,
+    "visibleScenes": [
+      {
+        "id": "4482964301",
+        "display": "none",
+        "anchorDisplay": "none"
+      },
+      {
+        "id": "4482965901",
+        "display": "block",
+        "anchorDisplay": "inline"
+      }
+    ],
+    "basics": 1,
+    "comforts": 1
+  },
+  {
+    "name": "chromium",
+    "width": 480,
+    "scroll": 480,
+    "visibleScenes": [
+      {
+        "id": "4482964301",
+        "display": "block",
+        "anchorDisplay": "inline"
+      },
+      {
+        "id": "4482965901",
+        "display": "none",
+        "anchorDisplay": "none"
+      }
+    ],
+    "basics": 1,
+    "comforts": 1
+  },
+  {
+    "name": "chromium",
+    "width": 1440,
+    "scroll": 1440,
+    "visibleScenes": [
+      {
+        "id": "4482964301",
+        "display": "block",
+        "anchorDisplay": "inline"
+      },
+      {
+        "id": "4482965901",
+        "display": "none",
+        "anchorDisplay": "none"
+      }
+    ],
+    "basics": 1,
+    "comforts": 1
+  },
+  {
+    "name": "webkit",
+    "width": 390,
+    "scroll": 390,
+    "visibleScenes": [
+      {
+        "id": "4482964301",
+        "display": "none",
+        "anchorDisplay": "none"
+      },
+      {
+        "id": "4482965901",
+        "display": "block",
+        "anchorDisplay": "inline"
+      }
+    ],
+    "basics": 1,
+    "comforts": 1
+  },
+  {
+    "name": "webkit",
+    "width": 480,
+    "scroll": 480,
+    "visibleScenes": [
+      {
+        "id": "4482964301",
+        "display": "block",
+        "anchorDisplay": "inline"
+      },
+      {
+        "id": "4482965901",
+        "display": "none",
+        "anchorDisplay": "none"
+      }
+    ],
+    "basics": 1,
+    "comforts": 1
+  },
+  {
+    "name": "webkit",
+    "width": 1440,
+    "scroll": 1440,
+    "visibleScenes": [
+      {
+        "id": "4482964301",
+        "display": "block",
+        "anchorDisplay": "inline"
+      },
+      {
+        "id": "4482965901",
+        "display": "none",
+        "anchorDisplay": "none"
+      }
+    ],
+    "basics": 1,
+    "comforts": 1
+  }
+]

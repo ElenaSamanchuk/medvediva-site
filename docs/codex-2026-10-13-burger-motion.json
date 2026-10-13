@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-13T09:02:56.892Z",
+  "rows": [
+    {
+      "motion": "no-preference",
+      "initial": {
+        "classes": "native-menu overlay-enter-active overlay-enter-to",
+        "opacity": "0",
+        "duration": "0.18s",
+        "property": "opacity"
+      },
+      "leave": {
+        "classes": "native-menu overlay-leave-from overlay-leave-active",
+        "opacity": "1",
+        "duration": "0.18s"
+      },
+      "detached": true,
+      "focusReturned": true,
+      "bodyUnlocked": true
+    },
+    {
+      "motion": "reduce",
+      "initial": {
+        "classes": "native-menu overlay-enter-from overlay-enter-active",
+        "opacity": "1",
+        "duration": "0s",
+        "property": "none"
+      },
+      "leave": {
+        "classes": "native-menu overlay-leave-from overlay-leave-active",
+        "opacity": "1",
+        "duration": "0s"
+      },
+      "detached": true,
+      "focusReturned": true,
+      "bodyUnlocked": true
+    }
+  ],
+  "sourceDifference": "source custom Nolim menu slides horizontally for~400ms; native overlay fades180ms"
+}

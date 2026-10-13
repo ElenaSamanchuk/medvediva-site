@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-09T16:24:30.903Z",
+  "scope": "local main page; no visual acceptance or delivery claim",
+  "results": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "mobile": false,
+      "dimensions": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 4626,
+        "broken": []
+      },
+      "cookie": "accepted and persisted",
+      "menu": "desktop links",
+      "educationPopup": "12 items; Escape",
+      "support": "validation/dry-run",
+      "external": [],
+      "errors": [],
+      "failed": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "dimensions": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 6854,
+        "broken": []
+      },
+      "cookie": "accepted and persisted",
+      "menu": "open/close",
+      "educationPopup": "12 items; Escape",
+      "support": "validation/dry-run",
+      "external": [],
+      "errors": [],
+      "failed": []
+    },
+    {
+      "width": 320,
+      "height": 693,
+      "mobile": true,
+      "dimensions": {
+        "width": 320,
+        "scrollWidth": 320,
+        "height": 5623,
+        "broken": []
+      },
+      "cookie": "accepted and persisted",
+      "menu": "open/close",
+      "educationPopup": "12 items; Escape",
+      "support": "validation/dry-run",
+      "external": [],
+      "errors": [],
+      "failed": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "mobile": true,
+      "dimensions": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 6075,
+        "broken": []
+      },
+      "cookie": "accepted and persisted",
+      "menu": "open/close",
+      "educationPopup": "12 items; Escape",
+      "support": "validation/dry-run",
+      "external": [],
+      "errors": [],
+      "failed": []
+    }
+  ]
+}

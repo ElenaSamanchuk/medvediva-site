@@ -1,0 +1,294 @@
+{
+  "build": "BMJeuq25/ChOLOQPx",
+  "shared": [
+    {
+      "name": "chromium",
+      "width": 320,
+      "menu": "PASS_AFTER_TRANSITION",
+      "svg": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ],
+      "scrollWidth": 320,
+      "headerCount": 1,
+      "footerCount": 1,
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "menuImmediateCheck": "FAIL_CLOSE",
+      "settledRetest": {
+        "name": "chromium",
+        "width": 320,
+        "open": true,
+        "closed": true,
+        "hash": "",
+        "overflow": ""
+      },
+      "note": "Initial immediatecheck observed intentional closing animation; after1000ms menu removed,hash andbodyoverflowrestored."
+    },
+    {
+      "name": "chromium",
+      "width": 390,
+      "menu": "PASS_AFTER_TRANSITION",
+      "svg": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ],
+      "scrollWidth": 390,
+      "headerCount": 1,
+      "footerCount": 1,
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "menuImmediateCheck": "FAIL_CLOSE",
+      "settledRetest": {
+        "name": "chromium",
+        "width": 390,
+        "open": true,
+        "closed": true,
+        "hash": "",
+        "overflow": ""
+      },
+      "note": "Initial immediatecheck observed intentional closing animation; after1000ms menu removed,hash andbodyoverflowrestored."
+    },
+    {
+      "name": "chromium",
+      "width": 1440,
+      "menu": "not_applicable_desktop",
+      "svg": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ],
+      "scrollWidth": 1440,
+      "headerCount": 1,
+      "footerCount": 1,
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ]
+    },
+    {
+      "name": "webkit",
+      "width": 320,
+      "menu": "PASS_AFTER_TRANSITION",
+      "svg": [
+        {
+          "x": 277,
+          "y": 25,
+          "width": 24,
+          "height": 24,
+          "top": 25,
+          "right": 301,
+          "bottom": 49,
+          "left": 277
+        }
+      ],
+      "scrollWidth": 320,
+      "headerCount": 1,
+      "footerCount": 1,
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "menuImmediateCheck": "FAIL_CLOSE",
+      "settledRetest": {
+        "name": "webkit",
+        "width": 320,
+        "open": true,
+        "closed": true,
+        "hash": "",
+        "overflow": ""
+      },
+      "note": "Initial immediatecheck observed intentional closing animation; after1000ms menu removed,hash andbodyoverflowrestored."
+    },
+    {
+      "name": "webkit",
+      "width": 390,
+      "menu": "PASS_AFTER_TRANSITION",
+      "svg": [
+        {
+          "x": 337.59375,
+          "y": 30.46875,
+          "width": 29.25,
+          "height": 29.25,
+          "top": 30.46875,
+          "right": 366.84375,
+          "bottom": 59.71875,
+          "left": 337.59375
+        }
+      ],
+      "scrollWidth": 390,
+      "headerCount": 1,
+      "footerCount": 1,
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ],
+      "menuImmediateCheck": "FAIL_CLOSE",
+      "settledRetest": {
+        "name": "webkit",
+        "width": 390,
+        "open": true,
+        "closed": true,
+        "hash": "",
+        "overflow": ""
+      },
+      "note": "Initial immediatecheck observed intentional closing animation; after1000ms menu removed,hash andbodyoverflowrestored."
+    },
+    {
+      "name": "webkit",
+      "width": 1440,
+      "menu": "not_applicable_desktop",
+      "svg": [
+        {
+          "x": 1294,
+          "y": -147,
+          "width": 34,
+          "height": 34,
+          "top": -147,
+          "right": 1328,
+          "bottom": -113,
+          "left": 1294
+        }
+      ],
+      "scrollWidth": 1440,
+      "headerCount": 1,
+      "footerCount": 1,
+      "assets": [
+        "http://127.0.0.1:4176/assets/index-BMJeuq25.js",
+        "http://127.0.0.1:4176/support-preview/widget.js"
+      ]
+    }
+  ],
+  "legal": [
+    {
+      "name": "chromium",
+      "route": "/personaldata",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "chromium",
+      "route": "/data-consent",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "chromium",
+      "route": "/part_oferta",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 1
+    },
+    {
+      "name": "chromium",
+      "route": "/offer",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "chromium",
+      "route": "/consent",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "chromium",
+      "route": "/offer",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "webkit",
+      "route": "/personaldata",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "webkit",
+      "route": "/data-consent",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "webkit",
+      "route": "/part_oferta",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 1
+    },
+    {
+      "name": "webkit",
+      "route": "/offer",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "webkit",
+      "route": "/consent",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    },
+    {
+      "name": "webkit",
+      "route": "/offer",
+      "width": 320,
+      "scrollWidth": 320,
+      "fontsLoaded": true,
+      "tables": 0
+    }
+  ],
+  "notPhysicalDevices": true,
+  "visualReviewed": [
+    "chromium-home-320-top.png",
+    "chromium-home-320-footer.png",
+    "webkit-home-320-top.png",
+    "webkit-home-320-footer.png"
+  ]
+}

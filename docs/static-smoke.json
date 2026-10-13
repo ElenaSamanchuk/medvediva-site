@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-09T17:08:53.630Z",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 254234,
+      "noindex": true
+    },
+    {
+      "path": "/pit",
+      "status": 200,
+      "bytes": 646201,
+      "noindex": true
+    },
+    {
+      "path": "/intensiv",
+      "status": 200,
+      "bytes": 300150,
+      "noindex": true
+    },
+    {
+      "path": "/tvg",
+      "status": 200,
+      "bytes": 231777,
+      "noindex": true
+    },
+    {
+      "path": "/page51404777.html",
+      "status": 200,
+      "bytes": 254234,
+      "noindex": true
+    },
+    {
+      "path": "/QA-not-existing-page",
+      "status": 404,
+      "bytes": 559,
+      "noindex": true
+    }
+  ],
+  "postGuard": 405,
+  "noJS": "main text visible",
+  "mobile": "popup/referral/dry-run",
+  "errors": [],
+  "posts": [],
+  "external": []
+}

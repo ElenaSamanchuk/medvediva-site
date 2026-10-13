@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-13T08:45:26.551Z",
+  "rows": [
+    {
+      "width": 1440,
+      "popup": "focus/trap/Escape/scroll restore",
+      "tooltip": "real hover/tap then Escape",
+      "promo": [
+        "4482959301"
+      ],
+      "timer": {
+        "before": "49",
+        "after": "47"
+      },
+      "errors": [],
+      "external": [],
+      "posts": []
+    },
+    {
+      "width": 390,
+      "popup": "focus/trap/Escape/scroll restore",
+      "tooltip": "real hover/tap then Escape",
+      "promo": [
+        "4482959301"
+      ],
+      "timer": {
+        "before": "42",
+        "after": "40"
+      },
+      "errors": [],
+      "external": [],
+      "posts": []
+    },
+    {
+      "width": 320,
+      "popup": "focus/trap/Escape/scroll restore",
+      "tooltip": "real hover/tap then Escape",
+      "promo": [
+        "4482959301"
+      ],
+      "timer": {
+        "before": "35",
+        "after": "33"
+      },
+      "errors": [],
+      "external": [],
+      "posts": []
+    }
+  ]
+}

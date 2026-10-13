@@ -1,0 +1,269 @@
+{
+  "checkedAt": "2026-10-12T21:13:55.133842+00:00",
+  "environment": "127.0.0.1:5176 Chromium; true mobile isMobile/hasTouch/DPR3 for 320,390,768; desktop1440 DPR1",
+  "matrix": [
+    {
+      "route": "/",
+      "width": 320,
+      "scrollWidth": 320,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/invent",
+      "width": 320,
+      "scrollWidth": 320,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/pit",
+      "width": 320,
+      "scrollWidth": 320,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/intensiv",
+      "width": 320,
+      "scrollWidth": 320,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/tvg",
+      "width": 320,
+      "scrollWidth": 320,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "scrollWidth": 390,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/invent",
+      "width": 390,
+      "scrollWidth": 390,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/pit",
+      "width": 390,
+      "scrollWidth": 390,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/intensiv",
+      "width": 390,
+      "scrollWidth": 390,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/tvg",
+      "width": 390,
+      "scrollWidth": 390,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "scrollWidth": 768,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/invent",
+      "width": 768,
+      "scrollWidth": 768,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/pit",
+      "width": 768,
+      "scrollWidth": 768,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/intensiv",
+      "width": 768,
+      "scrollWidth": 768,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/tvg",
+      "width": 768,
+      "scrollWidth": 768,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/invent",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/pit",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/intensiv",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    },
+    {
+      "route": "/tvg",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headerCount": 1,
+      "footerCount": 1,
+      "errors": []
+    }
+  ],
+  "changes": [
+    "Scroll canvas receives tabindex0 and visible focus; local overscroll containment",
+    "Tooltip groups expose data-native-tooltip and default hidden with CSS that survives source display:flex; interaction handled by sibling agent",
+    "Confirmed mobile /pit header interception: noninteractive fixed header root/canvas pointer-events:none, header a/button pointer-events:auto"
+  ],
+  "visualReviewed": [
+    "home-320-top.png",
+    "home-320-footer.png",
+    "invent-320-top.png",
+    "pit-320-top.png",
+    "home-1440-top.png",
+    "home-1440-footer.png",
+    "invent-390-footer.png",
+    "intensiv-768-top.png",
+    "invent-320-last-card.png",
+    "invent-390-last-card.png"
+  ],
+  "limitations": [
+    "Not acceptance of all124pages",
+    "No Safari/Firefox/physicalphones",
+    "20screens are top/footer, not all middlecontent",
+    "Tooltip fix awaits modelregeneration and interactiontest by sibling",
+    "No design-system redesign or source typography masschange"
+  ],
+  "stripCheck": [
+    {
+      "width": 320,
+      "before": {
+        "client": 320,
+        "scroll": 2340,
+        "left": 0,
+        "mode": "auto"
+      },
+      "after": {
+        "left": 1960,
+        "lastCardVisible": true
+      },
+      "pageWidth": 320
+    },
+    {
+      "width": 390,
+      "before": {
+        "client": 320,
+        "scroll": 2340,
+        "left": 0,
+        "mode": "auto"
+      },
+      "after": {
+        "left": 1960,
+        "lastCardVisible": true
+      },
+      "pageWidth": 390
+    },
+    {
+      "width": 768,
+      "before": {
+        "client": 768,
+        "scroll": 3187,
+        "left": 0,
+        "mode": "auto"
+      },
+      "after": {
+        "left": 2419,
+        "lastCardVisible": true
+      },
+      "pageWidth": 768
+    },
+    {
+      "width": 1440,
+      "before": {
+        "client": 1440,
+        "scroll": 3353,
+        "left": 0,
+        "mode": "auto"
+      },
+      "after": {
+        "left": 1913,
+        "lastCardVisible": true
+      },
+      "pageWidth": 1440
+    }
+  ],
+  "keyboardCheck": {
+    "route": "/invent",
+    "width": 390,
+    "focus": true,
+    "ArrowRightScrollLeft": 40,
+    "tabindex": 0,
+    "outline": "solid"
+  },
+  "note": "Initial clippedstrip candidate was rejected: horizontal scrolling was already implemented in generated scene-canvas CSS; improvement adds keyboard access, not a claimed new scrolling fix.",
+  "headerTapRegression": {
+    "widths": [
+      320,
+      390
+    ],
+    "isMobile": true,
+    "hasTouch": true,
+    "force": false,
+    "menuOpenClose": "PASS",
+    "tooltip2OpenAfterMenuClose": "PASS",
+    "reason": "Original intercept moved from canvas to section; final root rule removes all noninteractive container interception"
+  }
+}

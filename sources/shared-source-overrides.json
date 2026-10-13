@@ -1,0 +1,32 @@
+{
+  "source": "https://medvediva.ru/",
+  "capturedAt": "2026-10-13T09:01:22.469838+00:00",
+  "scope": "home design blocks only; archive remains unchanged; source JS is not executed",
+  "sourceFile": "sources/overrides/2026-10-13-header-menu-vk/home-source.html",
+  "sourceSha256": "dfa45aaf0c114e883da9378ef50f380683444308ab643da9cfc48fead62393ce",
+  "routes": [
+    "/"
+  ],
+  "blocks": [
+    {
+      "id": "rec860237765",
+      "file": "sources/overrides/2026-10-13-header-menu-vk/rec860237765.html",
+      "sha256": "54a9f65836d0c9da5ef00f2893a156ed1421c99e14411bdbc243d62d3da55d17"
+    },
+    {
+      "id": "rec1063609261",
+      "file": "sources/overrides/2026-10-13-header-menu-vk/rec1063609261.html",
+      "sha256": "5ee0d8860b7160c9f458fbd13591aad983a04594344586813dc20d1d7b3449f5"
+    },
+    {
+      "id": "rec2322512891",
+      "file": "sources/overrides/2026-10-13-header-menu-vk/rec2322512891.html",
+      "sha256": "358e475f7dd3a5693696da100e6d29d1131203096696c6a5afa90991c8906abc"
+    }
+  ],
+  "observedChanges": {
+    "header": "grid containers instead of window for background/logo/LK; left offsets 12/25/-25; 960 background width97%; navgroup480 height11 instead17; fixedsize text metadata",
+    "menu": "same IDs/text/geometry; CSS declaration ordering differs only",
+    "vk": "same IDs/text/geometry; exported relative icon/media URLs are absolute CDN URLs in fresh source"
+  }
+}

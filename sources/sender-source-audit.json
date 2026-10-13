@@ -1,0 +1,8 @@
+{
+  "source": "NN99.RU/widget/src/index.js",
+  "sha256": "c68c013ad1dd4d2d87165b893414300c95280a0c7f9e3bb521f7e58bb76829b8",
+  "mode": "original runtime with in-memory preview adapter; no real API or WebSocket",
+  "publicEmbedFoundIn": "page51404777.html",
+  "productionConfiguration": "remains in original source; not copied to preview",
+  "delivery": "not tested"
+}

@@ -1,0 +1,60 @@
+{
+  "capturedAt": "2026-10-09T13:17:14.911Z",
+  "scope": "local component only; no public site or delivery QA",
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "isMobile": false,
+      "hasTouch": false,
+      "deviceScaleFactor": 1,
+      "validation": "pass",
+      "dryRun": "pass",
+      "postCount": 0,
+      "pageErrors": [],
+      "measured": {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      "screenshot": "screens-local/web-support-1440.png"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "isMobile": true,
+      "hasTouch": true,
+      "deviceScaleFactor": 3,
+      "validation": "pass",
+      "dryRun": "pass",
+      "postCount": 0,
+      "pageErrors": [],
+      "measured": {
+        "width": 390,
+        "scrollWidth": 390
+      },
+      "screenshot": "screens-local/web-mob-support-390.png"
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 693
+      },
+      "isMobile": true,
+      "hasTouch": true,
+      "deviceScaleFactor": 3,
+      "validation": "pass",
+      "dryRun": "pass",
+      "postCount": 0,
+      "pageErrors": [],
+      "measured": {
+        "width": 320,
+        "scrollWidth": 320
+      },
+      "screenshot": "screens-local/web-mob-support-320.png"
+    }
+  ]
+}
