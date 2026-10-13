@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-10-13T09:38:44.934Z",
+  "rows": [
+    {
+      "width": 320,
+      "title": {
+        "x": 136,
+        "y": 213,
+        "width": 144.453125,
+        "height": 34,
+        "top": 213,
+        "right": 280.453125,
+        "bottom": 247,
+        "left": 136
+      },
+      "desc": {
+        "x": 136,
+        "y": 250,
+        "width": 136.640625,
+        "height": 37,
+        "top": 250,
+        "right": 272.640625,
+        "bottom": 287,
+        "left": 136
+      },
+      "banner": {
+        "x": 0,
+        "y": 55,
+        "width": 320,
+        "height": 68,
+        "top": 55,
+        "right": 320,
+        "bottom": 123,
+        "left": 0
+      },
+      "backgroundOpacity": "1",
+      "backgroundImage": "url(\"http://127.0.0.1:4176/media/3c9a4f4dbd1d0ad2f7b20f5b.svg\")",
+      "scrollWidth": 320,
+      "build": "http://127.0.0.1:4176/assets/index-BXEgb7mr.js",
+      "errors": [],
+      "closePersistent": true
+    },
+    {
+      "width": 390,
+      "title": {
+        "x": 165.75,
+        "y": 259.59375,
+        "width": 176.05224609375,
+        "height": 41.4375,
+        "top": 259.59375,
+        "right": 341.80224609375,
+        "bottom": 301.03125,
+        "left": 165.75
+      },
+      "desc": {
+        "x": 165.75,
+        "y": 304.6875,
+        "width": 166.53076171875,
+        "height": 45.09375,
+        "top": 304.6875,
+        "right": 332.28076171875,
+        "bottom": 349.78125,
+        "left": 165.75
+      },
+      "banner": {
+        "x": 0,
+        "y": 55,
+        "width": 390,
+        "height": 82,
+        "top": 55,
+        "right": 390,
+        "bottom": 137,
+        "left": 0
+      },
+      "backgroundOpacity": "1",
+      "backgroundImage": "url(\"http://127.0.0.1:4176/media/3c9a4f4dbd1d0ad2f7b20f5b.svg\")",
+      "scrollWidth": 390,
+      "build": "http://127.0.0.1:4176/assets/index-BXEgb7mr.js",
+      "errors": [],
+      "closePersistent": true
+    },
+    {
+      "width": 1440,
+      "title": {
+        "x": 299,
+        "y": 429,
+        "width": 192.59375,
+        "height": 44,
+        "top": 429,
+        "right": 491.59375,
+        "bottom": 473,
+        "left": 299
+      },
+      "desc": {
+        "x": 299,
+        "y": 480,
+        "width": 228.484375,
+        "height": 52.59375,
+        "top": 480,
+        "right": 527.484375,
+        "bottom": 532.59375,
+        "left": 299
+      },
+      "banner": {
+        "x": 270,
+        "y": 60,
+        "width": 1200,
+        "height": 95,
+        "top": 60,
+        "right": 1470,
+        "bottom": 155,
+        "left": 270
+      },
+      "backgroundOpacity": "1",
+      "backgroundImage": "url(\"http://127.0.0.1:4176/media/3c9a4f4dbd1d0ad2f7b20f5b.svg\")",
+      "scrollWidth": 1440,
+      "build": "http://127.0.0.1:4176/assets/index-BXEgb7mr.js",
+      "errors": [],
+      "closePersistent": true
+    }
+  ]
+}

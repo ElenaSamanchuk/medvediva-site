@@ -1,0 +1,44 @@
+{
+  "state": "PAUSED_USER_REQUEST",
+  "ownProcesses": "All local browser test processes completed; no servers owned by this agent",
+  "changedFiles": [
+    "src/style.css",
+    "src/components/SceneBlock.vue"
+  ],
+  "latestChanges": [
+    "scene-atom defaultline-height normal verified against currentlivehome",
+    "Scopedmenuautoheight-centre correction node1748446143742",
+    "Scopedhero description node176034604789485860 translate6px forreadability"
+  ],
+  "verified": {
+    "homeGapAfter6px": {
+      "320": 3.112,
+      "390": 3.691,
+      "1440": 7.112
+    },
+    "learningCentreAfterNormal": {
+      "320": {
+        "label": 424.5,
+        "circle": 424
+      },
+      "390": {
+        "label": 425.109,
+        "circle": 424.5
+      },
+      "1440": {
+        "label": 424.5,
+        "circle": 425
+      }
+    },
+    "invent390SourceLocalRects": "Exactmatch: sceneheights505,109,585,663 andtop0,505,614,1199",
+    "flowBadgesPit": "41/42 localcentrevsbackgroundmatcheslivewithin0.609px; no badge-specificCSS applied"
+  },
+  "evidence": [
+    "docs/codex-2026-10-13-home-gap-after-proof.json",
+    "docs/codex-2026-10-13-learning-align-before.json",
+    "docs/codex-2026-10-13-normal-and-gap-proof.json",
+    "docs/codex-2026-10-13-menu-centering-proof.json",
+    "docs/codex-2026-10-13-flow-compare.json"
+  ],
+  "next": "Parentfinalbuild must include lastnormal/hero6pxCSS; finalVKbannerproof notconfirmedbythisagent, ownedroot; no complete124pageacceptanceclaim"
+}

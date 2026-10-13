@@ -1,0 +1,439 @@
+{
+  "date": "2026-10-13T09:44:19.391Z",
+  "rows": [
+    {
+      "width": 1440,
+      "mode": "live",
+      "records": [
+        {
+          "id": "1423935221",
+          "classes": "r t-rec t-tooltip-container",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 709,
+          "y": 0,
+          "text": "#rec1423935221 .t396__artboard{height:709px;background-color:#f5f5f5;}#rec1423935221 .t396__filter{height:709px;}#rec1423935221 .t396__carrier{height:709px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423744001",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 450,
+          "y": 709,
+          "text": "#rec1423744001 .t396__artboard{height:450px;background-color:#f5f5f5;}#rec1423744001 .t396__filter{height:450px;}#rec1423744001 .t396__carrier{height:450px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1740193541",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 604,
+          "y": 1159,
+          "text": "#rec1740193541 .t396__artboard{height:604px;background-color:#f5f5f5;}#rec1740193541 .t396__filter{height:604px;}#rec1740193541 .t396__carrier{height:604px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423746821",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 842,
+          "y": 1763,
+          "text": "#rec1423746821 .t396__artboard{height:842px;background-color:#ffffff;}#rec1423746821 .t396__filter{height:842px;}#rec1423746821 .t396__carrier{height:842px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423749771",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 437,
+          "y": 2605,
+          "text": "#rec1423749771 .t396__artboard{height:437px;background-color:#f5f5f5;}#rec1423749771 .t396__filter{height:437px;}#rec1423749771 .t396__carrier{height:437px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423749781",
+          "classes": "r t-rec t-screenmin-1200px",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 547,
+          "y": 3042,
+          "text": "#rec1423749781 .t396__artboard{height:547px;background-color:#f5f5f5;}#rec1423749781 .t396__filter{height:547px;}#rec1423749781 .t396__carrier{height:547px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423751601",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 353,
+          "y": 3589,
+          "text": "#rec1423751601 .t396__artboard{height:353px;background-color:#ffffff;}#rec1423751601 .t396__filter{height:353px;}#rec1423751601 .t396__carrier{height:353px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "770878605",
+          "classes": "r t-rec t-rec_pt_0 t-rec_pb_0",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 478,
+          "y": 3942,
+          "text": "#rec770878605 .t396__artboard{height:478px;background-color:#262626;}#rec770878605 .t396__filter{height:478px;}#rec770878605 .t396__carrier{height:478px;background-position:center center;background-attachment:s"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "mode": "local",
+      "records": [
+        {
+          "id": "3552207101",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 709,
+          "y": 0,
+          "text": "Питание и тренировки Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость и энергию через осознанное движение и системный подход Продажи открыты Старт курса - 12 о"
+        },
+        {
+          "id": "1423744001",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 450,
+          "y": 709,
+          "text": "Структура курса Основная программаВсе тренировки доступны в любое время в приложении и на платформе Medve. Diva4 + 1 неделя дополнительного доступаБонусные материалы 10 мини курсов, лекций о питании, МФР и др ("
+        },
+        {
+          "id": "1740193541",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 604,
+          "y": 1159,
+          "text": "Что внутри курса? Коррекционные тренировкиСиловые тренировкиДля удобства коррекции поделены на разделы:— для плоского живота, красивой осанки, женского здоровья, устранения отёков и общего тонуса— для силы, под"
+        },
+        {
+          "id": "4482957101",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 150,
+          "y": 1763,
+          "text": "Тарифы"
+        },
+        {
+          "id": "4482959301",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 140,
+          "y": 1913,
+          "text": "Сегодня курс по самой низкой ценеСкидка действует до 7 октября С 8 октября цена станет вышеДо конца акции00:00:00:00секундминутчасовдней"
+        },
+        {
+          "id": "4482964301",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 650,
+          "y": 2053,
+          "text": "РекомендуемОбратная связь от куратораКоличество мест ограниченопит комфортныйВсё из тарифа «Базовый» + обратная связь от куратора (персональные видеоразборы) 4 023 ₽ за поток8 потоковДоступ 40 недель выбрать4 п"
+        },
+        {
+          "id": "4482968901",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 360,
+          "y": 2703,
+          "text": "Написать нам Напишите нам, поможем выбрать курс и оформить сертификатХотите подарить MEDVE.DIVA близкому человеку? Купить ТВГ Создан для тех, кто хочет справиться с перееданиями, эмоциональными срывами и хаосом"
+        },
+        {
+          "id": "1423749771",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 437,
+          "y": 3063,
+          "text": "Как попасть на курс?Вступите в [Бот предзаписи] — получите напоминания и спецусловияВыберите поток и тарифПолучите доступ к платформеТренируйтесь в удобное время, без привязки к расписанию 1 2 3 4"
+        },
+        {
+          "id": "1423749781",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 547,
+          "y": 3500,
+          "text": "Оборудование Замена: пояс от халата или длинный шарфЛента для пилатеса легкого или среднего натяжения 150-180 смЗамена: плотные «клубки» носков2 мягких массажных мяча, диаметр 10-12 смЗамена: плотно свёрнутое в"
+        },
+        {
+          "id": "1423751601",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 1440,
+          "height": 353,
+          "y": 4047,
+          "text": "как работает платформа? При оплате введите свою почту и придумайте парольПосле оплаты мы отправим письмо со ссылкой для входа в личный кабинетПерейдите по ссылке и войдите с теми же данными, что указали при опл"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "mode": "live",
+      "records": [
+        {
+          "id": "1941975871",
+          "classes": "r t-rec t-rec_pt_0 t-rec_pt-res-480_15 t-rec_pb_0 t-rec_pb-res-480_15",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 30,
+          "y": 0,
+          "text": ""
+        },
+        {
+          "id": "1423935221",
+          "classes": "r t-rec t-tooltip-container",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 788,
+          "y": 30,
+          "text": "#rec1423935221 .t396__artboard{height:709px;background-color:#f5f5f5;}#rec1423935221 .t396__filter{height:709px;}#rec1423935221 .t396__carrier{height:709px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1941961351",
+          "classes": "r t-rec t-screenmax-480px",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 67,
+          "y": 818,
+          "text": "#rec1941961351 .t396__artboard{height:50px;background-color:#f5f5f5;overflow:auto;}#rec1941961351 .t396__filter{height:50px;}#rec1941961351 .t396__carrier{height:50px;background-position:center center;backgroun"
+        },
+        {
+          "id": "1423744001",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 891,
+          "y": 885,
+          "text": "#rec1423744001 .t396__artboard{height:450px;background-color:#f5f5f5;}#rec1423744001 .t396__filter{height:450px;}#rec1423744001 .t396__carrier{height:450px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1740193541",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 1137,
+          "y": 1776,
+          "text": "#rec1740193541 .t396__artboard{height:604px;background-color:#f5f5f5;}#rec1740193541 .t396__filter{height:604px;}#rec1740193541 .t396__carrier{height:604px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423746821",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 1003,
+          "y": 2913,
+          "text": "#rec1423746821 .t396__artboard{height:842px;background-color:#ffffff;}#rec1423746821 .t396__filter{height:842px;}#rec1423746821 .t396__carrier{height:842px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423749771",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 1346,
+          "y": 3916,
+          "text": "#rec1423749771 .t396__artboard{height:437px;background-color:#f5f5f5;}#rec1423749771 .t396__filter{height:437px;}#rec1423749771 .t396__carrier{height:437px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423749801",
+          "classes": "r t-rec t-screenmax-1200px",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 115,
+          "y": 5262,
+          "text": "#rec1423749801 .t396__artboard{height:140px;background-color:#f5f5f5;}#rec1423749801 .t396__filter{height:140px;}#rec1423749801 .t396__carrier{height:140px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "1423749811",
+          "classes": "r t-rec t-screenmax-1200px",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 374,
+          "y": 5377,
+          "text": "#rec1423749811 .t396__artboard{height:369px;background-color:#f5f5f5;overflow:auto;}#rec1423749811 .t396__filter{height:369px;}#rec1423749811 .t396__carrier{height:369px;background-position:center center;backgr"
+        },
+        {
+          "id": "1423751601",
+          "classes": "r t-rec",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 480,
+          "y": 5751,
+          "text": "#rec1423751601 .t396__artboard{height:353px;background-color:#ffffff;}#rec1423751601 .t396__filter{height:353px;}#rec1423751601 .t396__carrier{height:353px;background-position:center center;background-attachmen"
+        },
+        {
+          "id": "770878605",
+          "classes": "r t-rec t-rec_pt_0 t-rec_pb_0",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 658,
+          "y": 6231,
+          "text": "#rec770878605 .t396__artboard{height:478px;background-color:#262626;}#rec770878605 .t396__filter{height:478px;}#rec770878605 .t396__carrier{height:478px;background-position:center center;background-attachment:s"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "mode": "local",
+      "records": [
+        {
+          "id": "3552207101",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 788,
+          "y": 0,
+          "text": "Питание и тренировки Онлайн-курс от Алены Медведевой, который помогает прийти в форму и вернуть телу упругость, лёгкость и энергию через осознанное движение и системный подход Продажи открыты Старт курса - 12 о"
+        },
+        {
+          "id": "1941961351",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 67,
+          "y": 788,
+          "text": "Подходит для любого уровня подготовки Для тренировок необходимо оборудование Занимайтесь по 40 минут в день"
+        },
+        {
+          "id": "1423744001",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 890,
+          "y": 855,
+          "text": "Структура курса Основная программаВсе тренировки доступны в любое время в приложении и на платформе Medve. Diva4 + 1 неделя дополнительного доступаБонусные материалы 10 мини курсов, лекций о питании, МФР и др ("
+        },
+        {
+          "id": "1740193541",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 1137,
+          "y": 1745,
+          "text": "Что внутри курса? Коррекционные тренировкиСиловые тренировкиДля удобства коррекции поделены на разделы:— для плоского живота, красивой осанки, женского здоровья, устранения отёков и общего тонуса— для силы, под"
+        },
+        {
+          "id": "4482957101",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 73,
+          "y": 2882,
+          "text": "Тарифы"
+        },
+        {
+          "id": "4482959301",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 109,
+          "y": 2955,
+          "text": "Сегодня курс по самой низкой ценеСкидка действует до 7 октября С 8 октября цена станет вышеДо конца акции00:00:00:00секундминутчасовдней"
+        },
+        {
+          "id": "4482965901",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 1145,
+          "y": 3064,
+          "text": "РекомендуемОбратная связь от куратораКоличество мест ограниченопит комфортныйВсё из тарифа «Базовый» + обратная связь от куратора (персональные видеоразборы) 4 023 ₽ за поток8 потоковДоступ 40 недель 4 потокаДо"
+        },
+        {
+          "id": "4482968901",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 499,
+          "y": 4209,
+          "text": "Написать нам Напишите нам, поможем выбрать курс и оформить сертификатХотите подарить MEDVE.DIVA близкому человеку? Купить ТВГ Создан для тех, кто хочет справиться с перееданиями, эмоциональными срывами и хаосом"
+        },
+        {
+          "id": "1423749771",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 1346,
+          "y": 4708,
+          "text": "Как попасть на курс?Вступите в [Бот предзаписи] — получите напоминания и спецусловияВыберите поток и тарифПолучите доступ к платформеТренируйтесь в удобное время, без привязки к расписанию 1 2 3 4"
+        },
+        {
+          "id": "1423749801",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 115,
+          "y": 6054,
+          "text": "оборудование"
+        },
+        {
+          "id": "1423749811",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 374,
+          "y": 6169,
+          "text": "Замена: пояс от халата или длинный шарфЛента для пилатеса легкого или среднего натяжения 150-180 смЗамена: плотные «клубки» носков2 мягких массажных мяча, диаметр 10-12 смЗамена: плотно свёрнутое в валик большо"
+        },
+        {
+          "id": "1423751601",
+          "classes": "scene-section",
+          "display": "block",
+          "visibility": "visible",
+          "width": 390,
+          "height": 480,
+          "y": 6543,
+          "text": "как работает платформа? При оплате введите свою почту и придумайте парольПосле оплаты мы отправим письмо со ссылкой для входа в личный кабинетПерейдите по ссылке и войдите с теми же данными, что указали при опл"
+        }
+      ]
+    }
+  ]
+}

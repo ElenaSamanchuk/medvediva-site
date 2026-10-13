@@ -9,9 +9,10 @@
   "/pit": {
     "source": "https://medvediva.ru/pit",
     "file": "sources/current/2026-10-13/pit.html",
-    "capturedAt": "2026-10-13T09:22:24.730Z",
-    "sha256": "48a6611f50e0e30b54b65103df85c94aa89aa89da11b7562cc1ecd3e5d18982f",
-    "bytes": 2301643
+    "capturedAt": "2026-10-13T09:48:18Z",
+    "sha256": "e06921ed8d3bb140a72d3be2d5cef01329b696dfb27e25590d6d9eeaf80b6ac7",
+    "bytes": 1170401,
+    "status": 200
   },
   "/intensiv": {
     "source": "https://medvediva.ru/intensiv",

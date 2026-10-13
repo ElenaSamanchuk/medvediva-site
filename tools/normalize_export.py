@@ -200,7 +200,7 @@ def compile_page(route):
   except (ValueError,TypeError):pass
  desc=s.find('meta',attrs={'name':'description'});og=s.find('meta',attrs={'property':'og:image'})
  data={'robots':robots.get('content','') if robots else '', 'structuredData':structured,'path':route['path'],'title':title,'description':desc.get('content','') if desc else '', 'canonical':route['canonical'],'image':localize(og.get('content','')) if og else '', 'scenes':scenes,'blocks':blocks,'popups':popups,'anchors':anchors,'missingMediaCount':len(asset_issues.get(current_path,[])),'unsupported':unsupported}
- if route['path']=='/pit':
+ if route['path']=='/pit' and s.find(id='rec4482970101'):
   promotion_file=ROOT/'sources/promotion-config-2026-10-13.json'
   if promotion_file.exists():
    captured=json.loads(promotion_file.read_text())
