@@ -90,6 +90,8 @@ function resize(){hideTooltip();width.value=innerWidth;}
 function scroll(){showTop.value=window.scrollY>500;}
 // Zero-попап на всю ширину: клик по пустому месту (не по содержимому сцены) закрывает, как клик вне окна (14.10.2026)
 function dialogBackdropClick(e){if(!dialogScenes.value.length)return;if(e.target.closest('.scene-node,.scene-group,.dialog-close,a,button,input,textarea,video'))return;close();}
+// Открытое меню закрывается кликом вне панели (решение Елены 14.10.2026)
+function menuOutsideClick(e){const n=e.target.closest('.scene-node,.scene-group,.menu-close,a,button');/* 1748446143723 — прозрачная подложка слева от панели, считается «вне» */if(n&&n.dataset?.node!=='1748446143723')return;close();}
 function resetDialog(){document.querySelectorAll('.native-dialog video').forEach(v=>v.pause());popup.value=null;menu.value=false;document.body.style.overflow='';previousFocus?.focus({focusVisible:keyboardFocus});}
 function close(){const owned=history.state?.medvedivaOverlay;resetDialog();if(owned)history.back();else if(location.hash==='#menuopen'||popups.value.some(p=>p.hook===location.hash))history.replaceState(history.state,'',location.pathname+location.search);}
 function overlayHistory(hook){if(location.hash!==hook)history.pushState({...history.state,medvedivaOverlay:true},'',hook);}
@@ -154,7 +156,7 @@ onUnmounted(()=>{removeEventListener('resize',resize);removeEventListener('keydo
   <SiteFooter :scene="scene('770878605')" :width="width" />
   <Transition name="vk-banner"><aside v-if="banner&&scene('2322512891')" class="native-banner"><SceneBlock :scene="scene('2322512891')" :width="bannerWidth" /></aside></Transition>
   <aside v-if="cookie&&scene('2019108731')" class="native-cookie"><SceneBlock :scene="scene('2019108731')" :width="width" /></aside>
-  <Transition name="menu-slide"><div v-if="menu" class="native-menu" role="dialog" aria-modal="true" aria-label="Меню сайта"><button class="menu-close" aria-label="Закрыть меню" @click="close">×</button><SceneBlock :scene="scene('860237765')" :width="width" /></div></Transition>
+  <Transition name="menu-slide"><div v-if="menu" class="native-menu" @click="menuOutsideClick" role="dialog" aria-modal="true" aria-label="Меню сайта"><button class="menu-close" aria-label="Закрыть меню" @click="close">×</button><SceneBlock :scene="scene('860237765')" :width="width" /></div></Transition>
   <Transition name="popup-rise"><div v-if="popup" class="native-modal" :class="{'native-modal--scene':dialogScenes.length}" @click.self="close"><section class="native-dialog" @click="dialogBackdropClick" :data-popup-hook="popup.hook" :class="{'native-dialog--scene':dialogScenes.length}" role="dialog" aria-modal="true" :aria-label="popup.title||'Информация'"><button class="dialog-close" aria-label="Закрыть" @click="close">×</button><h2 v-if="popup.title">{{popup.title}}</h2><div v-if="popup.html" class="popup-description" v-html="popup.html"></div><SceneBlock v-for="item in dialogScenes" :key="item.id" :scene="item" :width="Math.min(width,1200)" /><MediaPreview v-if="popup.embed" :url="popup.embed" /><div v-if="popup.pictures" class="gallery-popup"><DesignGallery :pictures="popup.pictures" /></div><SupportForm v-if="popup.form" mode="dry-run" :show-intro="false" /><a v-if="popup.button" class="popup-button" :href="popup.button.href">{{popup.button.text}}</a></section></div></Transition>
   <button v-if="showTop&&!cookie" class="back-top" aria-label="Вернуться к началу страницы" @click="backTop">⌃</button>
  </div>
