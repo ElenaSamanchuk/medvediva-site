@@ -1,0 +1,29 @@
+/* Дизайн-система Medve.Diva — токены (14.10.2026, Claude).
+   Значения взяты из действующей Тильды (частотный аудит главной, ПИТ, Интенсива, ТВГ, Оборудования и общего layout).
+   Сгенерированный CSS сцен ссылается на них через var(--…, исходное значение), см. tools/design_tokens.py. */
+:root{
+  /* Гарнитуры */
+  --font-display:Bounded,Arial,sans-serif;   /* заголовки, uppercase */
+  --font-ui:Manrope,Arial,sans-serif;        /* интерфейс, карточки, кнопки */
+  --font-text:Inter,Arial,sans-serif;        /* длинный текст, документы */
+
+  /* Шкала кеглей (px) */
+  --fs-2xs:8px;--fs-xs:10px;--fs-sm:12px;--fs-base:14px;--fs-md:16px;--fs-lg:18px;--fs-xl:20px;--fs-2xl:24px;--fs-3xl:30px;--fs-4xl:40px;--fs-5xl:60px;
+  --lh-tight:1.2;--lh-snug:1.35;--lh-text:1.55;
+  --fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;
+
+  /* Цвета: текст и поверхности */
+  --c-ink:#262626;--c-ink-2:#4c4c4c;--c-heading:#2b2829;--c-muted:#9c9d9f;--c-line:#c5c5c5;--c-line-soft:#eaeaea;
+  --c-white:#ffffff;--c-surface:#f5f5f5;--c-dark:#303030;
+  /* Цвета курсов */
+  --c-pit:#4269a3;--c-pit-deep:#315a94;--c-pit-soft:#e6f0ff;   /* Питание и тренировки, общий синий */
+  --c-tvg:#653a3f;--c-tvg-2:#694448;--c-tvg-soft:#e7e3e3;      /* Тело в голове */
+  --c-intensiv:#fe8064;                                        /* Интенсив */
+
+  /* Радиусы */
+  --r-xs:4px;--r-sm:6px;--r-md:8px;--r-lg:10px;--r-xl:12px;--r-2xl:14px;--r-3xl:16px;--r-card:20px;--r-panel:24px;--r-pill:3000px;
+
+  /* Отступы (шаг 4px) */
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;--sp-10:40px;--sp-12:48px;--sp-16:64px;--sp-20:80px;
+  --header-offset:80px;
+}

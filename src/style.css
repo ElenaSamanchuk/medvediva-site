@@ -1,7 +1,8 @@
 @import "./fonts.css";
+@import "./tokens.css";
 @import "tailwindcss";
 @theme { --color-support-blue:#2d95ff; --color-support-ink:#272d35; }
-body {margin:0;font-family:Manrope,Arial,sans-serif;background:#fff;color:#272d35;}
+body {margin:0;font-family:var(--font-ui);background:var(--c-white);color:#272d35;}
 button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transparent;}button{cursor:pointer;}
 .scene-section{position:relative;width:100%;overflow:hidden;}
 .scene-canvas--scrollable{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;}
@@ -35,7 +36,7 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 /* Tilda centres this auto-height label using its measured text height. */
 [data-scene="860237765"] [data-node="1748446143742"]{translate:0 calc((1px - 100%)/2);}
 /* Keep the source hero composition, with a readable gap below its title. */
-[data-scene="1624562851"] [data-node="176034604789485860"]{translate:0 6px;}
+[data-scene="1740196951"] [data-node="176034604789485860"]{translate:0 6px;}
 .native-modal{position:fixed;inset:0;z-index:1400;background:#0009;overflow-y:auto;display:flex;align-items:flex-start;justify-content:center;padding:60px 20px;}
 .native-dialog{position:relative;background:#fff;width:560px;max-width:100%;padding:40px;color:#000;}
 .native-dialog h2{font-weight:600;font-size:28px;line-height:1.23;margin-bottom:20px;}
@@ -52,8 +53,16 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .scene-button .scene-atom__button-content{display:flex;align-items:center;justify-content:center;position:relative;z-index:1;}
 .scene-flex>.scene-node{top:0!important;left:0!important;}
 
-.native-article>div{max-width:760px;margin:auto;padding:0 20px;font-family:Inter,Arial,sans-serif;font-size:20px;line-height:1.55;color:#000;overflow-wrap:anywhere}.native-article img{max-width:100%;margin:auto}.native-article ul{list-style:disc;padding-left:20px}.native-article a{text-decoration:underline}.native-article strong{font-weight:700}
-@media(max-width:639px){.native-article>div{font-size:16px;padding:0 20px}}
+/* Юридические документы: шире колонка, читаемый кегль, отступ от фиксированной шапки, заголовки в стиле сайта (14.10.2026, Claude) */
+.native-article{background:var(--c-surface);padding:calc(var(--header-offset) + var(--sp-6)) var(--sp-6) 72px!important}
+.native-article>div{max-width:960px;margin:0 auto;padding:var(--sp-12) var(--sp-16);background:var(--c-white);border-radius:var(--r-panel);font-family:var(--font-text);font-size:var(--fs-md);line-height:1.65;color:var(--c-heading);overflow-wrap:break-word;hyphens:manual}
+.native-article p{margin:0}
+.native-article>div>p[style*="center"]{font-family:var(--font-display);font-weight:var(--fw-semibold);text-transform:uppercase;font-size:17px;line-height:1.35;letter-spacing:.01em;color:var(--c-heading);margin:var(--sp-2) 0 var(--sp-3);text-align:left!important}
+.native-article>div>p[style*="center"]:first-child{font-size:28px;line-height:1.2;margin:0 0 16px}
+.native-article em{font-style:normal;color:var(--c-muted);font-size:var(--fs-base)}
+.native-article img{max-width:100%;margin:auto}.native-article ul{list-style:disc;padding-left:20px}.native-article a{text-decoration:underline;color:var(--c-pit)}.native-article strong{font-weight:700}
+@media(max-width:959px){.native-article{padding:88px 16px 56px!important}.native-article>div{padding:36px 32px}}
+@media(max-width:639px){.native-article{padding:80px 12px 40px!important}.native-article>div{padding:24px 18px;border-radius:18px;font-size:15px;line-height:1.6}.native-article>div>p[style*="center"]{font-size:14px;margin:6px 0 10px}.native-article>div>p[style*="center"]:first-child{font-size:18px}}
 
 .chat-launcher{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#7da1d4;box-shadow:0 6px 20px #4e72a633;z-index:950;cursor:default;display:grid;place-items:center}.chat-launcher svg{width:32px;height:32px}@media(max-width:479px){.chat-launcher{width:56px;height:56px;right:16px;bottom:16px}}
 
@@ -66,3 +75,5 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 @media(max-width:479px){.native-modal--scene{padding:40px 0}.native-dialog--scene{padding:0}.scene-anchor,.scene-section{scroll-margin-top:65px}}
 @media(prefers-reduced-motion:no-preference){.native-dialog{animation:dialog-enter .3s ease-in-out}@keyframes dialog-enter{from{opacity:0;translate:0 20px}to{opacity:1;translate:0 0}}}
 @media(prefers-reduced-motion:reduce){.sw-container *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:479px){.br-desktop{display:none}}
+.scene-atom ul{list-style:disc outside;padding-left:var(--sp-5);margin:0}.scene-atom ol{list-style:decimal outside;padding-left:var(--sp-5);margin:0}

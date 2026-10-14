@@ -20,3 +20,4 @@ playwright-report/
 **/storage-state*.json
 sources/overrides/**/home-source.html
 sources/current/
+docs/screens-claude-*/

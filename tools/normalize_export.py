@@ -5,8 +5,10 @@ from bs4 import BeautifulSoup, Comment, ProcessingInstruction
 import json,re,hashlib,shutil
 from urllib.parse import urlsplit
 from typography import typograf_html
+import design_tokens
 ROOT=Path(__file__).resolve().parents[1]
-EXPORT=ROOT/'sources/export/2026-10-09/alenamedvedeva'
+TYPO_SKIP=set(json.loads((ROOT/'sources/typograf-skip.json').read_text())['nodes']) if (ROOT/'sources/typograf-skip.json').exists() else set()
+EXPORT=ROOT/'sources/export/2026-10-14/alenamedvedeva'
 OUT=ROOT/'public/content';MEDIA=ROOT/'public/media'
 OUT.mkdir(parents=True,exist_ok=True);MEDIA.mkdir(parents=True,exist_ok=True)
 media={}
@@ -38,7 +40,7 @@ def localize(v):
  v=v.replace('https://tilda.ws/img/imgfishsquare.gif','data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=')
  return v.replace('--t396-','--scene-').replace('..//media/','/media/')
 
-def clean_html(atom):
+def clean_html(atom,typo=True):
  clone=BeautifulSoup(str(atom),'html.parser')
  for x in clone.find_all(string=lambda t:isinstance(t,(Comment,ProcessingInstruction))):x.extract()
  for e in clone(['script','style','iframe','object','embed','form','input']):e.decompose()
@@ -64,7 +66,10 @@ def clean_html(atom):
   if e.name=='img':
    if not e.get('src'):e['src']=''
    e['alt']=e.get('alt','')
- root=clone.find();return typograf_html(''.join(map(str,root.contents)),current_path) if root else ''
+ root=clone.find()
+ if not root:return ''
+ inner=''.join(map(str,root.contents))
+ return typograf_html(inner,current_path,nbsp=typo)
 
 def rules(css,conditions=()):
  pos=0
@@ -120,7 +125,7 @@ def node(e):
   return model
  atom=e.select_one('.tn-atom');kind=e.get('data-elem-type','shape')
  original=atom.get('data-original') if atom else None
- html=clean_html(atom) if atom else ''
+ html=clean_html(atom,e.get('data-elem-id') not in TYPO_SKIP) if atom else ''
  if kind=='image' and atom:
   img=atom.find('img');src=img.get('data-original') or img.get('src') if img else None
   if src:html='<img class="scene-image" src="'+localize(src)+'" alt="'+(img.get('alt','').replace('"','&quot;'))+'"/>'
@@ -174,6 +179,13 @@ def compile_page(route):
    blocks.append({'kind':'scene','id':recid})
    scenes.append({'id':recid,'min':r.get('data-screen-min',''),'max':r.get('data-screen-max',''),'board':{k[14:]:v for k,v in board.attrs.items() if k.startswith('data-artboard-')},'nodes':[node(e) for e in board.find_all(recursive=False) if e.has_attr('data-elem-id') or e.has_attr('data-group-id')]})
    css.append(appearance('\n'.join(t.get_text() for t in r.find_all('style')),recid))
+   # Отступы и фон самой записи Тильды вокруг артборда (t-rec padding), включая адаптивные -res-N (14.10.2026)
+   st=r.get('style','');pt=re.search(r'padding-top:\s*(\d+)px',st);pb=re.search(r'padding-bottom:\s*(\d+)px',st);bg=re.search(r'background-color:\s*([^;]+)',st)
+   cls=' '.join(r.get('class',[]));res=re.findall(r't-rec_p([tb])-res-(\d+)_(\d+)',cls)
+   if (pt and pt.group(1)!='0') or (pb and pb.group(1)!='0') or res:
+    css.append('#scene-%s{box-sizing:content-box;padding-top:%spx;padding-bottom:%spx;%s}'%(recid,pt.group(1) if pt else 0,pb.group(1) if pb else 0,('background-color:%s;'%bg.group(1).strip()) if bg else ''))
+    for side,w,val in sorted(res,key=lambda x:-int(x[1])):
+     css.append('@media screen and (max-width:%spx){#scene-%s{padding-%s:%spx}}'%(w,recid,'top' if side=='t' else 'bottom',val))
    minimum=re.match(r'^([\d.]+)',r.get('data-screen-min',''))
    maximum=re.match(r'^([\d.]+)',r.get('data-screen-max',''))
    if minimum:css.append('@media(max-width:%spx){#scene-%s,#rec%s{display:none!important}}'%(float(minimum.group(1))-0.02,recid,recid))
@@ -191,6 +203,11 @@ def compile_page(route):
      if img.get('data-original'):img['src']=img['data-original']
     blocks.append({'kind':'article','id':recid,'type':typ,'html':clean_html(content),'style':localize(r.get('style',''))})
   elif typ=='215':blocks.append({'kind':'anchor','id':recid})
+  elif typ=='113':
+   # T113 — пустой отступ; адаптивные padding из классов t-rec_pt-res-N_X (14.10.2026)
+   blocks.append({'kind':'spacer','id':recid,'style':localize(r.get('style',''))})
+   for side,res,val in re.findall(r't-rec_p([tb])-res-(\d+)_(\d+)',' '.join(r.get('class',[]))):
+    css.append('@media screen and (max-width:%spx){#scene-%s{padding-%s:%spx!important}}'%(res,recid,'top' if side=='t' else 'bottom',val))
   elif typ not in ('131','270','674','890','360','113','875'):
    unsupported.append({'id':recid,'type':typ,'text':r.get_text(' ',strip=True)[:4000]})
  title=s.title.get_text() if s.title else ''
@@ -205,8 +222,16 @@ def compile_page(route):
   if promotion_file.exists():
    captured=json.loads(promotion_file.read_text())
    data['promotion']={'config':captured['config'],'countdown':captured['countdown'],'bannerScenes':{'4482959301':'phase1','4482960101':'phase2','4482961001':'phase3'},'source':captured['source'],'capturedAt':captured['capturedAt']}
+ fix=json.loads((ROOT/'sources/fixups.json').read_text()).get(route['pageId'],{}) if (ROOT/'sources/fixups.json').exists() else {}
+ def walk(items):
+  for n in items or []:
+   if isinstance(n,dict):
+    if n.get('id') in fix:n.update({k:v for k,v in fix[n['id']].items() if k!='reason'})
+    for v in n.values():
+     if isinstance(v,list):walk(v)
+ walk(scenes)
  (OUT/(route['pageId']+'.json')).write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
- (OUT/(route['pageId']+'.css')).write_text('\n'.join(css))
+ (OUT/(route['pageId']+'.css')).write_text(design_tokens.apply('\n'.join(css)))
  return {'path':route['path'],'page':route['pageId'],'title':title,'scenes':len(scenes),'unsupported':unsupported,'missingMediaCount':len(asset_issues.get(current_path,[])),'state':'design-extracted-unverified'}
 manifest=json.loads((ROOT/'sources/export-manifest.json').read_text())
 # Start with the home page; --all compiles every canonical source for route-by-route acceptance.

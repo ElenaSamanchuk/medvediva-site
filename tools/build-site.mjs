@@ -31,7 +31,9 @@ try{
   await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,html);written.push(route.path);
   const alias=`/page${route.page}.html`;if(!routes.some(r=>r.path===alias))await fs.writeFile(path.join(dist,alias.slice(1)),html);
  }
- await fs.writeFile(path.join(dist,'404.html'),shell.replace('<div id="app"></div>','<div id="app"><main><h1>Страница не найдена</h1><a href="/">На главную</a></main></div>'));
+ // 404 — оформленная страница /mist, как настроено на Тильде (14.10.2026)
+ const mist=await fs.readFile(path.join(dist,'mist/index.html'),'utf8').catch(()=>null);
+ await fs.writeFile(path.join(dist,'404.html'),mist?mist.replace('</head>','<meta name="robots" content="noindex"></head>').replace(/(<script type="application\/json" id="site-page">)\{/,'$1{"notFound":true,'):shell.replace('<div id="app"></div>','<div id="app"><main><h1>Страница не найдена</h1><a href="/">На главную</a></main></div>'));
  await fs.writeFile(path.join(dist,'robots.txt'),'User-agent: *\nDisallow: /\n');
  await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:'local preview; noindex',count:written.length,routes:written},null,2));
  console.log(`Generated ${written.length} static preview pages with Vue SSR. Noindex; deployment not performed.`);
