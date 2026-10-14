@@ -194,7 +194,7 @@ def compile_page(route):
    popup=r.select_one('[data-tooltip-hook]');title=r.select_one('[class*="__title"]');descr=r.select_one('[class*="__descr"]');button=r.select_one('a[class*="__btn"],a.t-btn')
    if popup:
     embed=r.find('iframe');video=r.select_one('[data-videolazy-id]');sceneids=popup.get('data-popup-rec-ids','')
-    embedurl=embed.get('src','') if embed else ('https://www.youtube.com/embed/'+video['data-videolazy-id'] if video and video.get('data-videolazy-type')=='youtube' else '')
+    embedurl=embed.get('src','') if embed else ({'youtube':'https://www.youtube.com/embed/','kinescope':'https://kinescope.io/embed/'}.get(video.get('data-videolazy-type'),'')+video['data-videolazy-id'] if video and video.get('data-videolazy-id') and video.get('data-videolazy-type') in ('youtube','kinescope') else '')
     popups.append({'scenes':[re.sub(r'^rec','',x.strip()) for x in sceneids.split(',')] if sceneids else [],'embed':embedurl,'hook':popup['data-tooltip-hook'],'title':title.get_text(' ',strip=True) if title else popup.get('aria-label',''),'html':clean_html(descr) if descr else '', 'button':{'text':button.get_text(' ',strip=True),'href':button.get('href','')} if button else None,'form':typ=='702'})
   elif typ in ('106','33','976','3'):
    content=r.select_one('[field="text"],.t017,.t976__wrapper,.t107')
@@ -223,6 +223,28 @@ def compile_page(route):
    captured=json.loads(promotion_file.read_text())
    data['promotion']={'config':captured['config'],'countdown':captured['countdown'],'bannerScenes':{'4482959301':'phase1','4482960101':'phase2','4482961001':'phase3'},'source':captured['source'],'capturedAt':captured['capturedAt']}
  fix=json.loads((ROOT/'sources/fixups.json').read_text()).get(route['pageId'],{}) if (ROOT/'sources/fixups.json').exists() else {}
+ seo=json.loads((ROOT/'sources/seo.json').read_text()).get(route['path'],{}) if (ROOT/'sources/seo.json').exists() else {}
+ if seo.get('description'):data['description']=seo['description']
+ h1s=seo.get('h1',[])
+ for sc in scenes:
+  for key in h1s:
+   if ':' not in key:continue
+   want_scene,want_node=key.split(':',1)
+   if want_scene not in ('*',sc['id']):continue
+   def mark(items):
+    for n in items or []:
+     if isinstance(n,dict):
+      if n.get('id')==want_node and n.get('type')=='text':n['tag']='h1'
+      for v in n.values():
+       if isinstance(v,list):mark(v)
+   mark(sc.get('nodes'))
+ if 'article' in h1s:
+  for b in blocks:
+   if b.get('kind')=='article':
+    h=b['html'].lstrip()
+    m=re.match(r'<p( style="text-align: center;")>(.*?)</p>',h,re.S) or re.match(r'<strong()>(.*?)</strong>(?:<br/>)?',h,re.S) or re.match(r'()([^<]{5,200})<br/>',h,re.S)
+    if m:b['html']='<h1%s>%s</h1>'%(m.group(1),m.group(2))+h[m.end():]
+    break
  def walk(items):
   for n in items or []:
    if isinstance(n,dict):

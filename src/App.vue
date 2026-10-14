@@ -88,10 +88,10 @@ function resetDialog(){document.querySelectorAll('.native-dialog video').forEach
 function close(){const owned=history.state?.medvedivaOverlay;resetDialog();if(owned)history.back();else if(location.hash==='#menuopen'||popups.value.some(p=>p.hook===location.hash))history.replaceState(history.state,'',location.pathname+location.search);}
 function overlayHistory(hook){if(location.hash!==hook)history.pushState({...history.state,medvedivaOverlay:true},'',hook);}
 function open(item){if(!popup.value&&!menu.value)previousFocus=document.activeElement;menu.value=false;popup.value=item;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-dialog'),attribution);document.querySelector('.native-dialog button')?.focus();});}
-function openMenu(){if(!menu.value&&!popup.value)previousFocus=document.activeElement;popup.value=null;menu.value=true;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-menu'),attribution);document.querySelector('.menu-close')?.focus();});}
+function openMenu(){if(!menu.value&&!popup.value)previousFocus=document.activeElement;popup.value=null;menu.value=true;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-menu'),attribution);/* r из адреса — во внутренние ссылки меню, как скрипты Тильды 857516649/860263697 */{const r=new URLSearchParams(location.search).get('r');if(r)for(const a of document.querySelectorAll('.native-menu a[href^="/"]')){const u=new URL(a.getAttribute('href'),location.origin);if(u.pathname==='/members/login'||u.searchParams.has('r'))continue;u.searchParams.set('r',r);a.setAttribute('href',u.pathname+u.search+u.hash);}}document.querySelector('.menu-close')?.focus();});}
 function click(e){
  const a=e.target.closest('a'); const node=e.target.closest('[data-node]');
- if(node?.dataset.node==='1779882150069'){banner.value=false;localStore.setItem('medvedivaBannerClosed','1');clearTimeout(timer);return;}
+ if(node?.dataset.node==='1779882150069'||node?.dataset.node==='1780491925286000001'){banner.value=false;localStore.setItem('medvedivaBannerClosed','1');clearTimeout(timer);return;}
  if(node?.dataset.node==='1745573793244'){/* handled by link below */}
  if(node?.dataset.node==='1773213623325000005'){localStore.setItem('cookieConsent','accepted');localStore.setItem('cookieConsentDate',new Date().toISOString());cookie.value=false;return;}
  const tooltip=tooltipFor(a);
@@ -101,7 +101,7 @@ function click(e){
  const href=a.getAttribute('href');
  if(href==='#close'&&activeTooltip){e.preventDefault();hideTooltip();return;}
  const sceneId=a.closest('[data-scene]')?.dataset.scene;
- if(sceneId==='1423616591'&&!href?.startsWith('#')){const target=localLink(a.href,sceneId);if(target)a.setAttribute('href',target);}
+ if((sceneId==='1423616591'||sceneId==='860237765')&&!href?.startsWith('#')){const target=localLink(a.href,sceneId);if(target)a.setAttribute('href',target);}
  if(href==='#menuopen'&&scene('860237765')){e.preventDefault();overlayHistory(href);openMenu();return;}
  if(href==='#menuclose'||href==='#closepopup'){e.preventDefault();close();return;}
  const modal=popups.value.find(p=>p.hook===href);

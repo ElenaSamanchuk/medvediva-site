@@ -17,7 +17,8 @@ export function localLink(href,scene) {
  try {url=new URL(href,typeof location==='undefined'?'https://medvediva.ru':location.origin);}catch{return href;}
  if(!['http:','https:','mailto:','tel:','tg:','whatsapp:','viber:'].includes(url.protocol))return undefined;
  if(['medvediva.ru','www.medvediva.ru'].includes(url.hostname)||typeof location!=='undefined'&&url.origin===location.origin) {
-  if(scene==='1423616591' && ['/pit','/intensiv','/tvg'].includes(url.pathname)) {
+  // r переносится как в авторских скриптах Тильды: карточки курсов на главной и меню (рек 860237765, скрипты 857516649/860263697)
+  if(scene==='1423616591' && ['/pit','/intensiv','/tvg'].includes(url.pathname) || scene==='860237765' && url.pathname!=='/members/login') {
    const referral=new URLSearchParams(typeof location==='undefined'?'':location.search).get('r');if(referral&&!url.searchParams.has('r'))url.searchParams.set('r',referral);
   }
   return `${url.pathname}${url.search}${url.hash}`;

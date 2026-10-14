@@ -31,7 +31,7 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .vk-banner-leave-active{pointer-events:none}
 @media(max-width:768px){.native-banner{top:55px;left:0;width:100%;max-width:100%}.vk-banner-enter-from,.vk-banner-leave-to{transform:translate3d(0,calc(-100% - 60px),0)}}
 @media(prefers-reduced-motion:reduce){.vk-banner-enter-active,.vk-banner-leave-active{transition:none}.vk-banner-enter-from,.vk-banner-leave-to{transform:none}}
-.native-menu{position:fixed;inset:0;background:#f5f5f5;z-index:1200;overflow:auto;}
+.native-menu{position:fixed;inset:0;background:transparent;z-index:1200;overflow:auto;}
 .menu-close{position:absolute;right:22px;top:12px;z-index:2;font-size:38px;}
 /* Tilda centres this auto-height label using its measured text height. */
 [data-scene="860237765"] [data-node="1748446143742"]{translate:0 calc((1px - 100%)/2);}
@@ -57,12 +57,12 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .native-article{background:var(--c-surface);padding:calc(var(--header-offset) + var(--sp-6)) var(--sp-6) 72px!important}
 .native-article>div{max-width:960px;margin:0 auto;padding:var(--sp-12) var(--sp-16);background:var(--c-white);border-radius:var(--r-panel);font-family:var(--font-text);font-size:var(--fs-md);line-height:1.65;color:var(--c-heading);overflow-wrap:break-word;hyphens:manual}
 .native-article p{margin:0}
-.native-article>div>p[style*="center"]{font-family:var(--font-display);font-weight:var(--fw-semibold);text-transform:uppercase;font-size:17px;line-height:1.35;letter-spacing:.01em;color:var(--c-heading);margin:var(--sp-2) 0 var(--sp-3);text-align:left!important}
-.native-article>div>p[style*="center"]:first-child{font-size:28px;line-height:1.2;margin:0 0 16px}
+.native-article>div>p[style*="center"],.native-article>div>h1{font-family:var(--font-display);font-weight:var(--fw-semibold);text-transform:uppercase;font-size:17px;line-height:1.35;letter-spacing:.01em;color:var(--c-heading);margin:var(--sp-2) 0 var(--sp-3);text-align:left!important}
+.native-article>div>p[style*="center"]:first-child,.native-article>div>h1{font-size:28px;line-height:1.2;margin:0 0 16px}
 .native-article em{font-style:normal;color:var(--c-muted);font-size:var(--fs-base)}
 .native-article img{max-width:100%;margin:auto}.native-article ul{list-style:disc;padding-left:20px}.native-article a{text-decoration:underline;color:var(--c-pit)}.native-article strong{font-weight:700}
 @media(max-width:959px){.native-article{padding:88px 16px 56px!important}.native-article>div{padding:36px 32px}}
-@media(max-width:639px){.native-article{padding:80px 12px 40px!important}.native-article>div{padding:24px 18px;border-radius:18px;font-size:15px;line-height:1.6}.native-article>div>p[style*="center"]{font-size:14px;margin:6px 0 10px}.native-article>div>p[style*="center"]:first-child{font-size:18px}}
+@media(max-width:639px){.native-article{padding:80px 12px 40px!important}.native-article>div{padding:24px 18px;border-radius:18px;font-size:15px;line-height:1.6}.native-article>div>p[style*="center"]{font-size:14px;margin:6px 0 10px}.native-article>div>p[style*="center"]:first-child,.native-article>div>h1{font-size:18px}}
 
 .chat-launcher{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#7da1d4;box-shadow:0 6px 20px #4e72a633;z-index:950;cursor:default;display:grid;place-items:center}.chat-launcher svg{width:32px;height:32px}@media(max-width:479px){.chat-launcher{width:56px;height:56px;right:16px;bottom:16px}}
 
@@ -77,3 +77,20 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 @media(prefers-reduced-motion:reduce){.sw-container *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(max-width:479px){.br-desktop{display:none}}
 .scene-atom ul{list-style:disc outside;padding-left:var(--sp-5);margin:0}.scene-atom ol{list-style:decimal outside;padding-left:var(--sp-5);margin:0}
+/* Крестик плашки VK: зона нажатия 44px вместо 12px (14.10.2026) */
+.native-banner [data-node="1779882150069"]::after{content:"";position:absolute;inset:-16px;}
+.native-banner [data-node="1780491925286000001"]{pointer-events:auto;cursor:pointer;}
+/* Видеопопап (T331/T868): широкое окно 16:9 как на Тильде, без белой рамки (14.10.2026) */
+.native-dialog:has(.media-preview){width:min(960px,100%);padding:0;background:#000;border-radius:var(--r-xl);overflow:hidden}
+.native-dialog:has(.media-preview) .dialog-close{color:#fff;z-index:3;right:8px;top:4px}
+.native-modal:has(.media-preview){align-items:center}
+/* ТВГ: вся карточка «Смотреть первую лекцию» открывает видео — текст и подложка поверх ссылки не перехватывают клик (14.10.2026) */
+[data-node="1745493630841"],[data-node="1745493630848"],[data-node="1745493630853"]{pointer-events:none}
+.scene-flex>.scene-shape>.scene-atom,.scene-flex>.scene-image>.scene-atom{display:block;width:100%;height:100%}
+
+/* h1 первого экрана сохраняет вид атома Тильды (14.10.2026) */
+h1.scene-atom{font:inherit;margin:0}
+/* Ленты карточек (авторский .uc-scroll): скрытая полоса прокрутки и курсор перетаскивания (14.10.2026) */
+#scene-2368131481 .scene-canvas--scrollable,#scene-1941961351 .scene-canvas--scrollable{scrollbar-width:none}
+#scene-2368131481 .scene-canvas--scrollable::-webkit-scrollbar,#scene-1941961351 .scene-canvas--scrollable::-webkit-scrollbar{display:none}
+@media (pointer:fine){.scene-canvas--scrollable{cursor:grab}.scene-canvas--scrollable.is-dragging{cursor:grabbing;user-select:none}}

@@ -48,7 +48,7 @@ onBeforeUnmount(stop);
  </div>
 </template>
 <style scoped>
-.media-preview{position:relative;width:100%;height:100%;min-height:160px;background:#191919;display:grid;place-items:center;color:white;overflow:hidden}
+.media-preview{position:relative;width:100%;aspect-ratio:16/9;min-height:160px;background:#191919;display:grid;place-items:center;color:white;overflow:hidden}
 .media-preview video{display:block;width:100%;height:100%;max-height:85vh;object-fit:contain}
 .media-play{font-size:42px;padding:20px;cursor:pointer}.media-preview p{font-size:14px;padding:20px;text-align:center}
 .media-status{position:absolute;top:0;left:0;right:0;background:rgba(0,0,0,.75);pointer-events:none}

@@ -65,6 +65,7 @@ const href=computed(()=>{
   <DesignGallery v-else-if="node.type==='gallery'" :pictures="node.pictures" />
   <a v-else-if="href" class="scene-atom" :href="href" :target="linkTarget(href)" :rel="linkTarget(href)?'noopener noreferrer':undefined" :style="atomStyle" v-html="view.html"></a>
   <button v-else-if="node.type==='button'" type="button" class="scene-atom" :style="atomStyle" v-html="view.html"></button>
+  <h1 v-else-if="node.tag==='h1'" class="scene-atom" :style="atomStyle" v-html="view.html"></h1>
   <div v-else class="scene-atom" :style="atomStyle" v-html="view.html"></div>
  </div>
 </template>
