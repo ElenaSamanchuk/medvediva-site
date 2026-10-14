@@ -132,7 +132,7 @@ onMounted(async()=>{
   document.querySelector('meta[name="description"]')?.setAttribute('content',page.value.description);
   await document.fonts.ready;
   await nextTick();prepareLinks(document.getElementById('app'),attribution);
-  showTimer=setTimeout(()=>{banner.value=!localStore.getItem('medvedivaBannerClosed');if(banner.value)timer=setTimeout(()=>banner.value=false,10000);},500);
+  showTimer=setTimeout(()=>{banner.value=page.value?.path==='/'&&!localStore.getItem('medvedivaBannerClosed');/* VK только на главной (решение Елены 14.10.2026, как на Тильде) */if(banner.value)timer=setTimeout(()=>banner.value=false,10000);},500);
   hashChange();
   if(!document.getElementById('sender-preview-script')){const widget=document.createElement('script');widget.id='sender-preview-script';widget.src='/support-preview/widget.js';document.body.append(widget);}
  }catch(e){error.value='Не удалось загрузить страницу.';console.error(e);}
