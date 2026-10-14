@@ -3,6 +3,8 @@ import {localStore} from './lib/storage.mjs';
 import supportWidget from './lib/support-widget.json';
 import {initMeters} from './lib/meters.mjs';
 import {localLink} from './lib/scene.mjs';
+import {lazyImages} from './lib/lazy-images.mjs';
+import {prefixRootUrls,stripBase,withBase} from './lib/site-base.mjs';
 import {captureAttribution,prepareLinks,checkoutLink} from './lib/attribution.mjs';
 import {ref,computed,onMounted,onUnmounted,nextTick,provide,watch} from 'vue';
 import {createTariffUi} from './lib/tariff-ui.mjs';
@@ -28,13 +30,17 @@ authoredUi.countdownText=classes=>countdown.value?.text[(classes||[]).find(c=>c.
 provide('authoredUi',authoredUi);
 // Открытое меню перекрывает VK, куки, чат поддержки и стрелку «наверх» (решение Елены 14.10.2026)
 if(client)watch(menu,v=>document.documentElement.classList.toggle('menu-open',v));
-const supportPreview=client&&location.pathname==='/__preview/support';
+const supportPreview=client&&stripBase(location.pathname)==='/__preview/support';
 const cookie=ref(false);const showTop=ref(false);
 const overlays=['860237765','1063609261','2019108731','2322512891','770878605'];
 const popups=computed(()=>{const own=page.value?.popups||[];return [...own,...(shared.value?.popups||[]).filter(p=>!own.some(x=>x.hook===p.hook))];});
 const sceneId=id=>String(id).replace(/^rec/,'');
 const popupScenes=computed(()=>popups.value.flatMap(p=>(p.scenes||[]).map(sceneId)));
 const blocks=computed(()=>page.value?.blocks.filter(b=>!overlays.includes(b.id)&&!popupScenes.value.includes(b.id)&&(!page.value.promotion?.bannerScenes?.[b.id]||page.value.promotion.bannerScenes[b.id]===getActivePhase(page.value.promotion.config,now.value)))||[]);
+const eagerBlockId=computed(()=>blocks.value.find(b=>b.kind!=='anchor'&&b.kind!=='spacer')?.id);
+function lazyHtml(html){return lazyImages(html||'');}
+function shownHtml(html,eager){return eager?prefixRootUrls(html||'')||'':lazyHtml(html);}
+function styleText(value){return typeof value==='string'?prefixRootUrls(value):value;}
 const scene=id=>shared.value?.scenes.find(s=>s.id===sceneId(id))||page.value?.scenes.find(s=>s.id===sceneId(id));
 const dialogScenes=computed(()=>(popup.value?.scenes||[]).map(scene).filter(Boolean));
 let timer,showTimer,clockTimer;let previousFocus;
@@ -96,7 +102,7 @@ function resetDialog(){document.querySelectorAll('.native-dialog video').forEach
 function close(){const owned=history.state?.medvedivaOverlay;resetDialog();if(owned)history.back();else if(location.hash==='#menuopen'||popups.value.some(p=>p.hook===location.hash))history.replaceState(history.state,'',location.pathname+location.search);}
 function overlayHistory(hook){if(location.hash!==hook)history.pushState({...history.state,medvedivaOverlay:true},'',hook);}
 function open(item){if(!popup.value&&!menu.value)previousFocus=document.activeElement;menu.value=false;popup.value=item;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-dialog'),attribution);document.querySelector('.native-dialog button')?.focus();});}
-function openMenu(){if(!menu.value&&!popup.value)previousFocus=document.activeElement;popup.value=null;menu.value=true;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-menu'),attribution);/* r из адреса — во внутренние ссылки меню, как скрипты Тильды 857516649/860263697 */{const r=new URLSearchParams(location.search).get('r');if(r)for(const a of document.querySelectorAll('.native-menu a[href^="/"]')){const u=new URL(a.getAttribute('href'),location.origin);if(u.pathname==='/members/login'||u.searchParams.has('r'))continue;u.searchParams.set('r',r);a.setAttribute('href',u.pathname+u.search+u.hash);}}document.querySelector('.menu-close')?.focus({focusVisible:keyboardFocus});});}
+function openMenu(){if(!menu.value&&!popup.value)previousFocus=document.activeElement;popup.value=null;menu.value=true;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-menu'),attribution);/* r из адреса — во внутренние ссылки меню, как скрипты Тильды 857516649/860263697 */{const r=new URLSearchParams(location.search).get('r');if(r)for(const a of document.querySelectorAll('.native-menu a[href^="/"]')){const u=new URL(a.getAttribute('href'),location.origin);if(stripBase(u.pathname)==='/members/login'||u.searchParams.has('r'))continue;u.searchParams.set('r',r);a.setAttribute('href',withBase(u.pathname)+u.search+u.hash);}}document.querySelector('.menu-close')?.focus({focusVisible:keyboardFocus});});}
 function click(e){
  const a=e.target.closest('a'); const node=e.target.closest('[data-node]');
  if(node?.dataset.node==='1779882150069'||node?.dataset.node==='1780491925286000001'){banner.value=false;localStore.setItem('medvedivaBannerClosed','1');clearTimeout(timer);return;}
@@ -129,13 +135,14 @@ onMounted(async()=>{
  const referral=new URLSearchParams(location.search).get('r');if(referral)localStore.setItem('r',referral);
  try{
   if(!page.value){
-  const routes=await fetch('/content/routes.json').then(r=>r.json());const route=routes.find(r=>r.path===location.pathname||r.path===location.pathname.replace(/\/$/,''))||routes.find(r=>`/page${r.page}.html`===location.pathname);
+  const here=stripBase(location.pathname);
+  const routes=await fetch(withBase('/content/routes.json')).then(r=>r.json());const route=routes.find(r=>r.path===here||r.path===here.replace(/\/$/,''))||routes.find(r=>`/page${r.page}.html`===here);
   if(!route){error.value='Страница не найдена.';return;}
-  const link=document.createElement('link');link.rel='stylesheet';link.href=`/content/${route.page}.css`;document.head.append(link);
-  const layout=document.createElement('link');layout.rel='stylesheet';layout.href=`/content/${route.page}-layout.css`;document.head.append(layout);
-  page.value=await fetch(`/content/${route.page}.json`).then(r=>r.json());}
-  if(!shared.value)shared.value=await fetch('/content/shared-layout.json').then(r=>r.json());
-  const sharedCSS=document.createElement('link');sharedCSS.rel='stylesheet';sharedCSS.href='/content/shared-layout.css';document.head.append(sharedCSS);
+  const link=document.createElement('link');link.rel='stylesheet';link.href=withBase(`/content/${route.page}.css`);document.head.append(link);
+  const layout=document.createElement('link');layout.rel='stylesheet';layout.href=withBase(`/content/${route.page}-layout.css`);document.head.append(layout);
+  page.value=await fetch(withBase(`/content/${route.page}.json`)).then(r=>r.json());}
+  if(!shared.value)shared.value=await fetch(withBase('/content/shared-layout.json')).then(r=>r.json());
+  const sharedCSS=document.createElement('link');sharedCSS.rel='stylesheet';sharedCSS.href=withBase('/content/shared-layout.css');document.head.append(sharedCSS);
   document.title=page.value.title;
   document.querySelector('meta[name="description"]')?.setAttribute('content',page.value.description);
   await document.fonts.ready;
@@ -149,15 +156,15 @@ onUnmounted(()=>{removeEventListener('resize',resize);removeEventListener('keydo
 </script>
 <template>
  <main v-if="supportPreview" class="min-h-screen p-4 sm:p-10"><SupportForm mode="dry-run" /></main>
- <div v-else-if="error" class="p-10"><h1>{{error}}</h1><a href="/">На главную</a></div>
+ <div v-else-if="error" class="p-10"><h1>{{error}}</h1><a :href="withBase('/')">На главную</a></div>
  <div v-else-if="page" @click="click" @pointerdown="keyboardFocus=false" @mouseover="tooltipEnter" @mouseout="tooltipLeave" @focusin="tooltipEnter" @focusout="tooltipLeave">
   <SiteHeader :scene="scene('1063609261')" :width="width" />
-  <main><template v-for="block in blocks" :key="block.id"><SceneBlock v-if="block.kind==='scene'" :scene="scene(block.id)" :width="width" /><div v-else-if="block.kind==='spacer'" class="native-spacer" :id="`scene-${block.id}`" :style="block.style" aria-hidden="true"></div><article v-else-if="block.kind==='article'" class="native-article" :id="`scene-${block.id}`" :style="block.style"><div v-html="block.html"></div></article><StandardBlock v-else-if="block.kind!=='anchor'&&block.kind!=='spacer'" :block="block" :width="width" /><span v-else :id="`scene-${block.id}`"></span></template></main>
+  <main><template v-for="block in blocks" :key="block.id"><SceneBlock v-if="block.kind==='scene'" :scene="scene(block.id)" :width="width" :eager="block.id===eagerBlockId" /><div v-else-if="block.kind==='spacer'" class="native-spacer" :id="`scene-${block.id}`" :style="styleText(block.style)" aria-hidden="true"></div><article v-else-if="block.kind==='article'" class="native-article" :id="`scene-${block.id}`" :style="styleText(block.style)"><div v-html="shownHtml(block.html,block.id===eagerBlockId)"></div></article><StandardBlock v-else-if="block.kind!=='anchor'&&block.kind!=='spacer'" :block="block" :width="width" :eager="block.id===eagerBlockId" /><span v-else :id="`scene-${block.id}`"></span></template></main>
   <SiteFooter :scene="scene('770878605')" :width="width" />
-  <Transition name="vk-banner"><aside v-if="banner&&scene('2322512891')" class="native-banner"><SceneBlock :scene="scene('2322512891')" :width="bannerWidth" /></aside></Transition>
-  <aside v-if="cookie&&scene('2019108731')" class="native-cookie"><SceneBlock :scene="scene('2019108731')" :width="width" /></aside>
-  <Transition name="menu-slide"><div v-if="menu" class="native-menu" @click="menuOutsideClick" role="dialog" aria-modal="true" aria-label="Меню сайта"><button class="menu-close" aria-label="Закрыть меню" @click="close">×</button><SceneBlock :scene="scene('860237765')" :width="width" /></div></Transition>
-  <Transition name="popup-rise"><div v-if="popup" class="native-modal" :class="{'native-modal--scene':dialogScenes.length}" @click.self="close"><section class="native-dialog" @click="dialogBackdropClick" :data-popup-hook="popup.hook" :class="{'native-dialog--scene':dialogScenes.length}" role="dialog" aria-modal="true" :aria-label="popup.title||'Информация'"><button class="dialog-close" aria-label="Закрыть" @click="close">×</button><h2 v-if="popup.title">{{popup.title}}</h2><div v-if="popup.html" class="popup-description" v-html="popup.html"></div><SceneBlock v-for="item in dialogScenes" :key="item.id" :scene="item" :width="Math.min(width,1200)" /><MediaPreview v-if="popup.embed" :url="popup.embed" /><div v-if="popup.pictures" class="gallery-popup"><DesignGallery :pictures="popup.pictures" /></div><SupportForm v-if="popup.form" mode="dry-run" :show-intro="false" /><a v-if="popup.button" class="popup-button" :href="popup.button.href">{{popup.button.text}}</a></section></div></Transition>
+  <Transition name="vk-banner"><aside v-if="banner&&scene('2322512891')" class="native-banner"><SceneBlock :scene="scene('2322512891')" :width="bannerWidth" eager /></aside></Transition>
+  <aside v-if="cookie&&scene('2019108731')" class="native-cookie"><SceneBlock :scene="scene('2019108731')" :width="width" eager /></aside>
+  <Transition name="menu-slide"><div v-if="menu" class="native-menu" @click="menuOutsideClick" role="dialog" aria-modal="true" aria-label="Меню сайта"><button class="menu-close" aria-label="Закрыть меню" @click="close">×</button><SceneBlock :scene="scene('860237765')" :width="width" eager /></div></Transition>
+  <Transition name="popup-rise"><div v-if="popup" class="native-modal" :class="{'native-modal--scene':dialogScenes.length}" @click.self="close"><section class="native-dialog" @click="dialogBackdropClick" :data-popup-hook="popup.hook" :class="{'native-dialog--scene':dialogScenes.length}" role="dialog" aria-modal="true" :aria-label="popup.title||'Информация'"><button class="dialog-close" aria-label="Закрыть" @click="close">×</button><h2 v-if="popup.title">{{popup.title}}</h2><div v-if="popup.html" class="popup-description" v-html="prefixRootUrls(popup.html)"></div><SceneBlock v-for="item in dialogScenes" :key="item.id" :scene="item" :width="Math.min(width,1200)" /><MediaPreview v-if="popup.embed" :url="popup.embed" /><div v-if="popup.pictures" class="gallery-popup"><DesignGallery :pictures="popup.pictures" /></div><SupportForm v-if="popup.form" mode="dry-run" :show-intro="false" /><a v-if="popup.button" class="popup-button" :href="withBase(popup.button.href)">{{popup.button.text}}</a></section></div></Transition>
   <button v-if="showTop&&!cookie" class="back-top" aria-label="Вернуться к началу страницы" @click="backTop">⌃</button>
  </div>
 </template>

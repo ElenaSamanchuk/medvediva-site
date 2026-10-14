@@ -2,4 +2,4 @@
 import SceneBlock from './SceneBlock.vue';
 defineProps({scene:Object,width:Number});
 </script>
-<template><header v-if="scene" class="native-header"><SceneBlock :scene="scene" :width="width" /></header></template>
+<template><header v-if="scene" class="native-header"><SceneBlock :scene="scene" :width="width" eager /></header></template>

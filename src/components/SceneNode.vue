@@ -1,7 +1,9 @@
 <script setup>
 import {reveal as vReveal} from '../lib/reveal.mjs';
-import {computed,inject,provide,unref} from 'vue';
+import {computed,inject,onMounted,provide,ref,unref} from 'vue';
 import {authoredClasses,tariffKey,tariffStream,tariffNodeView} from '../lib/tariff-ui.mjs';
+import {backgroundFetchImg,deferBackground,lazyImages} from '../lib/lazy-images.mjs';
+import {prefixRootUrls} from '../lib/site-base.mjs';
 import DesignForm from './DesignForm.vue';
 import MediaPreview from './MediaPreview.vue';
 import DesignGallery from './DesignGallery.vue';
@@ -37,6 +39,26 @@ function keyActivate(event){
   const card=event.currentTarget.closest('.pf-card');card?.querySelector(`.pf-option--${next}`)?.focus();
  }
 }
+const eagerImages=inject('eagerImages',false);
+const eager=computed(()=>unref(eagerImages)===true);
+const bgOn=ref(false);
+const root=ref(null);
+const paint=computed(()=>{
+ const current=prefixRootUrls(props.node.atomStyle+(props.node.background?`;background-image:url("${props.node.background}")`:''))||'';
+ if(eager.value)return {style:current,url:''};
+ const deferred=deferBackground(current);
+ if(!deferred.url)return {style:current,url:''};
+ if(!bgOn.value)return {style:deferred.style,url:deferred.url};
+ const base=deferred.style;
+ return {style:`${base}${base&&!base.endsWith(';')?';':''}background-image:url("${deferred.url.replace(/"/g,'%22')}")`,url:deferred.url};
+});
+const renderedHtml=computed(()=>{
+ const html=view.value.html||'';
+ if(eager.value)return prefixRootUrls(html)||'';
+ return (paint.value.url?backgroundFetchImg(paint.value.url):'')+lazyImages(html);
+});
+function revealBg(event){if(event.target?.classList?.contains('scene-bg-fetch'))bgOn.value=true;}
+onMounted(()=>{const img=root.value?.querySelector?.('.scene-bg-fetch');if(img?.complete&&img.naturalWidth)bgOn.value=true;});
 const groupStyle=computed(()=>{
  if(props.node.type!=='group'||typeof window==='undefined')return undefined;
  const f=props.node.fields; const get=(k)=>field(f,k,props.screen); const pf=props.parent?.fields;
@@ -46,7 +68,7 @@ const groupStyle=computed(()=>{
  if(groupedFlex)return {top:'0px',left:'0px',position:'relative'};
  return {top:`${top}px`,left:pf||get('container')==='window'?`${left}px`:`calc(50% - ${props.screen/2}px + ${left}px)`,position:groupedFlex?'relative':'absolute'};
 });
-const atomStyle=computed(()=>props.node.atomStyle+(props.node.background?`;background-image:url("${props.node.background}")`:''));
+const atomStyle=computed(()=>paint.value.style);
 const href=computed(()=>{
  const original=sourceClasses.value.includes('pf-buy')&&state.value?state.value.link:props.node.href;
  const value=sourceClasses.value.includes('pf-buy')?authoredUi?.transformLink?.(original)||authoredUi?.checkoutHref?.(original)||original:original;
@@ -59,14 +81,14 @@ const href=computed(()=>{
    <SceneNode v-for="child in node.children" :key="child.id" :node="child" :screen="screen" :scene="scene" :parent="node" />
   </div>
  </div>
- <div v-else v-reveal="scene==='2322512891'?undefined:node.animation" class="scene-node" :class="[sourceClasses,`scene-${node.type}`,{'scene-group-child':isPhysicalFlex(parent?.fields),'pf-active':view.active}]" :hidden="view.hidden?true:undefined" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id">
+ <div v-else ref="root" @load.capture="revealBg" v-reveal="scene==='2322512891'?undefined:node.animation" class="scene-node" :class="[sourceClasses,`scene-${node.type}`,{'scene-group-child':isPhysicalFlex(parent?.fields),'pf-active':view.active}]" :hidden="view.hidden?true:undefined" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id">
   <DesignForm v-if="node.type==='form'" :node="node" :screen="screen" />
   <MediaPreview v-else-if="node.embed" :url="node.embed" />
   <DesignGallery v-else-if="node.type==='gallery'" :pictures="node.pictures" />
-  <a v-else-if="href" class="scene-atom" :href="href" :target="linkTarget(href)" :rel="linkTarget(href)?'noopener noreferrer':undefined" :style="atomStyle" v-html="view.html"></a>
-  <button v-else-if="node.type==='button'" type="button" class="scene-atom" :style="atomStyle" v-html="view.html"></button>
-  <h1 v-else-if="node.tag==='h1'" class="scene-atom" :style="atomStyle" v-html="view.html"></h1>
-  <div v-else class="scene-atom" :style="atomStyle" v-html="view.html"></div>
+  <a v-else-if="href" class="scene-atom" :href="href" :target="linkTarget(href)" :rel="linkTarget(href)?'noopener noreferrer':undefined" :style="atomStyle" v-html="renderedHtml"></a>
+  <button v-else-if="node.type==='button'" type="button" class="scene-atom" :style="atomStyle" v-html="renderedHtml"></button>
+  <h1 v-else-if="node.tag==='h1'" class="scene-atom" :style="atomStyle" v-html="renderedHtml"></h1>
+  <div v-else class="scene-atom" :style="atomStyle" v-html="renderedHtml"></div>
  </div>
 </template>
 

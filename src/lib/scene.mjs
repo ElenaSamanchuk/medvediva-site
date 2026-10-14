@@ -1,3 +1,4 @@
+import {withBase} from './site-base.mjs';
 export const screens = [1200,960,640,480,320];
 export function screenFor(width,points=screens) { return [...points].sort((a,b)=>b-a).find(s=>width>=s) || Math.min(...points); }
 export function field(fields,key,screen,board=false) {
@@ -21,7 +22,7 @@ export function localLink(href,scene) {
   if(scene==='1423616591' && ['/pit','/intensiv','/tvg'].includes(url.pathname) || scene==='860237765' && url.pathname!=='/members/login') {
    const referral=new URLSearchParams(typeof location==='undefined'?'':location.search).get('r');if(referral&&!url.searchParams.has('r'))url.searchParams.set('r',referral);
   }
-  return `${url.pathname}${url.search}${url.hash}`;
+  return withBase(`${url.pathname}${url.search}${url.hash}`);
  }
  return href;
 }

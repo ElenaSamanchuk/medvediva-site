@@ -220,3 +220,27 @@ SSH с этой машины один раз: `Connection timed out during banne
 - Поддержка — настоящий виджет NN99. Видео — свой плеер (замер против iframe).
 
 - Telegram: все href → tg:// (design_tokens.tg_links в обоих нормализаторах); 0 t.me в адресах, кроме битой ссылки исходника на /time. Удалены устаревшие модели /pred и /prolong_tariff. ЛК в меню: текст по центру иконки.
+
+## 14.10.2026 — Cursor: архив preview 20261014T184438Z ждёт Елену
+
+Исполнитель: Cursor. Коммиты и push не делались. SSH и rsync на сервер не запускались. Popovich 146.185.241.179, DNS, medvediva.ru и Tilda не менялись. Платные сервисы не подключались. Nginx заново не ставился. `deploy/server-activate.sh` не переписывался: уже HTTP-only, `listen 80`, gzip уровня 5. Старые релизы `20261013T103448Z` и `20261009T173948Z` не удалялись и не перезаписывались. `deploy/deploy-preview.sh` не запускался.
+
+Сборка заново не собиралась. `dist/index.html` новее исходников: 14.10.2026 21:41:45 МСК, против `src/style.css` 21:41:39, `public/content/shared-layout.css` 21:41:40 и `tools/normalize_standard.py` 21:29:36. В dist: `index-8PEZz3s5.js` / `index-Ct9VP_3w.css`, robots noindex. `node deploy/check-build.mjs` — PASS, 1599 файлов, noindex сохранён.
+
+Новый REL: `20261014T184438Z`. Архив `/tmp/medvediva-preview-20261014T184438Z.tar.gz`, 327775784 байт (313 МБ), упакован из каталога dist с `COPYFILE_DISABLE=1 tar --no-xattrs`. В корне архива есть `./index.html`. Архив ждёт Елену: она сама копирует его на `ubuntu@146.185.240.110` и активирует этим REL.
+
+## 14.10.2026 — Cursor: картинки ниже первого экрана не стартуют вместе с ним
+
+Исполнитель: Cursor. Коммиты не делались. SSH и rsync на сервер не запускались. Popovich, DNS, medvediva.ru и Tilda не менялись. Шрифты и CDN не трогались. noindex и dry-run сохранены. Вид шапки и героя не менялся.
+
+На главной в готовом HTML 37 картинок ниже первого экрана получили `loading="lazy"` и `decoding="async"`: 28 обычных `img` и 9 фонов (их адрес убран из `style`, поэтому браузер не качает их вместе с первым экраном; после подгрузки кадр тот же). Без lazy остались логотип шапки, два изображения героя и два фона героя. На остальных страницах шапка и первый видимый блок тоже без lazy.
+
+`npm run build:site` — 122 страницы. `node deploy/check-build.mjs` — PASS, 1599 файлов. REL `20261014T191900Z`. Архив `/tmp/medvediva-preview-20261014T191900Z.tar.gz`, 327797472 байт, в корне `./index.html`. Старые релизы не удалялись. Выкладывает Елена.
+
+## 14.10.2026 — Cursor: публичный GitHub и GitHub Pages
+
+Исполнитель: Cursor. Сервер 146.185.240.110, Popovich, DNS medvediva.ru и Tilda не менялись. Платные сервисы не подключались. Релиз `20261014T191900Z` на сервере не трогался.
+
+Репозиторий https://github.com/ElenaSamanchuk/medvediva-site публичный. GitHub Pages: https://elenasamanchuk.github.io/medvediva-site/ (ветка `gh-pages`, собранный сайт). Обычная сборка по-прежнему с корня `/` для сервера. Сборка Pages: `SITE_BASE=/medvediva-site/ npm run build:site`, затем `node deploy/check-build.mjs` — PASS, noindex сохранён. Локальный `dist/` после этого снова собран без префикса, чтобы случайная выкладка на IP не уехала с путём `/medvediva-site/`.
+
+Кроме `loading="lazy"`: у картинок-фонов ниже первого экрана адрес убран из `style` и подгружается отдельной скрытой картинкой; после загрузки в стиль возвращается тот же последний url. Шапка, первый экран, меню, куки и плашка VK без этой отсрочки. Цвета, отступы, шрифты и раскладка в этой правке не менялись.

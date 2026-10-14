@@ -1,9 +1,10 @@
 <script setup>
-import {computed} from 'vue';
+import {computed,provide} from 'vue';
 import SceneNode from './SceneNode.vue';
 import {field,screenFor} from '../lib/scene.mjs';
 const server=typeof window==='undefined';
-const props=defineProps({scene:Object,width:Number});
+const props=defineProps({scene:Object,width:Number,eager:Boolean});
+provide('eagerImages',computed(()=>!!props.eager));
 // Tilda record visibility is separate from the scene's layout breakpoints.
 const visible=computed(()=>{
  const min=Number.parseFloat(props.scene.min),max=Number.parseFloat(props.scene.max);

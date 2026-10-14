@@ -1,10 +1,13 @@
 // Generates only local files. No upload, DNS changes, third-party scripts or API calls.
 import {compileLayouts} from './compile-layout.mjs';
 import {compileSharedLayout} from './compile-shared-layout.mjs';
+import {normalizeBase,prefixRootUrls,withBase} from '../src/lib/site-base.mjs';
 import {build} from 'vite';
 import {pathToFileURL} from 'node:url';
 import fs from 'node:fs/promises';import path from 'node:path';
 const root=process.cwd();const dist=path.join(root,'dist');
+const pagesBase=normalizeBase(process.env.SITE_BASE||'/');
+const asset=target=>withBase(target,pagesBase);
 compileLayouts();
 const sharedLayout=compileSharedLayout();
 await build();
@@ -23,8 +26,8 @@ try{
   let html=shell.replace(/<title>.*?<\/title>/s,`<title>${escape(page.title)}</title>`).replace('<meta name="description" content="">',`<meta name="description" content="${escape(page.description)}">`);
   const image=page.image?.startsWith('/media/')?`<meta property="og:image" content="https://medvediva.ru${escape(page.image)}">`:'';
   const structured=(page.structuredData||[]).map(d=>`<script type="application/ld+json">${json(d)}</script>`).join('');
-  html=html.replace('</head>',image+structured+`<link rel="canonical" href="${escape(page.canonical)}"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.description)}"><meta property="og:url" content="${escape(page.canonical)}"><link rel="stylesheet" href="/content/${route.page}.css"><link rel="stylesheet" href="/content/${route.page}-layout.css"></head>`);
-  html=html.replace('</head>','<link rel="stylesheet" href="/content/shared-layout.css"></head>');
+  html=html.replace('</head>',image+structured+`<link rel="canonical" href="${escape(page.canonical)}"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.description)}"><meta property="og:url" content="${escape(page.canonical)}"><link rel="stylesheet" href="${asset(`/content/${route.page}.css`)}"><link rel="stylesheet" href="${asset(`/content/${route.page}-layout.css`)}"></head>`);
+  html=html.replace('</head>',`<link rel="stylesheet" href="${asset('/content/shared-layout.css')}"></head>`);
   html=html.replace('<div id="app"></div>',`<div id="app">${body}</div><script type="application/json" id="site-page">${json(page)}</script><script type="application/json" id="site-layout">${json(sharedLayout)}</script>`);
   const filename=route.path==='/'?'index.html':route.path.endsWith('.html')?route.path.slice(1):route.path.slice(1)+'/index.html';const target=path.resolve(dist,filename);
   if(!target.startsWith(dist+path.sep))throw new Error('Invalid output path');
@@ -33,8 +36,19 @@ try{
  }
  // 404 — оформленная страница /mist, как настроено на Тильде (14.10.2026)
  const mist=await fs.readFile(path.join(dist,'mist/index.html'),'utf8').catch(()=>null);
- await fs.writeFile(path.join(dist,'404.html'),mist?mist.replace('</head>','<meta name="robots" content="noindex"></head>').replace(/(<script type="application\/json" id="site-page">)\{/,'$1{"notFound":true,'):shell.replace('<div id="app"></div>','<div id="app"><main><h1>Страница не найдена</h1><a href="/">На главную</a></main></div>'));
+ await fs.writeFile(path.join(dist,'404.html'),mist?mist.replace('</head>','<meta name="robots" content="noindex"></head>').replace(/(<script type="application\/json" id="site-page">)\{/,'$1{"notFound":true,'):shell.replace('<div id="app"></div>',`<div id="app"><main><h1>Страница не найдена</h1><a href="${asset('/')}">На главную</a></main></div>`));
  await fs.writeFile(path.join(dist,'robots.txt'),'User-agent: *\nDisallow: /\n');
- await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:'local preview; noindex',count:written.length,routes:written},null,2));
+ if(pagesBase){
+  await fs.writeFile(path.join(dist,'.nojekyll'),'');
+  const cssFiles=[];
+  const walkCss=async dir=>{for(const entry of await fs.readdir(dir,{withFileTypes:true})){const target=path.join(dir,entry.name);if(entry.isDirectory())await walkCss(target);else if(entry.name.endsWith('.css'))cssFiles.push(target);}};
+  await walkCss(dist);
+  for(const file of cssFiles){
+   const css=await fs.readFile(file,'utf8');
+   const next=prefixRootUrls(css,pagesBase);
+   if(next!==css)await fs.writeFile(file,next);
+  }
+ }
+ await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:'local preview; noindex',base:pagesBase||'/',count:written.length,routes:written},null,2));
  console.log(`Generated ${written.length} static preview pages with Vue SSR. Noindex; deployment not performed.`);
 }finally{await fs.rm(path.join(root,'.ssr'),{recursive:true,force:true});}
