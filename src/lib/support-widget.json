@@ -1,0 +1,10 @@
+{
+ "_comment": "Виджет поддержки NN99 — тот же код, что на Тильде (рек 861379437). Ключи клиентские, публичные (видны в HTML живого сайта). Подключён по решению Елены 14.10.2026.",
+ "src": "https://www.nn99.ru/widget.js",
+ "attrs": {
+  "data-widget-id": "cmny85m8f0080ckpdve0yylg7",
+  "data-api-key": "cmny85m8f0081ckpdkq65j8qi",
+  "data-api-url": "https://www.nn99.ru/api",
+  "data-ws-url": "https://www.nn99.ru"
+ }
+}

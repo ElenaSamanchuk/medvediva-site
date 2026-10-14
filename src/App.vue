@@ -1,5 +1,6 @@
 <script setup>
 import {localStore} from './lib/storage.mjs';
+import supportWidget from './lib/support-widget.json';
 import {localLink} from './lib/scene.mjs';
 import {captureAttribution,prepareLinks,checkoutLink} from './lib/attribution.mjs';
 import {ref,computed,onMounted,onUnmounted,nextTick,provide} from 'vue';
@@ -134,7 +135,7 @@ onMounted(async()=>{
   await nextTick();prepareLinks(document.getElementById('app'),attribution);
   showTimer=setTimeout(()=>{banner.value=page.value?.path==='/'&&!localStore.getItem('medvedivaBannerClosed');/* VK только на главной (решение Елены 14.10.2026, как на Тильде) */if(banner.value)timer=setTimeout(()=>banner.value=false,10000);},500);
   hashChange();
-  if(!document.getElementById('sender-preview-script')){const widget=document.createElement('script');widget.id='sender-preview-script';widget.src='/support-preview/widget.js';document.body.append(widget);}
+  if(!document.getElementById('nn99-support-widget')){const widget=document.createElement('script');widget.id='nn99-support-widget';widget.src=supportWidget.src;widget.async=true;for(const [k,v] of Object.entries(supportWidget.attrs))widget.setAttribute(k,v);document.body.append(widget);}
  }catch(e){error.value='Не удалось загрузить страницу.';console.error(e);}
 });
 onUnmounted(()=>{removeEventListener('resize',resize);removeEventListener('keydown',key);removeEventListener('hashchange',hashChange);removeEventListener('popstate',hashChange);removeEventListener('scroll',scroll);clearTimeout(timer);clearTimeout(showTimer);clearTimeout(tooltipTimer);clearInterval(clockTimer);});
@@ -150,6 +151,6 @@ onUnmounted(()=>{removeEventListener('resize',resize);removeEventListener('keydo
   <aside v-if="cookie&&scene('2019108731')" class="native-cookie"><SceneBlock :scene="scene('2019108731')" :width="width" /></aside>
   <Transition name="menu-slide"><div v-if="menu" class="native-menu" role="dialog" aria-modal="true" aria-label="Меню сайта"><button class="menu-close" aria-label="Закрыть меню" @click="close">×</button><SceneBlock :scene="scene('860237765')" :width="width" /></div></Transition>
   <Transition name="popup-rise"><div v-if="popup" class="native-modal" :class="{'native-modal--scene':dialogScenes.length}" @click.self="close"><section class="native-dialog" :data-popup-hook="popup.hook" :class="{'native-dialog--scene':dialogScenes.length}" role="dialog" aria-modal="true" :aria-label="popup.title||'Информация'"><button class="dialog-close" aria-label="Закрыть" @click="close">×</button><h2 v-if="popup.title">{{popup.title}}</h2><div v-if="popup.html" class="popup-description" v-html="popup.html"></div><SceneBlock v-for="item in dialogScenes" :key="item.id" :scene="item" :width="Math.min(width,1200)" /><MediaPreview v-if="popup.embed" :url="popup.embed" /><div v-if="popup.pictures" class="gallery-popup"><DesignGallery :pictures="popup.pictures" /></div><SupportForm v-if="popup.form" mode="dry-run" :show-intro="false" /><a v-if="popup.button" class="popup-button" :href="popup.button.href">{{popup.button.text}}</a></section></div></Transition>
-  <button v-if="showTop" class="back-top" aria-label="Вернуться к началу страницы" @click="backTop">⌃</button>
+  <button v-if="showTop&&!cookie" class="back-top" aria-label="Вернуться к началу страницы" @click="backTop">⌃</button>
  </div>
 </template>
