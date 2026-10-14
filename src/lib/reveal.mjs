@@ -8,6 +8,8 @@ export function revealFrames(value,baseTransform='none'){
 }
 export const reveal={
  mounted(element,{value}){
+  // Внутри попапов анимация появления элементов не нужна: попап сам выезжает снизу (решение Елены 14.10.2026)
+  if(element.closest?.('.native-modal'))return;
   if(!value||states.has(element)||matchMedia('(prefers-reduced-motion: reduce)').matches||innerWidth<960&&value.mobile!=='y'||typeof IntersectionObserver==='undefined'||typeof element.animate!=='function')return;
   const state={observer:null,animation:null,started:false,originalOpacity:element.style.opacity};
   const restore=()=>{if(element.style.opacity==='0')element.style.opacity=state.originalOpacity;};

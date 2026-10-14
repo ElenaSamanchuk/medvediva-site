@@ -20,7 +20,7 @@ def typograf_html(html,path='',nbsp=True):
         # Тире не уходит в начало строки; разряды чисел и «число + единица» не разрываются (14.10.2026)
         if nbsp:text=re.sub(r'[ \t]+([—–])',lambda m:'\u00a0'+m.group(1),text)
         if nbsp:text=re.sub(r'(\d)[ \t]+(?=\d{3}(?!\d))',lambda m:m.group(1)+'\u00a0',text)
-        if nbsp:text=re.sub(r'(\d)[ \t]+(?=(?:руб|₽|%|кг|г\b|см|мм|мин|сек|ч\b|дн|дней|недел|час|раз|шт|тыс|млн|поток))',lambda m:m.group(1)+'\u00a0',text,flags=re.I)
+        if nbsp:text=re.sub(r'(\d)[ \t]+(?=(?:руб|₽|%|кг|г\b|см|мм|мин|сек|ч\b|дн|дней|недел|час|шт|тыс|млн))',lambda m:m.group(1)+'\u00a0',text,flags=re.I)
         if nbsp:text=re.sub(r'(№)[ \t]+(?=\d)',lambda m:m.group(1)+'\u00a0',text)
         # Last visible text of an element: no dots after digits, initials or ellipses.
         following=[s for s in node.next_siblings if str(s).strip()]

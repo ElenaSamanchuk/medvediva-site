@@ -236,7 +236,8 @@ def compile_page(route):
   if promotion_file.exists():
    captured=json.loads(promotion_file.read_text())
    data['promotion']={'config':captured['config'],'countdown':captured['countdown'],'bannerScenes':{'4482959301':'phase1','4482960101':'phase2','4482961001':'phase3'},'source':captured['source'],'capturedAt':captured['capturedAt']}
- fix=json.loads((ROOT/'sources/fixups.json').read_text()).get(route['pageId'],{}) if (ROOT/'sources/fixups.json').exists() else {}
+ _fx=json.loads((ROOT/'sources/fixups.json').read_text()) if (ROOT/'sources/fixups.json').exists() else {}
+ fix={**_fx.get('*',{}),**_fx.get(route['pageId'],{})}
  seo=json.loads((ROOT/'sources/seo.json').read_text()).get(route['path'],{}) if (ROOT/'sources/seo.json').exists() else {}
  if seo.get('description'):data['description']=seo['description']
  h1s=seo.get('h1',[])
@@ -266,8 +267,52 @@ def compile_page(route):
     for v in n.values():
      if isinstance(v,list):walk(v)
  walk(scenes)
+ # Сценовые правки: добавление узлов, слияние полей, высота артборда (футер и др.), 14.10.2026
+ for k,v in _fx.items():
+  if not (k.startswith('_footer_') or k.startswith('_scene_')):continue
+  sid=k.split('_')[-1]
+  for sc in scenes:
+   if sc['id']!=sid:continue
+   ids={n['id'] for n in sc['nodes']}
+   for n in sc['nodes']:
+    if n['id'] in v.get('fields',{}):n['fields'].update(v['fields'][n['id']])
+   for n in v.get('add',[]):
+    if n['id'] not in ids:sc['nodes'].append(json.loads(json.dumps(n)))
+   sc['board'].update(v.get('board',{}))
+   # CSS для новых/сдвинутых узлов по брейкпоинтам Тильды
+   media={'':None,'960':1199,'640':959,'480':639,'320':479}
+   def rule(bp,body):
+    return ('@media screen and (max-width:%dpx){%s}'%(media[bp],body)) if media[bp] else body
+   for nid,fields in v.get('fields',{}).items():
+    for kk,val in fields.items():
+     m=re.match(r'top(?:-res-(\d+))?-value$',kk)
+     if m:css.append(rule(m.group(1) or '','#scene-%s [data-node="%s"]{top:%spx!important}'%(sid,nid,val)))
+   for n in v.get('add',[]):
+    src=v.get('clone_css_from')
+    if src:
+     for line in [l for l in '\n'.join(css).split('\n') if ('[data-node="%s"]'%src) in l and '#scene-%s'%sid in l]:
+      css.append(re.sub(r'top:\d+px','top:0px',line.replace('[data-node="%s"]'%src,'[data-node="%s"]'%n['id'])))
+    for kk,val in n['fields'].items():
+     m=re.match(r'top(?:-res-(\d+))?-value$',kk)
+     if m:css.append(rule(m.group(1) or '','#scene-%s [data-node="%s"]{top:%spx!important}'%(sid,n['id'],val)))
+     m=re.match(r'width(?:-res-(\d+))?-value$',kk)
+     if m:css.append(rule(m.group(1) or '','#scene-%s [data-node="%s"]{width:%spx!important}'%(sid,n['id'],val)))
+   for hk,val in v.get('board',{}).items():
+    bp=hk.split('-')[-1] if '-res-' in hk else ''
+    css.append(rule(bp,'#scene-%s .scene-canvas{height:%spx!important}'%(sid,val)))
+ # Попапы «Оборудования»: без нумерации «1. …» в списках вариантов (решение Елены 14.10.2026)
+ if route['pageId'] in _fx.get('_strip_popup_numbering',[]):
+  pop_ids={x for p in popups for x in p.get('scenes',[])}
+  def strip(items):
+   for n in items or []:
+    if isinstance(n,dict):
+     if n.get('type')=='text' and n.get('html'):n['html']=re.sub(r'^(\s*(?:<[^>]+>\s*)*)\d{1,2}\.\s*',r'\1',n['html'])
+     for vv in n.values():
+      if isinstance(vv,list):strip(vv)
+  for sc in scenes:
+   if sc['id'] in pop_ids:strip(sc['nodes'])
  (OUT/(route['pageId']+'.json')).write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
- (OUT/(route['pageId']+'.css')).write_text(design_tokens.apply('\n'.join(css)))
+ (OUT/(route['pageId']+'.css')).write_text(design_tokens.round_line_heights(design_tokens.apply('\n'.join(css)),{sc['id'] for sc in scenes if any(k.startswith('upscale') and v=='window' for k,v in sc['board'].items())}))
  return {'path':route['path'],'page':route['pageId'],'title':title,'scenes':len(scenes),'unsupported':unsupported,'missingMediaCount':len(asset_issues.get(current_path,[])),'state':'design-extracted-unverified'}
 manifest=json.loads((ROOT/'sources/export-manifest.json').read_text())
 # Start with the home page; --all compiles every canonical source for route-by-route acceptance.

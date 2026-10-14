@@ -31,12 +31,10 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .vk-banner-leave-active{pointer-events:none}
 @media(max-width:768px){.native-banner{top:55px;left:0;width:100%;max-width:100%}.vk-banner-enter-from,.vk-banner-leave-to{transform:translate3d(0,calc(-100% - 60px),0)}}
 @media(prefers-reduced-motion:reduce){.vk-banner-enter-active,.vk-banner-leave-active{transition:none}.vk-banner-enter-from,.vk-banner-leave-to{transform:none}}
-.native-menu{position:fixed;inset:0;background:transparent;z-index:1200;overflow:auto;}
+.native-menu{position:fixed;inset:0;background:transparent;z-index:2147483000;overflow:auto;}
 .menu-close{position:absolute;right:22px;top:12px;z-index:2;font-size:38px;}
 /* Tilda centres this auto-height label using its measured text height. */
 [data-scene="860237765"] [data-node="1748446143742"]{translate:0 calc((1px - 100%)/2);}
-/* Keep the source hero composition, with a readable gap below its title. */
-[data-scene="1740196951"] [data-node="176034604789485860"]{translate:0 6px;}
 .native-modal{position:fixed;inset:0;z-index:1400;background:#0009;overflow-y:auto;display:flex;align-items:flex-start;justify-content:center;padding:60px 20px;}
 .native-dialog{position:relative;background:#fff;width:560px;max-width:100%;padding:40px;color:#000;}
 .native-dialog h2{font-weight:600;font-size:28px;line-height:1.23;margin-bottom:20px;}
@@ -49,7 +47,11 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .scene-flex>.scene-node{display:block;flex-shrink:0;}
 .scene-flex>.scene-text>.scene-atom{display:block;width:auto;}
 .scene-button .scene-atom{background-image:var(--scene-bgcolor-image)!important;background-color:var(--scene-bgcolor-color)!important;}
-.scene-button .scene-atom:hover{background-image:var(--scene-bgcolor-hover-image,var(--scene-bgcolor-image,none))!important;background-color:var(--scene-bgcolor-hover-color,var(--scene-bgcolor-color,transparent))!important;}
+/* Плавный hover кнопок с градиентом: hover-заливка отдельным слоем, проявляется за время hover из Тильды (14.10.2026) */
+.scene-button .scene-atom{position:relative;isolation:isolate}
+.scene-button .scene-atom::before{content:"";position:absolute;inset:0;border-radius:inherit;background-image:var(--scene-bgcolor-hover-image,none);background-color:var(--scene-bgcolor-hover-color,transparent);opacity:0;transition:opacity var(--t396-speedhover,.2s) ease-in-out;z-index:0;pointer-events:none}
+@media (hover:hover){.scene-button .scene-atom:hover::before{opacity:1}}
+@media(prefers-reduced-motion:reduce){.scene-button .scene-atom::before{transition:none}}
 .scene-button .scene-atom__button-content{display:flex;align-items:center;justify-content:center;position:relative;z-index:1;}
 .scene-flex>.scene-node{top:0!important;left:0!important;}
 
@@ -75,7 +77,6 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 @media(max-width:479px){.native-modal--scene{padding:40px 0}.native-dialog--scene{padding:0}.scene-anchor,.scene-section{scroll-margin-top:65px}}
 @media(prefers-reduced-motion:no-preference){.native-dialog{animation:dialog-enter .3s ease-in-out}@keyframes dialog-enter{from{opacity:0;translate:0 20px}to{opacity:1;translate:0 0}}}
 @media(prefers-reduced-motion:reduce){.sw-container *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media(max-width:479px){.br-desktop{display:none}}
 .scene-atom ul{list-style:disc outside;padding-left:var(--sp-5);margin:0}.scene-atom ol{list-style:decimal outside;padding-left:var(--sp-5);margin:0}
 /* Крестик плашки VK: зона нажатия 44px вместо 12px (14.10.2026) */
 .native-banner [data-node="1779882150069"]::after{content:"";position:absolute;inset:-16px;}
@@ -91,14 +92,14 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 /* h1 первого экрана сохраняет вид атома Тильды (14.10.2026) */
 h1.scene-atom{font:inherit;margin:0}
 /* Ленты карточек (авторский .uc-scroll): скрытая полоса прокрутки и курсор перетаскивания (14.10.2026) */
-#scene-2368131481 .scene-canvas--scrollable,#scene-1941961351 .scene-canvas--scrollable{scrollbar-width:none}
-#scene-2368131481 .scene-canvas--scrollable::-webkit-scrollbar,#scene-1941961351 .scene-canvas--scrollable::-webkit-scrollbar{display:none}
+.scene-canvas--scrollable{scrollbar-width:none}
+.scene-canvas--scrollable::-webkit-scrollbar{display:none}
 @media (pointer:fine){.scene-canvas--scrollable{cursor:grab}.scene-canvas--scrollable.is-dragging{cursor:grabbing;user-select:none}}
 /* Анимации как на Тильде (14.10.2026): hover-плавность атомов, выезд меню справа, попап снизу, появление куки */
 .scene-atom{transition:background-color var(--t396-speedhover,.2s) ease-in-out,color var(--t396-speedhover,.2s) ease-in-out,border-color var(--t396-speedhover,.2s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,.2s) ease-in-out}
 .menu-slide-enter-active,.menu-slide-leave-active{transition:transform .4s ease-in-out}
 .menu-slide-enter-from,.menu-slide-leave-to{transform:translateX(100%)}
-.popup-rise-enter-active,.popup-rise-leave-active{transition:background-color .3s ease}
+.popup-rise-enter-active{transition:background-color .6s ease}.popup-rise-leave-active{transition:background-color .45s ease}
 .popup-rise-enter-active .native-dialog,.popup-rise-leave-active .native-dialog{transition:transform .6s cubic-bezier(.19,1,.22,1)}
 .popup-rise-leave-active .native-dialog{transition-duration:.3s;transition-timing-function:ease-in}
 .popup-rise-enter-from,.popup-rise-leave-to{background-color:transparent!important}
@@ -106,3 +107,15 @@ h1.scene-atom{font:inherit;margin:0}
 .native-cookie{animation:cookie-in .4s ease both}
 @keyframes cookie-in{from{opacity:0;transform:translateY(20px)}}
 @media(prefers-reduced-motion:reduce){.menu-slide-enter-active,.menu-slide-leave-active,.popup-rise-enter-active .native-dialog,.popup-rise-leave-active .native-dialog,.scene-atom{transition:none}.native-cookie{animation:none}}
+/* Интенсив: карточки тем на сплошном фоне секции (на Тильде блок прозрачный → белая полоса), решение Елены 14.10.2026 */
+#scene-4224862101,#scene-3690339401,#scene-3690352301,#scene-3690357301{background-color:var(--c-surface)}
+/* Мобильное меню на всю высоту экрана: панель (shape 650px в исходнике) растягивается на 100dvh с учётом масштаба (14.10.2026) */
+.native-menu .scene-section{height:100dvh!important}
+.native-menu [data-node="1748446143723"],.native-menu [data-node="1748446143728"]{height:calc(100dvh / var(--scene-scale,1))!important}
+/* Обводка фокуса — только для клавиатуры; после клика и касания не показывается */
+:focus:not(:focus-visible){outline:none}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--c-pit);outline-offset:2px}
+/* Нижняя фиксированная плашка куки масштабируется от нижнего края, как на Тильде (14.10.2026) */
+.native-cookie .scene-canvas{transform-origin:bottom left!important;position:absolute!important;left:0;bottom:0}
+.scene-canvas{scrollbar-width:none}.scene-canvas::-webkit-scrollbar{display:none}
+html.menu-open .native-banner,html.menu-open .native-cookie,html.menu-open .back-top,html.menu-open .sw-container,html.menu-open .sw-fab-stack{visibility:hidden!important}

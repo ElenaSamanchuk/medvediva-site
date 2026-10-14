@@ -1,6 +1,143 @@
 {
-  "_comment": "Точечные правки вёрстки поверх исходника Тильды (14.10.2026, Claude). Ключ: pageId → nodeId → поля узла.",
-  "62157703": {
-    "1771493764232000016": {"html": "42 <br class=\"br-desktop\"/>поток", "reason": "в исходнике «42<br>поток» — на мобиле текст выходит за плашку"}
+ "_comment": "Точечные правки вёрстки поверх исходника Тильды (14.10.2026, Claude). Ключ: pageId → nodeId → поля узла.",
+ "*": {
+  "1745436517798": {
+   "html": "Пилатес-бол,<br/>диаметр 25 см",
+   "reason": "Елена 14.10: в две строки, как соседние карточки оборудования"
   }
+ },
+ "_footer_770878605": {
+  "fields": {
+   "1650735390825": {
+    "top-res-320-value": "313"
+   },
+   "1691846291748": {
+    "top-res-320-value": "339"
+   },
+   "1748596719458": {
+    "top-res-320-value": "369"
+   },
+   "1691846411554": {
+    "top-res-320-value": "423"
+   },
+   "1737618614841": {
+    "top-res-320-value": "403"
+   },
+   "1691846463831": {
+    "top-res-320-value": "504"
+   },
+   "1691847002458": {
+    "top-res-320-value": "180"
+   },
+   "1691847002464": {
+    "top-res-320-value": "220"
+   },
+   "1691847002468": {
+    "top-res-320-value": "203"
+   },
+   "1708608993681": {
+    "top-res-320-value": "237"
+   },
+   "1748596818729": {
+    "top-res-320-value": "257"
+   },
+   "1720256235919": {
+    "top-res-320-value": "437"
+   },
+   "1727527397584": {
+    "top-res-320-value": "470"
+   }
+  },
+  "add": [
+   {
+    "id": "claude-footer-tvg",
+    "type": "text",
+    "html": "<a href=\"/tvg\" style=\"color: inherit\">Тело в голове</a>",
+    "href": "",
+    "target": "",
+    "atomStyle": "",
+    "background": "",
+    "fields": {
+     "top-value": "156",
+     "left-value": "320",
+     "height-value": "16",
+     "width-value": "151",
+     "axisy-value": "top",
+     "axisx-value": "left",
+     "container-value": "grid",
+     "topunits-value": "px",
+     "leftunits-value": "px",
+     "heightunits-value": "px",
+     "widthunits-value": "px",
+     "textfit-value": "autoheight",
+     "fontsize-value": "13",
+     "top-res-320-value": "127",
+     "left-res-320-value": "10",
+     "width-res-320-value": "145",
+     "fontsize-res-320-value": "9",
+     "top-res-480-value": "168",
+     "left-res-480-value": "10",
+     "width-res-480-value": "140",
+     "fontsize-res-480-value": "10",
+     "top-res-640-value": "182",
+     "left-res-640-value": "10",
+     "width-res-640-value": "149",
+     "fontsize-res-640-value": "12",
+     "top-res-960-value": "156",
+     "left-res-960-value": "250",
+     "width-res-960-value": "178",
+     "fontsize-res-960-value": "13"
+    },
+    "classes": []
+   },
+   {
+    "id": "claude-footer-invent",
+    "type": "text",
+    "html": "<a href=\"/invent\" style=\"color: inherit\">Оборудование</a>",
+    "href": "",
+    "target": "",
+    "atomStyle": "",
+    "background": "",
+    "fields": {
+     "top-value": "187",
+     "left-value": "320",
+     "height-value": "16",
+     "width-value": "151",
+     "axisy-value": "top",
+     "axisx-value": "left",
+     "container-value": "grid",
+     "topunits-value": "px",
+     "leftunits-value": "px",
+     "heightunits-value": "px",
+     "widthunits-value": "px",
+     "textfit-value": "autoheight",
+     "fontsize-value": "13",
+     "top-res-320-value": "144",
+     "left-res-320-value": "10",
+     "width-res-320-value": "145",
+     "fontsize-res-320-value": "9",
+     "top-res-480-value": "190",
+     "left-res-480-value": "10",
+     "width-res-480-value": "140",
+     "fontsize-res-480-value": "10",
+     "top-res-640-value": "206",
+     "left-res-640-value": "10",
+     "width-res-640-value": "149",
+     "fontsize-res-640-value": "12",
+     "top-res-960-value": "187",
+     "left-res-960-value": "250",
+     "width-res-960-value": "178",
+     "fontsize-res-960-value": "13"
+    },
+    "classes": []
+   }
+  ],
+  "board": {
+   "height-res-320": "574"
+  },
+  "clone_css_from": "1691847759330"
+ },
+ "_strip_popup_numbering": [
+  "147712636"
+ ]
 }

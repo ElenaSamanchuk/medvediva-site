@@ -23,7 +23,7 @@ const height=computed(()=>{const design=Number(field(props.scene.board,'height',
 </script>
 <template>
  <span v-show="visible" class="scene-anchor" :id="`rec${scene.id}`"></span>
-  <section v-show="visible" class="scene-section" :id="`scene-${scene.id}`" :data-scene="scene.id" :style="server?undefined:{height:Math.floor(height*scale)+'px'}">
+  <section v-show="visible" class="scene-section" :id="`scene-${scene.id}`" :data-scene="scene.id" :style="server?undefined:{height:Math.floor(scene.board.pos==='fixed'?height:height*scale)+'px','--scene-scale':scale}">
   <div class="scene-canvas" :class="{'scene-canvas--scrollable':scrollable}" :tabindex="scrollable?0:undefined" @pointerdown="dragStart" @pointermove="dragMove" @pointerup="dragEnd" @pointerleave="dragEnd" @dragstart.prevent :style="server?{width:'100%'}:{width:width/scale+'px',height:height+'px',transform:`scale(${scale})`}">
    <div class="scene-background"></div><div class="scene-filter"></div>
    <SceneNode v-for="node in scene.nodes" :key="node.id" :node="node" :screen="screen" :scene="scene.id" />

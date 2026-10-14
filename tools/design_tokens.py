@@ -24,3 +24,25 @@ def apply(css):
         return f'font-family:var({tok},{m.group(1)}{name}{m.group(1)},Arial,sans-serif)' if tok else m.group(0)
     css=re.sub(r"font-family:\s*(['\"]?)(Bounded|Manrope|Inter)\1\s*,\s*Arial\s*,\s*sans-serif",fam,css)
     return css
+
+def round_line_heights(css,only_scenes=None):
+    """Тильда (t396) округляет межстрочный до целых px: font-size × line-height → round. Повторяем это для всех правил сцен,
+    включая медиа-правила, где меняется только кегль (межстрочный берётся из последнего известного для этого селектора). 14.10.2026"""
+    last_lh={};last_fs={}
+    def block(sel,body):
+        key=sel.strip()
+        if only_scenes is not None:
+            m=re.search(r'#scene-(\d+)',key)
+            if not m or m.group(1) not in only_scenes:return sel+'{'+body+'}'
+        fs=re.search(r'font-size:\s*([\d.]+)px',body);lh=re.search(r'line-height:\s*([\d.]+)\s*(?=;|$)',body)
+        if lh:last_lh[key]=float(lh.group(1))
+        if fs:last_fs[key]=float(fs.group(1))
+        size=last_fs.get(key);ratio=last_lh.get(key)
+        if size and ratio and (fs or lh):
+            px='%dpx'%int(size*ratio+0.5)
+            if lh:body=body[:lh.start()]+'line-height:'+px+body[lh.end():]
+            else:body=body.rstrip(';')+';line-height:'+px
+        return sel+'{'+body+'}'
+    def rules(text):
+        return re.sub(r'([^{}@]+)\{([^{}]*)\}',lambda m:block(m.group(1),m.group(2)),text)
+    return rules(css)
