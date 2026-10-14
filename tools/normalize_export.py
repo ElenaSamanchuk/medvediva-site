@@ -117,7 +117,7 @@ def node(e):
  authored_classes=[c for c in e.get('class',[]) if c.startswith(('pf-','cd-'))]
  if e.has_attr('data-group-id'):
   inner=e.select_one(':scope > .tn-molecule') or e
-  model={'id':e['data-group-id'],'type':'group','classes':authored_classes,'fields':{k[11:]:v for k,v in e.attrs.items() if k.startswith('data-group-')},'children':[node(n) for n in inner.find_all(recursive=False) if n.has_attr('data-elem-id') or n.has_attr('data-group-id')]}
+  model={'animation':{k[13:]:v for k,v in e.attrs.items() if k.startswith('data-animate-')} if e.get('data-animate-style') else None,'id':e['data-group-id'],'type':'group','classes':authored_classes,'fields':{k[11:]:v for k,v in e.attrs.items() if k.startswith('data-group-')},'children':[node(n) for n in inner.find_all(recursive=False) if n.has_attr('data-elem-id') or n.has_attr('data-group-id')]}
   for marker in inner.find_all(class_=lambda c:c in tooltip_hooks):
    if marker.find_parent(attrs={'data-group-id':True}) is e:
     for cls in marker.get('class',[]):
@@ -179,6 +179,20 @@ def compile_page(route):
    blocks.append({'kind':'scene','id':recid})
    scenes.append({'id':recid,'min':r.get('data-screen-min',''),'max':r.get('data-screen-max',''),'board':{k[14:]:v for k,v in board.attrs.items() if k.startswith('data-artboard-')},'nodes':[node(e) for e in board.find_all(recursive=False) if e.has_attr('data-elem-id') or e.has_attr('data-group-id')]})
    css.append(appearance('\n'.join(t.get_text() for t in r.find_all('style')),recid))
+   # sbs-анимации по наведению (data-animate-sbs-event="hover") — CSS-переходом, без runtime Тильды (14.10.2026)
+   for el in r.select('[data-animate-sbs-event="hover"]'):
+    nid=el.get('data-elem-id') or el.get('data-group-id')
+    try:steps=json.loads(el.get('data-animate-sbs-opts','[]').replace("'",'"'))
+    except ValueError:continue
+    if not nid or len(steps)<2:continue
+    t=steps[-1];num=lambda k,d:float(t.get(k,d) or d)
+    tr=[];mx,my,sx,sy,ro=num('mx',0),num('my',0),num('sx',1),num('sy',1),num('ro',0)
+    if mx or my:tr.append('translate(%gpx,%gpx)'%(mx,my))
+    if sx!=1 or sy!=1:tr.append('scale(%g,%g)'%(sx,sy))
+    if ro:tr.append('rotate(%gdeg)'%ro)
+    ms=int(num('ti',200))
+    css.append('#scene-%s [data-node="%s"]{transition:opacity %dms ease-in-out,transform %dms ease-in-out}'%(recid,nid,ms,ms))
+    css.append('@media (hover:hover){#scene-%s [data-node="%s"]:hover{opacity:%g;%s}}'%(recid,nid,num('op',1),('transform:%s'%' '.join(tr)) if tr else ''))
    # Отступы и фон самой записи Тильды вокруг артборда (t-rec padding), включая адаптивные -res-N (14.10.2026)
    st=r.get('style','');pt=re.search(r'padding-top:\s*(\d+)px',st);pb=re.search(r'padding-bottom:\s*(\d+)px',st);bg=re.search(r'background-color:\s*([^;]+)',st)
    cls=' '.join(r.get('class',[]));res=re.findall(r't-rec_p([tb])-res-(\d+)_(\d+)',cls)

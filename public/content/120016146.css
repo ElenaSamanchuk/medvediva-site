@@ -754,6 +754,8 @@
 @media screen and (max-width:959px){#scene-1933957861 [data-node="1771420117035"]{display:table;height:auto;}}
 @media screen and (max-width:639px){#scene-1933957861 [data-node="1771420117035"]{display:table;height:auto;}}
 @media screen and (max-width:479px){#scene-1933957861 [data-node="1771420117035"]{display:table;height:auto;}}
+#scene-1933957861 [data-node="175983006075621150"]{transition:opacity 200ms ease-in-out,transform 200ms ease-in-out}
+@media (hover:hover){#scene-1933957861 [data-node="175983006075621150"]:hover{opacity:0.65;}}
 #scene-770878605 .scene-canvas{height:478px;background-color:var(--c-ink,#262626);}
 #scene-770878605 .scene-filter{height:478px;}
 #scene-770878605 .scene-background{height:478px;background-position:center center;background-attachment:scroll;background-size:cover;background-repeat:no-repeat;}

@@ -544,6 +544,8 @@
 @media screen and (max-width:479px){#scene-738578752 [data-node="1680264262142"] .scene-atom{color:#ffffff;font-size:18px;line-height:1.25;background-size:cover;}}
 @media screen and (max-width:379px){#scene-738578752 [data-node="1680264262142"]{top:193px;;left:calc(50% - 160px + 13px);;width:307px;height:auto;}}
 @media screen and (max-width:379px){#scene-738578752 [data-node="1680264262142"] .scene-atom{font-size:16px;background-size:cover;}}
+#scene-738578752 [data-node="1676806846239"]{transition:opacity 200ms ease-in-out,transform 200ms ease-in-out}
+@media (hover:hover){#scene-738578752 [data-node="1676806846239"]:hover{opacity:1;transform:scale(1.1,1.1)}}
 #scene-738578752{box-sizing:content-box;padding-top:0px;padding-bottom:45px;background-color:#141414;}
 #scene-738578755 .scene-canvas{height:60px;background-color:#141414;}
 #scene-738578755 .scene-filter{height:60px;}

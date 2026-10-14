@@ -18,11 +18,14 @@ export const reveal={
    if(state.started||!entries.some(e=>e.isIntersecting))return;
    state.started=true;observer.disconnect();
    try{
-    const animation=element.animate(revealFrames(value,base),{duration:Math.max(0,Number(value.duration)||1)*1000,delay:Math.max(0,Number(value.delay)||0)*1000,easing:'ease-out',fill:'both'});
+    const animation=element.animate(revealFrames(value,base),{duration:Math.max(0,Number(value.duration)||1)*1000,delay:Math.max(0,Number(value.delay)||0)*1000,easing:'cubic-bezier(.19,1,.22,1)',fill:'both'});
     state.animation=animation;
     animation.finished.then(()=>{restore();animation.cancel();},restore);
    }catch{restore();}
-  });state.observer=observer;states.set(element,state);observer.observe(element);
+  },{rootMargin:'0px 0px -13% 0px'});state.observer=observer;states.set(element,state);observer.observe(element);
+  // Низ страницы: элементы ниже линии запуска тоже проявляются, когда прокручено до конца
+  state.atEnd=()=>{if(!state.started&&innerHeight+scrollY>=document.documentElement.scrollHeight-4&&element.getBoundingClientRect().top<innerHeight){observer.takeRecords();state.started=true;observer.disconnect();removeEventListener('scroll',state.atEnd);const a=element.animate(revealFrames(value,base),{duration:Math.max(0,Number(value.duration)||1)*1000,easing:'cubic-bezier(.19,1,.22,1)',fill:'both'});state.animation=a;a.finished.then(()=>{restore();a.cancel();},restore);}};
+  addEventListener('scroll',state.atEnd,{passive:true});
  },
- unmounted(element){const state=states.get(element);state?.observer.disconnect();state?.animation?.cancel();if(state&&element.style.opacity==='0')element.style.opacity=state.originalOpacity;states.delete(element);}
+ unmounted(element){const state=states.get(element);if(state?.atEnd)removeEventListener('scroll',state.atEnd);state?.observer.disconnect();state?.animation?.cancel();if(state&&element.style.opacity==='0')element.style.opacity=state.originalOpacity;states.delete(element);}
 };

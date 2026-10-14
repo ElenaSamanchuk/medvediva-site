@@ -94,3 +94,15 @@ h1.scene-atom{font:inherit;margin:0}
 #scene-2368131481 .scene-canvas--scrollable,#scene-1941961351 .scene-canvas--scrollable{scrollbar-width:none}
 #scene-2368131481 .scene-canvas--scrollable::-webkit-scrollbar,#scene-1941961351 .scene-canvas--scrollable::-webkit-scrollbar{display:none}
 @media (pointer:fine){.scene-canvas--scrollable{cursor:grab}.scene-canvas--scrollable.is-dragging{cursor:grabbing;user-select:none}}
+/* Анимации как на Тильде (14.10.2026): hover-плавность атомов, выезд меню справа, попап снизу, появление куки */
+.scene-atom{transition:background-color var(--t396-speedhover,.2s) ease-in-out,color var(--t396-speedhover,.2s) ease-in-out,border-color var(--t396-speedhover,.2s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,.2s) ease-in-out}
+.menu-slide-enter-active,.menu-slide-leave-active{transition:transform .4s ease-in-out}
+.menu-slide-enter-from,.menu-slide-leave-to{transform:translateX(100%)}
+.popup-rise-enter-active,.popup-rise-leave-active{transition:background-color .3s ease}
+.popup-rise-enter-active .native-dialog,.popup-rise-leave-active .native-dialog{transition:transform .6s cubic-bezier(.19,1,.22,1)}
+.popup-rise-leave-active .native-dialog{transition-duration:.3s;transition-timing-function:ease-in}
+.popup-rise-enter-from,.popup-rise-leave-to{background-color:transparent!important}
+.popup-rise-enter-from .native-dialog,.popup-rise-leave-to .native-dialog{transform:translateY(100vh)}
+.native-cookie{animation:cookie-in .4s ease both}
+@keyframes cookie-in{from{opacity:0;transform:translateY(20px)}}
+@media(prefers-reduced-motion:reduce){.menu-slide-enter-active,.menu-slide-leave-active,.popup-rise-enter-active .native-dialog,.popup-rise-leave-active .native-dialog,.scene-atom{transition:none}.native-cookie{animation:none}}

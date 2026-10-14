@@ -1522,6 +1522,12 @@
 @media screen and (max-width:959px){#scene-658873752 [data-node="1702676762402"]{top:24px;;left:calc(50% - 320px + 508px);;height:auto;}}
 @media screen and (max-width:639px){#scene-658873752 [data-node="1702676762402"]{top:17px;;left:calc(50% - 240px + 404px);;height:auto;}}
 @media screen and (max-width:479px){#scene-658873752 [data-node="1702676762402"]{top:16px;;left:calc(50% - 160px + 263px);;width:20px;height:auto;}}
+#scene-658873752 [data-node="1698388902640"]{transition:opacity 300ms ease-in-out,transform 300ms ease-in-out}
+@media (hover:hover){#scene-658873752 [data-node="1698388902640"]:hover{opacity:0.35;}}
+#scene-658873752 [data-node="1698388902650"]{transition:opacity 300ms ease-in-out,transform 300ms ease-in-out}
+@media (hover:hover){#scene-658873752 [data-node="1698388902650"]:hover{opacity:0.35;}}
+#scene-658873752 [data-node="1702676719791"]{transition:opacity 300ms ease-in-out,transform 300ms ease-in-out}
+@media (hover:hover){#scene-658873752 [data-node="1702676719791"]:hover{opacity:0.35;}}
 #scene-770878605 .scene-canvas{height:478px;background-color:var(--c-ink,#262626);}
 #scene-770878605 .scene-filter{height:478px;}
 #scene-770878605 .scene-background{height:478px;background-position:center center;background-attachment:scroll;background-size:cover;background-repeat:no-repeat;}

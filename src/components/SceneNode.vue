@@ -54,7 +54,7 @@ const href=computed(()=>{
 });
 </script>
 <template>
- <div v-if="node.type==='group'" class="scene-group" :class="[sourceClasses,{'pf-active':view.active}]" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id" :data-native-tooltip="node.tooltipHook" :hidden="node.tooltipHook||view.hidden?true:undefined" :style="groupStyle">
+ <div v-if="node.type==='group'" v-reveal="scene==='2322512891'?undefined:node.animation" class="scene-group" :class="[sourceClasses,{'pf-active':view.active}]" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id" :data-native-tooltip="node.tooltipHook" :hidden="node.tooltipHook||view.hidden?true:undefined" :style="groupStyle">
   <div class="scene-group-inner" :class="{'scene-flex':isPhysicalFlex(node.fields)}" :id="`group-${node.id}`">
    <SceneNode v-for="child in node.children" :key="child.id" :node="child" :screen="screen" :scene="scene" :parent="node" />
   </div>
