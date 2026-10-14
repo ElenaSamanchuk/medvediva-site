@@ -46,3 +46,13 @@ def round_line_heights(css,only_scenes=None):
     def rules(text):
         return re.sub(r'([^{}@]+)\{([^{}]*)\}',lambda m:block(m.group(1),m.group(2)),text)
     return rules(css)
+
+TG_RE=re.compile(r'(?:(?<=href=\\")|(?<="href":"))https?://(?:www\.)?(?:t|telegram)\.me/(\+?[A-Za-z0-9_-]{4,})/?(?:\?start=([A-Za-z0-9_-]+))?(?=\\"|")')
+def tg_links(raw):
+    """Все ссылки Telegram в href — tg:// (решение Елены 14.10.2026). Видимый текст не трогаем."""
+    def sub(m):
+        name,start=m.group(1),m.group(2)
+        if name.startswith('+'):return 'tg://join?invite='+name[1:]
+        if name.lower().startswith('http'):return m.group(0)
+        return 'tg://resolve?domain='+name+('&start='+start if start else '')
+    return TG_RE.sub(sub,raw)

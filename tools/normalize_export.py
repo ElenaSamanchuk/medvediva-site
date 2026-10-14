@@ -311,7 +311,7 @@ def compile_page(route):
       if isinstance(vv,list):strip(vv)
   for sc in scenes:
    if sc['id'] in pop_ids:strip(sc['nodes'])
- (OUT/(route['pageId']+'.json')).write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
+ (OUT/(route['pageId']+'.json')).write_text(design_tokens.tg_links(json.dumps(data,ensure_ascii=False,separators=(',',':'))))
  (OUT/(route['pageId']+'.css')).write_text(design_tokens.round_line_heights(design_tokens.apply('\n'.join(css)),{sc['id'] for sc in scenes if any(k.startswith('upscale') and v=='window' for k,v in sc['board'].items())}))
  return {'path':route['path'],'page':route['pageId'],'title':title,'scenes':len(scenes),'unsupported':unsupported,'missingMediaCount':len(asset_issues.get(current_path,[])),'state':'design-extracted-unverified'}
 manifest=json.loads((ROOT/'sources/export-manifest.json').read_text())

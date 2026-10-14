@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 """Native content models for the remaining standard export blocks; does not load vendor code."""
+import sys,os
+sys.path.insert(0,os.path.dirname(__file__))
+import design_tokens
 import importlib.util,json,re
 from pathlib import Path
 # Importing the design compiler would run compilation, so use the already localized models/map.
@@ -87,5 +90,5 @@ for route in routes:
     order=[e.get('id','')[3:] for e in source.select('[data-record-type]')];index=order.index(missing['id']);nextids=set(order[index+1:]);pos=next((i for i,b in enumerate(model['blocks']) if b['id'] in nextids),len(model['blocks']));model['blocks'].insert(pos,block)
   else:remaining.append(missing)
  model['unsupported']=remaining;route['unsupported']=remaining
- (OUT/(route['page']+'.json')).write_text(json.dumps(model,ensure_ascii=False,separators=(',',':')))
+ (OUT/(route['page']+'.json')).write_text(design_tokens.tg_links(json.dumps(model,ensure_ascii=False,separators=(',',':'))))
 (OUT/'routes.json').write_text(json.dumps(routes,ensure_ascii=False));print('Native standard block models:',count,'remaining:',sum(len(r['unsupported']) for r in routes))

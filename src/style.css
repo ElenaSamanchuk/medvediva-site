@@ -34,7 +34,7 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .native-menu{position:fixed;inset:0;background:transparent;z-index:2147483000;overflow:auto;}
 .menu-close{position:absolute;right:22px;top:12px;z-index:2;font-size:38px;}
 /* Tilda centres this auto-height label using its measured text height. */
-[data-scene="860237765"] [data-node="1748446143742"]{translate:0 calc((1px - 100%)/2);}
+[data-scene="860237765"] [data-node="1748446143742"]{translate:0 calc((1px - 100%)/2 - 1.3px);} /* текст ЛК по центру иконки (Елена 14.10.2026) */
 .native-modal{position:fixed;inset:0;z-index:1400;background:#0009;overflow-y:auto;display:flex;align-items:flex-start;justify-content:center;padding:60px 20px;}
 .native-dialog{position:relative;background:#fff;width:560px;max-width:100%;padding:40px;color:#000;}
 .native-dialog h2{font-weight:600;font-size:28px;line-height:1.23;margin-bottom:20px;}
