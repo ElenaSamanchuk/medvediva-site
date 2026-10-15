@@ -90,6 +90,27 @@ def rules(css,conditions=()):
    yield from rules(body,conditions+(selector[6:].strip(),))
   elif not selector.startswith('@'):yield selector,body,conditions
 
+def one_line_stream_label(css):
+ # «42 поток» в одну строку только до 479px (Елена, 14.10.2026, вечер).
+ # С 480px остаются ширина 45px, исходный left и white-space:normal. <br> на /tvg прячется на телефоне.
+ for nid in ('1771421195728000008','1771493764232000016'):
+  if nid not in css:continue
+  out=[];scene=None
+  for line in css.split('\n'):
+   if nid not in line or 'max-width:479px' not in line:
+    out.append(line);continue
+   found=re.search(r'(#scene-\d+ \[data-node="%s"\])'%nid,line)
+   if found:scene=found.group(1)
+   if '.scene-atom{' in line:
+    line=line.replace('white-space:normal','white-space:nowrap')
+    if 'white-space:' not in line:line=line.replace('.scene-atom{','.scene-atom{white-space:nowrap;',1)
+   elif 'width:' in line:
+    line=re.sub(r'(?<!-)width:\d+px','width:60px',line,1)
+   out.append(line)
+  if scene:out.append('@media screen and (max-width:479px){%s .scene-atom br{display:none}}'%scene)
+  css='\n'.join(out)
+ return css
+
 def appearance(css,recid):
  result=[]
  for selectors,body,conditions in rules(css):
@@ -279,14 +300,19 @@ def compile_page(route):
    for n in v.get('add',[]):
     if n['id'] not in ids:sc['nodes'].append(json.loads(json.dumps(n)))
    sc['board'].update(v.get('board',{}))
-   # CSS для новых/сдвинутых узлов по брейкпоинтам Тильды
+   # CSS для новых/сдвинутых узлов по брейкпоинтам Тильды.
+   # !important-правила идут от широкого экрана к узкому: на телефоне совпадают все max-width, побеждает последнее.
    media={'':None,'960':1199,'640':959,'480':639,'320':479}
    def rule(bp,body):
     return ('@media screen and (max-width:%dpx){%s}'%(media[bp],body)) if media[bp] else body
+   queued=[]
+   def queue(bp,body):
+    px=media[bp]
+    queued.append((0 if px is None else 1,-(px or 0),len(queued),rule(bp,body)))
    for nid,fields in v.get('fields',{}).items():
     for kk,val in fields.items():
      m=re.match(r'top(?:-res-(\d+))?-value$',kk)
-     if m:css.append(rule(m.group(1) or '','#scene-%s [data-node="%s"]{top:%spx!important}'%(sid,nid,val)))
+     if m:queue(m.group(1) or '','#scene-%s [data-node="%s"]{top:%spx!important}'%(sid,nid,val))
    for n in v.get('add',[]):
     src=v.get('clone_css_from')
     if src:
@@ -294,12 +320,13 @@ def compile_page(route):
       css.append(re.sub(r'top:\d+px','top:0px',line.replace('[data-node="%s"]'%src,'[data-node="%s"]'%n['id'])))
     for kk,val in n['fields'].items():
      m=re.match(r'top(?:-res-(\d+))?-value$',kk)
-     if m:css.append(rule(m.group(1) or '','#scene-%s [data-node="%s"]{top:%spx!important}'%(sid,n['id'],val)))
+     if m:queue(m.group(1) or '','#scene-%s [data-node="%s"]{top:%spx!important}'%(sid,n['id'],val))
      m=re.match(r'width(?:-res-(\d+))?-value$',kk)
-     if m:css.append(rule(m.group(1) or '','#scene-%s [data-node="%s"]{width:%spx!important}'%(sid,n['id'],val)))
+     if m:queue(m.group(1) or '','#scene-%s [data-node="%s"]{width:%spx!important}'%(sid,n['id'],val))
    for hk,val in v.get('board',{}).items():
     bp=hk.split('-')[-1] if '-res-' in hk else ''
-    css.append(rule(bp,'#scene-%s .scene-canvas{height:%spx!important}'%(sid,val)))
+    queue(bp,'#scene-%s .scene-canvas{height:%spx!important}'%(sid,val))
+   css.extend(item[3] for item in sorted(queued))
  # Попапы «Оборудования»: без нумерации «1. …» в списках вариантов (решение Елены 14.10.2026)
  if route['pageId'] in _fx.get('_strip_popup_numbering',[]):
   pop_ids={x for p in popups for x in p.get('scenes',[])}
@@ -312,7 +339,7 @@ def compile_page(route):
   for sc in scenes:
    if sc['id'] in pop_ids:strip(sc['nodes'])
  (OUT/(route['pageId']+'.json')).write_text(design_tokens.tg_links(json.dumps(data,ensure_ascii=False,separators=(',',':'))))
- (OUT/(route['pageId']+'.css')).write_text(design_tokens.round_line_heights(design_tokens.apply('\n'.join(css)),{sc['id'] for sc in scenes if any(k.startswith('upscale') and v=='window' for k,v in sc['board'].items())}))
+ (OUT/(route['pageId']+'.css')).write_text(design_tokens.round_line_heights(design_tokens.apply(one_line_stream_label('\n'.join(css))),{sc['id'] for sc in scenes if any(k.startswith('upscale') and v=='window' for k,v in sc['board'].items())}))
  return {'path':route['path'],'page':route['pageId'],'title':title,'scenes':len(scenes),'unsupported':unsupported,'missingMediaCount':len(asset_issues.get(current_path,[])),'state':'design-extracted-unverified'}
 manifest=json.loads((ROOT/'sources/export-manifest.json').read_text())
 # Start with the home page; --all compiles every canonical source for route-by-route acceptance.

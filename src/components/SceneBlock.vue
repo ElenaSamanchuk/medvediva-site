@@ -1,17 +1,49 @@
 <script setup>
-import {computed,provide} from 'vue';
+import {computed,onBeforeUnmount,onMounted,provide,ref} from 'vue';
 import SceneNode from './SceneNode.vue';
 import {field,screenFor} from '../lib/scene.mjs';
 const server=typeof window==='undefined';
-const props=defineProps({scene:Object,width:Number,eager:Boolean});
+const props=defineProps({scene:Object,width:Number,eager:Boolean,skipReveal:Boolean});
 provide('eagerImages',computed(()=>!!props.eager));
+provide('skipReveal',computed(()=>!!props.skipReveal));
 // Tilda record visibility is separate from the scene's layout breakpoints.
 const visible=computed(()=>{
  const min=Number.parseFloat(props.scene.min),max=Number.parseFloat(props.scene.max);
  return server||((!Number.isFinite(min)||props.width>=min)&&(!Number.isFinite(max)||props.width<max));
 });
 const screen=computed(()=>screenFor(props.width,(props.scene.board.screens||'320,480,640,960,1200').split(',').map(Number)));
-const scale=computed(()=>field(props.scene.board,'upscale',screen.value,true)==='window'?props.width/screen.value:1);
+const layoutScale=computed(()=>field(props.scene.board,'upscale',screen.value,true)==='window'?props.width/screen.value:1);
+// Меню 860237765 до 959px: scale = min(ширина/брейкпоинт, 100dvh/высота артборда). Ширина холста остаётся от брейкпоинта.
+const viewportHeight=ref(0);
+const menuFit=computed(()=>props.scene.id==='860237765'&&props.width<=959);
+function readViewport(){
+ const probe=document.createElement('div');
+ probe.style.cssText='position:fixed;left:0;top:0;height:100vh;height:100dvh;width:0;visibility:hidden;pointer-events:none';
+ document.documentElement.appendChild(probe);
+ const measured=probe.getBoundingClientRect().height;
+ probe.remove();
+ return measured||innerHeight;
+}
+function syncViewport(){if(!server&&menuFit.value)viewportHeight.value=readViewport();}
+if(!server&&menuFit.value)syncViewport();
+let stopViewport;
+onMounted(()=>{
+ if(!menuFit.value)return;
+ syncViewport();
+ const onViewport=()=>syncViewport();
+ addEventListener('resize',onViewport);
+ visualViewport?.addEventListener('resize',onViewport);
+ stopViewport=()=>{removeEventListener('resize',onViewport);visualViewport?.removeEventListener('resize',onViewport);};
+});
+onBeforeUnmount(()=>stopViewport?.());
+const scale=computed(()=>{
+ const base=layoutScale.value;
+ if(!menuFit.value||!(base>0))return base;
+ const design=Number(field(props.scene.board,'height',screen.value,true)||0);
+ const viewport=viewportHeight.value;
+ if(!(design>0)||!(viewport>0))return base;
+ return Math.min(base,viewport/design);
+});
 // Exported auto-overflow boards contain horizontal card strips. Their canvas
 // is the scroll container; make it reachable by keyboard as well as touch.
 const scrollable=computed(()=>field(props.scene.board,'ovrflw',screen.value,true)==='auto'&&props.scene.board.pos!=='fixed');
@@ -25,7 +57,7 @@ const height=computed(()=>{const design=Number(field(props.scene.board,'height',
 <template>
  <span v-show="visible" class="scene-anchor" :id="`rec${scene.id}`"></span>
   <section v-show="visible" class="scene-section" :id="`scene-${scene.id}`" :data-scene="scene.id" :style="server?undefined:{height:Math.floor(scene.board.pos==='fixed'?height:height*scale)+'px','--scene-scale':scale}">
-  <div class="scene-canvas" :class="{'scene-canvas--scrollable':scrollable}" :tabindex="scrollable?0:undefined" @pointerdown="dragStart" @pointermove="dragMove" @pointerup="dragEnd" @pointerleave="dragEnd" @dragstart.prevent :style="server?{width:'100%'}:{width:width/scale+'px',height:height+'px',transform:`scale(${scale})`}">
+  <div class="scene-canvas" :class="{'scene-canvas--scrollable':scrollable}" :tabindex="scrollable?0:undefined" @pointerdown="dragStart" @pointermove="dragMove" @pointerup="dragEnd" @pointerleave="dragEnd" @dragstart.prevent :style="server?{width:'100%'}:{width:width/layoutScale+'px',height:height+'px',transform:`scale(${scale})`}">
    <div class="scene-background"></div><div class="scene-filter"></div>
    <SceneNode v-for="node in scene.nodes" :key="node.id" :node="node" :screen="screen" :scene="scene.id" />
   </div>

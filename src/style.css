@@ -35,13 +35,15 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .menu-close{position:absolute;right:22px;top:12px;z-index:2;font-size:38px;}
 /* Tilda centres this auto-height label using its measured text height. */
 [data-scene="860237765"] [data-node="1748446143742"]{translate:0 calc((1px - 100%)/2 - 1.3px);} /* текст ЛК по центру иконки (Елена 14.10.2026) */
-.native-modal{position:fixed;inset:0;z-index:1400;background:#0009;overflow-y:auto;display:flex;align-items:flex-start;justify-content:center;padding:60px 20px;}
+.native-modal{position:fixed;inset:0;z-index:1400;background:#0009;overflow-y:auto;overflow-anchor:none;display:flex;align-items:flex-start;justify-content:center;padding:60px 20px;}
 .native-dialog{position:relative;background:#fff;width:560px;max-width:100%;padding:40px;color:#000;}
 .native-dialog h2{font-weight:600;font-size:28px;line-height:1.23;margin-bottom:20px;}
 .dialog-close{position:absolute;right:10px;top:0;font-size:36px;line-height:1.2;}
 .popup-description{font-size:16px;line-height:1.55;}.popup-description ul{list-style:disc;padding-left:20px;}.popup-description li{margin-bottom:6px;}
 .popup-button{display:block;text-align:center;background:#37a0ff;color:#fff;border-radius:10px;margin-top:25px;padding:16px;}
-.back-top{position:fixed;bottom:30px;left:20px;border-radius:50%;background:#ffffffe6;box-shadow:0 0 10px #0003;width:50px;height:50px;font-size:26px;z-index:900;}
+.back-top{position:fixed;bottom:30px;left:20px;border:0;padding:0;border-radius:53px;background:transparent;box-shadow:0 0 10px rgba(0,0,0,.2);width:50px;height:50px;z-index:900;line-height:0;}
+.back-top svg{display:block;width:50px;height:50px;}
+@media screen and (min-width:981px){.back-top:hover svg path,.back-top:focus-visible svg path{stroke:#ffffff;stroke-width:1px;}.back-top:hover,.back-top:focus-visible{background:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);}.back-top:hover svg rect,.back-top:focus-visible svg rect{fill:transparent;}}
 @media(max-width:479px){.native-banner{top:55px;left:0;}.native-modal{padding:40px 10px;}.native-dialog{padding:30px 20px;}.native-dialog h2{font-size:22px;}.popup-description{font-size:14px;}}
 
 .scene-flex>.scene-node{display:block;flex-shrink:0;}
@@ -109,9 +111,13 @@ h1.scene-atom{font:inherit;margin:0}
 @media(prefers-reduced-motion:reduce){.menu-slide-enter-active,.menu-slide-leave-active,.popup-rise-enter-active .native-dialog,.popup-rise-leave-active .native-dialog,.scene-atom{transition:none}.native-cookie{animation:none}}
 /* Интенсив: карточки тем на сплошном фоне секции (на Тильде блок прозрачный → белая полоса), решение Елены 14.10.2026 */
 #scene-4224862101,#scene-3690339401,#scene-3690352301,#scene-3690357301{background-color:var(--c-surface)}
-/* Мобильное меню на всю высоту экрана: панель (shape 650px в исходнике) растягивается на 100dvh с учётом масштаба (14.10.2026) */
-.native-menu .scene-section{height:100dvh!important}
-.native-menu [data-node="1748446143723"],.native-menu [data-node="1748446143728"]{height:calc(100dvh / var(--scene-scale,1))!important}
+/* Мобильное меню на всю высоту экрана: панель закрывает 100dvh. Масштаб холста — в SceneBlock (14.10.2026). */
+.native-menu .scene-section{height:100vh!important;height:100dvh!important}
+.native-menu [data-node="1748446143723"],.native-menu [data-node="1748446143728"]{height:calc(100vh / var(--scene-scale,1))!important;height:calc(100dvh / var(--scene-scale,1))!important}
+/* До 959px холст меню прижат к правому краю: при scale = min(ширина/брейкпоинт, 100dvh/650) картинка не уезжает влево. Соцсети на исходных top артборда. */
+@media(max-width:959px){
+ .native-menu .scene-canvas{position:absolute;top:0;right:0;transform-origin:top right}
+}
 /* Обводка фокуса — только для клавиатуры; после клика и касания не показывается */
 :focus:not(:focus-visible){outline:none}
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--c-pit);outline-offset:2px}

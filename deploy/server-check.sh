@@ -19,7 +19,10 @@ done < <(find /etc/nginx/sites-enabled -mindepth 1 -maxdepth 1 -print)
 if sudo -n nginx -T 2>/dev/null | grep -E 'server_name[^;]*146\.185\.240\.110' >/dev/null; then
   sudo -n test -f /etc/nginx/sites-enabled/medvediva-preview || { echo 'STOP: IP already belongs to another vhost'; exit 3; }
 fi
-if find /etc/nginx/conf.d -maxdepth 1 -name '*.conf' -print | read -r _; then
-  echo 'STOP: conf.d contains configurations that need review'; exit 3
-fi
+while IFS= read -r conf; do
+  case "$(basename "$conf")" in
+    medvediva-tune.conf) ;;
+    *) echo 'STOP: conf.d contains configurations that need review'; exit 3 ;;
+  esac
+done < <(find /etc/nginx/conf.d -maxdepth 1 -name '*.conf' -print)
 echo 'Server check passed; no unknown enabled sites.'

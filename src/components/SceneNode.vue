@@ -1,8 +1,8 @@
 <script setup>
 import {reveal as vReveal} from '../lib/reveal.mjs';
-import {computed,inject,onMounted,provide,ref,unref} from 'vue';
+import {computed,inject,provide,unref} from 'vue';
 import {authoredClasses,tariffKey,tariffStream,tariffNodeView} from '../lib/tariff-ui.mjs';
-import {backgroundFetchImg,deferBackground,lazyImages} from '../lib/lazy-images.mjs';
+import {lazyImages} from '../lib/lazy-images.mjs';
 import {prefixRootUrls} from '../lib/site-base.mjs';
 import DesignForm from './DesignForm.vue';
 import MediaPreview from './MediaPreview.vue';
@@ -40,25 +40,14 @@ function keyActivate(event){
  }
 }
 const eagerImages=inject('eagerImages',false);
+const skipReveal=inject('skipReveal',false);
 const eager=computed(()=>unref(eagerImages)===true);
-const bgOn=ref(false);
-const root=ref(null);
-const paint=computed(()=>{
- const current=prefixRootUrls(props.node.atomStyle+(props.node.background?`;background-image:url("${props.node.background}")`:''))||'';
- if(eager.value)return {style:current,url:''};
- const deferred=deferBackground(current);
- if(!deferred.url)return {style:current,url:''};
- if(!bgOn.value)return {style:deferred.style,url:deferred.url};
- const base=deferred.style;
- return {style:`${base}${base&&!base.endsWith(';')?';':''}background-image:url("${deferred.url.replace(/"/g,'%22')}")`,url:deferred.url};
-});
+function revealOf(animation){return unref(skipReveal)||props.scene==='2322512891'?undefined:animation;}
+const atomStyle=computed(()=>prefixRootUrls(props.node.atomStyle+(props.node.background?`;background-image:url("${props.node.background}")`:''))||'');
 const renderedHtml=computed(()=>{
  const html=view.value.html||'';
- if(eager.value)return prefixRootUrls(html)||'';
- return (paint.value.url?backgroundFetchImg(paint.value.url):'')+lazyImages(html);
+ return eager.value?prefixRootUrls(html)||'':lazyImages(html);
 });
-function revealBg(event){if(event.target?.classList?.contains('scene-bg-fetch'))bgOn.value=true;}
-onMounted(()=>{const img=root.value?.querySelector?.('.scene-bg-fetch');if(img?.complete&&img.naturalWidth)bgOn.value=true;});
 const groupStyle=computed(()=>{
  if(props.node.type!=='group'||typeof window==='undefined')return undefined;
  const f=props.node.fields; const get=(k)=>field(f,k,props.screen); const pf=props.parent?.fields;
@@ -68,7 +57,6 @@ const groupStyle=computed(()=>{
  if(groupedFlex)return {top:'0px',left:'0px',position:'relative'};
  return {top:`${top}px`,left:pf||get('container')==='window'?`${left}px`:`calc(50% - ${props.screen/2}px + ${left}px)`,position:groupedFlex?'relative':'absolute'};
 });
-const atomStyle=computed(()=>paint.value.style);
 const href=computed(()=>{
  const original=sourceClasses.value.includes('pf-buy')&&state.value?state.value.link:props.node.href;
  const value=sourceClasses.value.includes('pf-buy')?authoredUi?.transformLink?.(original)||authoredUi?.checkoutHref?.(original)||original:original;
@@ -76,12 +64,12 @@ const href=computed(()=>{
 });
 </script>
 <template>
- <div v-if="node.type==='group'" v-reveal="scene==='2322512891'?undefined:node.animation" class="scene-group" :class="[sourceClasses,{'pf-active':view.active}]" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id" :data-native-tooltip="node.tooltipHook" :hidden="node.tooltipHook||view.hidden?true:undefined" :style="groupStyle">
+ <div v-if="node.type==='group'" v-reveal="revealOf(node.animation)" class="scene-group" :class="[sourceClasses,{'pf-active':view.active}]" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id" :data-native-tooltip="node.tooltipHook" :hidden="node.tooltipHook||view.hidden?true:undefined" :style="groupStyle">
   <div class="scene-group-inner" :class="{'scene-flex':isPhysicalFlex(node.fields)}" :id="`group-${node.id}`">
    <SceneNode v-for="child in node.children" :key="child.id" :node="child" :screen="screen" :scene="scene" :parent="node" />
   </div>
  </div>
- <div v-else ref="root" @load.capture="revealBg" v-reveal="scene==='2322512891'?undefined:node.animation" class="scene-node" :class="[sourceClasses,`scene-${node.type}`,{'scene-group-child':isPhysicalFlex(parent?.fields),'pf-active':view.active}]" :hidden="view.hidden?true:undefined" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id">
+ <div v-else v-reveal="revealOf(node.animation)" class="scene-node" :class="[sourceClasses,`scene-${node.type}`,{'scene-group-child':isPhysicalFlex(parent?.fields),'pf-active':view.active}]" :hidden="view.hidden?true:undefined" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id">
   <DesignForm v-if="node.type==='form'" :node="node" :screen="screen" />
   <MediaPreview v-else-if="node.embed" :url="node.embed" />
   <DesignGallery v-else-if="node.type==='gallery'" :pictures="node.pictures" />

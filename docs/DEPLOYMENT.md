@@ -58,7 +58,7 @@ bash deploy/upload-and-activate.sh
 |-----------|------------|
 | `nginx is not installed` | Запустить `deploy/server-setup.sh` на сервере (см. выше) |
 | `existing site …` | На VM уже включён другой сайт — нужен разбор nginx вручную, не ломать чужие vhost |
-| `conf.d contains configurations` | Убрать или перенести `.conf` из `/etc/nginx/conf.d/` после согласования |
+| `conf.d contains configurations` | В `conf.d` есть неизвестный `.conf`. `medvediva-tune.conf` от `deploy/server-tune.sh` проверка пропускает; остальные убрать или согласовать |
 | `non-stock default site` / welcome page | Default nginx переконфигурирован — привести к штатному welcome или согласовать правку check |
 | `IP already belongs to another vhost` | IP привязан не к `medvediva-preview` — конфликт конфигов |
 | `conflicting Medvediva config` | Файл `medvediva-preview` изменён вручную без маркера managed |

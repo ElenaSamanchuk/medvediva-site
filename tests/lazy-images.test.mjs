@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {lazyImages, deferBackground, backgroundFetchImg} from '../src/lib/lazy-images.mjs';
+import {lazyImages} from '../src/lib/lazy-images.mjs';
 
 test('img markup gets lazy and async before the browser runs scripts', () => {
   const html = '<img class="scene-image" src="/media/a.png" alt=""/>';
@@ -9,12 +9,8 @@ test('img markup gets lazy and async before the browser runs scripts', () => {
   assert.equal(lazyImages('без картинки'), 'без картинки');
 });
 
-test('below-fold background keeps the painted file and drops the placeholder url', () => {
-  const style = "background-image:url('https://thb.tildacdn.com/tiny.png');;background-image:url(\"/media/full.png\")";
-  const deferred = deferBackground(style);
-  assert.equal(deferred.url, '/media/full.png');
-  assert.equal(deferred.style.includes('background-image'), false);
-  assert.match(backgroundFetchImg(deferred.url), /loading="lazy"/);
-  assert.match(backgroundFetchImg(deferred.url), /decoding="async"/);
-  assert.match(backgroundFetchImg(deferred.url), /src="\/media\/full.png"/);
+test('background urls stay in markup: lazy only marks img, not css backgrounds', () => {
+  const style = "background-image:url('/media/full.png')";
+  assert.equal(lazyImages(style), style);
+  assert.equal(lazyImages('<div style="background-image:url(/media/full.png)"></div>'), '<div style="background-image:url(/media/full.png)"></div>');
 });
