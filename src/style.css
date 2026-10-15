@@ -43,7 +43,9 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .popup-button{display:block;text-align:center;background:#37a0ff;color:#fff;border-radius:10px;margin-top:25px;padding:16px;}
 .back-top{position:fixed;bottom:30px;left:20px;border:0;padding:0;border-radius:53px;background:transparent;box-shadow:0 0 10px rgba(0,0,0,.2);width:50px;height:50px;z-index:900;line-height:0;}
 .back-top svg{display:block;width:50px;height:50px;}
-@media screen and (min-width:981px){.back-top:hover svg path,.back-top:focus-visible svg path{stroke:#ffffff;stroke-width:1px;}.back-top:hover,.back-top:focus-visible{background:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);}.back-top:hover svg rect,.back-top:focus-visible svg rect{fill:transparent;}}
+/* Стрелка «наверх»: градиент проявляется через слой ::before — background-image сам не анимируется (15.10.2026) */
+.back-top{overflow:hidden;transition:box-shadow .25s ease-in-out}.back-top::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);opacity:0;transition:opacity .25s ease-in-out}.back-top svg{position:relative}.back-top svg rect{transition:fill .25s ease-in-out}.back-top svg path{transition:stroke .25s ease-in-out}
+@media screen and (min-width:981px){.back-top:hover svg path,.back-top:focus-visible svg path{stroke:#ffffff;stroke-width:1px;}.back-top:hover::before,.back-top:focus-visible::before{opacity:1}.back-top:hover svg rect,.back-top:focus-visible svg rect{fill:transparent;}}
 @media(max-width:479px){.native-banner{top:55px;left:0;}.native-modal{padding:40px 10px;}.native-dialog{padding:30px 20px;}.native-dialog h2{font-size:22px;}.popup-description{font-size:14px;}}
 
 .scene-flex>.scene-node{display:block;flex-shrink:0;}
@@ -98,7 +100,6 @@ h1.scene-atom{font:inherit;margin:0}
 .scene-canvas--scrollable::-webkit-scrollbar{display:none}
 @media (pointer:fine){.scene-canvas--scrollable{cursor:grab}.scene-canvas--scrollable.is-dragging{cursor:grabbing;user-select:none}}
 /* Анимации как на Тильде (14.10.2026): hover-плавность атомов, выезд меню справа, попап снизу, появление куки */
-.scene-atom{transition:background-color var(--t396-speedhover,.2s) ease-in-out,color var(--t396-speedhover,.2s) ease-in-out,border-color var(--t396-speedhover,.2s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,.2s) ease-in-out}
 .menu-slide-enter-active,.menu-slide-leave-active{transition:transform .4s ease-in-out}
 .menu-slide-enter-from,.menu-slide-leave-to{transform:translateX(100%)}
 .popup-rise-enter-active{transition:background-color .6s ease}.popup-rise-leave-active{transition:background-color .45s ease}
@@ -127,3 +128,61 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 html.menu-open .native-banner,html.menu-open .native-cookie,html.menu-open .back-top,html.menu-open .sw-container,html.menu-open .sw-fab-stack{visibility:hidden!important}
 /* Zero-попапы (T1093) как на Тильде: фон только размыт, без затемнения (14.10.2026) */
 .native-modal.native-modal--scene{background-color:transparent}
+/* «Старт курса - 16 ноября» на /pit и /tvg: текст на 3px правее, «?» на месте (Елена 15.10.2026) */
+[data-node="1745313603006"] .scene-atom__button-text{position:relative;left:3px}
+/* Крестик в углу карточки Zero-попапа: координаты считает placeClose() в App.vue (15.10.2026) */
+.native-dialog--scene .dialog-close.dialog-close--card{position:absolute;right:auto;transform:translateX(-100%);width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:30px;line-height:1;color:#1d1d1d;z-index:3}
+/* «Скачивайте мобильное приложение» (/pit): иконки по центру карточки, подписи по центру иконок (Елена 15.10.2026).
+   На Тильде группа уезжала вправо на 4–6px, подписи — до 6.5px от своих иконок. Сдвиги в px артборда. */
+#scene-1423744001{--app-ia:0px;--app-ig:0px;--app-la:0px;--app-lg:0px;--app-t:0px}
+@media(min-width:1200px){#scene-1423744001{--app-ia:-5.5px;--app-ig:-5.5px;--app-la:-6.5px;--app-lg:-6.5px}}
+@media(min-width:960px) and (max-width:1199px){#scene-1423744001{--app-ia:-5.5px;--app-ig:-5.5px;--app-la:-3.5px;--app-lg:-6.5px;--app-t:7px}}
+@media(min-width:640px) and (max-width:959px){#scene-1423744001{--app-la:-4px;--app-lg:-.5px}}
+@media(min-width:480px) and (max-width:639px){#scene-1423744001{--app-ia:-4px;--app-ig:-4px;--app-la:-1.5px;--app-lg:-4.5px}}
+@media(max-width:479px){#scene-1423744001{--app-lg:-1.5px}}
+#scene-1423744001 [data-node="1759843236908"]{margin-left:var(--app-ia)}
+#scene-1423744001 [data-node="1759843237000"]{margin-left:var(--app-ig)}
+#scene-1423744001 [data-node="175984295669393940"]{margin-left:var(--app-la)}
+#scene-1423744001 [data-node="175983601512824920"]{margin-left:var(--app-lg)}
+#scene-1423744001 [data-node="175984291512919870"]{margin-left:var(--app-t)}
+/* Текстовые попапы (бот предзаписи, обучения и т.п.) в стиле сайта, а не дефолтной Тильды (Елена 15.10.2026):
+   карточка со скруглением как у Zero-попапов, заголовок Bounded капсом, текст Manrope, кнопка — градиент «Личного кабинета», фон размыт. */
+.native-modal:not(.native-modal--scene):not(:has(.media-preview)){background:#26262633;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);align-items:center}
+.native-dialog:not(.native-dialog--scene):not(:has(.media-preview)){border-radius:var(--r-3xl);padding:40px 40px 36px;color:var(--c-ink);font-family:var(--font-ui);box-shadow:0 10px 40px #0000001a;margin:auto 0}
+.native-dialog:not(.native-dialog--scene):not(:has(.media-preview)) h2{font-family:var(--font-display);font-weight:var(--fw-semibold);text-transform:uppercase;font-size:var(--fs-2xl);line-height:var(--lh-tight);color:var(--c-heading);margin:0 36px 20px 0}
+.native-dialog:not(.native-dialog--scene):not(:has(.media-preview)) .popup-description{font-size:var(--fs-md);line-height:var(--lh-text);color:var(--c-ink-2)}
+.native-dialog:not(.native-dialog--scene) .popup-description strong,.native-dialog:not(.native-dialog--scene) .popup-description b{color:var(--c-ink);font-weight:var(--fw-semibold)}
+.native-dialog:not(.native-dialog--scene) .popup-description li::marker{color:var(--c-pit)}
+.native-dialog:not(.native-dialog--scene):not(:has(.media-preview)) .dialog-close{top:14px;right:14px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:30px;line-height:1;color:var(--c-ink)}
+.popup-button{background:linear-gradient(0.353turn,rgba(135,169,218,1) 0%,rgba(67,105,163,1) 100%);border-radius:var(--r-lg);font-family:var(--font-ui);font-weight:var(--fw-semibold);font-size:var(--fs-md);padding:16px;transition:filter .2s}
+.popup-button:hover,.popup-button:focus-visible{filter:brightness(1.08)}
+@media(max-width:479px){.native-dialog:not(.native-dialog--scene):not(:has(.media-preview)){padding:28px 20px 24px}.native-dialog:not(.native-dialog--scene):not(:has(.media-preview)) h2{font-size:var(--fs-xl)}.native-dialog:not(.native-dialog--scene):not(:has(.media-preview)) .popup-description{font-size:var(--fs-base)}}
+/* Сглаживание шрифтов как на Тильде (.tn-atom и тексты Тильды — antialiased). Без него на Mac весь текст выглядит жирнее (Елена 15.10.2026). */
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+/* Попап открыт → body overflow:hidden убирает полосу прокрутки, ширина прыгает. Место под полосу держим всегда (Елена 15.10.2026). */
+html{scrollbar-gutter:stable}
+/* Плавные ховеры, всплывашки и появление (Елена 15.10.2026).
+   На Тильде большинство ховеров меняют opacity — добавляем её и transform/filter к переходам атома. */
+.scene-atom{transition:background-color var(--t396-speedhover,.2s) ease-in-out,color var(--t396-speedhover,.2s) ease-in-out,border-color var(--t396-speedhover,.2s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,.2s) ease-in-out,opacity var(--t396-speedhover,.2s) ease-in-out,transform var(--t396-speedhover,.2s) ease-in-out,filter var(--t396-speedhover,.2s) ease-in-out}
+.scene-atom a,.native-article a,.popup-description a,.native-cookie a,.scene-vector svg path,.scene-vector svg rect{transition:color .2s ease-in-out,opacity .2s ease-in-out,fill .2s ease-in-out,stroke .2s ease-in-out,text-decoration-color .2s ease-in-out}
+.dialog-close,.menu-close{transition:opacity .2s ease-in-out,transform .2s ease-in-out}
+@media(hover:hover){.dialog-close:hover,.menu-close:hover{opacity:.6}}
+/* Попапы: фон с размытием проявляется, карточка выезжает (уже есть popup-rise) */
+.popup-rise-enter-active,.popup-rise-leave-active{transition:background-color .6s ease,opacity .45s ease,backdrop-filter .45s ease}
+.popup-rise-enter-from,.popup-rise-leave-to{opacity:0}
+/* Меню: выезд + проявление */
+.menu-slide-enter-active,.menu-slide-leave-active{transition:transform .4s ease-in-out,opacity .4s ease-in-out}
+.menu-slide-enter-from,.menu-slide-leave-to{opacity:0}
+/* Подсказки и показ/скрытие элементов через hidden — плавно, где браузер умеет (Chrome 117+, Safari 17.5+) */
+[data-native-tooltip]{transition:opacity .2s ease-in-out,display .2s allow-discrete}
+[data-native-tooltip][hidden]{opacity:0}
+@starting-style{[data-native-tooltip]:not([hidden]){opacity:0}}
+@media(prefers-reduced-motion:reduce){.scene-atom,.scene-atom a,.back-top::before,.dialog-close,.menu-close,[data-native-tooltip]{transition:none}.native-cookie{animation:none}.popup-rise-enter-active,.popup-rise-leave-active,.menu-slide-enter-active,.menu-slide-leave-active{transition:none}}
+/* «Обучения» на главной без подчёркивания (Елена 15.10.2026) */
+[data-node="1731073040214"] u{text-decoration:none}
+/* Zero-попапы: серая подложка артборда (#f5f5f5 на 1200px) закрывала размытую страницу полосой — делаем прозрачной (Елена 15.10.2026) */
+.native-dialog--scene .scene-section{background-color:transparent!important}
+/* Стрелка «наверх» на одной линии с кнопкой чата поддержки (Елена 15.10.2026):
+   чат 60px с отступом 20px (десктоп) и 56px с 16px (телефон) — центры совпадают, отступ от края тот же */
+.back-top{bottom:25px;left:20px}
+@media(max-width:480px){.back-top{bottom:19px;left:16px}}

@@ -4,6 +4,7 @@ import supportWidget from './lib/support-widget.json';
 import {initMeters} from './lib/meters.mjs';
 import {localLink} from './lib/scene.mjs';
 import {lazyImages} from './lib/lazy-images.mjs';
+import {docLinks} from './lib/doc-links.mjs';
 import {eagerContentIds,loadsSecondBlockEager} from './lib/eager-blocks.mjs';
 import {prefixRootUrls,stripBase,withBase} from './lib/site-base.mjs';
 import {captureAttribution,prepareLinks,checkoutLink} from './lib/attribution.mjs';
@@ -94,19 +95,35 @@ function hashChange(){
  resetDialog();
  if(location.hash.length>1)nextTick(()=>anchorTarget(location.hash)?.scrollIntoView({behavior:'instant'}));
 }
-function resize(){hideTooltip();width.value=innerWidth;}
+function resize(){hideTooltip();width.value=innerWidth;if(popup.value)nextTick(placeClose);}
+// Крестик Zero-попапа — в правом верхнем углу карточки, а не окна (Елена 15.10.2026).
+// Карточка — самая большая непрозрачная фигура или группа сцены; без неё крестик остаётся в углу окна.
+const closeSpot=ref(null);
+function placeClose(){
+ const dialog=document.querySelector('.native-dialog--scene');
+ if(!dialog){closeSpot.value=null;return;}
+ // Свой крестик в макете попапа (#closepopup) — тогда наш не дублируем
+ if([...dialog.querySelectorAll('a[href="#closepopup"],a[href="#menuclose"]')].some(a=>{const n=a.closest('[data-node]');return !n||getComputedStyle(n).display!=='none';})){closeSpot.value={display:'none'};return;}
+ const box=dialog.getBoundingClientRect();let card=null,area=0;
+ for(const node of dialog.querySelectorAll('.scene-node.scene-shape,.scene-group')){
+  const rect=node.getBoundingClientRect();const color=getComputedStyle(node.querySelector(':scope > .scene-atom,:scope > .scene-group-inner')||node).backgroundColor;
+  if(!rect.width||!rect.height||color==='transparent'||/,\s*0\)$/.test(color))continue;
+  if(rect.width*rect.height>area){area=rect.width*rect.height;card=rect;}
+ }
+ closeSpot.value=card?{top:`${card.top-box.top+10}px`,left:`${card.right-box.left-10}px`}:null;
+}
 function scroll(){showTop.value=window.scrollY>500;}
 // Zero-попап на всю ширину: клик по пустому месту (не по содержимому сцены) закрывает, как клик вне окна (14.10.2026)
 function dialogBackdropClick(e){if(!dialogScenes.value.length)return;if(e.target.closest('.scene-node,.scene-group,.dialog-close,a,button,input,textarea,video'))return;close();}
 // Открытое меню закрывается кликом вне панели (решение Елены 14.10.2026)
 function menuOutsideClick(e){const n=e.target.closest('.scene-node,.scene-group,.menu-close,a,button');/* 1748446143723 — прозрачная подложка слева от панели, считается «вне» */if(n&&n.dataset?.node!=='1748446143723')return;close();}
-function resetDialog(){document.querySelectorAll('.native-dialog video').forEach(v=>v.pause());popup.value=null;menu.value=false;document.body.style.overflow='';previousFocus?.focus({focusVisible:keyboardFocus});}
+function resetDialog(){document.querySelectorAll('.native-dialog video').forEach(v=>v.pause());popup.value=null;menu.value=false;document.body.style.overflow='';previousFocus?.focus({preventScroll:true,focusVisible:keyboardFocus});}
 function close(){const owned=history.state?.medvedivaOverlay;resetDialog();if(owned)history.back();else if(location.hash==='#menuopen'||popups.value.some(p=>p.hook===location.hash))history.replaceState(history.state,'',location.pathname+location.search);}
 function overlayHistory(hook){if(location.hash!==hook)history.pushState({...history.state,medvedivaOverlay:true},'',hook);}
-function open(item){if(!popup.value&&!menu.value)previousFocus=document.activeElement;menu.value=false;popup.value=item;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-dialog'),attribution);document.querySelector('.native-dialog button')?.focus({preventScroll:true});});}
+function open(item){if(!popup.value&&!menu.value)previousFocus=document.activeElement;menu.value=false;popup.value=item;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-dialog'),attribution);placeClose();requestAnimationFrame(placeClose);document.querySelector('.native-dialog button')?.focus({preventScroll:true});});}
 function openMenu(){if(!menu.value&&!popup.value)previousFocus=document.activeElement;popup.value=null;menu.value=true;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-menu'),attribution);/* r из адреса — во внутренние ссылки меню, как скрипты Тильды 857516649/860263697 */{const r=new URLSearchParams(location.search).get('r');if(r)for(const a of document.querySelectorAll('.native-menu a[href^="/"]')){const u=new URL(a.getAttribute('href'),location.origin);if(stripBase(u.pathname)==='/members/login'||u.searchParams.has('r'))continue;u.searchParams.set('r',r);a.setAttribute('href',withBase(u.pathname)+u.search+u.hash);}}document.querySelector('.menu-close')?.focus({focusVisible:keyboardFocus});});}
 function click(e){
- const a=e.target.closest('a'); const node=e.target.closest('[data-node]');
+ const a=e.target.closest('a[href]'); const node=e.target.closest('[data-node]');
  if(node?.dataset.node==='1779882150069'||node?.dataset.node==='1780491925286000001'){banner.value=false;localStore.setItem('medvedivaBannerClosed','1');clearTimeout(timer);return;}
  if(node?.dataset.node==='1745573793244'){/* handled by link below */}
  if(node?.dataset.node==='1773213623325000005'){localStore.setItem('cookieConsent','accepted');localStore.setItem('cookieConsentDate',new Date().toISOString());cookie.value=false;return;}
@@ -120,6 +137,7 @@ function click(e){
  if((sceneId==='1423616591'||sceneId==='860237765')&&!href?.startsWith('#')){const target=localLink(a.href,sceneId);if(target)a.setAttribute('href',target);}
  if(href==='#menuopen'&&scene('860237765')){e.preventDefault();overlayHistory(href);openMenu();return;}
  if(href==='#menuclose'||href==='#closepopup'){e.preventDefault();close();return;}
+ if(href==='#back'){e.preventDefault();if(history.length>1)history.back();else location.assign(withBase('/'));return;} /* «Назад» на Тильде — javascript:history.back() */
  const modal=popups.value.find(p=>p.hook===href);
  if(modal){e.preventDefault();overlayHistory(href);open(modal);return;}
   if(href?.startsWith('#')&&href.length>1){
@@ -161,12 +179,12 @@ onUnmounted(()=>{removeEventListener('resize',resize);removeEventListener('keydo
  <div v-else-if="error" class="p-10"><h1>{{error}}</h1><a :href="withBase('/')">На главную</a></div>
  <div v-else-if="page" @click="click" @pointerdown="keyboardFocus=false" @mouseover="tooltipEnter" @mouseout="tooltipLeave" @focusin="tooltipEnter" @focusout="tooltipLeave">
   <SiteHeader :scene="scene('1063609261')" :width="width" />
-  <main><template v-for="block in blocks" :key="block.id"><SceneBlock v-if="block.kind==='scene'" :scene="scene(block.id)" :width="width" :eager="isEager(block.id)" :skip-reveal="block.id===eagerIds[1]" /><div v-else-if="block.kind==='spacer'" class="native-spacer" :id="`scene-${block.id}`" :style="styleText(block.style)" aria-hidden="true"></div><article v-else-if="block.kind==='article'" class="native-article" :id="`scene-${block.id}`" :style="styleText(block.style)"><div v-html="shownHtml(block.html,isEager(block.id))"></div></article><StandardBlock v-else-if="block.kind!=='anchor'&&block.kind!=='spacer'" :block="block" :width="width" :eager="isEager(block.id)" /><span v-else :id="`scene-${block.id}`"></span></template></main>
+  <main><template v-for="block in blocks" :key="block.id"><SceneBlock v-if="block.kind==='scene'" :scene="scene(block.id)" :width="width" :eager="isEager(block.id)" :skip-reveal="block.id===eagerIds[1]" /><div v-else-if="block.kind==='spacer'" class="native-spacer" :id="`scene-${block.id}`" :style="styleText(block.style)" aria-hidden="true"></div><article v-else-if="block.kind==='article'" class="native-article" :id="`scene-${block.id}`" :style="styleText(block.style)"><div v-html="shownHtml(docLinks(block.html),isEager(block.id))"></div></article><StandardBlock v-else-if="block.kind!=='anchor'&&block.kind!=='spacer'" :block="block" :width="width" :eager="isEager(block.id)" /><span v-else :id="`scene-${block.id}`"></span></template></main>
   <SiteFooter :scene="scene('770878605')" :width="width" />
   <Transition name="vk-banner"><aside v-if="banner&&scene('2322512891')" class="native-banner"><SceneBlock :scene="scene('2322512891')" :width="bannerWidth" eager /></aside></Transition>
   <aside v-if="cookie&&scene('2019108731')" class="native-cookie"><SceneBlock :scene="scene('2019108731')" :width="width" eager /></aside>
   <Transition name="menu-slide"><div v-if="menu" class="native-menu" @click="menuOutsideClick" role="dialog" aria-modal="true" aria-label="Меню сайта"><button class="menu-close" aria-label="Закрыть меню" @click="close">×</button><SceneBlock :scene="scene('860237765')" :width="width" eager /></div></Transition>
-  <Transition name="popup-rise"><div v-if="popup" class="native-modal" :class="{'native-modal--scene':dialogScenes.length}" @click.self="close"><section class="native-dialog" @click="dialogBackdropClick" :data-popup-hook="popup.hook" :class="{'native-dialog--scene':dialogScenes.length}" role="dialog" aria-modal="true" :aria-label="popup.title||'Информация'"><button class="dialog-close" aria-label="Закрыть" @click="close">×</button><h2 v-if="popup.title">{{popup.title}}</h2><div v-if="popup.html" class="popup-description" v-html="prefixRootUrls(popup.html)"></div><SceneBlock v-for="item in dialogScenes" :key="item.id" :scene="item" :width="Math.min(width,1200)" /><MediaPreview v-if="popup.embed" :url="popup.embed" /><div v-if="popup.pictures" class="gallery-popup"><DesignGallery :pictures="popup.pictures" /></div><SupportForm v-if="popup.form" mode="dry-run" :show-intro="false" /><a v-if="popup.button" class="popup-button" :href="withBase(popup.button.href)">{{popup.button.text}}</a></section></div></Transition>
+  <Transition name="popup-rise"><div v-if="popup" class="native-modal" :class="{'native-modal--scene':dialogScenes.length}" @click.self="close"><section class="native-dialog" @click="dialogBackdropClick" :data-popup-hook="popup.hook" :class="{'native-dialog--scene':dialogScenes.length}" role="dialog" aria-modal="true" :aria-label="popup.title||'Информация'"><button class="dialog-close" :class="{'dialog-close--card':closeSpot}" :style="closeSpot||undefined" aria-label="Закрыть" @click="close">×</button><h2 v-if="popup.title">{{popup.title}}</h2><div v-if="popup.html" class="popup-description" v-html="prefixRootUrls(popup.html)"></div><SceneBlock v-for="item in dialogScenes" :key="item.id" :scene="item" :width="Math.min(width,1200)" /><MediaPreview v-if="popup.embed" :url="popup.embed" /><div v-if="popup.pictures" class="gallery-popup"><DesignGallery :pictures="popup.pictures" /></div><SupportForm v-if="popup.form" mode="dry-run" :show-intro="false" /><a v-if="popup.button" class="popup-button" :href="withBase(popup.button.href)">{{popup.button.text}}</a></section></div></Transition>
   <button v-if="showTop&&!cookie" type="button" class="back-top" aria-label="Вернуться к началу страницы" @click="backTop"><svg role="presentation" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" rx="50" fill="#ffffff" fill-opacity="0.90" stroke="none"/><path d="M14 28L25 18l10 10" stroke="#000000" stroke-width="1" fill="none"/></svg></button>
  </div>
 </template>

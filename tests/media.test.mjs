@@ -19,3 +19,12 @@ test('Chromium uses MSE even when its media API advertises native HLS',()=>{
  assert.equal(useNativeHls('Mozilla/5.0 Macintosh AppleWebKit/605.1.15 Version/18.0 Safari/605.1.15'),true);
  assert.equal(useNativeHls('Mozilla/5.0 iPhone AppleWebKit/605.1.15 CriOS/145.0 Mobile Safari/604.1'),true);
 });
+
+import {embedSrc} from '../src/lib/media.mjs';
+test('embedSrc: Kinescope и YouTube в iframe, чужие адреса отбрасываются', () => {
+ assert.equal(embedSrc('https://kinescope.io/embed/iybjGEYtGedq8nm6hd8KQd'),'https://kinescope.io/embed/iybjGEYtGedq8nm6hd8KQd');
+ assert.equal(embedSrc('https://kinescope.io/iybjGEYtGedq8nm6hd8KQd'),'https://kinescope.io/embed/iybjGEYtGedq8nm6hd8KQd');
+ assert.equal(embedSrc('https://www.youtube.com/embed/AbJEwOJdMmM'),'https://www.youtube-nocookie.com/embed/AbJEwOJdMmM');
+ assert.equal(embedSrc('http://kinescope.io/embed/iybjGEYtGedq8nm6hd8KQd'),null);
+ assert.equal(embedSrc('https://evil.example/embed/x'),null);
+});
