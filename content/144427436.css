@@ -76,12 +76,12 @@
 @media screen and (max-width:479px){#scene-2314006521 [data-node="1779798129533000006"] .scene-atom .scene-atom__button-border::after{display:none;}}
 @media screen and (max-width:479px){@media (hover),(min-width:0\0){#scene-2314006521 [data-node="1779798129533000006"] .scene-atom:hover::after{opacity:0;}}}
 @media screen and (max-width:479px){@media (hover),(min-width:0\0){#scene-2314006521 [data-node="1779798129533000006"] .scene-atom:hover{}}}
-#scene-2314006521 [data-node="1779800868944000002"]{color:#4c72aa;text-align:center;z-index:3;top:128px;;left:calc(50% - 600px + 917px);;width:223px;height:49px;}
-#scene-2314006521 [data-node="1779800868944000002"] .scene-atom{color:#4c72aa;font-size:14px;font-family:var(--font-ui,'Manrope',Arial,sans-serif);line-height:17px;font-weight:700;border-radius:12px 12px 12px 12px;background-position:center center;--scene-borderwidth:1px;--scene-borderstyle:solid;--scene-borderstyle-existed:1;box-shadow:0px 2px 6px 0px rgba(129,144,169,0.3);--scene-speedhover:0.2s;--scene-bgcolor-color:#ffffff;--scene-bgcolor-image:none;background-color:var(--scene-bgcolor-color,transparent);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
+#scene-2314006521 [data-node="1779800868944000002"]{color:var(--c-pit,#4269a3);text-align:center;z-index:3;top:128px;;left:calc(50% - 600px + 917px);;width:223px;height:49px;}
+#scene-2314006521 [data-node="1779800868944000002"] .scene-atom{color:var(--c-pit,#4269a3);font-size:14px;font-family:var(--font-ui,'Manrope',Arial,sans-serif);line-height:17px;font-weight:700;border-radius:12px 12px 12px 12px;background-position:center center;--scene-borderwidth:1px;--scene-borderstyle:solid;--scene-borderstyle-existed:1;box-shadow:0px 2px 6px 0px rgba(129,144,169,0.3);--scene-speedhover:0.2s;--scene-bgcolor-color:#ffffff;--scene-bgcolor-image:none;background-color:var(--scene-bgcolor-color,transparent);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
 #scene-2314006521 [data-node="1779800868944000002"] .scene-atom::after{display:none;}
 #scene-2314006521 [data-node="1779800868944000002"] .scene-atom .scene-atom__button-icon{position:relative;width:9px;height:9px;order:1;--icon:url('/medvediva-site/media/c4413c02c2bc01e6751225a6.svg');}
 #scene-2314006521 [data-node="1779800868944000002"] .scene-atom .scene-atom__button-content{column-gap:10px;padding:0px 0px 0px 0px;}
-#scene-2314006521 [data-node="1779800868944000002"] .scene-atom .scene-atom__button-text{color:#4c72aa;}
+#scene-2314006521 [data-node="1779800868944000002"] .scene-atom .scene-atom__button-text{color:var(--c-pit,#4269a3);}
 #scene-2314006521 [data-node="1779800868944000002"] .scene-atom .scene-atom__button-border::before{display:none;}
 #scene-2314006521 [data-node="1779800868944000002"] .scene-atom .scene-atom__button-border::after{display:none;}
 @media (hover),(min-width:0\0){#scene-2314006521 [data-node="1779800868944000002"] .scene-atom:hover::after{opacity:0;}}
