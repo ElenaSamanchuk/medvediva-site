@@ -58,6 +58,8 @@ try{
   // Предзагрузка шрифтов страницы: только гарнитуры и начертания, которые есть в её стилях — текст сразу рисуется своим шрифтом (15.10.2026)
   html=html.replace('</head>',[...new Set([...(await pageFonts(route.page)),...((page.blocks||[]).some(b=>b.kind==='article')?['bounded600','inter400','inter700']:[])])].map(f=>`<link rel="preload" as="font" type="font/woff2" href="${asset(`/fonts/${f}.woff2`)}" crossorigin>`).join('')+'</head>');
   // Предзагрузка картинок первого экрана: фоны и img первого блока качаются сразу, с высоким приоритетом (15.10.2026)
+  // Плашка VK показывается только на главной — её иконку качаем заранее
+  if(route.path==='/')html=html.replace('</head>',`<link rel="preload" as="image" href="${asset('/media/e619f0822f9d7652910443f2.png')}">`+'</head>');
   html=html.replace('</head>',heroImages(page).map(u=>`<link rel="preload" as="image" href="${asset(u)}" fetchpriority="high">`).join('')+'</head>');
   html=html.replace('<div id="app"></div>',`<div id="app">${body}</div><script type="application/json" id="site-page">${json(page)}</script><script type="application/json" id="site-layout">${json(sharedLayout)}</script>`);
   const filename=route.path==='/'?'index.html':route.path.endsWith('.html')?route.path.slice(1):route.path.slice(1)+'/index.html';const target=path.resolve(dist,filename);

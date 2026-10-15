@@ -5,7 +5,7 @@ import {initMeters} from './lib/meters.mjs';
 import {localLink} from './lib/scene.mjs';
 import {lazyImages} from './lib/lazy-images.mjs';
 import {docLinks} from './lib/doc-links.mjs';
-import {fadeInImages} from './lib/image-fade.mjs';
+import {fadeInImages,warmLazyImages} from './lib/image-fade.mjs';
 import {initAnalytics} from './lib/analytics.mjs';
 import {eagerContentIds,loadsSecondBlockEager} from './lib/eager-blocks.mjs';
 import {prefixRootUrls,stripBase,withBase} from './lib/site-base.mjs';
@@ -168,6 +168,7 @@ onMounted(async()=>{
  addEventListener('resize',resize);addEventListener('keydown',key);addEventListener('hashchange',hashChange);addEventListener('popstate',hashChange);addEventListener('scroll',scroll,{passive:true});
  addEventListener('load',syncStripArrows);setTimeout(syncStripArrows,1200);
  fadeInImages(document.querySelector('main'));
+ warmLazyImages(document.querySelector('main'));
  initAnalytics();
  if(supportPreview)return;
  attribution=captureAttribution(location.search);
@@ -182,7 +183,8 @@ onMounted(async()=>{
   const layout=document.createElement('link');layout.rel='stylesheet';layout.href=withBase(`/content/${route.page}-layout.css`);document.head.append(layout);
   page.value=await fetch(withBase(`/content/${route.page}.json`)).then(r=>r.json());}
   if(!shared.value)shared.value=await fetch(withBase('/content/shared-layout.json')).then(r=>r.json());
-  const sharedCSS=document.createElement('link');sharedCSS.rel='stylesheet';sharedCSS.href=withBase('/content/shared-layout.css');document.head.append(sharedCSS);
+  // в собранной странице shared-layout.css уже подключён в <head> — второй раз не качаем
+  if(!document.querySelector('link[rel="stylesheet"][href$="/content/shared-layout.css"]')){const sharedCSS=document.createElement('link');sharedCSS.rel='stylesheet';sharedCSS.href=withBase('/content/shared-layout.css');document.head.append(sharedCSS);}
   document.title=page.value.title;
   document.querySelector('meta[name="description"]')?.setAttribute('content',page.value.description);
   await document.fonts.ready;

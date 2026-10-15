@@ -19,3 +19,25 @@ export function fadeInImages(root){
   const done=()=>reveal(atom);probe.addEventListener('load',done,{once:true});probe.addEventListener('error',done,{once:true});setTimeout(done,8000);
  }
 }
+
+// Фоновая докачка: после загрузки первого экрана, когда браузер свободен, ленивые картинки ниже
+// качаются по порядку сверху вниз (по 4 одновременно) — к моменту прокрутки они уже готовы (Елена 15.10.2026).
+export function warmLazyImages(root, parallel = 4) {
+  if (!root || navigator.connection?.saveData) return;
+  const start = () => {
+    const queue = [...root.querySelectorAll('img[loading="lazy"]')].filter(img => !(img.complete && img.naturalWidth));
+    const next = () => {
+      const img = queue.shift();
+      if (!img) return;
+      const done = () => next();
+      img.addEventListener('load', done, { once: true });
+      img.addEventListener('error', done, { once: true });
+      img.loading = 'eager';
+      if (img.complete) done();
+    };
+    for (let i = 0; i < parallel; i++) next();
+  };
+  const idle = cb => (window.requestIdleCallback ? requestIdleCallback(cb, { timeout: 2000 }) : setTimeout(cb, 300));
+  if (document.readyState === 'complete') idle(start);
+  else addEventListener('load', () => idle(start), { once: true });
+}

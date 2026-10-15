@@ -227,3 +227,5 @@ img,.scene-atom{transition-property:opacity}
 .img-fade{opacity:0!important}
 img:not(.img-fade),.scene-atom:not(.img-fade){transition:opacity .45s ease-out,background-color var(--t396-speedhover,.2s) ease-in-out,color var(--t396-speedhover,.2s) ease-in-out,border-color var(--t396-speedhover,.2s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,.2s) ease-in-out,transform var(--t396-speedhover,.2s) ease-in-out,filter var(--t396-speedhover,.2s) ease-in-out}
 @media(prefers-reduced-motion:reduce){.img-fade{opacity:1!important}}
+/* Плашка VK: белая карточка видна сразу, не дожидаясь SVG-заливки (на медленной сети плашка выезжала «прозрачной», Елена 15.10.2026) */
+.native-banner [data-node="1779800012434"] .scene-atom{background-color:#fff}
