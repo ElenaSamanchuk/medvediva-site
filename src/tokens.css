@@ -8,7 +8,7 @@
   --font-text:Inter,Arial,sans-serif;        /* длинный текст, документы */
 
   /* Шкала кеглей (px) */
-  --fs-2xs:8px;--fs-xs:10px;--fs-sm:12px;--fs-base:14px;--fs-md:16px;--fs-lg:18px;--fs-xl:20px;--fs-2xl:24px;--fs-3xl:30px;--fs-4xl:40px;--fs-5xl:60px;
+  --fs-2xs:8px;--fs-xs:10px;--fs-sm:12px;--fs-13:13px;--fs-base:14px;--fs-15:15px;--fs-md:16px;--fs-lg:18px;--fs-xl:20px;--fs-2xl:24px;--fs-3xl:30px;--fs-4xl:40px;--fs-5xl:60px;
   --lh-tight:1.2;--lh-snug:1.35;--lh-text:1.55;
   --fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;
 
@@ -16,7 +16,7 @@
   --c-ink:#262626;--c-ink-2:#4c4c4c;--c-heading:#2b2829;--c-muted:#9c9d9f;--c-line:#c5c5c5;--c-line-soft:#eaeaea;
   --c-white:#ffffff;--c-surface:#f5f5f5;--c-dark:#303030;
   /* Цвета курсов */
-  --c-pit:#4269a3;--c-pit-deep:#315a94;--c-pit-soft:#e6f0ff;   /* Питание и тренировки, общий синий */
+  --c-pit:#4269a3;--c-pit-light:#7697c7;--c-pit-deep:#315a94;--c-pit-soft:#e6f0ff;   /* Питание и тренировки, общий синий */
   --c-tvg:#653a3f;--c-tvg-2:#694448;--c-tvg-soft:#e7e3e3;      /* Тело в голове */
   --c-intensiv:#fe8064;                                        /* Интенсив */
 

@@ -6,6 +6,8 @@ import {localLink} from './lib/scene.mjs';
 import {lazyImages} from './lib/lazy-images.mjs';
 import {docLinks} from './lib/doc-links.mjs';
 import {fadeInImages} from './lib/image-fade.mjs';
+import {initAnalytics} from './lib/analytics.mjs';
+import {initSmoothScroll} from './lib/smooth-scroll.mjs';
 import {eagerContentIds,loadsSecondBlockEager} from './lib/eager-blocks.mjs';
 import {prefixRootUrls,stripBase,withBase} from './lib/site-base.mjs';
 import {captureAttribution,prepareLinks,checkoutLink} from './lib/attribution.mjs';
@@ -158,7 +160,7 @@ function click(e){
  if(modal){e.preventDefault();overlayHistory(href);open(modal);return;}
   if(href?.startsWith('#')&&href.length>1){
   const target=anchorTarget(href);
-  if(target){e.preventDefault();resetDialog();history.pushState(null,'',href);target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
+  if(target){e.preventDefault();resetDialog();history.pushState(null,'',href);dispatchEvent(new Event('medvediva:anchor'));target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
  }
 }
 function key(e){if(e.key==='Tab')keyboardFocus=true;if(e.key==='Escape'){hideTooltip();if(popup.value||menu.value)close();}if(e.key==='Tab'&&(popup.value||menu.value)){const root=document.querySelector(popup.value?'.native-dialog':'.native-menu');const items=[...root.querySelectorAll('button,a[href],input,textarea,select,[tabindex="0"]')].filter(x=>!x.disabled&&x.getClientRects().length);const first=items[0],last=items.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}}}
@@ -167,6 +169,8 @@ onMounted(async()=>{
  addEventListener('resize',resize);addEventListener('keydown',key);addEventListener('hashchange',hashChange);addEventListener('popstate',hashChange);addEventListener('scroll',scroll,{passive:true});
  addEventListener('load',syncStripArrows);setTimeout(syncStripArrows,1200);
  fadeInImages(document.querySelector('main'));
+ initAnalytics();
+ initSmoothScroll();
  if(supportPreview)return;
  attribution=captureAttribution(location.search);
  cookie.value=!['accepted','true'].includes(localStore.getItem('cookieConsent'));

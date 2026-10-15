@@ -78,6 +78,17 @@ try{
   const used=new Set();for(const file of files){for(const m of (await fs.readFile(file,'utf8')).matchAll(/\/media\/([0-9a-f]{24})\.png/g))used.add(m[1]);}
   for(const h of lighter)if(!used.has(h))await fs.rm(path.join(media,h+'.png'),{force:true});
  }
+ // Дизайн-система: почти одинаковые оттенки → токены, кегли 13/15 → шкала (аудит 15.10.2026, решение Елены).
+ // Только в CSS-значениях (после «:», «,», «(» или пробела); атрибуты SVG fill="#…" не трогаем — там var() не работает.
+ {
+  const colorTokens={'4369a3':'--c-pit,#4269a3','4c72aa':'--c-pit,#4269a3','7195c9':'--c-pit-light,#7697c7','7b9ed1':'--c-pit-light,#7697c7','7697c7':'--c-pit-light,#7697c7','282930':'--c-ink,#262626','252628':'--c-ink,#262626','242424':'--c-ink,#262626','ebebeb':'--c-line-soft,#eaeaea','ececec':'--c-line-soft,#eaeaea','e9e9e9':'--c-line-soft,#eaeaea','f6f6f6':'--c-surface,#f5f5f5'};
+  const colorRe=new RegExp(`(?<=[:,(\\s])#(${Object.keys(colorTokens).join('|')})(?![0-9a-f])`,'gi');
+  const files=[];const walk=async dir=>{for(const entry of await fs.readdir(dir,{withFileTypes:true})){const target=path.join(dir,entry.name);if(entry.isDirectory()){if(!['media','fonts','assets'].includes(entry.name))await walk(target);}else if(/\.(css|json)$/.test(entry.name))files.push(target);}};
+  await walk(path.join(dist,'content'));
+  for(const file of files){const text=await fs.readFile(file,'utf8');
+   const next=text.replace(colorRe,(m,h)=>`var(${colorTokens[h.toLowerCase()]})`).replace(/font-size:\s*(13|15)px/g,(m,v)=>`font-size:var(--fs-${v},${v}px)`);
+   if(next!==text)await fs.writeFile(file,next);}
+ }
  await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:'local preview; noindex',base:pagesBase||'/',count:written.length,routes:written},null,2));
  console.log(`Generated ${written.length} static preview pages with Vue SSR. Noindex; deployment not performed.`);
 }finally{await fs.rm(path.join(root,'.ssr'),{recursive:true,force:true});}
