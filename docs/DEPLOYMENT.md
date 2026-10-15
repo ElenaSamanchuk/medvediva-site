@@ -80,3 +80,17 @@ SKIP_BUILD=1 bash deploy/deploy-preview.sh
 Установка пакетов (кроме однократного server-setup), certbot/боевой TLS, DNS, удаление старых релизов, backend форм, аналитика, коммиты и push.
 
 Боевой перенос medvediva.ru — отдельный этап после приёмки и согласования Елены.
+
+## GitHub Pages: публикация без удаления старых assets (15.10.2026)
+
+Имена файлов в `assets/` (index-*.js / *.css) меняются при каждой сборке. Браузеры держат HTML до 10 минут (`cache-control: max-age=600`); если при публикации удалить старые assets, закешированная страница грузится без стилей (так было у Елены 15.10). Публиковать так — старые assets остаются, отчёт `report/` не трогается:
+
+```
+SITE_BASE=/medvediva-site/ npm run build:site && node deploy/check-build.mjs
+cd ../medvediva-gh-pages && git pull --ff-only origin gh-pages
+rsync -a --delete --filter='P assets/*' --exclude .git --exclude .nojekyll --exclude report ../medvediva-site/dist/ ./
+git add -A && git commit -m "Publish …" && git push origin gh-pages
+cd ../medvediva-site && npm run build:site   # локальный dist снова от корня /
+```
+
+Для сервера (если включено кеширование HTML) — то же правило: старые `assets/*` удалять не сразу, а через сутки.
