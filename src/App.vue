@@ -5,6 +5,7 @@ import {initMeters} from './lib/meters.mjs';
 import {localLink} from './lib/scene.mjs';
 import {lazyImages} from './lib/lazy-images.mjs';
 import {docLinks} from './lib/doc-links.mjs';
+import {fadeInImages} from './lib/image-fade.mjs';
 import {eagerContentIds,loadsSecondBlockEager} from './lib/eager-blocks.mjs';
 import {prefixRootUrls,stripBase,withBase} from './lib/site-base.mjs';
 import {captureAttribution,prepareLinks,checkoutLink} from './lib/attribution.mjs';
@@ -165,6 +166,7 @@ onMounted(async()=>{
  clockTimer=setInterval(()=>{now.value=Date.now();},1000);
  addEventListener('resize',resize);addEventListener('keydown',key);addEventListener('hashchange',hashChange);addEventListener('popstate',hashChange);addEventListener('scroll',scroll,{passive:true});
  addEventListener('load',syncStripArrows);setTimeout(syncStripArrows,1200);
+ fadeInImages(document.querySelector('main'));
  if(supportPreview)return;
  attribution=captureAttribution(location.search);
  cookie.value=!['accepted','true'].includes(localStore.getItem('cookieConsent'));

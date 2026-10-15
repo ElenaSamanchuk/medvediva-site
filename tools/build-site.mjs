@@ -16,6 +16,17 @@ const routes=JSON.parse(await fs.readFile('public/content/routes.json','utf8'));
 await build({publicDir:false,build:{ssr:'src/entry-server.js',outDir:'.ssr',emptyOutDir:true}});
 const escape=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=s=>JSON.stringify(s).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
+function heroImages(page){
+ const skip=new Set(['860237765','1063609261','2019108731','2322512891',...(page.popups||[]).flatMap(p=>(p.scenes||[]).map(x=>String(x).replace(/^rec/,'')))]);
+ const first=(page.blocks||[]).find(b=>b.kind!=='anchor'&&b.kind!=='spacer'&&!skip.has(String(b.id)));const scene=(page.scenes||[]).find(sc=>sc.id===first?.id);if(!scene)return [];
+ const urls=[];const walk=o=>{if(!o||typeof o!=='object')return;if(Array.isArray(o))return o.forEach(walk);
+  if(o.type&&o.background)urls.push(o.background);
+  if(o.type&&typeof o.atomStyle==='string')for(const m of o.atomStyle.matchAll(/url\(['"]?([^'")]+)['"]?\)/g))urls.push(m[1]);
+  if(o.type==='image'&&typeof o.html==='string')for(const m of o.html.matchAll(/src="([^"]+)"/g))urls.push(m[1]);
+  Object.values(o).forEach(walk);};
+ walk(scene.nodes);
+ return [...new Set(urls)].filter(u=>u.startsWith('/media/')&&!u.endsWith('.svg')).slice(0,5);
+}
 const written=[];
 try{
  const {render}=await import(pathToFileURL(path.join(root,'.ssr/entry-server.js')).href);
@@ -28,6 +39,8 @@ try{
   const structured=(page.structuredData||[]).map(d=>`<script type="application/ld+json">${json(d)}</script>`).join('');
   html=html.replace('</head>',image+structured+`<link rel="canonical" href="${escape(page.canonical)}"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.description)}"><meta property="og:url" content="${escape(page.canonical)}"><link rel="stylesheet" href="${asset(`/content/${route.page}.css`)}"><link rel="stylesheet" href="${asset(`/content/${route.page}-layout.css`)}"></head>`);
   html=html.replace('</head>',`<link rel="stylesheet" href="${asset('/content/shared-layout.css')}"></head>`);
+  // Предзагрузка картинок первого экрана: фоны и img первого блока качаются сразу, с высоким приоритетом (15.10.2026)
+  html=html.replace('</head>',heroImages(page).map(u=>`<link rel="preload" as="image" href="${asset(u)}" fetchpriority="high">`).join('')+'</head>');
   html=html.replace('<div id="app"></div>',`<div id="app">${body}</div><script type="application/json" id="site-page">${json(page)}</script><script type="application/json" id="site-layout">${json(sharedLayout)}</script>`);
   const filename=route.path==='/'?'index.html':route.path.endsWith('.html')?route.path.slice(1):route.path.slice(1)+'/index.html';const target=path.resolve(dist,filename);
   if(!target.startsWith(dist+path.sep))throw new Error('Invalid output path');
