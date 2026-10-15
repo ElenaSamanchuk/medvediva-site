@@ -360,3 +360,11 @@ GitHub Pages без force: `ac0f8f2686c9fd3c286c3520a708cea84ed2f35e`. https://e
 Исполнитель: Cursor. `npm run build:site`, push, tar и SSH не запускались. «42 поток», жирность, бургер, `.back-top`, попап, аватар, правило второго блока и hover «Личный кабинет» не менялись. Шапка не трогалась: узел `1745573724674` по-прежнему `href="/"`.
 
 Логотип футера — узел `1719145944812` в сцене `770878605` (`public/content/shared-layout.json` и исходник главной `51404777.json`). Было `href=""`, стало `href="/"`. На странице `SceneNode` отдаёт его через `localLink` → `withBase`: на сервере `/`, на GitHub Pages `/medvediva-site/`. Тот же узел на мобилке и десктопе. В `sources/fixups.json` ключ `*` сохраняет эту ссылку при следующей нормализации.
+
+## 15.10.2026 — Claude Code: фиксация и публикация правок Cursor
+
+Исполнитель: Claude Code (Cursor упёрся в лимит). Новых правок вёрстки не было: в коммит ушло всё, что описано в записях Cursor за 14–15.10. `npm test` — 42/42. SSH, rsync на сервер, DNS, Tilda и medvediva.ru не трогались.
+
+`main`: коммит `86bf0dc`, push без force. В коммит не вошёл `tools/_tmp-link-colors.mjs`: это начатая Cursor проверка цвета ссылок `rgb(67,105,163)` на юр-страницах (personaldata, offer, part_oferta), изменений по ней в коде нет. Файл оставлен локально, задача не закрыта.
+
+GitHub Pages: сборка `SITE_BASE=/medvediva-site/`, check PASS, 1600 файлов, noindex. `gh-pages` без force: `3429055c261e6d44c6000944a600c6add158db31`, статус Pages built. На опубликованной главной логотип футера ведёт на `/medvediva-site/`. Локальный `dist/` снова собран от корня `/`: check PASS, 1599 файлов, префикса нет. Серверный архив не собирался.
