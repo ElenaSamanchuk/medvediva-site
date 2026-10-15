@@ -61,6 +61,9 @@ try{
   for(const file of files){const text=await fs.readFile(file,'utf8');
    const next=text.replace(/\/media\/([0-9a-f]{24})\.png/g,(m,h,offset,whole)=>lighter.has(h)&&!keep.test(whole.slice(Math.max(0,offset-120),offset))?`/media/${h}.webp`:m);
    if(next!==text)await fs.writeFile(file,next);}
+  // PNG, заменённые на WebP и больше нигде не упомянутые, в сборку не кладём — без дублей (15.10.2026)
+  const used=new Set();for(const file of files){for(const m of (await fs.readFile(file,'utf8')).matchAll(/\/media\/([0-9a-f]{24})\.png/g))used.add(m[1]);}
+  for(const h of lighter)if(!used.has(h))await fs.rm(path.join(media,h+'.png'),{force:true});
  }
  await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:'local preview; noindex',base:pagesBase||'/',count:written.length,routes:written},null,2));
  console.log(`Generated ${written.length} static preview pages with Vue SSR. Noindex; deployment not performed.`);
