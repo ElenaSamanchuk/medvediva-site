@@ -95,7 +95,7 @@ function hashChange(){
  resetDialog();
  if(location.hash.length>1)nextTick(()=>anchorTarget(location.hash)?.scrollIntoView({behavior:'instant'}));
 }
-function resize(){hideTooltip();width.value=innerWidth;if(popup.value)nextTick(placeClose);}
+function resize(){hideTooltip();width.value=innerWidth;if(popup.value)nextTick(placeClose);nextTick(syncStripArrows);}
 // Крестик Zero-попапа — в правом верхнем углу карточки, а не окна (Елена 15.10.2026).
 // Карточка — самая большая непрозрачная фигура или группа сцены; без неё крестик остаётся в углу окна.
 const closeSpot=ref(null);
@@ -120,13 +120,28 @@ function menuOutsideClick(e){const n=e.target.closest('.scene-node,.scene-group,
 function resetDialog(){document.querySelectorAll('.native-dialog video').forEach(v=>v.pause());popup.value=null;menu.value=false;document.body.style.overflow='';previousFocus?.focus({preventScroll:true,focusVisible:keyboardFocus});}
 function close(){const owned=history.state?.medvedivaOverlay;resetDialog();if(owned)history.back();else if(location.hash==='#menuopen'||popups.value.some(p=>p.hook===location.hash))history.replaceState(history.state,'',location.pathname+location.search);}
 function overlayHistory(hook){if(location.hash!==hook)history.pushState({...history.state,medvedivaOverlay:true},'',hook);}
-function open(item){if(!popup.value&&!menu.value)previousFocus=document.activeElement;menu.value=false;popup.value=item;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-dialog'),attribution);placeClose();requestAnimationFrame(placeClose);document.querySelector('.native-dialog button')?.focus({preventScroll:true});});}
+function open(item){if(!popup.value&&!menu.value)previousFocus=document.activeElement;menu.value=false;popup.value=item;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-dialog'),attribution);placeClose();requestAnimationFrame(placeClose);document.querySelector('.native-dialog button')?.focus({preventScroll:true,focusVisible:keyboardFocus});});}
 function openMenu(){if(!menu.value&&!popup.value)previousFocus=document.activeElement;popup.value=null;menu.value=true;document.body.style.overflow='hidden';nextTick(()=>{prepareLinks(document.querySelector('.native-menu'),attribution);/* r из адреса — во внутренние ссылки меню, как скрипты Тильды 857516649/860263697 */{const r=new URLSearchParams(location.search).get('r');if(r)for(const a of document.querySelectorAll('.native-menu a[href^="/"]')){const u=new URL(a.getAttribute('href'),location.origin);if(stripBase(u.pathname)==='/members/login'||u.searchParams.has('r'))continue;u.searchParams.set('r',r);a.setAttribute('href',withBase(u.pathname)+u.search+u.hash);}}document.querySelector('.menu-close')?.focus({focusVisible:keyboardFocus});});}
+// Стрелки у прокручиваемых лент (на Тильде их листал свой скрипт); лента — ближайший прокручиваемый блок после блока со стрелкой (Елена 15.10.2026)
+const scrollArrows={'1745407681111':-1,'1745407739027':1,'1751618490035':-1,'1751618490132':1};
+function stripFor(node){
+ let block=node.closest('main > *');
+ while(block){if(block.querySelector('.scene-canvas--scrollable'))return block.querySelector('.scene-canvas--scrollable');block=block.nextElementSibling;}
+ return null;
+}
+function syncStripArrows(){
+ for(const nodeId of Object.keys(scrollArrows))document.querySelectorAll(`[data-node="${nodeId}"]`).forEach(n=>{const box=stripFor(n);n.classList.toggle('strip-arrow--idle',!box||box.scrollWidth-box.clientWidth<8);});
+}
+function scrollStrip(node,dir){
+ const box=stripFor(node);if(!box)return;
+ box.scrollBy({left:dir*Math.max(160,box.clientWidth*0.8),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+}
 function click(e){
  const a=e.target.closest('a[href]'); const node=e.target.closest('[data-node]');
  if(node?.dataset.node==='1779882150069'||node?.dataset.node==='1780491925286000001'){banner.value=false;localStore.setItem('medvedivaBannerClosed','1');clearTimeout(timer);return;}
  if(node?.dataset.node==='1745573793244'){/* handled by link below */}
  if(node?.dataset.node==='1773213623325000005'){localStore.setItem('cookieConsent','accepted');localStore.setItem('cookieConsentDate',new Date().toISOString());cookie.value=false;return;}
+ if(node&&scrollArrows[node.dataset.node]){scrollStrip(node,scrollArrows[node.dataset.node]);return;}
  const tooltip=tooltipFor(a);
  if(tooltip){e.preventDefault();if(activeTooltip?.panel===tooltip&&!matchMedia('(hover: hover)').matches)hideTooltip();else showTooltip(a,tooltip);return;}
  if(activeTooltip&&!activeTooltip.panel.contains(e.target))hideTooltip();
@@ -149,6 +164,7 @@ function key(e){if(e.key==='Tab')keyboardFocus=true;if(e.key==='Escape'){hideToo
 onMounted(async()=>{
  clockTimer=setInterval(()=>{now.value=Date.now();},1000);
  addEventListener('resize',resize);addEventListener('keydown',key);addEventListener('hashchange',hashChange);addEventListener('popstate',hashChange);addEventListener('scroll',scroll,{passive:true});
+ addEventListener('load',syncStripArrows);setTimeout(syncStripArrows,1200);
  if(supportPreview)return;
  attribution=captureAttribution(location.search);
  cookie.value=!['accepted','true'].includes(localStore.getItem('cookieConsent'));

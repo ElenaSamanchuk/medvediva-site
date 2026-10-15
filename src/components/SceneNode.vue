@@ -48,6 +48,17 @@ const renderedHtml=computed(()=>{
  const html=view.value.html||'';
  return eager.value?prefixRootUrls(html)||'':lazyImages(html);
 });
+// Ширина в %: Тильда пересчитывает её скриптом — от сетки (1200/960/640/480/320) при контейнере «сетка»;
+// а на брейкпоинтах, где единицы сменились на px, её CSS-выгрузка всё равно пишет «%» (461% вместо 461px) (15.10.2026)
+const gridPctStyle=computed(()=>{
+ const f=props.node.fields;if(!f||props.parent)return undefined;
+ if(!Object.entries(f).some(([k,v])=>k.startsWith('widthunits')&&v==='%'))return undefined;
+ const get=(k)=>field(f,k,props.screen);
+ const value=Number(get('width'));if(!(value>0))return undefined;
+ if(get('widthunits')==='px')return {width:`${value}px`};
+ if(get('widthunits')==='%'&&get('container')==='grid')return {width:`${props.screen*value/100}px`};
+ return undefined;
+});
 const groupStyle=computed(()=>{
  if(props.node.type!=='group'||typeof window==='undefined')return undefined;
  const f=props.node.fields; const get=(k)=>field(f,k,props.screen); const pf=props.parent?.fields;
@@ -64,12 +75,12 @@ const href=computed(()=>{
 });
 </script>
 <template>
- <div v-if="node.type==='group'" v-reveal="revealOf(node.animation)" class="scene-group" :class="[sourceClasses,{'pf-active':view.active}]" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id" :data-native-tooltip="node.tooltipHook" :hidden="node.tooltipHook||view.hidden?true:undefined" :style="groupStyle">
+ <div v-if="node.type==='group'" v-reveal="revealOf(node.animation)" class="scene-group" :class="[sourceClasses,{'pf-active':view.active}]" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id" :data-native-tooltip="node.tooltipHook" :hidden="node.tooltipHook||view.hidden?true:undefined" :style="[groupStyle,gridPctStyle]">
   <div class="scene-group-inner" :class="{'scene-flex':isPhysicalFlex(node.fields)}" :id="`group-${node.id}`">
    <SceneNode v-for="child in node.children" :key="child.id" :node="child" :screen="screen" :scene="scene" :parent="node" />
   </div>
  </div>
- <div v-else v-reveal="revealOf(node.animation)" class="scene-node" :class="[sourceClasses,`scene-${node.type}`,{'scene-group-child':isPhysicalFlex(parent?.fields),'pf-active':view.active}]" :hidden="view.hidden?true:undefined" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id">
+ <div v-else v-reveal="revealOf(node.animation)" :style="gridPctStyle" class="scene-node" :class="[sourceClasses,`scene-${node.type}`,{'scene-group-child':isPhysicalFlex(parent?.fields),'pf-active':view.active}]" :hidden="view.hidden?true:undefined" :role="actionable?(addon?'checkbox':'radio'):undefined" :aria-checked="actionable?view.active:undefined" :tabindex="actionable?0:undefined" @click="activate" @keydown="keyActivate" :data-node="node.id">
   <DesignForm v-if="node.type==='form'" :node="node" :screen="screen" />
   <MediaPreview v-else-if="node.embed" :url="node.embed" />
   <DesignGallery v-else-if="node.type==='gallery'" :pictures="node.pictures" />

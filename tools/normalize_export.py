@@ -12,11 +12,14 @@ EXPORT=ROOT/'sources/export/2026-10-14/alenamedvedeva'
 OUT=ROOT/'public/content';MEDIA=ROOT/'public/media'
 OUT.mkdir(parents=True,exist_ok=True);MEDIA.mkdir(parents=True,exist_ok=True)
 media={}
-for p in sorted((EXPORT/'images').glob('*')):
+# Страницы, которых нет в выгрузке 14.10, но их периодически включают на Тильде: берём из выгрузки 09.10 (Елена 15.10.2026)
+EXPORT_0910=ROOT/'sources/export/2026-10-09/alenamedvedeva'
+EXTRA_ROUTES=[{'path':'/pred','canonical':'https://medvediva.ru/pred','file':'sources/export/2026-10-09/alenamedvedeva/page42012570.html','pageId':'42012570'}]
+for p in sorted((EXPORT/'images').glob('*'))+sorted((EXPORT_0910/'images').glob('*')):
  if not p.is_file() or p.suffix.lower() not in ('.jpg','.jpeg','.png','.webp','.gif','.svg','.ico','.avif'):continue
  b=p.read_bytes();name=hashlib.sha256(b).hexdigest()[:24]+p.suffix.lower();dest=MEDIA/name
  if not dest.exists():dest.write_bytes(b)
- media['images/'+p.name]='/media/'+name
+ media.setdefault('images/'+p.name,'/media/'+name)
 
 extra_path=ROOT/'sources/remote-media.json'
 if extra_path.exists():media.update(json.loads(extra_path.read_text()))
@@ -252,6 +255,10 @@ def compile_page(route):
   except (ValueError,TypeError):pass
  desc=s.find('meta',attrs={'name':'description'});og=s.find('meta',attrs={'property':'og:image'})
  data={'robots':robots.get('content','') if robots else '', 'structuredData':structured,'path':route['path'],'title':title,'description':desc.get('content','') if desc else '', 'canonical':route['canonical'],'image':localize(og.get('content','')) if og else '', 'scenes':scenes,'blocks':blocks,'popups':popups,'anchors':anchors,'missingMediaCount':len(asset_issues.get(current_path,[])),'unsupported':unsupported}
+ # /pred — тот же код тарифов и таймера, что на /pit; настройки админа извлечены из её T123 в выгрузке 09.10 (15.10.2026)
+ if route['path']=='/pred' and (ROOT/'sources/promotion-config-pred-2026-10-09.json').exists():
+  captured=json.loads((ROOT/'sources/promotion-config-pred-2026-10-09.json').read_text())
+  data['promotion']={'config':captured['config'],'countdown':captured['countdown'],'bannerScenes':{'2414578721':'phase1','2414578931':'phase2','2414579211':'phase3'},'source':captured['source'],'capturedAt':captured['capturedAt']}
  if route['path']=='/pit' and s.find(id='rec4482970101'):
   promotion_file=ROOT/'sources/promotion-config-2026-10-13.json'
   if promotion_file.exists():
@@ -345,7 +352,7 @@ manifest=json.loads((ROOT/'sources/export-manifest.json').read_text())
 # Start with the home page; --all compiles every canonical source for route-by-route acceptance.
 import sys
 selected_path=sys.argv[sys.argv.index('--path')+1] if '--path' in sys.argv else '/'
-routes=manifest['routes'] if '--all' in sys.argv else [r for r in manifest['routes'] if r['path']==selected_path]
+routes=manifest['routes']+EXTRA_ROUTES if '--all' in sys.argv else [r for r in manifest['routes']+EXTRA_ROUTES if r['path']==selected_path]
 compiled=[]
 for index,route in enumerate(routes,1):
  compiled.append(compile_page(route))

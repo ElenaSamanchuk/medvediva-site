@@ -49,6 +49,19 @@ try{
    if(next!==css)await fs.writeFile(file,next);
   }
  }
+ // Картинки PNG → WebP без потерь (то же разрешение, cwebp -lossless -exact), если WebP легче хотя бы на 5% (15.10.2026).
+ // og:image и "image" страницы оставляем PNG: не все мессенджеры понимают WebP.
+ {
+  const media=path.join(dist,'media');const lighter=new Set();
+  for(const name of await fs.readdir(media).catch(()=>[])){if(!name.endsWith('.webp'))continue;const png=name.replace(/\.webp$/,'.png');
+   const [a,b]=await Promise.all([fs.stat(path.join(media,png)).catch(()=>null),fs.stat(path.join(media,name))]);if(a&&b.size<a.size*0.95)lighter.add(png.replace(/\.png$/,''));}
+  const files=[];const walk=async dir=>{for(const entry of await fs.readdir(dir,{withFileTypes:true})){const target=path.join(dir,entry.name);if(entry.isDirectory()){if(entry.name!=='media')await walk(target);}else if(/\.(html|css|json)$/.test(entry.name))files.push(target);}};
+  await walk(dist);
+  const keep=/(og:image|twitter:image)"\s+content="[^"]*$|"image":"[^"]*$/;
+  for(const file of files){const text=await fs.readFile(file,'utf8');
+   const next=text.replace(/\/media\/([0-9a-f]{24})\.png/g,(m,h,offset,whole)=>lighter.has(h)&&!keep.test(whole.slice(Math.max(0,offset-120),offset))?`/media/${h}.webp`:m);
+   if(next!==text)await fs.writeFile(file,next);}
+ }
  await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:'local preview; noindex',base:pagesBase||'/',count:written.length,routes:written},null,2));
  console.log(`Generated ${written.length} static preview pages with Vue SSR. Noindex; deployment not performed.`);
 }finally{await fs.rm(path.join(root,'.ssr'),{recursive:true,force:true});}

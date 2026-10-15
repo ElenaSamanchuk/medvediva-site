@@ -134,17 +134,17 @@ html.menu-open .native-banner,html.menu-open .native-cookie,html.menu-open .back
 .native-dialog--scene .dialog-close.dialog-close--card{position:absolute;right:auto;transform:translateX(-100%);width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:30px;line-height:1;color:#1d1d1d;z-index:3}
 /* «Скачивайте мобильное приложение» (/pit): иконки по центру карточки, подписи по центру иконок (Елена 15.10.2026).
    На Тильде группа уезжала вправо на 4–6px, подписи — до 6.5px от своих иконок. Сдвиги в px артборда. */
-#scene-1423744001{--app-ia:0px;--app-ig:0px;--app-la:0px;--app-lg:0px;--app-t:0px}
-@media(min-width:1200px){#scene-1423744001{--app-ia:-5.5px;--app-ig:-5.5px;--app-la:-6.5px;--app-lg:-6.5px}}
-@media(min-width:960px) and (max-width:1199px){#scene-1423744001{--app-ia:-5.5px;--app-ig:-5.5px;--app-la:-3.5px;--app-lg:-6.5px;--app-t:7px}}
-@media(min-width:640px) and (max-width:959px){#scene-1423744001{--app-la:-4px;--app-lg:-.5px}}
-@media(min-width:480px) and (max-width:639px){#scene-1423744001{--app-ia:-4px;--app-ig:-4px;--app-la:-1.5px;--app-lg:-4.5px}}
-@media(max-width:479px){#scene-1423744001{--app-lg:-1.5px}}
-#scene-1423744001 [data-node="1759843236908"]{margin-left:var(--app-ia)}
-#scene-1423744001 [data-node="1759843237000"]{margin-left:var(--app-ig)}
-#scene-1423744001 [data-node="175984295669393940"]{margin-left:var(--app-la)}
-#scene-1423744001 [data-node="175983601512824920"]{margin-left:var(--app-lg)}
-#scene-1423744001 [data-node="175984291512919870"]{margin-left:var(--app-t)}
+#scene-1423744001,#scene-1437484671{--app-ia:0px;--app-ig:0px;--app-la:0px;--app-lg:0px;--app-t:0px}
+@media(min-width:1200px){#scene-1423744001,#scene-1437484671{--app-ia:-5.5px;--app-ig:-5.5px;--app-la:-6.5px;--app-lg:-6.5px}}
+@media(min-width:960px) and (max-width:1199px){#scene-1423744001,#scene-1437484671{--app-ia:-5.5px;--app-ig:-5.5px;--app-la:-3.5px;--app-lg:-6.5px;--app-t:7px}}
+@media(min-width:640px) and (max-width:959px){#scene-1423744001,#scene-1437484671{--app-la:-4px;--app-lg:-.5px}}
+@media(min-width:480px) and (max-width:639px){#scene-1423744001,#scene-1437484671{--app-ia:-4px;--app-ig:-4px;--app-la:-1.5px;--app-lg:-4.5px}}
+@media(max-width:479px){#scene-1423744001,#scene-1437484671{--app-lg:-1.5px}}
+:is(#scene-1423744001,#scene-1437484671) [data-node="1759843236908"]{margin-left:var(--app-ia)}
+:is(#scene-1423744001,#scene-1437484671) [data-node="1759843237000"]{margin-left:var(--app-ig)}
+:is(#scene-1423744001,#scene-1437484671) [data-node="175984295669393940"]{margin-left:var(--app-la)}
+:is(#scene-1423744001,#scene-1437484671) [data-node="175983601512824920"]{margin-left:var(--app-lg)}
+:is(#scene-1423744001,#scene-1437484671) [data-node="175984291512919870"]{margin-left:var(--app-t)}
 /* Текстовые попапы (бот предзаписи, обучения и т.п.) в стиле сайта, а не дефолтной Тильды (Елена 15.10.2026):
    карточка со скруглением как у Zero-попапов, заголовок Bounded капсом, текст Manrope, кнопка — градиент «Личного кабинета», фон размыт. */
 .native-modal:not(.native-modal--scene):not(:has(.media-preview)){background:#26262633;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);align-items:center}
@@ -186,3 +186,39 @@ html{scrollbar-gutter:stable}
    чат 60px с отступом 20px (десктоп) и 56px с 16px (телефон) — центры совпадают, отступ от края тот же */
 .back-top{bottom:25px;left:20px}
 @media(max-width:480px){.back-top{bottom:19px;left:16px}}
+/* /pit «Длительность доступа к программе»: карточки потоков ровной сеткой (Елена 15.10.2026; на Тильде ряды съезжали на 1–7px, шаги 10/13/17px) */
+#scene-1423746821{--dur-c2x:0px;--dur-c4x:0px;--dur-c8x:0px;--dur-c4y:0px;--dur-c8y:0px}
+@media(min-width:1200px){#scene-1423746821{--dur-c4y:-3px;--dur-c8y:-10px}}
+@media(min-width:960px) and (max-width:1199px){#scene-1423746821{--dur-c2x:-10px}}
+@media(min-width:480px) and (max-width:959px){#scene-1423746821{--dur-c8x:-5px}}
+@media(max-width:479px){#scene-1423746821{--dur-c4x:-1px;--dur-c8x:-6px}}
+#scene-1423746821 [data-node="1745403007818"],#scene-1423746821 [data-node="1745403007834"],#scene-1423746821 [data-node="1745403007842"],#scene-1423746821 [data-node="1745403007848"],#scene-1423746821 [data-node="1745403007825"]{margin-left:var(--dur-c2x,0px);margin-top:var(--dur-c2y,0px)}
+#scene-1423746821 [data-node="1766418164059000021"],#scene-1423746821 [data-node="1766418164059000024"],#scene-1423746821 [data-node="1766418164059000026"],#scene-1423746821 [data-node="1766418164059000027"],#scene-1423746821 [data-node="1766418164059000028"]{margin-left:var(--dur-c4x,0px);margin-top:var(--dur-c4y,0px)}
+#scene-1423746821 [data-node="1745403007855"],#scene-1423746821 [data-node="1766418159544000015"],#scene-1423746821 [data-node="1766418159544000017"],#scene-1423746821 [data-node="1766418159544000018"],#scene-1423746821 [data-node="1766418159544000019"]{margin-left:var(--dur-c8x,0px);margin-top:var(--dur-c8y,0px)}
+/* Стрелки у прокручиваемых лент: листают ленту (scrollArrows в App.vue) (Елена 15.10.2026) */
+[data-node="1745407681111"],[data-node="1745407739027"],[data-node="1751618490035"],[data-node="1751618490132"]{cursor:pointer;transition:opacity .2s ease-in-out}
+@media(hover:hover){[data-node="1745407681111"]:hover,[data-node="1745407739027"]:hover,[data-node="1751618490035"]:hover,[data-node="1751618490132"]:hover{opacity:.7}}
+/* /tvg «43 поток · Старт 12 октября»: на телефоне текст вылезал за плашку на 3px (как на Тильде) — плашка шире на 8px, справа отступ как слева (Елена 15.10.2026) */
+@media screen and (max-width:479px){#scene-1423911981 [data-node="1771493764231000005"]{width:152px!important}}
+/* structura.shop не используем (Елена 15.10.2026): в «Йога блоки» (/invent #zeropopup7) скрыта строка магазина и подзаголовок «Дополнительные варианты» — Ozon остаётся под «Лучшие варианты»; на /inventsjd скрыт текст со ссылкой */
+#scene-2384706591 [data-node="1781593603762000011"],#scene-2384706591 [data-node="1781593603765000027"],#scene-522184969 [data-node="1669996390884"]{display:none!important}
+#scene-2384706591 [data-node="1781593603756000001"],#scene-2384706591 [data-node="1781593603756000001"]>.scene-group-inner{height:auto!important}
+#scene-2384706591 [data-node="1781593603756000001"]>.scene-group-inner{padding-bottom:18px}
+.strip-arrow--idle{visibility:hidden!important;pointer-events:none!important}
+/* Футер, сноска «*Meta…» на телефоне в 2 строки вместо 4 (Елена 15.10.2026) */
+@media screen and (max-width:479px){#scene-770878605 [data-node="1748596818729"]{width:200px!important}}
+/* Меню (телефон/планшет): «Подписывайтесь…» и иконки соцсетей по правому краю, как пункты и «Личный кабинет» выше (Елена 15.10.2026). Сдвиги в px артборда по брейкпоинтам */
+#scene-860237765{--mn-t:0px;--mn-i:0px}
+@media(max-width:479px){#scene-860237765{--mn-t:-22px;--mn-i:61.5px}}
+@media(min-width:480px) and (max-width:639px){#scene-860237765{--mn-t:-18.7px;--mn-i:53.4px}}
+@media(min-width:640px) and (max-width:959px){#scene-860237765{--mn-t:-21.6px;--mn-i:61.6px}}
+#scene-860237765 [data-node="1748446143766"]{margin-left:var(--mn-t)}
+#scene-860237765 [data-node="1748446143766"] .scene-atom{text-align:right}
+#scene-860237765 :is([data-node="1748446143778"],[data-node="1748446143784"],[data-node="1748446143771"]){margin-left:var(--mn-i)}
+/* Куки: на ширинах с масштабом плашка выше своей секции — не обрезать верх (Елена 15.10.2026, iPhone) */
+.native-cookie .scene-section{overflow:visible!important}
+/* Рамка фокуса у крестиков — только при управлении с клавиатуры (Safari рисовал её после открытия попапа) */
+.dialog-close:focus:not(:focus-visible),.menu-close:focus:not(:focus-visible){outline:none}
+/* Куки: размытие под плашкой (blur 40px как на Тильде). Анимация появления с fill both держала opacity «анимированной» — контейнер становился границей backdrop-filter и блюр пропадал (Елена 15.10.2026) */
+.native-cookie{animation-fill-mode:backwards}
+.native-cookie #group-1773213623322000002{-webkit-backdrop-filter:blur(40px);backdrop-filter:blur(40px)}
