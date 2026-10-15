@@ -16,6 +16,22 @@ const routes=JSON.parse(await fs.readFile('public/content/routes.json','utf8'));
 await build({publicDir:false,build:{ssr:'src/entry-server.js',outDir:'.ssr',emptyOutDir:true}});
 const escape=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=s=>JSON.stringify(s).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
+// Какие файлы шрифтов нужны странице: пары «гарнитура + вес» из её CSS и общего лейаута → ближайшее доступное начертание
+const fontFiles={manrope:[400,500,600,700,800],bounded:[500,600,900],inter:[300,400,500,600,700],druktextwidecyr:[600,700]};
+let sharedFontCss=null;
+async function pageFonts(pageId){
+ sharedFontCss??=await fs.readFile('public/content/shared-layout.css','utf8');
+ const css=sharedFontCss+await fs.readFile(`public/content/${pageId}.css`,'utf8').catch(()=>'');
+ const need=new Set();
+ for(const rule of css.match(/\{[^{}]*\}/g)||[]){
+  const fam=rule.match(/font-family:\s*(?:var\(--font-[a-z]+,\s*)?['"]?([A-Za-z]+)/i)?.[1]?.toLowerCase();if(!fontFiles[fam])continue;
+  const w=Number(rule.match(/font-weight:\s*(\d{3})/)?.[1]||400);const list=fontFiles[fam];
+  const pick=list.includes(w)?w:(w>500?list.find(x=>x>=w)||list.at(-1):[...list].reverse().find(x=>x<=w)||list[0]);
+  need.add(fam+pick);
+ }
+ need.add('manrope400'); // шрифт body по умолчанию (src/style.css)
+ return [...need].sort();
+}
 function heroImages(page){
  const skip=new Set(['860237765','1063609261','2019108731','2322512891',...(page.popups||[]).flatMap(p=>(p.scenes||[]).map(x=>String(x).replace(/^rec/,'')))]);
  const first=(page.blocks||[]).find(b=>b.kind!=='anchor'&&b.kind!=='spacer'&&!skip.has(String(b.id)));const scene=(page.scenes||[]).find(sc=>sc.id===first?.id);if(!scene)return [];
@@ -39,6 +55,8 @@ try{
   const structured=(page.structuredData||[]).map(d=>`<script type="application/ld+json">${json(d)}</script>`).join('');
   html=html.replace('</head>',image+structured+`<link rel="canonical" href="${escape(page.canonical)}"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.description)}"><meta property="og:url" content="${escape(page.canonical)}"><link rel="stylesheet" href="${asset(`/content/${route.page}.css`)}"><link rel="stylesheet" href="${asset(`/content/${route.page}-layout.css`)}"></head>`);
   html=html.replace('</head>',`<link rel="stylesheet" href="${asset('/content/shared-layout.css')}"></head>`);
+  // Предзагрузка шрифтов страницы: только гарнитуры и начертания, которые есть в её стилях — текст сразу рисуется своим шрифтом (15.10.2026)
+  html=html.replace('</head>',[...new Set([...(await pageFonts(route.page)),...((page.blocks||[]).some(b=>b.kind==='article')?['bounded600','inter400','inter700']:[])])].map(f=>`<link rel="preload" as="font" type="font/woff2" href="${asset(`/fonts/${f}.woff2`)}" crossorigin>`).join('')+'</head>');
   // Предзагрузка картинок первого экрана: фоны и img первого блока качаются сразу, с высоким приоритетом (15.10.2026)
   html=html.replace('</head>',heroImages(page).map(u=>`<link rel="preload" as="image" href="${asset(u)}" fetchpriority="high">`).join('')+'</head>');
   html=html.replace('<div id="app"></div>',`<div id="app">${body}</div><script type="application/json" id="site-page">${json(page)}</script><script type="application/json" id="site-layout">${json(sharedLayout)}</script>`);
