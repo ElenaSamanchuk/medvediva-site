@@ -1,5 +1,7 @@
 # Развёртывание preview Medvediva (статика)
 
+> Общий справочник по всем серверам и проектам (Bi13, Kochfit, Medvediva, PopovichFit) — `~/Projects/agent-setup/docs/ADMIN.md`. Здесь — детали только Medvediva.
+
 ## Сервер: общая VM с kochfit.ru (16.10.2026)
 
 С 16.10.2026 preview живёт на **https://preview.medvediva.ru** — VM `212.233.93.50` (hostname `kochfit`), общая с лендингом **kochfit.ru**. Выложил админ; его описание сервера — MD «Medvediva preview на сервере kochfit» (Telegram 16.10).
