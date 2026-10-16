@@ -59,7 +59,7 @@ KOCHFIT_AFTER=$(status_of kochfit.ru /)
 NGINX_AFTER=$(nginx_state)
 rm -f "$TARBALL"
 
-echo "DISK: $(sudo -n head -c 80 "$BASE/releases/$REL/index.html" || true)"
+echo "INDEX (начало загруженной главной): $(sudo -n head -c 80 "$BASE/releases/$REL/index.html" || true)"
 echo "CHECK: https://$DOMAIN/ 200, 404 page 404, noindex header present"
 echo "KOCHFIT: https://kochfit.ru/ before $KOCHFIT_BEFORE, after $KOCHFIT_AFTER"
 if [[ "$NGINX_BEFORE" != "$NGINX_AFTER" ]]; then
