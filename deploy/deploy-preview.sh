@@ -9,6 +9,7 @@ REL="$(date -u +%Y%m%dT%H%M%SZ)"
 export REL
 SKIP_BUILD="${SKIP_BUILD:-0}"
 
+ssh_open_master || { deploy_ssh_hint; exit 255; }
 echo 'Checking server before upload…'
 code=0
 "${SSH[@]}" "$SERVER" 'bash -s' < "$CHECK_SCRIPT" || code=$?

@@ -27,8 +27,27 @@ export KEY HOST SERVER PORT
 [[ "$SERVER" == "ubuntu@${HOST}" ]] || { echo "SERVER must be ubuntu@${HOST} (got: $SERVER)" >&2; exit 2; }
 [[ -f "$KEY" ]] || { echo "SSH key not found: $KEY" >&2; exit 2; }
 
-SSH=(ssh -i "$KEY" -p "$PORT" -o IdentitiesOnly=yes -o ConnectTimeout=60 -o ServerAliveInterval=15)
-RSYNC_SSH="ssh -i $KEY -p $PORT -o IdentitiesOnly=yes -o ConnectTimeout=60 -o ServerAliveInterval=15"
+# Одно SSH-соединение на весь скрипт (ControlMaster): проверка, mkdir, rsync и активация идут через него.
+# Без этого 3–4 новых соединения подряд обрывались «banner exchange timeout», хотя одиночные проходили (16.10.2026).
+CM_PATH="/tmp/mdv-%C"  # короткий путь: у сокета предел 104 символа
+SSH_OPTS=(-i "$KEY" -p "$PORT" -o IdentitiesOnly=yes -o ConnectTimeout=60 -o ServerAliveInterval=15 -o ControlMaster=auto -o "ControlPath=$CM_PATH" -o ControlPersist=300)
+SSH=(ssh "${SSH_OPTS[@]}")
+RSYNC_SSH="ssh -i $KEY -p $PORT -o IdentitiesOnly=yes -o ConnectTimeout=60 -o ServerAliveInterval=15 -o ControlMaster=auto -o ControlPath=$CM_PATH -o ControlPersist=300"
+ssh_close_master() { ssh "${SSH_OPTS[@]}" -O exit "$SERVER" >/dev/null 2>&1 || true; }
+trap ssh_close_master EXIT
+# Открыть общее соединение с повторами: новые соединения к VM обрываются через раз (сеть по пути, 16.10.2026),
+# а установленное держится. Дальше все ssh/rsync идут через него.
+ssh_open_master() {
+  local i
+  if ssh "${SSH_OPTS[@]}" -O check "$SERVER" >/dev/null 2>&1; then echo "SSH: используем уже открытое соединение"; return 0; fi
+  for i in 1 2 3 4 5 6 7 8; do
+    if ssh "${SSH_OPTS[@]}" -o ConnectTimeout=25 -MNf "$SERVER" 2>/dev/null && ssh "${SSH_OPTS[@]}" -O check "$SERVER" >/dev/null 2>&1; then
+      echo "SSH: соединение открыто (попытка $i)"; return 0
+    fi
+    echo "SSH: попытка $i не удалась, повтор через 20 с…" >&2; sleep 20
+  done
+  return 255
+}
 
 deploy_ssh_hint() {
   echo >&2
@@ -36,6 +55,7 @@ deploy_ssh_hint() {
   echo '  • Включите своё VPN-подключение: из обычной сети сервер не открывается.' >&2
   echo '  • Сервер общий с kochfit.ru: настройки nginx и сервера скриптами не меняем.' >&2
   echo '  • Ключ: chmod 600 на .pem; при сомнениях: bash deploy/diagnose-preview.sh' >&2
+  echo '  • «banner exchange timeout» / «Connection closed»: сервер временно не пускает адрес после серии оборванных соединений. Не повторяйте сразу — каждая попытка продлевает блок; подождите ~10 минут и запустите один раз.' >&2
 }
 
 # Куда смотреть после выкладки
