@@ -3,6 +3,11 @@
 #   ssh -i "$KEY" ubuntu@146.185.240.110 'bash -s' < deploy/server-setup.sh
 # Нужен passwordless sudo (стандартный образ Ubuntu в облаке). DNS и чужие сайты не трогает.
 set -euo pipefail
+# Только для отдельной VM 146.185.240.110. На общей VM с kochfit (212.233.93.50) скрипт снёс бы чужой сайт.
+if [[ -e /etc/nginx/sites-available/kochfit || -e /etc/nginx/sites-enabled/kochfit ]]; then
+  echo 'STOP: shared VM with kochfit detected — use the shared profile (HOST=212.233.93.50), not this script.' >&2
+  exit 3
+fi
 export DEBIAN_FRONTEND=noninteractive
 if ! command -v nginx >/dev/null; then
   sudo apt-get update -qq

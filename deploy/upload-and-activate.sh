@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-# Одношаговая загрузка и активация (без server-check). VPN + KEY обязательны.
+# Одношаговая загрузка и активация (без server-check). Нужен KEY; VPN — только для legacy 146.185.240.110.
+# HOST=212.233.93.50 (по умолчанию) — профиль shared, см. deploy/common.sh.
 #
 # Rsync dist/ (после сборки или SKIP_BUILD=1):
-#   export KEY=~/Downloads/ubuntu-STD3-8-16-200GB-M9I9y4Dw.pem HOST=146.185.240.110
+#   export KEY=~/Downloads/ubuntu-STD3-8-16-200GB-M9I9y4Dw.pem HOST=212.233.93.50
 #   export REL=20261009T173948Z SKIP_BUILD=1
 #   bash deploy/upload-and-activate.sh
 #
 # Докачка уже собранного tarball (обрыв scp):
-#   export KEY=… HOST=146.185.240.110 REL=20261009T173948Z
+#   export KEY=… HOST=212.233.93.50 REL=20261009T173948Z
 #   export TAR=/tmp/medvediva-preview-20261009T173948Z.tar.gz
 #   bash deploy/upload-and-activate.sh
 #
@@ -72,10 +73,9 @@ if [[ "$SKIP_UPLOAD" != 1 ]]; then
 fi
 
 echo "→ активация релиза ${REL} на сервере"
-if ! "${SSH[@]}" "$SERVER" "bash -s -- '${REL}'" < deploy/server-activate.sh; then
+if ! "${SSH[@]}" "$SERVER" "bash -s -- '${REL}'" < "$ACTIVATE_SCRIPT"; then
   echo 'Активация не удалась — см. вывод выше; rollback должен восстановить previous current.' >&2
   exit 1
 fi
 
-echo "Preview: http://${HOST}/"
-echo "Preview: https://${HOST}/ (самоподписанный сертификат — подтвердите исключение в браузере)"
+print_preview_urls

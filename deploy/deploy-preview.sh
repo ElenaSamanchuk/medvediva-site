@@ -10,8 +10,9 @@ export REL
 SKIP_BUILD="${SKIP_BUILD:-0}"
 
 echo 'Checking server before upload…'
-if ! "${SSH[@]}" "$SERVER" 'bash -s' < deploy/server-check.sh; then
-  code=$?
+code=0
+"${SSH[@]}" "$SERVER" 'bash -s' < "$CHECK_SCRIPT" || code=$?
+if [[ "$code" -ne 0 ]]; then
   if [[ "$code" -eq 255 ]]; then deploy_ssh_hint; fi
   echo >&2 'server-check не прошёл — пришлите текст STOP (без ключа и секретов).'
   exit "$code"
@@ -33,10 +34,9 @@ if ! rsync_with_retry --delete dist/ "${SERVER}:${DEPLOY_BASE}/releases/${REL}/"
   exit 255
 fi
 
-if ! "${SSH[@]}" "$SERVER" "bash -s -- '${REL}'" < deploy/server-activate.sh; then
+if ! "${SSH[@]}" "$SERVER" "bash -s -- '${REL}'" < "$ACTIVATE_SCRIPT"; then
   echo >&2 'Активация на сервере не удалась — см. вывод выше; предыдущий релиз должен восстановиться автоматически.'
   exit 1
 fi
-echo "Preview: http://${HOST}/"
-echo "Preview: https://${HOST}/ (самоподписанный сертификат — подтвердите исключение в браузере)"
+print_preview_urls
 echo 'Формы остаются dry-run; noindex сохранён.'

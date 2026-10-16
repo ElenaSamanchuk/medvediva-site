@@ -1,5 +1,39 @@
 # Развёртывание preview Medvediva (статика)
 
+## Текущий сервер: общая VM с kochfit.ru — профиль shared (16.10.2026)
+
+С 16.10.2026 preview живёт на **https://preview.medvediva.ru** — VM `212.233.93.50` (hostname `kochfit`), общая с лендингом **kochfit.ru**. Выложил админ; его описание сервера — MD «Medvediva preview на сервере kochfit» (Telegram 16.10).
+
+`deploy/common.sh` выбирает профиль по `HOST` (или `DEPLOY_HOST`; zsh сам задаёт `HOST`=имя Mac, такое значение игнорируется):
+
+| HOST | Профиль | Каталог | Скрипты на сервере |
+|---|---|---|---|
+| `212.233.93.50` (по умолчанию) | shared | `/var/www/medvediva` | `server-check-shared.sh`, `server-activate-shared.sh` |
+| `146.185.240.110` | legacy | `/var/www/medvediva-preview` | `server-check.sh`, `server-activate.sh` |
+
+```bash
+cd /Users/elena/Projects/medvediva-site
+npm ci && npm test
+bash deploy/diagnose-preview.sh    # SSH + server-check + локальная сборка, без выкладки
+bash deploy/deploy-preview.sh      # сборка → rsync в releases/$REL → переключение current
+```
+
+Что делает профиль shared:
+
+- **check** (только чтение): в `sites-enabled` только `kochfit` и `medvediva`; у medvediva `server_name preview.medvediva.ru`, `root /var/www/medvediva/current`, нет `default_server`; домен не объявлен в других конфигах; `conf.d` пуст; сертификат Let's Encrypt на месте; предупреждение, если релизов больше 3.
+- **activate**: только `chmod a+rX` релиза и симлинк `current`. Конфиги nginx не пишет, nginx не перезагружает, `sites-enabled` не трогает. Проверка по имени (`curl --resolve preview.medvediva.ru:443:127.0.0.1`): главная 200, несуществующий путь 404, заголовок `X-Robots-Tag: noindex`. Не прошло — `current` возвращается на прошлый релиз. Статус `https://kochfit.ru/` и контрольные суммы конфигов nginx сравниваются до и после.
+- Откат вручную: `ssh … "sudo ln -sfn releases/<ПРОШЛЫЙ_REL> /var/www/medvediva/current"`. Старые релизы (~320 МБ) удалять вручную, оставляя 2–3.
+
+**На общей VM не запускать** `server-setup.sh`, `server-tune.sh`, `server-activate.sh`, `server-check.sh` — в них стоит защита: при наличии конфига `kochfit` они останавливаются.
+
+Изменения nginx (новый домен, боевой `medvediva.ru`, HTTP/2) скриптами не делаются — вручную по правилам админа: домен в `server_name` на 80 → `certbot certonly --webroot -w /var/www/letsencrypt-medvediva -d <домен>` (не `--nginx`) → пути сертификата в блок 443 → `sudo nginx -t && sudo systemctl reload nginx` (не restart). nginx 1.24: `listen 443 ssl http2;`, директивы `http2 on;` нет. `default_server` принадлежит kochfit.
+
+Формы на preview — демо (заявки никуда не уходят). Боевой перенос `medvediva.ru` — отдельная задача по поручению Елены.
+
+## Legacy: отдельная VM 146.185.240.110
+
+Ниже — исходная инструкция для отдельной VM; запускается с `HOST=146.185.240.110`.
+
 Цель: показать текущую **незавершённую** статическую сборку на согласованном IP **146.185.240.110**. Это не medvediva.ru: DNS и Tilda не меняются, noindex и robots Disallow сохранены, формы — dry-run.
 
 Popovichfit — **другой сервер** (`146.185.241.179`, Node/Nitro + `deploy/deploy.sh`). Medvediva — только `dist/` через `deploy/deploy-preview.sh`.

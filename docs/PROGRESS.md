@@ -431,3 +431,11 @@ GitHub Pages: сборка `SITE_BASE=/medvediva-site/`, check PASS, 1600 фай
 ## 15.10.2026 ночь-4 — Claude Code: страница без стилей на GitHub Pages (кеш)
 
 Елена увидела /pit без стилей. Причина: браузер держал старый HTML (Pages: max-age=600), а при публикации rsync --delete удалял старые хешированные `assets/index-*.css/js`. Сейчас все файлы отдаются 200, /pit со стилями (Manrope, 0 ошибок). Старые assets из последних 15 публикаций возвращены в gh-pages (`e103f6f`); порядок публикации с `--filter='P assets/*'` — `docs/DEPLOYMENT.md`.
+
+## 16.10.2026 — Claude Code: выкладка на общую VM kochfit (профиль shared)
+
+- Админ выложил preview на https://preview.medvediva.ru (VM 212.233.93.50, общая с kochfit.ru) и прислал MD с рисками старых скриптов `deploy/`. Всё сверено с кодом — подтвердилось.
+- Сделано по его чек-листу (на сервере ничего не запускалось): профиль shared в `deploy/common.sh` (по умолчанию 212.233.93.50; legacy 146.185.240.110 — как было), новые `deploy/server-check-shared.sh` (только чтение) и `deploy/server-activate-shared.sh` (только симлинк `current`, без записи nginx/reload; проверка по имени 200/404/noindex, откат симлинка, сравнение kochfit.ru и конфигов до/после). В legacy-скриптах и server-setup/tune — STOP при наличии конфига kochfit. Исправлено: zsh задаёт `HOST`=имя Mac (учитывается только IP), `deploy-preview.sh` при неудачном server-check выходил с кодом 0.
+- Проверка: `bash -n` всех скриптов, локальный макет ФС с фейковыми sudo/nginx/curl — 5 STOP-сценариев check, успешная активация и 2 отката; legacy activate на «общей VM» останавливается, kochfit не удаляется. `npm test` 49/49, `check-build` PASS. Живой прогон на сервере — не делался (следующий шаг: `bash deploy/diagnose-preview.sh`, затем выкладка).
+- kochfit-redesign: `scripts/deploy-kochfit.mjs` (rsync --delete через sudo) ограничен каталогами `/var/www/kochfit` и `/var/www/html`. Его хост по умолчанию 212.233.93.151 — не совпадает с сервером kochfit.ru (212.233.93.50), вопрос админу.
+- Ответ админу: `docs/2026-10-16-ответ-админу-выкладка-Claude.md`. Ключ .pem — только локально (`*.pem` в .gitignore), в репозиторий и чаты не копировать.

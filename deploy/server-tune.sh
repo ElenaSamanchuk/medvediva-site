@@ -4,6 +4,11 @@
 # Запуск с Mac (VPN), без комментариев в команде:
 #   ssh -i "$KEY" -o ConnectTimeout=60 -o ServerAliveInterval=15 ubuntu@146.185.240.110 'bash -s' < deploy/server-tune.sh
 set -euo pipefail
+# Только для отдельной VM 146.185.240.110. На общей VM с kochfit (212.233.93.50) скрипт снёс бы чужой сайт.
+if [[ -e /etc/nginx/sites-available/kochfit || -e /etc/nginx/sites-enabled/kochfit ]]; then
+  echo 'STOP: shared VM with kochfit detected — use the shared profile (HOST=212.233.93.50), not this script.' >&2
+  exit 3
+fi
 
 REL_ROOT=/var/www/medvediva-preview/releases/20261014T191900Z
 VHOST=/etc/nginx/sites-available/medvediva-preview

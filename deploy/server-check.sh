@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
+# Только для отдельной VM 146.185.240.110. На общей VM с kochfit (212.233.93.50) скрипт снёс бы чужой сайт.
+if [[ -e /etc/nginx/sites-available/kochfit || -e /etc/nginx/sites-enabled/kochfit ]]; then
+  echo 'STOP: shared VM with kochfit detected — use the shared profile (HOST=212.233.93.50), not this script.' >&2
+  exit 3
+fi
 command -v nginx >/dev/null || { echo 'STOP: nginx is not installed. Send this result for the server setup step.'; exit 3; }
 sudo -n nginx -t
 # Refuse unknown sites. A stock nginx welcome page may coexist with an explicit IP vhost.
