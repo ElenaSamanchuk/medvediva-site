@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Одношаговая загрузка и активация (без server-check). Нужен KEY; VPN — только для legacy 146.185.240.110.
-# HOST=212.233.93.50 (по умолчанию) — профиль shared, см. deploy/common.sh.
+# Одношаговая загрузка и активация (без server-check). Нужен KEY и VPN. Сервер — 212.233.93.50, см. deploy/common.sh.
 #
 # Rsync dist/ (после сборки или SKIP_BUILD=1):
 #   export KEY=~/Downloads/ubuntu-STD3-8-16-200GB-M9I9y4Dw.pem HOST=212.233.93.50
