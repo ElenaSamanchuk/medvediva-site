@@ -1,0 +1,48 @@
+/* 16.10.2026 — правки Елены: cards
+   Плитки «Комплексы самопомощи» / «Плоский живот» (блок «Что внутри курса?», /pit, /pred и копии):
+   подпись запечена в PNG. ::before — затемнение снизу (0 → .45 в нижних ~45%);
+   ::after — копия картинки с порогом по белому, маска только на полосе подписи, blend lighten:
+   белые буквы остаются белыми поверх затемнения. */
+#scene-1740193541 .scene-node[data-node="175983601516821330"] .scene-atom,
+#scene-1740193541 .scene-node[data-node="175983601517221680"] .scene-atom,
+#scene-1861571881 .scene-node[data-node="175983601516821330"] .scene-atom,
+#scene-1861571881 .scene-node[data-node="175983601517221680"] .scene-atom {
+  position: relative;
+  overflow: hidden;
+}
+#scene-1740193541 .scene-node[data-node="175983601516821330"] .scene-atom::before,
+#scene-1740193541 .scene-node[data-node="175983601517221680"] .scene-atom::before,
+#scene-1740193541 .scene-node[data-node="175983601516821330"] .scene-atom::after,
+#scene-1740193541 .scene-node[data-node="175983601517221680"] .scene-atom::after,
+#scene-1861571881 .scene-node[data-node="175983601516821330"] .scene-atom::before,
+#scene-1861571881 .scene-node[data-node="175983601517221680"] .scene-atom::before,
+#scene-1861571881 .scene-node[data-node="175983601516821330"] .scene-atom::after,
+#scene-1861571881 .scene-node[data-node="175983601517221680"] .scene-atom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+#scene-1740193541 .scene-node[data-node="175983601516821330"] .scene-atom::before,
+#scene-1740193541 .scene-node[data-node="175983601517221680"] .scene-atom::before,
+#scene-1861571881 .scene-node[data-node="175983601516821330"] .scene-atom::before,
+#scene-1861571881 .scene-node[data-node="175983601517221680"] .scene-atom::before {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .45) 100%);
+}
+#scene-1740193541 .scene-node[data-node="175983601516821330"] .scene-atom::after,
+#scene-1740193541 .scene-node[data-node="175983601517221680"] .scene-atom::after,
+#scene-1861571881 .scene-node[data-node="175983601516821330"] .scene-atom::after,
+#scene-1861571881 .scene-node[data-node="175983601517221680"] .scene-atom::after {
+  background: inherit;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(.53) contrast(25);
+  mix-blend-mode: lighten;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 82%, #000 85%);
+  mask-image: linear-gradient(to bottom, transparent 82%, #000 85%);
+}
+
+/* «Комплексы самопомощи»: мягче порог — с contrast(25) буквы тоньше оригинала (проверено DPR 2). У «Плоский живот» мягкий порог захватывает светлые шорты — там прежний. */
+#scene-1740193541 [data-node="175983601516821330"] .scene-atom::after,
+#scene-1861571881 [data-node="175983601516821330"] .scene-atom::after { filter: brightness(.62) contrast(6); }

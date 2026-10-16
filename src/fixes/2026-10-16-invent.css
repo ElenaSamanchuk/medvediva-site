@@ -1,0 +1,40 @@
+/* 16.10.2026 — правки Елены: invent */
+
+/* Шкала «Важность»: под скруглённым SVG-атомом лежал квадратный linear-gradient —
+   его углы торчали ступенькой на правом конце. Скругляем сам атом и растягиваем фон по боксу. */
+#scene-2368131481 .scene-atom[style*="linear-gradient(120.91deg"] {
+  border-radius: 999px !important;
+  overflow: hidden;
+  background-size: 100% 100%, 100% 100% !important;
+  background-repeat: no-repeat, no-repeat !important;
+}
+
+/* Первый экран: кнопки «Для коррекционных / силовых тренировок» ближе к тексту (зазор ~40px).
+   Текст кончается на 225 (1200) / 230 (960) → кнопки на 265 / 270. 640 и ниже не трогаем. */
+@media (min-width: 1200px) {
+  #scene-2365924581 [data-node="1781089893357000002"] { top: 265px !important; }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  #scene-2365924581 [data-node="1781089893357000002"] { top: 270px !important; }
+}
+
+/* Блок силовых: дорожка шкалы была PNG с прозрачными краями (заливка поверх выглядела тоньше и мылилась на телефоне) → чистая капсула того же цвета (Елена/дизайнер 16.10.2026) */
+#scene-2368131981 [data-node="1781026719521000307"] .scene-atom {
+  background-image: none !important;
+  background-color: #c6d3e7 !important;
+  border-radius: 999px !important;
+}
+/* у заливки была прозрачная рамка 1px — сквозь неё просвечивала дорожка, заливка казалась тоньше */
+#scene-2368131981 [data-node="1781026719521000308"] .scene-atom { border-radius: 999px !important; border-width: 0 !important; overflow: hidden; }
+
+/* Телефон: скругление картинок по формуле дизайнера «внутренний = внешний − отступ»: карточка 10px, отступ 10px → 0, берём минимум 4px (было 10px); в ленте коррекционных отступ сверху = боковому (было на ~3px больше) */
+@media (max-width: 479px) {
+  :is(#scene-2368131481, #scene-2368131981) :is([data-node="1781026719515000204"],[data-node="1781026719519000261"],[data-node="1781026719520000280"],[data-node="1781026719517000223"],[data-node="1781026719518000242"],[data-node="1781026719522000318"],[data-node="1781026719523000337"],[data-node="1781026719524000356"],[data-node="1781026719521000301"]) .scene-atom { border-radius: 4px !important; }
+}
+@media (max-width: 479px) {
+  #scene-2368131481 :is([data-node="1781026719515000204"],[data-node="1781026719519000261"],[data-node="1781026719520000280"],[data-node="1781026719517000223"],[data-node="1781026719518000242"],[data-node="1781026719522000318"],[data-node="1781026719523000337"],[data-node="1781026719524000356"]) { translate: 0 -3px; }
+}
+
+/* Лента коррекционных: шкалы как в блоке силовых — дорожка-капсула, заливка чистым градиентом без SVG-слоя (он давал ступеньки) и без прозрачной рамки 1px (заливка казалась тоньше дорожки) */
+#scene-2368131481 :is(.scene-atom[style*="d39906bf371d3ebb5a118034"],.scene-atom[style*="4618fc2ad8a2eeb0a57b1119"]) { background-image: none !important; background-color: #c6d3e7 !important; border-radius: 999px !important; }
+#scene-2368131481 .scene-atom[style*="linear-gradient(120.91deg"] { background-image: linear-gradient(120.91deg, #87a9da 0%, #4269a3 100%) !important; border-width: 0 !important; }

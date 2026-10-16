@@ -25,10 +25,13 @@ button,input,textarea {font:inherit;}button,a{-webkit-tap-highlight-color:transp
 .native-header .scene-canvas{pointer-events:none;}
 .native-header a,.native-header button{pointer-events:auto;}
 .native-cookie{position:fixed;bottom:0;left:0;width:100%;z-index:1100;}
-.native-banner{position:fixed;top:60px;left:270px;width:1200px;max-width:calc(100vw - 32px);z-index:1050;pointer-events:none;}.native-banner a,.native-banner [data-node="1779882150069"]{pointer-events:auto;cursor:pointer;}
+/* Плашка VK по левому краю логотипа/контента на любой ширине, а не 270px от окна (Елена 16.10.2026; 10px — отступ карточки внутри сцены) */
+.native-banner{position:fixed;top:60px;left:calc(50% - 585px);width:1200px;max-width:calc(100vw - 32px);z-index:1050;pointer-events:none;}.native-banner a,.native-banner [data-node="1779882150069"]{pointer-events:auto;cursor:pointer;}
 .vk-banner-enter-active,.vk-banner-leave-active{transition:transform 1.5s cubic-bezier(.4,0,.2,1)}
 .vk-banner-enter-from,.vk-banner-leave-to{transform:translate3d(calc(-100% - 32px),0,0)}
 .vk-banner-leave-active{pointer-events:none}
+@media(max-width:1199px){.native-banner{left:calc(50% - 465px)}}
+@media(max-width:959px){.native-banner{left:calc(50% - 302px)}}
 @media(max-width:768px){.native-banner{top:55px;left:0;width:100%;max-width:100%}.vk-banner-enter-from,.vk-banner-leave-to{transform:translate3d(0,calc(-100% - 60px),0)}}
 @media(prefers-reduced-motion:reduce){.vk-banner-enter-active,.vk-banner-leave-active{transition:none}.vk-banner-enter-from,.vk-banner-leave-to{transform:none}}
 .native-menu{position:fixed;inset:0;background:transparent;z-index:2147483000;overflow:auto;}
@@ -229,3 +232,10 @@ img:not(.img-fade),.scene-atom:not(.img-fade){transition:opacity .45s ease-out,b
 @media(prefers-reduced-motion:reduce){.img-fade{opacity:1!important}}
 /* Плашка VK: белая карточка видна сразу, не дожидаясь SVG-заливки (на медленной сети плашка выезжала «прозрачной», Елена 15.10.2026) */
 .native-banner [data-node="1779800012434"] .scene-atom{background-color:#fff}
+/* Пункты меню в шапке темнеют при наведении (Елена 16.10.2026) */
+#scene-1063609261 :is([data-node="1745573724647"],[data-node="1745573724652"],[data-node="1745573724655"],[data-node="1745573724658"]) .scene-atom{transition:color .2s ease,opacity .45s ease-out}
+@media (hover:hover){#scene-1063609261 :is([data-node="1745573724647"],[data-node="1745573724652"],[data-node="1745573724655"],[data-node="1745573724658"]):hover .scene-atom{color:#111!important}}
+/* Кнопки покупки /intensiv: при наведении проявляется тот же градиент, развёрнутый на 180°, — как у кнопок /invent и /pred (Елена 16.10.2026; без подъёма и тени) */
+:is(#scene-1666850011 [data-node="176000097824543860"],#scene-4224862101 :is([data-node="175621730549996160"],[data-node="175621729272357300"],[data-node="1756217096966"]),#scene-1423728941 [data-node="175999695057236860"]) .scene-atom::before{background-image:var(--scene-bgcolor-image);transform:rotate(180deg);transition-duration:.3s}
+/* Футер на телефоне: линия посередине между сноской *Meta и юр-ссылками — по ~36px сверху и снизу на 390 (сцена масштабируется от 320; было 41/31, Елена 16.10.2026) */
+@media screen and (max-width:479px){#scene-770878605.scene-section [data-node="1650735390825"]{top:309px!important}}

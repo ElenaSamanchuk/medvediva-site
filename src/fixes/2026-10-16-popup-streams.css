@@ -1,0 +1,23 @@
+/* 16.10.2026 — попап «Расписание потоков» (/tvg 1937524491, /pit 1934090221, /pred 3457495001):
+   на десктопе (≥960) карточка шире, список потоков в 2 колонки — помещается в окно без прокрутки.
+   Макет 640 и мобильные не трогаем. Узлы: 1771421648005 карточка, 1771424394110000001 аватар, …057 заголовок,
+   …026/…039 плашка 2025−2026, …138 список, …109 разделитель, …222 фото, …158/…173 текст, 1771421758493 кнопка. */
+@media (min-width:960px){
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001){--L:100px;height:712px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) .scene-canvas{height:712px!important;transform:none!important;isolation:isolate;margin-left:auto;margin-right:auto}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648005"]{left:var(--L)!important;top:16px!important;width:760px!important;height:688px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771424394110000001"]{left:calc(var(--L) + 30px)!important;top:46px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648057"]{left:calc(var(--L) + 106px)!important;top:46px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648026"]{left:calc(var(--L) + 106px)!important;top:78px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648039"]{left:calc(var(--L) + 111px)!important;top:84px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648138"]{left:calc(var(--L) + 30px)!important;top:130px!important;width:700px!important;height:295px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648138"] > .scene-atom{display:block!important;column-count:2;column-gap:40px;column-fill:auto;height:295px!important;width:100%!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648109"]{left:calc(var(--L) + 30px)!important;top:445px!important;width:700px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648222"]{left:calc(var(--L) + 30px)!important;top:470px!important;width:112px!important;height:200px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648158"]{left:calc(var(--L) + 165px)!important;top:470px!important;width:400px!important;height:38px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421648173"]{left:calc(var(--L) + 165px)!important;top:520px!important;width:400px!important}
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001) [data-node="1771421758493"]{left:calc(var(--L) + 165px)!important;top:630px!important}
+}
+@media (min-width:1200px){
+ :is(#scene-1937524491,#scene-1934090221,#scene-3457495001){--L:220px}
+}
