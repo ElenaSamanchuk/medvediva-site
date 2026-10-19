@@ -1,7 +1,10 @@
 // Аналитика как на Тильде (выгрузка 14.10.2026), только на боевом домене — не на превью и не локально (Елена 15.10.2026).
 // Яндекс Метрика 91164461 — счётчик из настроек Тильды (старт через 2 с, вебвизор);
 // Яндекс Метрика 96364189 — код в head страниц; пиксель Meta 2487307824736433 — PageView.
-export const ANALYTICS_HOSTS = ['medvediva.ru', 'www.medvediva.ru'];
+// Зеркало medvediva.kg — только Метрика 96364189, как на Тильде .kg (19.10.2026).
+import { SITE } from './site.mjs';
+
+export const ANALYTICS_HOSTS = SITE.hosts;
 
 export function analyticsAllowed(hostname) {
   return ANALYTICS_HOSTS.includes(String(hostname || '').toLowerCase());
@@ -23,6 +26,7 @@ export function initAnalytics(win = window) {
   win.ym.l = 1 * new Date();
   loadScript('https://mc.yandex.ru/metrika/tag.js');
   win.ym(96364189, 'init', { clickmap: true, trackLinks: true, accurateTrackBounce: true });
+  if (SITE.id === 'kg') return true;
   setTimeout(() => {
     win.mainMetrikaId = '91164461';
     win.ym(91164461, 'init', { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, ecommerce: 'dataLayer' });

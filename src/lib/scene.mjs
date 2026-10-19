@@ -1,4 +1,5 @@
 import {withBase} from './site-base.mjs';
+import {SITE} from './site.mjs';
 export const screens = [1200,960,640,480,320];
 export function screenFor(width,points=screens) { return [...points].sort((a,b)=>b-a).find(s=>width>=s) || Math.min(...points); }
 export function field(fields,key,screen,board=false) {
@@ -15,9 +16,9 @@ export function localLink(href,scene) {
  if(!href)return undefined;
  if(href.startsWith('#'))return href;
  let url;
- try {url=new URL(href,typeof location==='undefined'?'https://medvediva.ru':location.origin);}catch{return href;}
+ try {url=new URL(href,typeof location==='undefined'?SITE.origin:location.origin);}catch{return href;}
  if(!['http:','https:','mailto:','tel:','tg:','whatsapp:','viber:'].includes(url.protocol))return undefined;
- if(['medvediva.ru','www.medvediva.ru'].includes(url.hostname)||typeof location!=='undefined'&&url.origin===location.origin) {
+ if(SITE.hosts.includes(url.hostname)||typeof location!=='undefined'&&url.origin===location.origin) {
   // r переносится как в авторских скриптах Тильды: карточки курсов на главной и меню (рек 860237765, скрипты 857516649/860263697)
   if(scene==='1423616591' && ['/pit','/intensiv','/tvg'].includes(url.pathname) || scene==='860237765' && url.pathname!=='/members/login') {
    const referral=new URLSearchParams(typeof location==='undefined'?'':location.search).get('r');if(referral&&!url.searchParams.has('r'))url.searchParams.set('r',referral);

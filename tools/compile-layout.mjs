@@ -2,6 +2,8 @@
 import fs from 'node:fs';import {field} from '../src/lib/scene.mjs';
 export function compileLayouts(){
  const routes=JSON.parse(fs.readFileSync('public/content/routes.json','utf8'));
+ // Документы и футер зеркала .kg (tools/normalize_kg.py)
+ if(fs.existsSync('public/content/routes-kg.json'))routes.push(...JSON.parse(fs.readFileSync('public/content/routes-kg.json','utf8')));
  for(const route of routes){
   const page=JSON.parse(fs.readFileSync(`public/content/${route.page}.json`,'utf8'));const rules=[];
   for(const scene of page.scenes){

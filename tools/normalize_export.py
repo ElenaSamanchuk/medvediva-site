@@ -348,22 +348,24 @@ def compile_page(route):
  (OUT/(route['pageId']+'.json')).write_text(design_tokens.tg_links(json.dumps(data,ensure_ascii=False,separators=(',',':'))))
  (OUT/(route['pageId']+'.css')).write_text(design_tokens.round_line_heights(design_tokens.apply(one_line_stream_label('\n'.join(css))),{sc['id'] for sc in scenes if any(k.startswith('upscale') and v=='window' for k,v in sc['board'].items())}))
  return {'path':route['path'],'page':route['pageId'],'title':title,'scenes':len(scenes),'unsupported':unsupported,'missingMediaCount':len(asset_issues.get(current_path,[])),'state':'design-extracted-unverified'}
-manifest=json.loads((ROOT/'sources/export-manifest.json').read_text())
-# Start with the home page; --all compiles every canonical source for route-by-route acceptance.
-import sys
-selected_path=sys.argv[sys.argv.index('--path')+1] if '--path' in sys.argv else '/'
-routes=manifest['routes']+EXTRA_ROUTES if '--all' in sys.argv else [r for r in manifest['routes']+EXTRA_ROUTES if r['path']==selected_path]
-compiled=[]
-for index,route in enumerate(routes,1):
- compiled.append(compile_page(route))
- if '--all' in sys.argv and index%20==0:print('Normalized %s/%s pages'%(index,len(routes)),flush=True)
-if '--all' not in sys.argv and (OUT/'routes.json').exists():
- previous=json.loads((OUT/'routes.json').read_text());compiled=compiled+[p for p in previous if p['path'] not in {r['path'] for r in compiled}]
-(OUT/'routes.json').write_text(json.dumps(compiled,ensure_ascii=False))
-(ROOT/'sources/local-media.json').write_text(json.dumps(media,ensure_ascii=False,indent=2))
-issue_path=ROOT/'sources/asset-issues.json'
-previous_issues=json.loads(issue_path.read_text()) if issue_path.exists() and '--all' not in sys.argv else {}
-for r in routes:previous_issues.pop(r['path'],None)
-previous_issues.update({k:sorted(v) for k,v in asset_issues.items()})
-issue_path.write_text(json.dumps(previous_issues,ensure_ascii=False,indent=2))
-print(json.dumps({'pages':len(compiled),'media':len(media),'uniqueMedia':len(list(MEDIA.iterdir())),'unsupported':sum(len(r['unsupported']) for r in compiled)}))
+# Импорт без запуска (tools/normalize_kg.py берёт compile_page) — 19.10.2026
+if __name__=='__main__':
+ manifest=json.loads((ROOT/'sources/export-manifest.json').read_text())
+ # Start with the home page; --all compiles every canonical source for route-by-route acceptance.
+ import sys
+ selected_path=sys.argv[sys.argv.index('--path')+1] if '--path' in sys.argv else '/'
+ routes=manifest['routes']+EXTRA_ROUTES if '--all' in sys.argv else [r for r in manifest['routes']+EXTRA_ROUTES if r['path']==selected_path]
+ compiled=[]
+ for index,route in enumerate(routes,1):
+  compiled.append(compile_page(route))
+  if '--all' in sys.argv and index%20==0:print('Normalized %s/%s pages'%(index,len(routes)),flush=True)
+ if '--all' not in sys.argv and (OUT/'routes.json').exists():
+  previous=json.loads((OUT/'routes.json').read_text());compiled=compiled+[p for p in previous if p['path'] not in {r['path'] for r in compiled}]
+ (OUT/'routes.json').write_text(json.dumps(compiled,ensure_ascii=False))
+ (ROOT/'sources/local-media.json').write_text(json.dumps(media,ensure_ascii=False,indent=2))
+ issue_path=ROOT/'sources/asset-issues.json'
+ previous_issues=json.loads(issue_path.read_text()) if issue_path.exists() and '--all' not in sys.argv else {}
+ for r in routes:previous_issues.pop(r['path'],None)
+ previous_issues.update({k:sorted(v) for k,v in asset_issues.items()})
+ issue_path.write_text(json.dumps(previous_issues,ensure_ascii=False,indent=2))
+ print(json.dumps({'pages':len(compiled),'media':len(media),'uniqueMedia':len(list(MEDIA.iterdir())),'unsupported':sum(len(r['unsupported']) for r in compiled)}))

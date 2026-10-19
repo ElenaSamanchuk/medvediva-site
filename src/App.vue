@@ -7,6 +7,7 @@ import {lazyImages} from './lib/lazy-images.mjs';
 import {docLinks} from './lib/doc-links.mjs';
 import {fadeInImages,warmLazyImages} from './lib/image-fade.mjs';
 import {initAnalytics} from './lib/analytics.mjs';
+import {SITE} from './lib/site.mjs';
 import {eagerContentIds,loadsSecondBlockEager} from './lib/eager-blocks.mjs';
 import {prefixRootUrls,stripBase,withBase} from './lib/site-base.mjs';
 import {captureAttribution,prepareLinks,checkoutLink} from './lib/attribution.mjs';
@@ -50,7 +51,7 @@ const scene=id=>shared.value?.scenes.find(s=>s.id===sceneId(id))||page.value?.sc
 const dialogScenes=computed(()=>(popup.value?.scenes||[]).map(scene).filter(Boolean));
 let timer,showTimer,clockTimer;let previousFocus;
 let attribution={};
-authoredUi.checkoutHref=href=>checkoutLink(href,attribution,localStore.getItem('r'),client?location.origin:'https://medvediva.ru');
+authoredUi.checkoutHref=href=>checkoutLink(href,attribution,localStore.getItem('r'),client?location.origin:SITE.origin);
 let activeTooltip=null;let tooltipTimer;let keyboardFocus=false;
 function tooltipFor(trigger){
  const hook=trigger?.getAttribute('href');

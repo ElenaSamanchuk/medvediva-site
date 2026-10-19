@@ -3,6 +3,7 @@ import {compileLayouts} from './compile-layout.mjs';
 import {compileSharedLayout} from './compile-shared-layout.mjs';
 import {normalizeBase,prefixRootUrls,withBase} from '../src/lib/site-base.mjs';
 import {build} from 'vite';
+import {KG_RU_PAGES,kgPage,kgLayout,kgLayoutCss,conversions} from './kg-mirror.mjs';
 import {pathToFileURL} from 'node:url';
 import fs from 'node:fs/promises';import path from 'node:path';
 const root=process.cwd();const dist=path.join(root,'dist');
@@ -10,15 +11,19 @@ const pagesBase=normalizeBase(process.env.SITE_BASE||'/');
 const asset=target=>withBase(target,pagesBase);
 // Боевой medvediva.ru: SITE_MODE=production — без noindex, robots.txt открыт, sitemap.xml. Иначе preview (noindex, Disallow).
 const production=process.env.SITE_MODE==='production';
+// Зеркало medvediva.kg: VITE_SITE=kg (tools/kg-mirror.mjs), 19.10.2026
+const kg=process.env.VITE_SITE==='kg';
+const origin=kg?'https://medvediva.kg':'https://medvediva.ru';
 // Страницы, которые не переносим — отдают 404 (решение 19.10.2026)
 const excluded=new Set(['/support','/delete','/testform']);
 // Как в sitemap Тильды: служебные страницы и 404 туда не попадают
 const notInSitemap=new Set(['/header','/footer','/mist','/pred','/test-split']);
 compileLayouts();
-const sharedLayout=compileSharedLayout();
+const sharedLayout=kg?kgLayout(compileSharedLayout()):compileSharedLayout();
 await build();
 const shell=await fs.readFile(path.join(dist,'index.html'),'utf8');
-const routes=JSON.parse(await fs.readFile('public/content/routes.json','utf8')).filter(r=>!excluded.has(r.path));
+let routes=JSON.parse(await fs.readFile('public/content/routes.json','utf8')).filter(r=>!excluded.has(r.path));
+if(kg)routes=[...routes.filter(r=>KG_RU_PAGES.includes(r.path)),...JSON.parse(await fs.readFile('public/content/routes-kg.json','utf8')).filter(r=>r.path!=='/footer')];
 await build({publicDir:false,build:{ssr:'src/entry-server.js',outDir:'.ssr',emptyOutDir:true}});
 const escape=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=s=>JSON.stringify(s).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
@@ -53,12 +58,13 @@ const written=[];const sitemap=[];
 try{
  const {render}=await import(pathToFileURL(path.join(root,'.ssr/entry-server.js')).href);
  for(const route of routes){
-  const page=JSON.parse(await fs.readFile(`public/content/${route.page}.json`,'utf8'));
-  page.aliases=[`/page${route.page}.html`];
+  let page=JSON.parse(await fs.readFile(`public/content/${route.page}.json`,'utf8'));
+  if(kg){page=kgPage(page);await fs.writeFile(path.join(dist,'content',`${route.page}.json`),JSON.stringify(page));}
+  page.aliases=[`/page${route.page.replace(/^kg/,'')}.html`];
   const body=await render(page,sharedLayout);
   let html=shell.replace(/<title>.*?<\/title>/s,`<title>${escape(page.title)}</title>`).replace('<meta name="description" content="">',`<meta name="description" content="${escape(page.description)}">`);
-  if(production){html=html.replace('<meta name="robots" content="noindex,nofollow">',page.robots?`<meta name="robots" content="${escape(page.robots)}">`:'');html=html.replace('</head>','<meta name="yandex-verification" content="1945e09729fe9850"></head>');if(!page.robots&&page.canonical&&!notInSitemap.has(route.path))sitemap.push(page.canonical);}
-  const image=page.image?.startsWith('/media/')?`<meta property="og:image" content="https://medvediva.ru${escape(page.image)}">`:'';
+  if(production){html=html.replace('<meta name="robots" content="noindex,nofollow">',page.robots?`<meta name="robots" content="${escape(page.robots)}">`:'');if(!kg)html=html.replace('</head>','<meta name="yandex-verification" content="1945e09729fe9850"></head>');if(!page.robots&&page.canonical&&!notInSitemap.has(route.path))sitemap.push(page.canonical);}
+  const image=page.image?.startsWith('/media/')?`<meta property="og:image" content="${origin}${escape(page.image)}">`:'';
   const structured=(page.structuredData||[]).map(d=>`<script type="application/ld+json">${json(d)}</script>`).join('');
   html=html.replace('</head>',image+structured+`<link rel="canonical" href="${escape(page.canonical)}"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.description)}"><meta property="og:url" content="${escape(page.canonical)}"><link rel="stylesheet" href="${asset(`/content/${route.page}.css`)}"><link rel="stylesheet" href="${asset(`/content/${route.page}-layout.css`)}"></head>`);
   html=html.replace('</head>',`<link rel="stylesheet" href="${asset('/content/shared-layout.css')}"></head>`);
@@ -66,19 +72,31 @@ try{
   html=html.replace('</head>',[...new Set([...(await pageFonts(route.page)),...((page.blocks||[]).some(b=>b.kind==='article')?['bounded600','inter400','inter700']:[])])].map(f=>`<link rel="preload" as="font" type="font/woff2" href="${asset(`/fonts/${f}.woff2`)}" crossorigin>`).join('')+'</head>');
   // Предзагрузка картинок первого экрана: фоны и img первого блока качаются сразу, с высоким приоритетом (15.10.2026)
   // Плашка VK показывается только на главной — её иконку качаем заранее
-  if(route.path==='/')html=html.replace('</head>',`<link rel="preload" as="image" href="${asset('/media/e619f0822f9d7652910443f2.png')}">`+'</head>');
+  if(route.path==='/'&&!kg)html=html.replace('</head>',`<link rel="preload" as="image" href="${asset('/media/e619f0822f9d7652910443f2.png')}">`+'</head>');
   html=html.replace('</head>',heroImages(page).map(u=>`<link rel="preload" as="image" href="${asset(u)}" fetchpriority="high">`).join('')+'</head>');
   html=html.replace('<div id="app"></div>',`<div id="app">${body}</div><script type="application/json" id="site-page">${json(page)}</script><script type="application/json" id="site-layout">${json(sharedLayout)}</script>`);
   const filename=route.path==='/'?'index.html':route.path.endsWith('.html')?route.path.slice(1):route.path.slice(1)+'/index.html';const target=path.resolve(dist,filename);
   if(!target.startsWith(dist+path.sep))throw new Error('Invalid output path');
   await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,html);written.push(route.path);
-  const alias=`/page${route.page}.html`;if(!routes.some(r=>r.path===alias))await fs.writeFile(path.join(dist,alias.slice(1)),html);
+  const alias=page.aliases[0];if(!routes.some(r=>r.path===alias))await fs.writeFile(path.join(dist,alias.slice(1)),html);
  }
+ // Зеркало .kg: в dist/content только его страницы (уже переписаны под .kg) и общий макет .kg
+ if(kg){
+  const keep=new Set(routes.flatMap(r=>[`${r.page}.json`,`${r.page}.css`,`${r.page}-layout.css`]));
+  for(const name of await fs.readdir(path.join(dist,'content')))if(!keep.has(name))await fs.rm(path.join(dist,'content',name),{force:true});
+  await fs.writeFile(path.join(dist,'content','routes.json'),JSON.stringify(routes));
+  await fs.writeFile(path.join(dist,'content','shared-layout.json'),JSON.stringify(sharedLayout));
+  await fs.writeFile(path.join(dist,'content','shared-layout.css'),kgLayoutCss(await fs.readFile('public/content/shared-layout.css','utf8')));
+  await fs.rm(path.join(dist,'support-preview'),{recursive:true,force:true});
+  await fs.writeFile('docs/kg-price-conversions.txt',[...new Set(conversions)].sort().join('\n')+'\n');
+ }
+ // .ru: документы и футер зеркала .kg из public/content в сборку не кладём
+ if(!kg)for(const name of await fs.readdir(path.join(dist,'content')))if(name.startsWith('kg')||name==='routes-kg.json')await fs.rm(path.join(dist,'content',name),{force:true});
  // 404 — оформленная страница /mist, как настроено на Тильде (14.10.2026)
  const mist=await fs.readFile(path.join(dist,'mist/index.html'),'utf8').catch(()=>null);
  await fs.writeFile(path.join(dist,'404.html'),mist?mist.replace('</head>','<meta name="robots" content="noindex"></head>').replace(/(<script type="application\/json" id="site-page">)\{/,'$1{"notFound":true,'):shell.replace('<div id="app"></div>',`<div id="app"><main><h1>Страница не найдена</h1><a href="${asset('/')}">На главную</a></main></div>`));
  if(production){
-  await fs.writeFile(path.join(dist,'robots.txt'),'User-agent: *\nAllow: /\n\nSitemap: https://medvediva.ru/sitemap.xml\n');
+  await fs.writeFile(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
   await fs.writeFile(path.join(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...new Set(sitemap)].map(u=>`<url><loc>${escape(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
  }else await fs.writeFile(path.join(dist,'robots.txt'),'User-agent: *\nDisallow: /\n');
  if(pagesBase){
@@ -119,6 +137,13 @@ try{
    const next=text.replace(colorRe,(m,h)=>`var(${colorTokens[h.toLowerCase()]})`).replace(/font-size:\s*(13|15)px/g,(m,v)=>`font-size:var(--fs-${v},${v}px)`);
    if(next!==text)await fs.writeFile(file,next);}
  }
- await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:production?'production':'local preview; noindex',base:pagesBase||'/',count:written.length,routes:written},null,2));
+ await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:(production?'production':'local preview; noindex')+(kg?' kg':''),base:pagesBase||'/',count:written.length,routes:written},null,2));
  console.log(production?`Generated ${written.length} production pages with Vue SSR, sitemap ${sitemap.length} URLs; deployment not performed.`:`Generated ${written.length} static preview pages with Vue SSR. Noindex; deployment not performed.`);
+ // Зеркало .kg: картинки только те, на которые ссылаются его страницы
+ if(kg){
+  const used=new Set();const walk=async dir=>{for(const entry of await fs.readdir(dir,{withFileTypes:true})){const target=path.join(dir,entry.name);if(entry.isDirectory()){if(entry.name!=='media')await walk(target);}else if(/\.(html|css|json|js)$/.test(entry.name))for(const m of (await fs.readFile(target,'utf8')).matchAll(/\/media\/([0-9a-f]{24}\.[a-z0-9]+)/g))used.add(m[1]);}};
+  await walk(dist);let removed=0;
+  for(const name of await fs.readdir(path.join(dist,'media')))if(!used.has(name)){await fs.rm(path.join(dist,'media',name));removed++;}
+  console.log(`kg: media kept ${used.size}, removed ${removed}`);
+ }
 }finally{await fs.rm(path.join(root,'.ssr'),{recursive:true,force:true});}

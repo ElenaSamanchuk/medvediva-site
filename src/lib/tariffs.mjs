@@ -1,3 +1,4 @@
+import {sitePrice,CURRENCY} from './site.mjs';
 // Independent implementation of the public site's authored PF pricing rules.
 // Config is parsed as data from T123, never executed as a Tilda script.
 export const streams=[1,2,4,8];
@@ -22,7 +23,7 @@ export function tariffLinks(config,phase,key){
  }
  return null;
 }
-export function formatTariffPrice(value){return String(value).replace(/\B(?=(\d{3})+(?!\d))/g,'\u2009')+' ₽';}
+export function formatTariffPrice(value){return String(sitePrice(value)).replace(/\B(?=(\d{3})+(?!\d))/g,'\u2009')+' '+CURRENCY;}
 export function tariffState(config,key,selectedIndex=0,withTvg=false,date=new Date()){
  const phase=tariffPhase(config,date),standard=config.prices?.std?.[key];
  const prices=phase==='phase3'?standard:config.prices?.[phase]?.[key],links=tariffLinks(config,phase,key);

@@ -1,6 +1,7 @@
 // Адреса сайта и почты в юр-документах — ссылками, как в политике конфиденциальности (Елена 15.10.2026).
 // medvediva.ru ведёт на локальный путь (дальше prefixRootUrls добавляет base), почта — mailto:.
 // Текст внутри уже существующих <a> не трогается; пустой href у ссылки-адреса заполняется.
+import {SITE} from './site.mjs';
 
 const ADDRESS = /(https?:\/\/[^\s<>"«»]+|www\.[^\s<>"«»]+|[\w.+-]+@[\w-]+(?:\.[\w-]+)+)/g;
 const TRAIL = /[.,;:!?)\]]+$/;
@@ -13,7 +14,7 @@ export function addressHref(address) {
   const text = String(address || '').replace(/&amp;/g, '&');
   if (!text.includes('://') && !text.startsWith('www.') && text.includes('@')) return `mailto:${text}`;
   const url = new URL(text.startsWith('www.') ? `https://${text}` : text);
-  if (/^(www\.)?medvediva\.ru$/i.test(url.hostname)) return `${url.pathname || '/'}${url.search}${url.hash}`;
+  if (SITE.hosts.includes(url.hostname.toLowerCase())) return `${url.pathname || '/'}${url.search}${url.hash}`;
   return url.href;
 }
 

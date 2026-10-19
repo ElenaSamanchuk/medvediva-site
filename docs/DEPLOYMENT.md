@@ -57,3 +57,13 @@ cd ../medvediva-site && npm run build:site   # локальный dist снов�
 Боевая сборка — `SITE_MODE=production npm run build:site && SITE_MODE=production node deploy/check-build.mjs`: без noindex, `robots.txt` открыт со ссылкой на `sitemap.xml` (тот же набор URL, что в sitemap Тильды), `yandex-verification` как на Тильде. Без `SITE_MODE` — preview (noindex, Disallow). /support, /delete, /testform не переносим — 404 в обоих режимах. Форма /work пока демо.
 
 На той же VM 212.233.93.50, отдельно от preview: каталог `/var/www/medvediva-prod` (releases + симлинк `current`), конфиг `deploy/nginx/medvediva-prod.conf` → `/etc/nginx/sites-available/medvediva-prod`. `default_server` остаётся у kochfit. Порядок переезда: сертификат через DNS-01 (TXT `_acme-challenge` в Бегете) → конфиг + `nginx -t && systemctl reload nginx` → выкладка → проверка `curl --resolve medvediva.ru:443:127.0.0.1` → A-записи `@` и `www` в Бегете на 212.233.93.50 (MX/SPF/unisender не трогать) → перевыпуск через `certbot certonly --webroot -w /var/www/letsencrypt-medvediva` для автопродления.
+
+## Зеркало medvediva.kg (19.10.2026)
+
+Тот же код, отдельная сборка: `VITE_SITE=kg SITE_MODE=production npm run build:site && VITE_SITE=kg SITE_MODE=production node deploy/check-build.mjs`. Логика — `tools/kg-mirror.mjs`, настройки сайта в коде — `src/lib/site.mjs`.
+
+- Страницы .ru: `/`, `/pred`, `/pit`, `/tvg`, `/intensiv` (+ `/mist` как 404). Остальное, включая `/invent`, — 404.
+- Документы `/offer`, `/personaldata` и футер — из выгрузки Тильды .kg (проект 9469007): `tools/normalize_kg.py` (нужен bs4, выгрузка в `sources/export/kg-2026-10-19/`, не в git) → `public/content/kg*.json`, `routes-kg.json`. Ссылки на copyright.ru в документах сняты, текст не менялся.
+- ЛК `lk.medvediva.kg` — та же школа, что `lk.medvediva.ru`, ID тарифов те же. Цены в сомах как в ЛК: рубли × 1,05, округление до 5 (`kgsFromRub`); список пересчётов — `docs/kg-price-conversions.txt`.
+- Убрано: баннер и блок ВК, сноска про Meta/РФ, пункт меню «Оборудование». Боты — как на .ru. Метрика только 96364189.
+- Сервер: та же VM 212.233.93.50, `/var/www/medvediva-kg` (releases + `current`), конфиг `deploy/nginx/medvediva-kg.conf`, сертификат medvediva.kg+www (webroot, renew_hook reload). `/pred` → 302 на `/pit`, как на .ru. DNS .kg — на Бегете (регистратор киргизский, NS уже Бегета).
