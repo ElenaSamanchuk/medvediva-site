@@ -8,11 +8,17 @@ import fs from 'node:fs/promises';import path from 'node:path';
 const root=process.cwd();const dist=path.join(root,'dist');
 const pagesBase=normalizeBase(process.env.SITE_BASE||'/');
 const asset=target=>withBase(target,pagesBase);
+// Боевой medvediva.ru: SITE_MODE=production — без noindex, robots.txt открыт, sitemap.xml. Иначе preview (noindex, Disallow).
+const production=process.env.SITE_MODE==='production';
+// Страницы, которые не переносим — отдают 404 (решение 19.10.2026)
+const excluded=new Set(['/support','/delete','/testform']);
+// Как в sitemap Тильды: служебные страницы и 404 туда не попадают
+const notInSitemap=new Set(['/header','/footer','/mist','/pred','/test-split']);
 compileLayouts();
 const sharedLayout=compileSharedLayout();
 await build();
 const shell=await fs.readFile(path.join(dist,'index.html'),'utf8');
-const routes=JSON.parse(await fs.readFile('public/content/routes.json','utf8'));
+const routes=JSON.parse(await fs.readFile('public/content/routes.json','utf8')).filter(r=>!excluded.has(r.path));
 await build({publicDir:false,build:{ssr:'src/entry-server.js',outDir:'.ssr',emptyOutDir:true}});
 const escape=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=s=>JSON.stringify(s).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
@@ -43,7 +49,7 @@ function heroImages(page){
  walk(scene.nodes);
  return [...new Set(urls)].filter(u=>u.startsWith('/media/')&&!u.endsWith('.svg')).slice(0,5);
 }
-const written=[];
+const written=[];const sitemap=[];
 try{
  const {render}=await import(pathToFileURL(path.join(root,'.ssr/entry-server.js')).href);
  for(const route of routes){
@@ -51,6 +57,7 @@ try{
   page.aliases=[`/page${route.page}.html`];
   const body=await render(page,sharedLayout);
   let html=shell.replace(/<title>.*?<\/title>/s,`<title>${escape(page.title)}</title>`).replace('<meta name="description" content="">',`<meta name="description" content="${escape(page.description)}">`);
+  if(production){html=html.replace('<meta name="robots" content="noindex,nofollow">',page.robots?`<meta name="robots" content="${escape(page.robots)}">`:'');html=html.replace('</head>','<meta name="yandex-verification" content="1945e09729fe9850"></head>');if(!page.robots&&page.canonical&&!notInSitemap.has(route.path))sitemap.push(page.canonical);}
   const image=page.image?.startsWith('/media/')?`<meta property="og:image" content="https://medvediva.ru${escape(page.image)}">`:'';
   const structured=(page.structuredData||[]).map(d=>`<script type="application/ld+json">${json(d)}</script>`).join('');
   html=html.replace('</head>',image+structured+`<link rel="canonical" href="${escape(page.canonical)}"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.description)}"><meta property="og:url" content="${escape(page.canonical)}"><link rel="stylesheet" href="${asset(`/content/${route.page}.css`)}"><link rel="stylesheet" href="${asset(`/content/${route.page}-layout.css`)}"></head>`);
@@ -70,7 +77,10 @@ try{
  // 404 — оформленная страница /mist, как настроено на Тильде (14.10.2026)
  const mist=await fs.readFile(path.join(dist,'mist/index.html'),'utf8').catch(()=>null);
  await fs.writeFile(path.join(dist,'404.html'),mist?mist.replace('</head>','<meta name="robots" content="noindex"></head>').replace(/(<script type="application\/json" id="site-page">)\{/,'$1{"notFound":true,'):shell.replace('<div id="app"></div>',`<div id="app"><main><h1>Страница не найдена</h1><a href="${asset('/')}">На главную</a></main></div>`));
- await fs.writeFile(path.join(dist,'robots.txt'),'User-agent: *\nDisallow: /\n');
+ if(production){
+  await fs.writeFile(path.join(dist,'robots.txt'),'User-agent: *\nAllow: /\n\nSitemap: https://medvediva.ru/sitemap.xml\n');
+  await fs.writeFile(path.join(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...new Set(sitemap)].map(u=>`<url><loc>${escape(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
+ }else await fs.writeFile(path.join(dist,'robots.txt'),'User-agent: *\nDisallow: /\n');
  if(pagesBase){
   await fs.writeFile(path.join(dist,'.nojekyll'),'');
   const cssFiles=[];
@@ -109,6 +119,6 @@ try{
    const next=text.replace(colorRe,(m,h)=>`var(${colorTokens[h.toLowerCase()]})`).replace(/font-size:\s*(13|15)px/g,(m,v)=>`font-size:var(--fs-${v},${v}px)`);
    if(next!==text)await fs.writeFile(file,next);}
  }
- await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:'local preview; noindex',base:pagesBase||'/',count:written.length,routes:written},null,2));
- console.log(`Generated ${written.length} static preview pages with Vue SSR. Noindex; deployment not performed.`);
+ await fs.writeFile('docs/static-build.json',JSON.stringify({at:new Date().toISOString(),mode:production?'production':'local preview; noindex',base:pagesBase||'/',count:written.length,routes:written},null,2));
+ console.log(production?`Generated ${written.length} production pages with Vue SSR, sitemap ${sitemap.length} URLs; deployment not performed.`:`Generated ${written.length} static preview pages with Vue SSR. Noindex; deployment not performed.`);
 }finally{await fs.rm(path.join(root,'.ssr'),{recursive:true,force:true});}

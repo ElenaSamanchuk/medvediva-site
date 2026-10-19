@@ -51,3 +51,9 @@ cd ../medvediva-site && npm run build:site   # локальный dist снов�
 ```
 
 Для сервера (если включено кеширование HTML) — то же правило: старые `assets/*` удалять не сразу, а через сутки.
+
+## Боевой medvediva.ru (19.10.2026)
+
+Боевая сборка — `SITE_MODE=production npm run build:site && SITE_MODE=production node deploy/check-build.mjs`: без noindex, `robots.txt` открыт со ссылкой на `sitemap.xml` (тот же набор URL, что в sitemap Тильды), `yandex-verification` как на Тильде. Без `SITE_MODE` — preview (noindex, Disallow). /support, /delete, /testform не переносим — 404 в обоих режимах. Форма /work пока демо.
+
+На той же VM 212.233.93.50, отдельно от preview: каталог `/var/www/medvediva-prod` (releases + симлинк `current`), конфиг `deploy/nginx/medvediva-prod.conf` → `/etc/nginx/sites-available/medvediva-prod`. `default_server` остаётся у kochfit. Порядок переезда: сертификат через DNS-01 (TXT `_acme-challenge` в Бегете) → конфиг + `nginx -t && systemctl reload nginx` → выкладка → проверка `curl --resolve medvediva.ru:443:127.0.0.1` → A-записи `@` и `www` в Бегете на 212.233.93.50 (MX/SPF/unisender не трогать) → перевыпуск через `certbot certonly --webroot -w /var/www/letsencrypt-medvediva` для автопродления.
